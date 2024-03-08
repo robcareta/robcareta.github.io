@@ -1,0 +1,55 @@
+---
+title: "Intrahousehold Bargaining Power and Time Allocation for Multiple Activities"
+date: 2023-10-04
+author:
+  - name: Roberto Cárdenas-Retamal
+    affiliation: Departamento de Econoḿıa. Facultad de Ciencias Economicas y Administrativas. Universidad Católica de la Santísima Concepción. University of Florida, USA.
+    orcid: 0000-0002-9578-827X
+  - name: Manuel Barrientos Ciefuentes
+    affiliation: Durham University Business School. 
+  - name: Felipe Vásquez Lavín
+    affiliation: Univeridad del Desarrollo
+  - name: Roberto Ponce Oliva
+    affiliation: Universidad del Desarrollo
+categories: 
+  - Time allocation
+  - Intrahousehold bargaining power
+  - Multiple discrete-continuous choice modeling
+  - Gender equity
+  - Chile
+pub-info:
+  links:
+    - name: Final version
+      url: https://doi.org/10.47872/laer.v32.149
+      icon: fa-solid fa-scroll
+    # - name: Code
+    #   url: https://github.com/andrewheiss/ngo-crackdowns-philanthropy
+    #   icon: fa-brands fa-github
+    # - name: Data
+    #   url: https://github.com/andrewheiss/ngo-crackdowns-philanthropy/tree/master/data
+    #   icon: fa-solid fa-table
+    - name: Add to Zotero
+      url: https://www.zotero.org/save?type=doi&q=10.1016/j.foodpol.2021.102078
+      icon: ai ai-zotero
+  reference: >-
+    <a><strong>Cárdenas-Retamal, R.</strong></a>, <a>Barrientos Cifuentes, M.</a>, <a>Vásquez Lavin, F.</a> and <a>Ponce Oliva, R.</a> (2021). “Intrahousehold Bargaining Power and Time Allocation for Multiple Activities” <em>Latin American Economic Review</em> 32:5, doi: <a href="https://doi.org/10.47872/laer.v32.149"><code>10.47872/laer.v32.149</code></a>
+#  extra: >-
+#    Presented at the V International Conference COES: ”Concentrations” in 2018, and in the X Annual Meeting of the Chilean Society of Regional Studies SOCHER in 2018.
+doi: 10.47872/laer.v32.149
+haiku: 
+ #   - Income inequality in areas with salmon farms fell significantly compared to areas without farms.
+#    - The installment of salmon farms in remote coastal areas dampened the general trend of increased income inequality.
+ #   - The impact is equivalent to a reduction in the Gini coefficient from 0.479 to 0.464.
+---
+
+## Abstract
+
+During the last decades, important policies have been implemented to incorporate women into the labor market, reduce persistent gender inequalities, and balance the time allocation between paid and unpaid work. We assess the Chilean case considering couples’ time allocation with an explicit consideration of intrahousehold bargaining power (relative wages and education). The Chilean case is interesting because we use the first urban national survey of time use, which could help understand gender differences in labor participation. We estimate a demand model, specifically a Multiple Discrete-Continuous Extreme Value (MDCEV) model considering six time-consuming activities on weekdays and weekends. In addition, we assess two hypothetical scenarios, namely, a proxy to childcare availability policy and an increase in women’s relative wages. We found that bargaining indicators are related to how individuals allocate their time, particularly the inverse relationship between the time allocated to housework and paid work. Moreover, we found that increasing women’s bargaining power in terms of wages could produce stronger labor force participation increments. Finally, our simulations show that while women can bridge the gap between paid and unpaid work, they continue to spend more time on domestic activities than men.
+
+
+## Citation
+
+<p class="buttons" style="text-align:center;">
+<a class="btn btn-danger" target="_blank" href="https://www.zotero.org/save?type=doi&q=10.1177/0899764020971045">{{< ai zotero >}}&emsp;Add to Zotero {{< fa square-arrow-up-right >}}</a>
+</p>
+

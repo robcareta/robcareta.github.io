@@ -1,0 +1,69 @@
+---
+title: "Environmental efficiency in the salmon industry—an exploratory analysis around the 2007 ISA virus outbreak and subsequent regulations in Chile"
+date: 2023-05-14
+author:
+  - name: César Salazar
+    affiliation: Universidad del Bio-Bio
+    orcid: 0000-0002-0199-7688
+  - name: Roberto Cárdenas-Retamal
+    affiliation: University of Florida
+    orcid: 0000-0002-9578-827X
+  - name: Marcela Jaime
+    affiliation: Universidad de Concepcion
+categories: 
+  - DEA analysis
+  - Undesired outputs
+  - Environmental efficiency 
+  - Salmon aquaculture
+pub-info:
+  links:
+    - name: Final version
+      url: https://doi.org/10.1007/s10668-022-02390-8
+      icon: fa-solid fa-scroll
+    # - name: Code
+    #   url: https://github.com/andrewheiss/ngo-crackdowns-philanthropy
+    #   icon: fa-brands fa-github
+    # - name: Data
+    #   url: https://github.com/andrewheiss/ngo-crackdowns-philanthropy/tree/master/data
+    #   icon: fa-solid fa-table
+    - name: Add to Zotero
+      url: https://www.zotero.org/save?type=doi&q=10.1016/j.foodpol.2021.102078
+      icon: ai ai-zotero
+  reference: >-
+    <a>Salazar, C.</a>, <a><strong>Cárdenas-Retamal, R. </strong></a> and <a>Jaime M</a>. (2023) “Environmental efficiency in the salmon industry—an exploratory analysis around the 2007 ISA virus outbreak and subsequent regulations in Chile”. <em>Environmnent, Development and Sustainability</em> 25: 8107-8135, doi: <a href="https://doi.org/10.1007/s10668-022-02390-8"><code>10.1007/s10668-022-02390-8</code></a>
+#  extra: >-
+#    Presented at the V International Conference COES: ”Concentrations” in 2018, and in the X Annual Meeting of the Chilean Society of Regional Studies SOCHER in 2018.
+doi: 10.1007/s10668-022-02390-8
+haiku: 
+ #   - Income inequality in areas with salmon farms fell significantly compared to areas without farms.
+#    - The installment of salmon farms in remote coastal areas dampened the general trend of increased income inequality.
+ #   - The impact is equivalent to a reduction in the Gini coefficient from 0.479 to 0.464.
+---
+
+## Abstract
+
+Environmental performance indicators are key to monitoring the sustainability of production processes. In the salmon industry, there is a growing concern about the excess of nutrients that have accumulated at the bottom of marine ecosystems and the negative externalities of those nutrients on the environment. In this paper, we measure environmental performance in the salmon industry in Chile by applying a set of data envelopment analysis (DEA) models. In these models, we incorporate pollutants as undesired outputs of the production process. Our data start in the years of the ISA virus outbreak and continue into the subsequent years of recovery in which stricter sanitary norms were implemented. All the models suggest a negative trend in both average technical and environmental efficiencies during the ISA virus outbreak and a subsequent increase in efficiency scores in the following years. A gap can be observed between environmental and technical efficiency measures, a gap that widened during the first years of the regulatory change and decreased at the end of the period. We argue that these findings offer preliminary evidence that environmental performance improved because of the new regulations.
+
+
+## Citation
+
+<p class="buttons" style="text-align:center;">
+<a class="btn btn-danger" target="_blank" href="https://www.zotero.org/save?type=doi&q=10.1177/0899764020971045">{{< ai zotero >}}&emsp;Add to Zotero {{< fa square-arrow-up-right >}}</a>
+</p>
+
+```bibtex
+@article{Salazar2022,
+  title = {Environmental efficiency in the salmon industry—an exploratory analysis around the 2007 ISA virus outbreak and subsequent regulations in Chile},
+  volume = {25},
+  ISSN = {1573-2975},
+  url = {http://dx.doi.org/10.1007/s10668-022-02390-8},
+  DOI = {10.1007/s10668-022-02390-8},
+  number = {8},
+  journal = {Environment,  Development and Sustainability},
+  publisher = {Springer Science and Business Media LLC},
+  author = {Salazar,  César and Cárdenas-Retamal,  Roberto and Jaime,  Marcela},
+  year = {2022},
+  month = may,
+  pages = {8107–8135}
+}
+```

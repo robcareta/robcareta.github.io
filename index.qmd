@@ -1,0 +1,29 @@
+---
+about:
+  template: trestles
+  image: "img/ANA_1857.jpg"
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/rocardenasr
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/marvin-schmitt-a85b321a2/
+    - icon: envelope
+      text: Email
+      href: "mailto:robertocardenasr@ufl.edu"  
+---
+
+::: {#about-block}
+:::
+
+# Welcome to my website!
+
+:::{#hero-heading}
+:::
+
+I'm a PhD student in the Fisheries and Aquatic Sciences at the University of Florida. My areas of interest are mainly in seafood markets, sustainable consumption and nutritional effects on consumers. 
+
+
+
+
