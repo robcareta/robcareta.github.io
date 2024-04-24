@@ -1,0 +1,28 @@
+---
+title: "Seafood purchase, diet-related disease, and WIC participation"
+date: 2024-03-05
+author:
+  - name: Roberto Cárdenas-Retamal
+    orcid: 0000-0002-9578-827X
+    affiliation: School of Forest, Fisheries, & Geomatics Sciences, University of Florida
+  - name: Di Fang
+    affiliation: Food and Resources Economics Department, University of Florida
+  - name: Frank Asche
+    affiliation: School of Forest, Fisheries, & Geomatics Sciences, University of Florida
+categories:
+  - Seafood 
+  - Consumer behavior
+  - Diagnosis disease
+  - WIC
+pub-info:
+  reference: >-
+    <a>Roberto Cardenas-Retamal</a>, <a>Di Fang</a>, and <a>Frank Asche</a>, “Seafood purchase, diet-related disease, and WIC participation”
+#  links:
+ # - name: Code
+  #  url: https://github.com/vincentarelbundock/mfxplainer
+  #  icon: fa-brands fa-github
+pub-status: 
+  status: Writing
+  class: warning
+  icon: fa-solid fa-pencil
+---
