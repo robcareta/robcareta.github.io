@@ -16,7 +16,7 @@ categories:
   - WIC
 pub-info:
   reference: >-
-    <a>Roberto Cardenas-Retamal</a>, <a>Di Fang</a>, and <a>Frank Asche</a>, “Seafood purchase, diet-related disease, and WIC participation”
+    <strong>Roberto Cardenas-Retamal </strong>, <a>Di Fang</a>, and <a>Frank Asche</a>, “Seafood purchase, diet-related disease, and WIC participation”
 #  links:
  # - name: Code
   #  url: https://github.com/vincentarelbundock/mfxplainer
