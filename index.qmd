@@ -1,4 +1,10 @@
 ---
+title: " "
+pagetitle: "About me"
+format:
+  html:
+    quarto-template-params:
+      banner-header-class: "home"
 about:
   template: trestles
   image: "img/ANA_1857.jpg"
@@ -8,10 +14,11 @@ about:
       href: https://twitter.com/rocardenasr
     - icon: linkedin
       text: LinkedIn
-      href: https://www.linkedin.com/in/marvin-schmitt-a85b321a2/
+      href: https://www.linkedin.com/in/roberto-cárdenas-retamal-2ba2a5126 
     - icon: envelope
       text: Email
       href: "mailto:robertocardenasr@ufl.edu"  
+      
 ---
 
 ::: {#about-block}
@@ -24,6 +31,8 @@ about:
 
 I'm a PhD student in the Fisheries and Aquatic Sciences at the University of Florida. My areas of interest are mainly in seafood markets, sustainable consumption and nutritional effects on consumers. 
 
+--- 
 
+My research papers and working papers can be found [here!](research/index.qmd) 
 
 

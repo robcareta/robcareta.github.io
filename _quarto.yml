@@ -69,8 +69,8 @@ format:
     
     
     # Metadata stuff
-pagetitle: "{{< meta title >}} | Roberto Cárdenas-Retamal"
-author-meta: "Roberto Cárdenas"
+#pagetitle: "{{< meta title >}} | Roberto Cárdenas-Retamal"
+#author-meta: "Roberto Cárdenas"
 
 render:
     - "*.qmd"
