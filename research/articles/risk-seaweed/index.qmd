@@ -17,7 +17,7 @@ categories:
   - Seaweed aquaculture
 pub-info:
   reference: >-
-    <a>César Salazar</a>, <a>Marcela Jaime</a>, <strong>Roberto Cárdenas-Retamal</strong> and <a>Francisco Hernandez</a>. “Risk perception and production risk in seaweed aquaculture”.
+    <a>César Salazar</a>, <a>Marcela Jaime</a>, <strong>Roberto Cárdenas-Retamal</strong> and <a>Francisco Hernandez</a>. (2024) “Risk perception and production risk in seaweed aquaculture”.
 #  links:
  # - name: Code
   #  url: https://github.com/vincentarelbundock/mfxplainer
