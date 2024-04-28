@@ -21,7 +21,8 @@ pub-info:
       url: https://doi.org/10.1080/13657305.2024.2342270
       icon: fa-solid fa-scroll
   reference: >-
-    <a>César Salazar</a>, <a>Marcela Jaime</a>, <strong>Roberto Cárdenas-Retamal</strong> and <a>Francisco Hernandez</a>. (2024) “Risk perception and production risk in seaweed aquaculture”. <em>Aquaculture Economics & Management</em> 1 - 29., doi: <a href="https://doi.org/10.1080/13657305.2024.2342270"><code>10.1080/13657305.2024.2342270</code></a>
+    <a>César Salazar</a>, <a>Marcela Jaime</a>,<a><strong>Cárdenas-Retamal, R.</strong></a>, and <a>Francisco Hernandez</a>. (2024) “Risk perception and production risk in seaweed aquaculture”. <em>Aquaculture Economics & Management</em> 1-29, doi: <a href="https://doi.org/10.1080/13657305.2024.2342270"><code>10.1080/13657305.2024.2342270</code></a>
+
   
 #  links:
  # - name: Code
