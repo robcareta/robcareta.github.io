@@ -10,7 +10,7 @@ author:
     orcid: 0000-0002-9578-827X
     affiliation: School of Forest, Fisheries, & Geomatics Sciences, University of Florida
   - name: Francisco Hernandez
-    affiliation: Unievrsidad del Bio-Bío
+    affiliation: Universidad del Bio-Bío
 categories:
   - Production risk
   - Sample selection
@@ -20,18 +20,17 @@ pub-info:
     - name: Final version
       url: https://doi.org/10.1080/13657305.2024.2342270
       icon: fa-solid fa-scroll
-  reference: >-
-    <a>César Salazar</a>, <a>Marcela Jaime</a>,<a><strong>Cárdenas-Retamal, R.</strong></a>, and <a>Francisco Hernandez</a>. (2024) “Risk perception and production risk in seaweed aquaculture”. <em>Aquaculture Economics & Management</em> 1-29, doi: <a href="https://doi.org/10.1080/13657305.2024.2342270"><code>10.1080/13657305.2024.2342270</code></a>
+    - name: Add to Zotero
+      url: https://www.zotero.org/save?type=doi&q=10.1016/j.foodpol.2021.102078
+      icon: ai ai-zotero
+  reference: >- 
+   <a>César Salazar</a>, <a>Marcela Jaime</a>, <a><strong>Cárdenas-Retamal, R.</strong></a>, and <a>Francisco Hernandez</a>. (2024) “Risk perception and production risk in seaweed aquaculture”. <em>Aquaculture Economics & Management</em> 1-29, doi: <a href="https://doi.org/10.1080/13657305.2024.2342270"><code>10.1080/13657305.2024.2342270</code></a>
 
   
 #  links:
  # - name: Code
   #  url: https://github.com/vincentarelbundock/mfxplainer
   #  icon: fa-brands fa-github
-pub-status: 
-  status: Writing
-  class: warning
-  icon: fa-solid fa-pencil
 doi: 10.1080/13657305.2024.2342270 
 # haiku:
 #  - Forthcoming in Aquaculture Economics and Managment
