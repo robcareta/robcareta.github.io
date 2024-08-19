@@ -18,7 +18,7 @@ about:
     - icon: envelope
       text: Email
       href: "mailto:robertocardenasr@ufl.edu"  
-    - text: "{{< iconify ai google-scholar >}}"
+    - text: "{{< iconify academicons:google-scholar >}}"
       href: https://scholar.google.com/citations?user=sfOOqUkAAAAJ&hl=es
 ---
 
