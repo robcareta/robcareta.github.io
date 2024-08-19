@@ -6,7 +6,7 @@ format:
     quarto-template-params:
       banner-header-class: "home"
 about:
-  template: trestles
+  template: solana
   image: "img/ANA_1857.jpg"
   links:
     - icon: twitter
@@ -33,6 +33,6 @@ I'm a PhD student in the Fisheries and Aquatic Sciences at the University of Flo
 
 --- 
 
-My research papers and working papers can be found [here!](research/index.qmd) 
+My research papers and work in progress can be found [here!](research/index.qmd) 
 
 

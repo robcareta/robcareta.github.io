@@ -1,0 +1,68 @@
+---
+title: "Risk perception and production risk in seaweed aquaculture"
+date: 2024-04-27
+author:
+  - name: César Salazar
+    affiliation: Universidad del Bio-Bio. Research Nucleus on Environmental and Natural Resource Economics (NENRE)-EfD Chile
+    orcid: 0000-0002-0199-7688
+  - name: Marcela Jaime
+    affiliation: Universidad de Concepcion. Research Nucleus on Environmental and Natural Resource Economics (NENRE) EfD-Chile, Centre of Applied Ecology and Sustainability (CAPES)
+  - name: Roberto Cárdenas-Retamal
+    affiliation: Departamento de Economía. Facultad deCiencias Económicas y Administrativas, Universidad Católica de la Santísima Concepción. Interdisciplinary Center forAquaculture Research (INCAR)
+    orcid: 0000-0002-9578-827X
+  - name: Francisco Hernandez
+    affiliation: Universidad del Bio-Bio
+categories: 
+  - Production risk
+  - Sample selection
+  - Seaweed aquaculture
+pub-info:
+  links:
+    - name: Final version
+      url: https://doi.org/10.1080/13657305.2024.2342270
+      icon: fa-solid fa-scroll
+    # - name: Code
+    #   url: https://github.com/andrewheiss/ngo-crackdowns-philanthropy
+    #   icon: fa-brands fa-github
+    # - name: Data
+    #   url: https://github.com/andrewheiss/ngo-crackdowns-philanthropy/tree/master/data
+    #   icon: fa-solid fa-table
+    - name: Add to Zotero
+      url: https://www.zotero.org/save?type=doi.org/10.1080/13657305.2024.2342270
+      icon: ai ai-zotero
+  reference: >-
+    <a>Salazar, C.</a>, <a>Jaime, M</a>, <a><strong>Cárdenas-Retamal, R.</strong> </a> and <a>Hernandez, F.</a> (2024). “Risk perception and production risk in seaweed aquaculture”. <em>Aquaculture Economics & Management</em> 1-29, doi: <a href="https://doi.org/10.1080/13657305.2024.2342270"><code>10.1080/13657305.2024.2342270</code></a>
+#  extra: >-
+#    Presented at the V International Conference COES: ”Concentrations” in 2018, and in the X Annual Meeting of the Chilean Society of Regional Studies SOCHER in 2018.
+doi: 10.1080/13657305.2024.2342270
+haiku: 
+ #   - Income inequality in areas with salmon farms fell significantly compared to areas without farms.
+#    - The installment of salmon farms in remote coastal areas dampened the general trend of increased income inequality.
+ #   - The impact is equivalent to a reduction in the Gini coefficient from 0.479 to 0.464.
+---
+
+## Abstract
+
+Risk is an inherent characteristic of aquaculture production. For a holistic understanding of risk, the risk assessment process must account for both subjective and objective dimensions of risk. This paper empirically studies the role of risk perception and the risk properties of inputs used in aquaculture to explain the low adoption rates of seaweed farming in Chile. We propose a risk production estimation framework with selectivity to explore the role of risk, given that many aquaculture concessions remain totally or partially unexploited. We found that farmers are more likely to produce seaweed when they perceive greater access to financing, but also that this activity is more exposed to theft than other activities. Moreover, results suggest that labor and energy are risk-increasing inputs, while we found that capital and the number of hectares available are risk-decreasing inputs. The latter is important as it suggests that larger seaweed producers and more investment would reduce production variability
+
+
+## Citation
+
+<p class="buttons" style="text-align:center;">
+<a class="btn btn-danger" target="_blank" href="https://www.zotero.org/save?type=doi.org/10.1080/13657305.2024.2342270">{{< ai zotero >}}&emsp;Add to Zotero {{< fa square-arrow-up-right >}}</a>
+</p>
+
+```bibtex
+@article{Salazar2024,
+  title = {Risk perception and production risk in seaweed aquaculture},
+  ISSN = {1551-8663},
+  url = {http://dx.doi.org/10.1080/13657305.2024.2342270},
+  DOI = {10.1080/13657305.2024.2342270},
+  journal = {Aquaculture Economics &amp; Management},
+  publisher = {Informa UK Limited},
+  author = {Salazar,  César and Jaime,  Marcela and Cárdenas,  Roberto and Hernández,  Francisco},
+  year = {2024},
+  month = apr,
+  pages = {1–29}
+}
+```

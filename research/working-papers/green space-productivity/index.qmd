@@ -1,0 +1,40 @@
+---
+title: "The Effects of Acute Urban Green Space Exposure on Productivity: A Field Experiment"
+date: 2022-03-05
+author:
+  - name: Tongzhe Li
+    affiliation: University of Guelph
+  - name: Mark Patton
+    affiliation: Statistics Canada
+  - name: Roberto Cárdenas-Retamal
+    orcid: 0000-0002-9578-827X
+    affiliation: School of Forest, Fisheries, & Geomatics Sciences, University of Florida
+  - name: Danielle Roy 
+    affiliation: Univresity of Guelph
+  - name: Di Fang 
+    affiliation: University of Florida
+categories:
+  - Green space
+  - Urban space
+  - Productivity
+  - Framed field experiment
+pub-info:
+  reference: >-
+    “The Effects of Acute Urban Green Space Exposure on Productivity: A Field Experiment”
+#  links:
+ # - name: Code
+  #  url: https://github.com/vincentarelbundock/mfxplainer
+  #  icon: fa-brands fa-github
+pub-status: 
+  status: Writing
+  class: warning
+  icon: fa-solid fa-pencil
+  
+haiku: 
+  - With Tongzhe Li, Mark Patton, Danielle Roy and Di Fang 
+---
+
+
+## Abstract
+
+Increasing productivity at the individual level has proven to be a complex equation of numerous factors. The literature has provided evidence that targeted green space exposure can lend to increased attention and overall well-being improvements. On the other hand, urban settings do not provide the mind with a restful environment due to the noise, color palettes, and unnatural shapes of buildings. In this study, we examine the effects of acute green space exposure on productivity and well-being using a framed field experiment, measured by a math and a Rosenberg test, respectively. In total, 222 adult participants performed both tests before and after between-subjects treatments implemented at the session level. The two treatments consist of a 20-minute walk randomized at either a green or an urban space, while the control group spends 20 minutes inside the experiment building. We estimate the average treatment effect which shows neither of the treatments resulted in a statistically significant difference from the control group regarding participants' productivity and well-being. This is an important null result that warrants further investigation.

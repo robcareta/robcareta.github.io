@@ -11,9 +11,11 @@ author:
     affiliation: School of Forest, Fisheries, & Geomatics Sciences, University of Florida
 categories:
   - Seafood 
-  - Consumer behavior
-  - Diagnosis disease
-  - WIC
+  - WIC program
+  - Healthy diets
+  - Disease diagnosis
+  - Food policy 
+  - Scanner data
 pub-info:
   reference: >-
     “Seafood purchase, diet-related disease, and WIC participation”
