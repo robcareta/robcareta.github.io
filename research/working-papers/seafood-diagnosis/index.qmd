@@ -16,7 +16,7 @@ categories:
   - WIC
 pub-info:
   reference: >-
-    <strong>Roberto Cardenas-Retamal </strong>, <a>Di Fang</a>, and <a>Frank Asche</a>, “Seafood purchase, diet-related disease, and WIC participation”
+    “Seafood purchase, diet-related disease, and WIC participation”
 #  links:
  # - name: Code
   #  url: https://github.com/vincentarelbundock/mfxplainer
@@ -25,4 +25,8 @@ pub-status:
   status: Writing
   class: warning
   icon: fa-solid fa-pencil
+  
+haiku: 
+  - With Di Fang and Frank Asche
+  - Presented at the Agricultural & Applied Ecoonmics Association (AAEA) 2024 conference in New Orleans
 ---

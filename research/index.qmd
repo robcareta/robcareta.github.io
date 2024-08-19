@@ -19,7 +19,7 @@ toc-location: right
 
 ---
 
-## Workin progress
+## Work in progress
 
 :::{#working-papers}
 :::

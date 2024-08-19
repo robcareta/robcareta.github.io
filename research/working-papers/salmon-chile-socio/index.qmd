@@ -16,7 +16,7 @@ categories:
   - Chile
 pub-info:
   reference: >-
-    <a>Adams Ceballos-Concha</a>, <a>Frank Asche</a>, and <strong>Roberto Cárdenas-Retamal</strong>, “Salmon aquaculture in Chile: Production growth and socio-economic impact”
+    “Salmon aquaculture in Chile: Production growth and socio-economic impact”
 #  links:
  # - name: Code
   #  url: https://github.com/vincentarelbundock/mfxplainer
@@ -25,6 +25,10 @@ pub-status:
   status: Writing
   class: warning
   icon: fa-solid fa-pencil
+  
+haiku: 
+  - With Adams Ceballos and Frank Asche
+  - Review and Resubmit at Reviews in Aquaculture
 ---
 
 
