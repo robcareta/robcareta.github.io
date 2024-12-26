@@ -1,0 +1,98 @@
+---
+title: "Salmon Aquaculture in Chile: Production Growth and Socioeconomic Impacts"
+date: 2025-01-01
+author:
+  - name: Adams Ceballos-Concha
+    affiliation: University of Florida
+    orcid: 0000-0003-3822-8791
+  - name: Frank Asche
+    affiliation: University of Florida
+    orcid: 0000-0002-1540-9728
+  - name: Roberto Cárdenas-Retamal
+    affiliation: University of Florida
+    orcid: 0000-0002-9578-827X
+categories: 
+  - Aquaculture
+  - Chile
+  - Salmon
+  - Socioeconomic impacts
+pub-info:
+  links:
+    - name: Final version
+      url: https://doi.org/10.1111/raq.12993
+      icon: fa-solid fa-scroll
+    # - name: Code
+    #   url: https://github.com/andrewheiss/ngo-crackdowns-philanthropy
+    #   icon: fa-brands fa-github
+    # - name: Data
+    #   url: https://github.com/andrewheiss/ngo-crackdowns-philanthropy/tree/master/data
+    #   icon: fa-solid fa-table
+    - name: Add to Zotero
+      url: https://www.zotero.org/save?type=doi&q=10.1111/raq.12993
+      icon: ai ai-zotero
+  reference: >-
+    <a>Ceballos-Concha, A.</a>, <a>Asche, F</a>, and <a><strong>Cárdenas-Retamal, R. </strong></a> . (2025) “Salmon Aquaculture in Chile: Production Growth and Socioeconomic Impacts”. <em>Reviews in Aquaculture</em> 17(1), e12993, doi: <a href="https://doi.org/10.1111/raq.12993"><code>10.1111/raq.12993</code></a>
+#  extra: >-
+#    Presented at the V International Conference COES: ”Concentrations” in 2018, and in the X Annual Meeting of the Chilean Society of Regional Studies SOCHER in 2018.
+doi: 10.1111/raq.12993
+haiku: 
+ #   - Income inequality in areas with salmon farms fell significantly compared to areas without farms.
+#    - The installment of salmon farms in remote coastal areas dampened the general trend of increased income inequality.
+ #   - The impact is equivalent to a reduction in the Gini coefficient from 0.479 to 0.464.
+---
+
+## Abstract
+
+Global aquaculture production has been rapidly increasing in recent decades. Associated with this growth, there has been a discussion with respect to the industry's socioeconomic impact. In particular, the industry's ability to make a positive difference in the communities where it is conducted is often questioned. This is a difficult topic to address due to limited data availability. However, it is a critical question concerning the aquaculture industry's long-term viability. Some recent studies have addressed specific indicators such as poverty reduction in a given country. However, no studies review the impact of an aquaculture industry on a broad set of indicators over time. In this paper, we review the impact of the Chilean salmon industry on three broad socioeconomic indicators: employment, salary level and migration; as well as several narrower indicators. While data beyond production initially are scarce and mostly found in the gray literature, the information they provide connects well with newer data sets as they become available. Not unexpectedly, employment in the Chilean aquaculture industry increases with production. The industry pays relatively well, and it has a societal impact as opportunities created by the industry first reverse outward migration and then lead to inward migration. This is also associated with reduced poverty, a more even income distribution, a higher female labor participation ratio, and higher education levels. While the overall socioeconomic impacts of the industry are positive, they are also disrupted by severe environmental crises and show that the socioeconomic benefits are conditioned on environmental sustainability.
+
+
+## Citation
+
+<p class="buttons" style="text-align:center;">
+<a class="btn btn-danger" target="_blank" href="https://www.zotero.org/save?type=doi&q=10.1177/0899764020971045">{{< ai zotero >}}&emsp;Add to Zotero {{< fa square-arrow-up-right >}}</a>
+</p>
+
+```bibtex
+@article{Ceballos-Concha2025-yo,
+  title     = "Salmon aquaculture in Chile: Production growth and socioeconomic
+               impacts",
+  author    = "Ceballos-Concha, Adams and Asche, Frank and
+               C{\'a}rdenas-Retamal, Roberto",
+  abstract  = "ABSTRACTGlobal aquaculture production has been rapidly
+               increasing in recent decades. Associated with this growth, there
+               has been a discussion with respect to the industry's
+               socioeconomic impact. In particular, the industry's ability to
+               make a positive difference in the communities where it is
+               conducted is often questioned. This is a difficult topic to
+               address due to limited data availability. However, it is a
+               critical question concerning the aquaculture industry's
+               long‐term viability. Some recent studies have addressed specific
+               indicators such as poverty reduction in a given country.
+               However, no studies review the impact of an aquaculture industry
+               on a broad set of indicators over time. In this paper, we review
+               the impact of the Chilean salmon industry on three broad
+               socioeconomic indicators: employment, salary level and
+               migration; as well as several narrower indicators. While data
+               beyond production initially are scarce and mostly found in the
+               gray literature, the information they provide connects well with
+               newer data sets as they become available. Not unexpectedly,
+               employment in the Chilean aquaculture industry increases with
+               production. The industry pays relatively well, and it has a
+               societal impact as opportunities created by the industry first
+               reverse outward migration and then lead to inward migration.
+               This is also associated with reduced poverty, a more even income
+               distribution, a higher female labor participation ratio, and
+               higher education levels. While the overall socioeconomic impacts
+               of the industry are positive, they are also disrupted by severe
+               environmental crises and show that the socioeconomic benefits
+               are conditioned on environmental sustainability.",
+  journal   = "Rev. Aquac.",
+  publisher = "Wiley",
+  volume    =  17,
+  number    =  1,
+  month     =  jan,
+  year      =  2025,
+  copyright = "http://onlinelibrary.wiley.com/termsAndConditions\#vor",
+  language  = "en"
+}
+```

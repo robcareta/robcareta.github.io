@@ -1,5 +1,5 @@
 ---
-title: "Seafood purchase, diet-related disease, and WIC participation"
+title: "Disease diagnosis and seafood purchases in the U.S."
 date: 2024-03-05
 author:
   - name: Roberto Cárdenas-Retamal
@@ -18,7 +18,7 @@ categories:
   - Scanner data
 pub-info:
   reference: >-
-    “Seafood purchase, diet-related disease, and WIC participation”
+    “Disease diagnosis and seafood purchases in the U.S.”
 #  links:
  # - name: Code
   #  url: https://github.com/vincentarelbundock/mfxplainer
@@ -31,4 +31,6 @@ pub-status:
 haiku: 
   - With Di Fang and Frank Asche
   - Presented at the Agricultural & Applied Ecoonmics Association (AAEA) 2024 conference in New Orleans
+  - Draft soon
 ---
+
