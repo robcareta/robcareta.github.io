@@ -1,0 +1,44 @@
+---
+title: "The growing importance of aquaculture: The case of Norwegian salmon"
+date: 2024-03-05
+author:
+  - name: A. Iversen
+    affiliation: NOFIMA, Norway
+  - name: Frank Asche
+    affiliation: School of Forest, Fisheries, & Geomatics Sciences, University of Florida
+  - name: T. Nyrud
+    affiliation: NOFIMA, Norway
+  - name: R. Robertsen
+    affiliation: NOFIMA, Norway
+  - name: B.I. Bendiksen
+    affiliation: NOFIMA, Norway
+  - name: S. Steinsbø
+    affiliation: NOFIMA, Norway  
+  - name: Roberto Cárdenas-Retamal
+    orcid: 0000-0002-9578-827X
+    affiliation: School of Forest, Fisheries, & Geomatics Sciences, University of Florida
+  
+categories:
+  - Salmon industry 
+  - Norway
+  - Socioeconomic impacts
+pub-info:
+  reference: >-
+    “The growing importance of aquaculture: The case of Norwegian salmon”
+#  links:
+ # - name: Code
+  #  url: https://github.com/vincentarelbundock/mfxplainer
+  #  icon: fa-brands fa-github
+pub-status: 
+  status: Writing
+  class: warning
+  icon: fa-solid fa-pencil
+  
+haiku: 
+  #- With Di Fang and Frank Asche
+  #- Presented at the Agricultural & Applied Ecoonmics Association (AAEA) 2024 conference in New Orleans
+---
+
+## Abstract 
+
+While the rapid growth in global aquaculture production has made the industry a success story in terms of providing nutritious food, it is often criticized for its limited socio-economic effects. While there is a burgeoning literature investigating socio-economic impacts, this is a difficult topic due to limited data availability. In this paper we will review the socio-economic impacts of the Norwegian salmon aquaculture industry using economic impact analysis focusing on two impact measures, employment and value added. In contrast to earlier studies, we will cover the whole supply chain from input suppliers to sales rather than focusing on one part of the chain, and accounting for ripple effects in several rounds. This is highly important as there in 2022 were around 11,600 direct jobs in production, 8,000 jobs in additional core activities related to processing and sales and 33,000 jobs with different suppliers and service providers, for a total of 52,600 jobs in the industry. The production activities are highly dispersed geographically and mostly conducted in coastal communities. While this is also true for some types of services, the employment in the industry becomes more concentrated and moves towards larger communities and cities as one move down-stream or away from the core activities.
