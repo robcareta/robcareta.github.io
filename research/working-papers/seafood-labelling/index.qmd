@@ -1,0 +1,39 @@
+---
+title: "Sustainable seafood consumption: A hedonic analysis of eco-labeling in the U.S. market"
+date: 2025-01-01
+author:
+  - name: Roberto Cárdenas-Retamal
+    orcid: 0000-0002-9578-827X
+    affiliation: School of Forest, Fisheries, & Geomatics Sciences, University of Florida
+  - name: Frank Asche
+    affiliation: School of Forest, Fisheries, & Geomatics Sciences, University of Florida
+  - name: Di Fang
+    affiliation: Food and Resources Economics Department, University of Florida
+
+categories:
+  - Ecolabeling
+  - Seafood market
+  - Price premium
+  - Hedonic price
+  - Homescan data
+  - Mmarine stewardship council
+pub-info:
+  reference: >-
+    “Sustainable seafood consumption: A hedonic analysis of eco-labeling in the U.S. market”
+#  links:
+ # - name: Code
+  #  url: https://github.com/vincentarelbundock/mfxplainer
+  #  icon: fa-brands fa-github
+pub-status: 
+  status: Writing
+  class: warning
+  icon: fa-solid fa-pencil
+  
+#haiku: 
+  #- With Di Fang and Frank Asche
+  #- Presented at the Agricultural & Applied Ecoonmics Association (AAEA) 2024 conference in New Orleans
+---
+
+# Abstract 
+
+Ecolabels are an attribute that provides important information to consumers about the sustainability of the production process, contributing to reducing the information gap between consumers and producers. Although the price premiums for ecolabels in the seafood market are well-studied in Europe, this is not the case for the U.S. an important market in the global seafood markets, despite the concerns concerning environmental sustainability. In this article we explored the price premium for sustainable labeling in the seafood market in the United States, using the NielsenIQ Consumer Panel data from the 2010-2020 period, we extracted the price of the seafood products, as well as their attributes and we connected this dataset with the ecolabel of the Marine Stewardship Council (MSC) obtained from the MSC. We worked with cod, haddock, and tuna data, and we tested the ecolabel variable using a hedonic prices approach and some spatial models. Our results show that households pay a premium for seafood with a sustainable label, as well as a number of attributes, such as brands and product form. 
