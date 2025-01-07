@@ -16,7 +16,7 @@ categories:
   - Price premium
   - Hedonic price
   - Homescan data
-  - Mmarine stewardship council
+  - Marine stewardship council
 pub-info:
   reference: >-
     “Sustainable seafood consumption: A hedonic analysis of eco-labeling in the U.S. market”
