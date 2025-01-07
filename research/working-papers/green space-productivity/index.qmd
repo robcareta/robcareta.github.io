@@ -31,7 +31,7 @@ pub-status:
   icon: fa-solid fa-pencil
   
 haiku: 
-  - With Tongzhe Li, Mark Patton, Danielle Roy and Di Fang
+ # - With Tongzhe Li, Mark Patton, Danielle Roy and Di Fang
   - Under review at Journal of Economic Behavior & Organization
 ---
 

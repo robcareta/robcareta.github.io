@@ -29,7 +29,10 @@ pub-status:
   icon: fa-solid fa-pencil
   
 haiku: 
-  - With Di Fang and Frank Asche
+  #- With Di Fang and Frank Asche
   - Presented at the Agricultural & Applied Ecoonmics Association (AAEA) 2024 conference in New Orleans
 ---
 
+# Abstract 
+
+Disease diagnosis plays a critical turning point in individuals’ lives, often incentivizing lifestyle changes. However, how these events lead to significant changes in short and long-term food choices remains less-studied. Despite the well-documented health benefits of seafood, its consumption remains below recommended levels. Addressing this challenge, food assistance programs, such as the Special Supplemental Nutrition Program for Women, Infants, and Children (WIC), have updated their offerings to include seafood, aiming to promote healthier diets among low-income populations. Using a difference-in-difference methodology, this study examines how various disease diagnoses affected seafood purchase behaviors in the U.S. Using the Nielson IQ dataset from 2011 to 2020, our findings show a significant increase in seafood purchases post-diagnosis, with more pronounced effects observed among wealthier and higher-educated households.
