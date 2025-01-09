@@ -5,6 +5,7 @@ website:
   title: "Roberto Cárdenas-Retamal"                                # Your name
   description: ""   # A brief slogan (optional)
   image: img/ANA_1857.jpg
+  google-analytics: "G-H4P0QZL89D"
 
   
   #favicon:
