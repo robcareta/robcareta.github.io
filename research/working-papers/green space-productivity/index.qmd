@@ -32,7 +32,7 @@ pub-status:
   
 haiku: 
  # - With Tongzhe Li, Mark Patton, Danielle Roy and Di Fang
-  - Under review at Journal of Economic Behavior & Organization
+ # - Under review at Journal of Economic Behavior & Organization
 ---
 
 

@@ -36,7 +36,7 @@ pub-status:
   
 haiku: 
   #- With Di Fang and Frank Asche
-  #- Presented at the Agricultural & Applied Ecoonmics Association (AAEA) 2024 conference in New Orleans
+  - Under review at Reviews in Aquaculture
 ---
 
 ## Abstract 

@@ -35,4 +35,16 @@ haiku:
 
 # Abstract 
 
-Disease diagnosis plays a critical turning point in individuals’ lives, often incentivizing lifestyle changes. However, how these events lead to significant changes in short and long-term food choices remains less-studied. Despite the well-documented health benefits of seafood, its consumption remains below recommended levels. Addressing this challenge, food assistance programs, such as the Special Supplemental Nutrition Program for Women, Infants, and Children (WIC), have updated their offerings to include seafood, aiming to promote healthier diets among low-income populations. Using a difference-in-difference methodology, this study examines how various disease diagnoses affected seafood purchase behaviors in the U.S. Using the Nielson IQ dataset from 2011 to 2020, our findings show a significant increase in seafood purchases post-diagnosis, with more pronounced effects observed among wealthier and higher-educated households.
+Disease diagnosis can be a critical turning point in individuals’ lives and incentivize them to make lifestyle changes.
+However, the extent to which these events lead to significant changes in short- and long-term food choices and the
+extent to which this depends on diagnosis and demographics remain less studied. Seafood is a food group that is
+particularly interesting in this context. Despite well-documented health benefits, seafood consumption remains below
+recommended levels and vary significantly between demographic groups. Using the NielsenIQ datasets, this
+study examines how three diet-related disease diagnoses, type 2 diabetes, high cholesterol, and heart disease, affected
+seafood purchasing behaviors in the United States, using a two-stage difference in difference approach. Our
+findings show a significant increase in seafood purchases post-diagnosis by 5%–8% for all diagnosis; the persistence
+of the impact vary between 5 and 12 years depending on the diagnosis, before the effect eventually declines. There is
+heterogeneity in the results, showing that demographic differences in households play an important role in seafood
+purchases responses to a diagnosis. In particular, although the wealthier and more educated always increase their
+purchases, the poorest groups increase in a higher proportion when they are diagnosed with type 2 diabetes but do
+not respond to a diagnosis related to heart disease

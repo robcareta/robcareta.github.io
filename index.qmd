@@ -34,6 +34,6 @@ I’m a PhD candidate in the Fisheries and Aquatic Sciences program at the Unive
 
 --- 
 
-You can find my research papers and ongoing projects [here!](research/index.qmd) 
+You can find my research papers and ongoing projects [on this page](research/index.qmd) 
 
 

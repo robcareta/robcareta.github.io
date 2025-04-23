@@ -31,7 +31,7 @@ pub-status:
   
 #haiku: 
   #- With Di Fang and Frank Asche
-  #- Presented at the Agricultural & Applied Ecoonmics Association (AAEA) 2024 conference in New Orleans
+  - Presented at the North American Association of Fisheries Economists (NAAFE) 2025 Forum in La Jolla, CA
 ---
 
 # Abstract 
