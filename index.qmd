@@ -30,10 +30,10 @@ about:
 :::{#hero-heading}
 :::
 
-I'm a PhD candidate in the Fisheries and Aquatic Sciences program at the University of Florida. My areas of interest are mainly in seafood markets, sustainable consumption and nutritional effects on consumers. My dissertation is about incentives and product attributes in seafood markets.
+I’m a PhD candidate in the Fisheries and Aquatic Sciences program at the University of Florida. My research focuses on seafood markets, sustainable consumption, and the nutritional impacts of seafood on consumers. My dissertation explores how incentives and product attributes influence consumer behavior in seafood markets.
 
 --- 
 
-My research papers and work in progress can be found [here!](research/index.qmd) 
+You can find my research papers and ongoing projects [here!](research/index.qmd) 
 
 
