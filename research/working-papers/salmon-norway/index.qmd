@@ -36,7 +36,7 @@ pub-status:
   
 haiku: 
   #- With Di Fang and Frank Asche
-  - Under review at Reviews in Aquaculture
+  - R&R at Reviews in Aquaculture
 ---
 
 ## Abstract 
