@@ -35,7 +35,6 @@ pub-status:
   icon: fa-solid fa-pencil
   
 haiku: 
-  #- With Di Fang and Frank Asche
   - R&R at Reviews in Aquaculture
 ---
 

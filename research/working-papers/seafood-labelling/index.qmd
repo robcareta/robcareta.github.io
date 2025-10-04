@@ -1,5 +1,5 @@
 ---
-title: "Sustainable seafood consumption: A hedonic analysis of eco-labeling in the U.S. market"
+title: "Sustainable seafood consumption: A hedonic analysis of eco-labeling in the haddock U.S. market"
 date: 2025-01-01
 author:
   - name: Roberto Cárdenas-Retamal
@@ -19,7 +19,7 @@ categories:
   - Marine stewardship council
 pub-info:
   reference: >-
-    “Sustainable seafood consumption: A hedonic analysis of eco-labeling in the U.S. market”
+    “Sustainable seafood consumption: A hedonic analysis of eco-labeling in the haddock U.S. market”
 #  links:
  # - name: Code
   #  url: https://github.com/vincentarelbundock/mfxplainer
@@ -27,13 +27,12 @@ pub-info:
 pub-status: 
   status: Writing
   class: warning
-  icon: fa-solid fa-pencil
+  icon: "fa-solid fa-pencil"
   
-#haiku: 
-  #- With Di Fang and Frank Asche
+haiku: 
   - Presented at the North American Association of Fisheries Economists (NAAFE) 2025 Forum in La Jolla, CA
 ---
 
 # Abstract 
 
-Ecolabels are an attribute that provides important information to consumers about the sustainability of the production process, contributing to reducing the information gap between consumers and producers. Although the price premiums for ecolabels in the seafood market are well-studied in Europe, this is not the case for the U.S. an important market in the global seafood markets, despite the concerns concerning environmental sustainability. In this article we explored the price premium for sustainable labeling in the seafood market in the United States, using the NielsenIQ Consumer Panel data from the 2010-2020 period, we extracted the price of the seafood products, as well as their attributes and we connected this dataset with the ecolabel of the Marine Stewardship Council (MSC) obtained from the MSC. We worked with cod, haddock, and tuna data, and we tested the ecolabel variable using a hedonic prices approach and some spatial models. Our results show that households pay a premium for seafood with a sustainable label, as well as a number of attributes, such as brands and product form. 
+Ecolabels signaling a sustainable or responsible production process have become an important product attribute for many food products including seafood. If an ecolabel is to incentivize improved production practises, there must be a price premium associated with the label. Although price premiums for ecolabels in seafood markets have been been studied in several European markets, evidence from the U.S. market is scarce, despite the importance of US in the global seafood market. In this study, we estimated the price premium for haddock labeled with the ecolabel of the Marine Stewardship Council (MSC) in the U.S. We used the NielsenIQ Consumer Panel data from the 2013-2020, and connected this dataset with the MSC-ecolabel using UPC-codes obtained from the MSC. The premium of the MSC-ecolabel as well as other product attributes are estimated using a hedonic price model. Our results indicate that U.S. households on average pay a 22% premium for MSC-labeled haddock. However, only high- and low-income households are found to pay a premium, while the attribute is insignificant for middle-income households.

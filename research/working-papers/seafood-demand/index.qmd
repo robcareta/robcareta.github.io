@@ -23,10 +23,8 @@ pub-info:
 pub-status: 
   status: Writing
   class: warning
-  icon: fa-solid fa-pencil
+  icon: "fa-solid fa-pencil"
   
-#haiku: 
-  #- With Di Fang and Frank Asche
 
 ---
 

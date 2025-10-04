@@ -28,11 +28,10 @@ pub-info:
 pub-status: 
   status: Writing
   class: warning
-  icon: fa-solid fa-pencil
+  icon: "fa-solid fa-pencil"
   
 haiku: 
- # - With Tongzhe Li, Mark Patton, Danielle Roy and Di Fang
- # - Under review at Journal of Economic Behavior & Organization
+ - Under review at Land Economics
 ---
 
 
