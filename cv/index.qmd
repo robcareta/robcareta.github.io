@@ -6,7 +6,7 @@ engine: knitr
 resources:
   - "cv.pdf"
 cv:
-  pdf: "cv.pdf"
+  pdf: "CV.pdf"
 title-block-banner: false
 ---
 
