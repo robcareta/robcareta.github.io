@@ -1,0 +1,91 @@
+---
+title: "The growing importance of aquaculture: The case of Norwegian salmon"
+date: 2025-01-01
+author:
+  - name: A. Iversen
+    affiliation: NOFIMA, Norway
+  - name: Frank Asche
+    affiliation: School of Forest, Fisheries, & Geomatics Sciences, University of Florida
+  - name: T. Nyrud
+    affiliation: NOFIMA, Norway
+  - name: R. Robertsen
+    affiliation: NOFIMA, Norway
+  - name: B.I. Bendiksen
+    affiliation: NOFIMA, Norway
+  - name: S. Steinsbø
+    affiliation: NOFIMA, Norway  
+  - name: Roberto Cárdenas-Retamal
+    orcid: 0000-0002-9578-827X
+    affiliation: School of Forest, Fisheries, & Geomatics Sciences, University of Florida
+  
+categories: 
+  - Aquaculture  
+  - Input–output analysis
+  - Ripple effects 
+  - Salmon
+pub-info:
+  links:
+    - name: Final version
+      url: https://doi.org/10.1111%2Fraq.70088
+      icon: fa-solid fa-scroll
+      
+  reference: >-
+    <a>Iversen, A.</a>, <a>Asche, F.</a>, <a>Nyrud, T.</a>, <a>Robertsen, R.</a>, <a>Bendiksen, B. I.</a>, <a><strong>Cárdenas-Retamal, R. </strong></a>, and <a>Steinsbø, S</a>.  (2025) “The Growing Importance of Aquaculture: The Case of Norwegian Salmon”. <em>Reviews in Aquaculture</em> 17(4),e70088, doi: <a href=" https://doi.org/10.1111/raq.70088"><code>10.1111/raq.70088</code></a>
+
+doi: 10.1111/raq.70088
+haiku: 
+ #   - Income inequality in areas with salmon farms fell significantly compared to areas without farms.
+#    - The installment of salmon farms in remote coastal areas dampened the general trend of increased income inequality.
+ #   - The impact is equivalent to a reduction in the Gini coefficient from 0.479 to 0.464.
+---
+
+## Abstract
+
+While the rapid growth in global aquaculture production has made the industry a success story in terms of providing nutritious food, it is often criticized for its limited socioeconomic effects. While there is a burgeoning literature investigating socioeconomic impacts, this is a difficult topic due to limited data availability. In this paper, we will review the socioeconomic impacts of the Norwegian salmon aquaculture industry using economic impact analysis, focusing on two impact measures: employment and value added. In contrast to earlier studies, we will cover the whole supply chain from input suppliers to sales rather than focusing on one part of the chain and accounting for ripple effects in several rounds. This is highly important as there, in 2022, were 11,175 direct jobs in production, 8500 jobs in additional core activities related to processing and sales, and 38,000 jobs with different suppliers and service providers, for a total of 57,800 jobs in the industry. The production activities are highly dispersed geographically and mostly conducted in coastal communities. While this is also true for some types of services, the employment in the industry becomes more concentrated and moves toward larger communities and cities as one moves downstream or away from the core activities.
+
+## Citation
+
+<p class="buttons" style="text-align:center;">
+<a class="btn btn-danger" target="_blank" href="https://www.zotero.org/save?type=doi&q=10.1177/0899764020971045">{{< ai zotero >}}&emsp;Add to Zotero {{< fa square-arrow-up-right >}}</a>
+</p>
+
+```bibtex
+@ARTICLE{Iversen2025-kk,
+  title     = "The growing importance of aquaculture: The case of Norwegian
+               salmon",
+  author    = "Iversen, Audun and Asche, Frank and Nyrud, Thomas and Robertsen,
+               Roy and Bendiksen, Bj{\o}rn Inge and C{\'a}rdenas-Retamal,
+               Roberto and Steinsb{\o}, Silje",
+  abstract  = "ABSTRACTWhile the rapid growth in global aquaculture production
+               has made the industry a success story in terms of providing
+               nutritious food, it is often criticized for its limited
+               socioeconomic effects. While there is a burgeoning literature
+               investigating socioeconomic impacts, this is a difficult topic
+               due to limited data availability. In this paper, we will review
+               the socioeconomic impacts of the Norwegian salmon aquaculture
+               industry using economic impact analysis, focusing on two impact
+               measures: employment and value added. In contrast to earlier
+               studies, we will cover the whole supply chain from input
+               suppliers to sales rather than focusing on one part of the chain
+               and accounting for ripple effects in several rounds. This is
+               highly important as there, in 2022, were 11,175 direct jobs in
+               production, 8500 jobs in additional core activities related to
+               processing and sales, and 38,000 jobs with different suppliers
+               and service providers, for a total of 57,800 jobs in the
+               industry. The production activities are highly dispersed
+               geographically and mostly conducted in coastal communities.
+               While this is also true for some types of services, the
+               employment in the industry becomes more concentrated and moves
+               toward larger communities and cities as one moves downstream or
+               away from the core activities.",
+  journal   = "Rev. Aquac.",
+  publisher = "Wiley",
+  volume    =  17,
+  number    =  4,
+  month     =  sep,
+  year      =  2025,
+  copyright = "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+  language  = "en"
+}
+
+```
