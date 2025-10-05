@@ -424,12 +424,12 @@ pre.text, pre.sourceCode, .cell-output pre {
 
 .research {
     .back-nav a {
-        color: shift-color($green, -80%);
+        color: shift-color($blue, -80%);
     }
     
     .quarto-title .quarto-categories .quarto-category {
-        background-color: shift-color($green, -75%);
-        color: $green;
+        background-color: shift-color($blue, -75%);
+        color: $blue;
         font-size: 0.65em;
         opacity: 1;
     }
