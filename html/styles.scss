@@ -99,7 +99,7 @@ $code-color: $gray-900 !default;
 $btn-code-copy-color-active: $orange !default;
 
 // TOC
-$toc-color: $green;
+$toc-color: $blue;
 $toc-font-size: 1em;
 
 // Navbar
@@ -461,7 +461,7 @@ pre.text, pre.sourceCode, .cell-output pre {
 
         li.project {
             margin-bottom: 2.5em;
-            border-left: 6px solid shift-color($green, -90%);
+            border-left: 6px solid shift-color($blue, -90%);
 
             p {
                 margin: 0;
