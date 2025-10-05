@@ -9,9 +9,9 @@ about:
   template: solana
   image: "img/ANA_1857.jpg"
   links:
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com/rocardenasr
+    # - icon: twitter
+    #   text: Twitter
+    #   href: https://twitter.com/rocardenasr
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/roberto-cárdenas-retamal-2ba2a5126 
@@ -37,3 +37,8 @@ I’m a PhD candidate in the Fisheries and Aquatic Sciences program at the Unive
 You can find my research papers and ongoing projects [on this page](research/index.qmd) 
 
 
+::: callout-note
+
+I am currently on the academic job market for positions starting in 2025–2026
+
+:::
