@@ -46,23 +46,23 @@ haiku:
 Risk is an inherent characteristic of aquaculture production. For a holistic understanding of risk, the risk assessment process must account for both subjective and objective dimensions of risk. This paper empirically studies the role of risk perception and the risk properties of inputs used in aquaculture to explain the low adoption rates of seaweed farming in Chile. We propose a risk production estimation framework with selectivity to explore the role of risk, given that many aquaculture concessions remain totally or partially unexploited. We found that farmers are more likely to produce seaweed when they perceive greater access to financing, but also that this activity is more exposed to theft than other activities. Moreover, results suggest that labor and energy are risk-increasing inputs, while we found that capital and the number of hectares available are risk-decreasing inputs. The latter is important as it suggests that larger seaweed producers and more investment would reduce production variability
 
 
-## Citation
+<!-- ## Citation -->
 
-<p class="buttons" style="text-align:center;">
-<a class="btn btn-danger" target="_blank" href="https://www.zotero.org/save?type=doi.org/10.1080/13657305.2024.2342270">{{< ai zotero >}}&emsp;Add to Zotero {{< fa square-arrow-up-right >}}</a>
-</p>
+<!-- <p class="buttons" style="text-align:center;"> -->
+<!-- <a class="btn btn-danger" target="_blank" href="https://www.zotero.org/save?type=doi.org/10.1080/13657305.2024.2342270">{{< ai zotero >}}&emsp;Add to Zotero {{< fa square-arrow-up-right >}}</a> -->
+<!-- </p> -->
 
-```bibtex
-@article{Salazar2024,
-  title = {Risk perception and production risk in seaweed aquaculture},
-  ISSN = {1551-8663},
-  url = {http://dx.doi.org/10.1080/13657305.2024.2342270},
-  DOI = {10.1080/13657305.2024.2342270},
-  journal = {Aquaculture Economics &amp; Management},
-  publisher = {Informa UK Limited},
-  author = {Salazar,  César and Jaime,  Marcela and Cárdenas,  Roberto and Hernández,  Francisco},
-  year = {2024},
-  month = apr,
-  pages = {1–29}
-}
-```
+<!-- ```bibtex -->
+<!-- @article{Salazar2024, -->
+<!--   title = {Risk perception and production risk in seaweed aquaculture}, -->
+<!--   ISSN = {1551-8663}, -->
+<!--   url = {http://dx.doi.org/10.1080/13657305.2024.2342270}, -->
+<!--   DOI = {10.1080/13657305.2024.2342270}, -->
+<!--   journal = {Aquaculture Economics &amp; Management}, -->
+<!--   publisher = {Informa UK Limited}, -->
+<!--   author = {Salazar,  César and Jaime,  Marcela and Cárdenas,  Roberto and Hernández,  Francisco}, -->
+<!--   year = {2024}, -->
+<!--   month = apr, -->
+<!--   pages = {1–29} -->
+<!-- } -->
+<!-- ``` -->

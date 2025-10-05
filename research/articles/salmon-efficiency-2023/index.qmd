@@ -45,25 +45,25 @@ haiku:
 Environmental performance indicators are key to monitoring the sustainability of production processes. In the salmon industry, there is a growing concern about the excess of nutrients that have accumulated at the bottom of marine ecosystems and the negative externalities of those nutrients on the environment. In this paper, we measure environmental performance in the salmon industry in Chile by applying a set of data envelopment analysis (DEA) models. In these models, we incorporate pollutants as undesired outputs of the production process. Our data start in the years of the ISA virus outbreak and continue into the subsequent years of recovery in which stricter sanitary norms were implemented. All the models suggest a negative trend in both average technical and environmental efficiencies during the ISA virus outbreak and a subsequent increase in efficiency scores in the following years. A gap can be observed between environmental and technical efficiency measures, a gap that widened during the first years of the regulatory change and decreased at the end of the period. We argue that these findings offer preliminary evidence that environmental performance improved because of the new regulations.
 
 
-## Citation
+<!-- ## Citation -->
 
-<p class="buttons" style="text-align:center;">
-<a class="btn btn-danger" target="_blank" href="https://www.zotero.org/save?type=doi&q=10.1177/0899764020971045">{{< ai zotero >}}&emsp;Add to Zotero {{< fa square-arrow-up-right >}}</a>
-</p>
+<!-- <p class="buttons" style="text-align:center;"> -->
+<!-- <a class="btn btn-danger" target="_blank" href="https://www.zotero.org/save?type=doi&q=10.1177/0899764020971045">{{< ai zotero >}}&emsp;Add to Zotero {{< fa square-arrow-up-right >}}</a> -->
+<!-- </p> -->
 
-```bibtex
-@article{Salazar2022,
-  title = {Environmental efficiency in the salmon industry—an exploratory analysis around the 2007 ISA virus outbreak and subsequent regulations in Chile},
-  volume = {25},
-  ISSN = {1573-2975},
-  url = {http://dx.doi.org/10.1007/s10668-022-02390-8},
-  DOI = {10.1007/s10668-022-02390-8},
-  number = {8},
-  journal = {Environment,  Development and Sustainability},
-  publisher = {Springer Science and Business Media LLC},
-  author = {Salazar,  César and Cárdenas-Retamal,  Roberto and Jaime,  Marcela},
-  year = {2022},
-  month = may,
-  pages = {8107–8135}
-}
-```
+<!-- ```bibtex -->
+<!-- @article{Salazar2022, -->
+<!--   title = {Environmental efficiency in the salmon industry—an exploratory analysis around the 2007 ISA virus outbreak and subsequent regulations in Chile}, -->
+<!--   volume = {25}, -->
+<!--   ISSN = {1573-2975}, -->
+<!--   url = {http://dx.doi.org/10.1007/s10668-022-02390-8}, -->
+<!--   DOI = {10.1007/s10668-022-02390-8}, -->
+<!--   number = {8}, -->
+<!--   journal = {Environment,  Development and Sustainability}, -->
+<!--   publisher = {Springer Science and Business Media LLC}, -->
+<!--   author = {Salazar,  César and Cárdenas-Retamal,  Roberto and Jaime,  Marcela}, -->
+<!--   year = {2022}, -->
+<!--   month = may, -->
+<!--   pages = {8107–8135} -->
+<!-- } -->
+<!-- ``` -->

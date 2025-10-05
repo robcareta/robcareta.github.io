@@ -48,25 +48,25 @@ haiku:
 Women's participation in small-scale aquaculture is growing, but women producers remain in a disadvantaged position compared to men. Reducing gender gaps is at the core of many development programs, but little is known regarding the source of these differences. This paper investigates the main drivers of gender gaps in seaweed small-scale aquaculture by focusing on the analysis of differences between male and women, and across a series of psychological traits. We use data from a sample of 152 seaweed producers from central-southern Chile and perform a matching procedure to generate a balanced sample of male and female producers in the dimensions determining their performance in the sector. Our results show that female producers may exhibit more positive psychological traits such as patience and interpersonal trust. However, women's choices in seaweed farming may be incongruent with these characteristics, as expecting more immediate returns than males, and may not be able to exploit the advantages of collaboration in selling in the sector. This supports the notion that opportunity costs (e.g., other activities in the marine area) and outside options (e.g., fishing versus trade) may be one of the major drivers of gender gaps and suggests that there are barriers keeping women from exploiting their potentially advantageous individual characteristics. Results provide important insights for the design of support instruments aimed at reducing these barriers faced by women in the sector
 
 
-## Citation
+<!-- ## Citation -->
 
-<p class="buttons" style="text-align:center;">
-<a class="btn btn-danger" target="_blank" href="https://www.zotero.org/save?type=doi&q=10.1177/0899764020971045">{{< ai zotero >}}&emsp;Add to Zotero {{< fa square-arrow-up-right >}}</a>
-</p>
+<!-- <p class="buttons" style="text-align:center;"> -->
+<!-- <a class="btn btn-danger" target="_blank" href="https://www.zotero.org/save?type=doi&q=10.1177/0899764020971045">{{< ai zotero >}}&emsp;Add to Zotero {{< fa square-arrow-up-right >}}</a> -->
+<!-- </p> -->
 
-```bibtex
-@article{Salazar2023,
-  title = {Women engagement,  psychological traits,  and gender gaps in the small‐scale seaweed aquaculture in Chile},
-  volume = {15},
-  ISSN = {1753-5131},
-  url = {http://dx.doi.org/10.1111/raq.12793},
-  DOI = {10.1111/raq.12793},
-  number = {4},
-  journal = {Reviews in Aquaculture},
-  publisher = {Wiley},
-  author = {Salazar,  César and Jaime,  Marcela and Retamal,  Roberto Cárdenas and Baquedano,  Marjorie},
-  year = {2023},
-  month = jan,
-  pages = {1540–1553}
-}
-```
+<!-- ```bibtex -->
+<!-- @article{Salazar2023, -->
+<!--   title = {Women engagement,  psychological traits,  and gender gaps in the small‐scale seaweed aquaculture in Chile}, -->
+<!--   volume = {15}, -->
+<!--   ISSN = {1753-5131}, -->
+<!--   url = {http://dx.doi.org/10.1111/raq.12793}, -->
+<!--   DOI = {10.1111/raq.12793}, -->
+<!--   number = {4}, -->
+<!--   journal = {Reviews in Aquaculture}, -->
+<!--   publisher = {Wiley}, -->
+<!--   author = {Salazar,  César and Jaime,  Marcela and Retamal,  Roberto Cárdenas and Baquedano,  Marjorie}, -->
+<!--   year = {2023}, -->
+<!--   month = jan, -->
+<!--   pages = {1540–1553} -->
+<!-- } -->
+<!-- ``` -->

@@ -47,9 +47,9 @@ haiku:
 During the last decades, important policies have been implemented to incorporate women into the labor market, reduce persistent gender inequalities, and balance the time allocation between paid and unpaid work. We assess the Chilean case considering couples’ time allocation with an explicit consideration of intrahousehold bargaining power (relative wages and education). The Chilean case is interesting because we use the first urban national survey of time use, which could help understand gender differences in labor participation. We estimate a demand model, specifically a Multiple Discrete-Continuous Extreme Value (MDCEV) model considering six time-consuming activities on weekdays and weekends. In addition, we assess two hypothetical scenarios, namely, a proxy to childcare availability policy and an increase in women’s relative wages. We found that bargaining indicators are related to how individuals allocate their time, particularly the inverse relationship between the time allocated to housework and paid work. Moreover, we found that increasing women’s bargaining power in terms of wages could produce stronger labor force participation increments. Finally, our simulations show that while women can bridge the gap between paid and unpaid work, they continue to spend more time on domestic activities than men.
 
 
-## Citation
+<!-- ## Citation -->
 
-<p class="buttons" style="text-align:center;">
-<a class="btn btn-danger" target="_blank" href="https://www.zotero.org/save?type=doi&q=10.1177/0899764020971045">{{< ai zotero >}}&emsp;Add to Zotero {{< fa square-arrow-up-right >}}</a>
-</p>
+<!-- <p class="buttons" style="text-align:center;"> -->
+<!-- <a class="btn btn-danger" target="_blank" href="https://www.zotero.org/save?type=doi&q=10.1177/0899764020971045">{{< ai zotero >}}&emsp;Add to Zotero {{< fa square-arrow-up-right >}}</a> -->
+<!-- </p> -->
 
