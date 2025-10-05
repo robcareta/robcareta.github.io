@@ -30,6 +30,9 @@ $green:   #118230 !default;
 $teal:    #008080 !default;
 $cyan:    #3093CF !default;
 
+
+// --- Paleta original ---
+/*
 $primary:   $pink !default;
 $secondary: $gray-700 !default;
 $success:   $green !default;
@@ -38,6 +41,26 @@ $warning:   $orange !default;
 $danger:    $red !default;
 $light:     $gray-400 !default;
 $dark:      $black !default;
+
+*/
+
+
+// --- Paleta Marina / profesiona ---
+$blue:    #005f73;
+$teal:    #0a9396;
+$cyan:    #94d2bd;
+$orange:  #ee9b00;
+$yellow:  #e9d8a6;
+$gray-900: #001219;
+
+$primary:   $teal;
+$secondary: $cyan;
+$navbar-bg: $blue;
+$link-color: $teal;
+$link-hover-color: $orange;
+$footer-bg: $gray-900;
+
+
 
 // $min-contrast-ratio: 2.6 !default;
 
