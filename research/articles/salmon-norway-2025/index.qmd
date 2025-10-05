@@ -1,6 +1,6 @@
 ---
 title: "The growing importance of aquaculture: The case of Norwegian salmon"
-date: 2025-01-01
+date: 2025-09-12
 author:
   - name: A. Iversen
     affiliation: NOFIMA, Norway
