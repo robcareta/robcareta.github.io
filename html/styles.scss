@@ -86,7 +86,7 @@ $footer-font-family: "Jost" !default;
 $body-color: $gray-900 !default;
 
 // Links
-$link-color: $teal !default;
+$link-color: $blue !default;
 $link-decoration: none !default;
 $link-hover-color: $red !default;
 $link-hover-decoration: underline !default;
@@ -103,7 +103,7 @@ $toc-color: $green;
 $toc-font-size: 1em;
 
 // Navbar
-$navbar-bg: $teal !default;
+$navbar-bg: $blue !default;
 $navbar-fg: $white !default;
 $navbar-hl: $gray-400 !default;
 
@@ -223,7 +223,7 @@ pre.text, pre.sourceCode, .cell-output pre {
     font-family: $footer-font-family;
 
     a {
-        color: $teal
+        color: $blue
     }
 
     .faux-block {
@@ -362,8 +362,8 @@ pre.text, pre.sourceCode, .cell-output pre {
         margin-top: 1.5em;
 
         .quarto-category {
-            background-color: shift-color($teal, -25%);
-            border-color: shift-color($teal, -45%);
+            background-color: shift-color($blue, -25%);
+            border-color: shift-color($blue, -45%);
             color: $white;
             font-size: 0.65em;
             opacity: 1;
@@ -395,7 +395,7 @@ pre.text, pre.sourceCode, .cell-output pre {
     }
 
     .project-details {
-        background-color: rgba($teal, 0.1);
+        background-color: rgba($blue, 0.1);
         padding: 0.75em;
         margin: 1em 0;
     }
@@ -500,7 +500,7 @@ pre.text, pre.sourceCode, .cell-output pre {
 
     .project-details-listing {
         margin-top: 0.8em;
-        background-color: shift-color($teal, -90%);
+        background-color: shift-color($blue, -90%);
         font-size: 0.9rem;
 
         @media (max-width: map-get($grid-breakpoints, md)) {
@@ -514,7 +514,7 @@ pre.text, pre.sourceCode, .cell-output pre {
         }
 
         .details {
-            background-color: $teal;
+            background-color: $blue;
             padding-right: 1.5em;
 
             a {
@@ -650,13 +650,13 @@ pre.text, pre.sourceCode, .cell-output pre {
 
 .cv-download {
     font-family: $headings-font-family;
-    background-color: $teal;
-    border-color: $teal;
+    background-color: $blue;
+    border-color: $blue;
     color: $white;
 
     &:hover {
-        background-color: $teal;
-        border-color: $teal;
+        background-color: $blue;
+        border-color: $blue;
         color: $white;
     }
 }
