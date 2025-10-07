@@ -27,9 +27,9 @@ pub-info:
     # - name: Data
     #   url: https://github.com/andrewheiss/ngo-crackdowns-philanthropy/tree/master/data
     #   icon: fa-solid fa-table
-    - name: Add to Zotero
-      url: https://www.zotero.org/save?type=doi.org/10.1080/13657305.2024.2342270
-      icon: ai ai-zotero
+    # - name: Add to Zotero
+    #   url: https://www.zotero.org/save?type=doi.org/10.1080/13657305.2024.2342270
+    #   icon: ai ai-zotero
   reference: >-
     <a>Salazar, C.</a>, <a>Jaime, M</a>, <a><strong>Cárdenas-Retamal, R.</strong> </a> and <a>Hernandez, F.</a> (2024). “Risk perception and production risk in seaweed aquaculture”. <em>Aquaculture Economics & Management</em> 1-29, doi: <a href="https://doi.org/10.1080/13657305.2024.2342270"><code>10.1080/13657305.2024.2342270</code></a>
 #  extra: >-

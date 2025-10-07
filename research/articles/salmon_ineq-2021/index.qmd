@@ -26,9 +26,9 @@ pub-info:
     # - name: Data
     #   url: https://github.com/andrewheiss/ngo-crackdowns-philanthropy/tree/master/data
     #   icon: fa-solid fa-table
-    - name: Add to Zotero
-      url: https://www.zotero.org/save?type=doi&q=10.1016/j.foodpol.2021.102078
-      icon: ai ai-zotero
+    # - name: Add to Zotero
+    #   url: https://www.zotero.org/save?type=doi&q=10.1016/j.foodpol.2021.102078
+    #   icon: ai ai-zotero
   reference: >-
     <a><strong>Cárdenas-Retamal, R.</strong></a>, <a>Dresdner-Cid, J.</a>, and <a>Ceballos-Concha, A.</a>, (2021) “Impact assessment of salmon farming on income distribution in remote coastal areas: The Chilean case,” <em>Food Policy</em> 101: 102078, doi: <a href="https://doi.org/10.1016/j.foodpol.2021.102078"><code>10.1016/j.foodpol.2021.102078</code></a>
   extra: >-

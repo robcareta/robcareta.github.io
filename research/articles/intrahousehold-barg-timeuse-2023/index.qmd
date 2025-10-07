@@ -28,9 +28,9 @@ pub-info:
     # - name: Data
     #   url: https://github.com/andrewheiss/ngo-crackdowns-philanthropy/tree/master/data
     #   icon: fa-solid fa-table
-    - name: Add to Zotero
-      url: https://www.latinaer.org/index.php/laer/article/view/149
-      icon: ai ai-zotero
+    # - name: Add to Zotero
+    #   url: https://www.latinaer.org/index.php/laer/article/view/149
+    #   icon: ai ai-zotero
   reference: >-
     <a><strong>Cárdenas-Retamal, R.</strong></a>, <a>Barrientos Cifuentes, M.</a>, <a>Vásquez Lavin, F.</a> and <a>Ponce Oliva, R.</a> (2023). “Intrahousehold Bargaining Power and Time Allocation for Multiple Activities” <em>Latin American Economic Review</em> 32:5, doi: <a href="https://doi.org/10.47872/laer.v32.149"><code>10.47872/laer.v32.149</code></a>
 #  extra: >-

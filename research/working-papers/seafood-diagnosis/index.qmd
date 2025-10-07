@@ -1,6 +1,6 @@
 ---
 title: "Diet-related Disease and Consumer Behavior: Seafood Purchasing Responses to Type 2 Diabetes Diagnosis"
-date: 2024-03-05
+date: 2025-10-07
 author:
   - name: Roberto Cárdenas-Retamal
     orcid: 0000-0002-9578-827X

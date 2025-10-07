@@ -29,9 +29,9 @@ pub-info:
     # - name: Data
     #   url: https://github.com/andrewheiss/ngo-crackdowns-philanthropy/tree/master/data
     #   icon: fa-solid fa-table
-    - name: Add to Zotero
-      url: https://www.zotero.org/save?type=doi&q=10.1016/j.foodpol.2021.102078
-      icon: ai ai-zotero
+    # - name: Add to Zotero
+    #   url: https://www.zotero.org/save?type=doi&q=10.1016/j.foodpol.2021.102078
+    #   icon: ai ai-zotero
   reference: >-
     <a>Salazar, C.</a>, <a>Jaime, M</a>, <a><strong>Cárdenas-Retamal, R.</strong> </a> and <a>Baquedano, M.</a> (2023). “Women engagement, psychological traits, and gender gaps in the small-scale seaweed aquaculture in Chile”. <em>Reviews in Aquaculture</em> 15(4):1540-1553, doi: <a href="https://doi.org/10.1111/raq.12793"><code>10.1111/raq.12793</code></a>
 #  extra: >-

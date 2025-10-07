@@ -27,9 +27,9 @@ pub-info:
     # - name: Data
     #   url: https://github.com/andrewheiss/ngo-crackdowns-philanthropy/tree/master/data
     #   icon: fa-solid fa-table
-    - name: Add to Zotero
-      url: https://www.zotero.org/save?type=doi&q=10.1111/raq.12993
-      icon: ai ai-zotero
+    # - name: Add to Zotero
+    #   url: https://www.zotero.org/save?type=doi&q=10.1111/raq.12993
+    #   icon: ai ai-zotero
   reference: >-
     <a>Ceballos-Concha, A.</a>, <a>Asche, F</a>, and <a><strong>Cárdenas-Retamal, R. </strong></a> . (2025) “Salmon Aquaculture in Chile: Production Growth and Socioeconomic Impacts”. <em>Reviews in Aquaculture</em> 17(1), e12993, doi: <a href="https://doi.org/10.1111/raq.12993"><code>10.1111/raq.12993</code></a>
 #  extra: >-
