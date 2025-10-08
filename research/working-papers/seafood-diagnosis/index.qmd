@@ -22,7 +22,7 @@ pub-info:
   links: 
       - name: Preprint
         url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5488969
-        icon: fa-solid fa-scroll  
+        icon: fa-solid fa-file-pdf  
     
 pub-status: 
   status: Writing
