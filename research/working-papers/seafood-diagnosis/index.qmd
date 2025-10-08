@@ -19,7 +19,11 @@ categories:
 pub-info:
   reference: >-
     “Seafood Purchasing in Responses to Type 2 Diabetes Diagnosis”
-
+  links: 
+      - name: Preprint
+        url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5488969
+        icon: fa-solid fa-scroll  
+    
 pub-status: 
   status: Writing
   class: warning
