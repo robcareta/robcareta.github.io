@@ -22,12 +22,12 @@ pub-info:
   links: 
       - name: Preprint
         url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5488969
-        icon: fa-solid fa-file-pdf  
+        icon: fa-solid fa-scroll
     
 pub-status: 
   status: Writing
   class: warning
-  icon: "fa-solid fa-pencil"
+  icon: fa-solid fa-pencil
   
 haiku: 
   - Under review at AJAE

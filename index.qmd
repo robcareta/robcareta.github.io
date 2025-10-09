@@ -37,7 +37,7 @@ I’m a PhD candidate in the Fisheries and Aquatic Sciences program at the Unive
 You can find my research papers and ongoing projects [on this page](research/index.qmd) 
 
 
-::: callout-note
+:::{.callout-note collapse="false"} 
 
 I am currently on the academic job market for positions starting in Fall 2026
 
