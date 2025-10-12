@@ -1,0 +1,28 @@
+---
+title: "Labor outcomes effect of mental health"
+date: 2025-06-01
+author:
+  - name: Roberto Cárdenas-Retamal
+    orcid: 0000-0002-9578-827X
+    affiliation: School of Forest, Fisheries, & Geomatics Sciences, University of Florida
+ 
+categories:
+  - Mental health
+  - Depression
+  - Anxiety
+  - Labor outcomes
+pub-info:
+  reference: >-
+    “Labor outcomes effect of mental health”
+#  links:
+ # - name: Code
+  #  url: https://github.com/vincentarelbundock/mfxplainer
+  #  icon: fa-brands fa-github
+pub-status: 
+  status: Writing
+  class: warning
+  icon: "fa-solid fa-pencil"
+  
+
+---
+
