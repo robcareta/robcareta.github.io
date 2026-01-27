@@ -1,0 +1,36 @@
+---
+title: "The value of nutritional attributes in seafood"
+date: 2026-01-01
+author:
+  - name: Roberto Cárdenas-Retamal
+    orcid: 0000-0002-9578-827X
+    affiliation: School of Forest, Fisheries, & Geomatics Sciences, University of Florida
+  - name: Frank Asche
+    affiliation: School of Forest, Fisheries, & Geomatics Sciences, University of Florida
+ 
+categories:
+  - labeling
+  - Seafood market
+  - Seafood demand
+  - Homescan data
+  - Hedonic price 
+  - Seafood
+pub-info:
+  reference: >-
+    “The value of nutritional attributes in seafood”
+#  links:
+ # - name: Code
+  #  url: https://github.com/vincentarelbundock/mfxplainer
+  #  icon: fa-brands fa-github
+pub-status: 
+  status: Writing
+  class: warning
+  icon: "fa-solid fa-pencil"
+  
+
+---
+
+
+# Abstract 
+
+Nutritional information in food products has the potential to modify dietary choices. Such shifts in consumer behavior may help mitigate diet-related and non-communicable diseases, given the well-established link between poor diets and chronic disease morbidity and mortality. Labels that communicate health benefits can therefore serve as an important public-health tool by encouraging healthier choices and enabling consumers to make more informed decisions. Seafood, in particular, has garnered significant attention in nutritional research due to its role in preventing diet-related pathologies. A primary driver of these benefits is the presence of omega-3 fatty acids, which are essential for brain development, metabolic regulation, and cardiovascular health. Despite these known benefits, approximately 90% of American households consume less than the recommended amounts of seafood. This study extends the literature by quantifying the hedonic price premium for the omega-3 label. The seafood examined includes the most consumed products in the U.S.: tuna, salmon, shrimp, cod, and oysters. We utilize the NielsenIQ consumer panel, which provides information about what products American households purchase, as well as the attributes of each of them. Ultimately, we find a positive and significant premium for tuna, salmon, and oysters. Our findings indicate that consumers place a measurable value on omega-3 information, as reflected in positive price premiums for several widely consumed seafood species. These results suggest that nutritional labeling can influence product valuation with implications for both market outcomes and dietary quality

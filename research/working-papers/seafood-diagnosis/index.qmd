@@ -30,7 +30,6 @@ pub-status:
   icon: fa-solid fa-pencil
   
 haiku: 
-  - Under review at AJAE
   - Presented at the Agricultural & Applied Ecoonmics Association (AAEA) 2024 conference in New Orleans
   
   
