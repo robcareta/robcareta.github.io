@@ -1,7 +1,9 @@
 ---
-title: "More than Just a Walk in the Park: Performance in Green and Urban Spaces"
+title: "More than just a break: Performance after walking in green and urban spaces"
 date: 2022-03-05
 author:
+  - name: Jianhui Liu
+    affiliation: University of Florida
   - name: Tongzhe Li
     affiliation: University of Guelph
   - name: Mark Patton
@@ -20,7 +22,7 @@ categories:
   - Framed field experiment
 pub-info:
   reference: >-
-    “More than Just a Walk in the Park: Performance in Green and Urban Spaces”
+    “More than just a break: Performance after walking in green and urban spaces”
 #  links:
  # - name: Code
   #  url: https://github.com/vincentarelbundock/mfxplainer
@@ -31,7 +33,7 @@ pub-status:
   icon: "fa-solid fa-pencil"
   
 haiku: 
- - Under review at Land Economics
+ - Reviewed and resubmitted at Applied Economics
 ---
 
 
