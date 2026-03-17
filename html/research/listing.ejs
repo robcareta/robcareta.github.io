@@ -26,6 +26,21 @@
             </div>
             <% } %>
             
+            <% if (item['pub-info'] && (item['pub-info']['journal-if'] || item.doi)) { %>
+            <div class="project-metrics">
+                <% if (item['pub-info']['journal-if']) { %>
+                <span class="metric-badge if-badge" title="Journal Impact Factor">
+                    <i class="fa-solid fa-chart-line"></i>&nbsp;IF&nbsp;<%= item['pub-info']['journal-if'] %>
+                </span>
+                <% } %>
+                <% if (item.doi) { %>
+                <a href="https://scholar.google.com/scholar?q=doi:<%- item.doi %>" class="metric-badge scholar-badge" target="_blank" title="Find on Google Scholar">
+                    <i class="fa-brands fa-google"></i>&nbsp;Google Scholar
+                </a>
+                <% } %>
+            </div>
+            <% } %>
+
             <div class="project-details-listing">
                 <ul class="project-links">
                     <li class="project-link details">
