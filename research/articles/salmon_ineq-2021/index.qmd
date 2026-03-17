@@ -30,7 +30,6 @@ pub-info:
     #   url: https://www.zotero.org/save?type=doi&q=10.1016/j.foodpol.2021.102078
     #   icon: ai ai-zotero
   journal-if: 6.4
-  citations: 27  # UPDATE: add citations from mislabeled GS duplicate ("un remote coastal areas. The Chilean casa")
   reference: >-
     <a><strong>Cárdenas-Retamal, R.</strong></a>, <a>Dresdner-Cid, J.</a>, and <a>Ceballos-Concha, A.</a>, (2021) “Impact assessment of salmon farming on income distribution in remote coastal areas: The Chilean case,” <em>Food Policy</em> 101: 102078, doi: <a href=”https://doi.org/10.1016/j.foodpol.2021.102078”><code>10.1016/j.foodpol.2021.102078</code></a>
   extra: >-

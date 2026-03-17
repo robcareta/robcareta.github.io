@@ -26,22 +26,21 @@
             </div>
             <% } %>
             
-            <% if (item['pub-info'] && (item['pub-info']['journal-if'] || item['pub-info']['citations'] !== undefined || item.doi)) { %>
+            <% if (item['pub-info'] && (item['pub-info']['journal-if'] || item.doi)) { %>
             <div class="project-metrics">
                 <% if (item['pub-info']['journal-if']) { %>
                 <span class="metric-badge if-badge" title="Journal Impact Factor (2023)">
                     <i class="fa-solid fa-chart-line"></i>&nbsp;IF&nbsp;<%= item['pub-info']['journal-if'] %>
                 </span>
                 <% } %>
-                <% if (item['pub-info']['citations'] !== undefined && item['pub-info']['citations'] !== null) { %>
-                <% var citUrl = item.doi ? 'https://scholar.google.com/scholar?q=doi:' + item.doi : '#'; %>
-                <a href="<%- citUrl %>" class="metric-badge citations-badge" target="_blank" title="Citations (Google Scholar)">
-                    <i class="fa-solid fa-graduation-cap"></i>&nbsp;Cited by&nbsp;<%= item['pub-info']['citations'] %>
-                </a>
-                <% } %>
-                <% if (item.doi && item['pub-info']['citations'] === undefined) { %>
-                <a href="https://scholar.google.com/scholar?q=doi:<%- item.doi %>" class="metric-badge scholar-badge" target="_blank" title="Find on Google Scholar">
-                    <i class="fa-brands fa-google"></i>&nbsp;Google Scholar
+                <% if (item.doi) { %>
+                <a href="https://scholar.google.com/scholar?q=doi:<%- item.doi %>"
+                   class="metric-badge citations-badge"
+                   data-doi="<%- item.doi %>"
+                   target="_blank"
+                   title="Citations via OpenAlex — click to see on Google Scholar"
+                   style="display:none">
+                    <i class="fa-solid fa-graduation-cap"></i>&nbsp;Cited by&nbsp;<span class="cite-count">0</span>
                 </a>
                 <% } %>
             </div>

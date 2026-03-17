@@ -176,6 +176,25 @@ Note
   </div>
 </div>
  <!-- /main -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var badges = document.querySelectorAll('.citations-badge[data-doi]');
+  if (!badges.length) return;
+
+  badges.forEach(function (badge) {
+    var doi = badge.getAttribute('data-doi');
+    fetch('https://api.openalex.org/works/doi:' + doi + '?select=cited_by_count&mailto=robertocardenasr@ufl.edu')
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+      .then(function (d) {
+        if (typeof d.cited_by_count === 'number') {
+          badge.querySelector('.cite-count').textContent = d.cited_by_count;
+          badge.style.display = 'inline-flex';
+        }
+      })
+      .catch(function () { /* leave badge hidden if API fails */ });
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const isCodeAnnotation = (el) => {
