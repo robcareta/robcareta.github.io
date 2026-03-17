@@ -524,6 +524,17 @@ pre.text, pre.sourceCode, .cell-output pre {
             border: 1px solid shift-color($teal, -60%);
         }
 
+        .citations-badge {
+            background-color: shift-color($orange, -85%);
+            color: darken($orange, 15%);
+            border: 1px solid shift-color($orange, -65%);
+
+            &:hover {
+                background-color: shift-color($orange, -70%);
+                text-decoration: none;
+            }
+        }
+
         .scholar-badge {
             background-color: shift-color($orange, -85%);
             color: darken($orange, 15%);

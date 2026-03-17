@@ -30,6 +30,7 @@ pub-info:
       icon: fa-solid fa-scroll
       
   journal-if: 11.1
+  citations: 6
   reference: >-
     <a>Iversen, A.</a>, <a>Asche, F.</a>, <a>Nyrud, T.</a>, <a>Robertsen, R.</a>, <a>Bendiksen, B. I.</a>, <a><strong>Cárdenas-Retamal, R. </strong></a>, and <a>Steinsbø, S</a>.  (2025) “The Growing Importance of Aquaculture: The Case of Norwegian Salmon”. <em>Reviews in Aquaculture</em> 17(4),e70088, doi: <a href=" https://doi.org/10.1111/raq.70088"><code>10.1111/raq.70088</code></a>
 
