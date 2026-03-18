@@ -1,12 +1,7 @@
 ---
-layout: page
 title: Curriculum vitae
-excerpt: My current CV
-engine: knitr 
 resources:
   - "cv.pdf"
-cv:
-  pdf: "CV.pdf"
 title-block-banner: false
 ---
 
