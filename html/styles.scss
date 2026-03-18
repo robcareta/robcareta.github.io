@@ -687,31 +687,6 @@ pre.text, pre.sourceCode, .cell-output pre {
     }
 }
 
-// Visitor map on homepage
-.visitor-map-section {
-    margin-top: 1.5em;
-
-    .visitor-map-title {
-        font-family: $headings-font-family;
-        font-size: 1.1em;
-        font-weight: 500;
-        color: $gray-700;
-        margin-bottom: 0.6em;
-    }
-
-    .visitor-map-container {
-        border-radius: 0.4rem;
-        overflow: hidden;
-        border: 1px solid $gray-200;
-
-        .looker-embed {
-            width: 100%;
-            height: 340px;
-            border: 0;
-            display: block;
-        }
-    }
-}
 
 .cv-download {
     font-family: $headings-font-family;

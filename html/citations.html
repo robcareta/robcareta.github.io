@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     fetch('https://api.openalex.org/works/doi:' + doi + '?select=cited_by_count&mailto=robertocardenasr@ufl.edu')
       .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
       .then(function (d) {
-        if (typeof d.cited_by_count === 'number') {
+        if (d.cited_by_count > 0) {
           badge.querySelector('.cite-count').textContent = d.cited_by_count;
           badge.style.display = 'inline-flex';
         }

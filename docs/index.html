@@ -37,7 +37,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0bca7c36e24e035fe09ac834b5714026.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-8931d3b3f71fe5cc2e0b8f699b2ad376.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -166,25 +166,6 @@ Note
 </div>
 </div>
 </div>
-<hr>
-<div class="visitor-map-section">
-  <h3 class="visitor-map-title" data-anchor-id="welcome-to-my-website">
-    <i class="fa-solid fa-earth-americas"></i>&nbsp; Visitors
-  </h3>
-  <div class="visitor-map-container">
-    <!--
-      SETUP (one time, ~5 min):
-      1. Go to lookerstudio.google.com → Create → Report
-      2. Add data source: Google Analytics 4 → property G-H4P0QZL89D
-      3. Insert → Geo chart  (metric: Sessions, dimension: Country)
-      4. File → Share → Manage access → set to "Anyone with the link can view"
-      5. File → Embed report → copy the src URL from the <iframe> code
-      6. Replace YOUR_REPORT_ID/YOUR_PAGE_ID below with that URL
-    -->
-    <iframe src="https://lookerstudio.google.com/embed/reporting/YOUR_REPORT_ID/page/YOUR_PAGE_ID" class="looker-embed" frameborder="0" allowfullscreen="" sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
-    </iframe>
-  </div>
-</div>
 
 
 </section>
@@ -205,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function () {
     fetch('https://api.openalex.org/works/doi:' + doi + '?select=cited_by_count&mailto=robertocardenasr@ufl.edu')
       .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
       .then(function (d) {
-        if (typeof d.cited_by_count === 'number') {
+        if (d.cited_by_count > 0) {
           badge.querySelector('.cite-count').textContent = d.cited_by_count;
           badge.style.display = 'inline-flex';
         }
