@@ -535,14 +535,32 @@ pre.text, pre.sourceCode, .cell-output pre {
             }
         }
 
-        .scholar-badge {
-            background-color: shift-color($orange, -85%);
-            color: darken($orange, 15%);
-            border: 1px solid shift-color($orange, -65%);
+        // Dimensions badge alignment
+        .badge-dimensions-wrapper {
+            display: inline-flex !important;
+            align-items: center !important;
+            vertical-align: middle;
 
-            &:hover {
-                background-color: shift-color($orange, -70%);
-                text-decoration: none;
+            a.__dimensions_badge_embed__ {
+                display: inline-flex !important;
+                align-items: center !important;
+            }
+        }
+
+        // Altmetric donut badge — shrink to 36px to match row height
+        .badge-altmetric-wrapper {
+            display: inline-flex !important;
+            align-items: center !important;
+            vertical-align: middle;
+
+            .altmetric-details-link {
+                display: inline-flex !important;
+                align-items: center !important;
+
+                img {
+                    width: 36px !important;
+                    height: 36px !important;
+                }
             }
         }
     }
@@ -694,6 +712,27 @@ pre.text, pre.sourceCode, .cell-output pre {
                 font-size: 0.85em;
             }
         }
+    }
+}
+
+// Visitor map on homepage
+.visitor-map-section {
+    margin-top: 1.5em;
+
+    .visitor-map-title {
+        font-family: $headings-font-family;
+        font-size: 1.1em;
+        font-weight: 500;
+        color: $gray-700;
+        margin-bottom: 0.6em;
+    }
+
+    .visitor-map-container {
+        border-radius: 0.4rem;
+        overflow: hidden;
+        max-width: 480px;
+
+        img { width: 100%; }
     }
 }
 

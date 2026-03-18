@@ -37,8 +37,28 @@ I’m a PhD candidate in the Fisheries and Aquatic Sciences program at the Unive
 You can find my research papers and ongoing projects [on this page](research/index.qmd) 
 
 
-:::{.callout-note collapse="false"} 
+:::{.callout-note collapse="false"}
 
 I am currently on the academic job market for positions starting in Fall 2026
 
 :::
+
+---
+
+```{=html}
+<div class="visitor-map-section">
+  <h3 class="visitor-map-title">
+    <i class="fa-solid fa-earth-americas"></i>&nbsp; Visitors
+  </h3>
+  <div class="visitor-map-container">
+    <!-- ClustrMaps widget — replace XXXXXXXX with your site ID from clustrmaps.com -->
+    <!-- To get your ID: go to https://clustrmaps.com → Add site → enter robcareta.github.io → copy the widget code -->
+    <script type='text/javascript' id='clustrmaps'
+      src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=XXXXXXXX&co=005f73&ct=ffffff&cmo=3acc3a&cmn=ff5353'>
+    </script>
+    <p class="visitor-map-placeholder" style="display:none">
+      <em>Visitor map loading…</em>
+    </p>
+  </div>
+</div>
+```
