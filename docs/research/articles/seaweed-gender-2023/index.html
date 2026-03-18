@@ -42,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-75272add7887ab8c0a266d5ea518ee75.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-2faf41b28f1d592aa03801db251aa504.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -85,8 +85,6 @@ gtag('config', 'G-H4P0QZL89D', { 'anonymize_ip': true});
       }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
-<script async="" src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
-<script async="" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
 
 
 </head>
@@ -272,6 +270,25 @@ gtag('config', 'G-H4P0QZL89D', { 'anonymize_ip': true});
 </section>
 
 </main> <!-- /main -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var badges = document.querySelectorAll('.citations-badge[data-doi]');
+  if (!badges.length) return;
+
+  badges.forEach(function (badge) {
+    var doi = badge.getAttribute('data-doi');
+    fetch('https://api.openalex.org/works/doi:' + doi + '?select=cited_by_count&mailto=robertocardenasr@ufl.edu')
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+      .then(function (d) {
+        if (typeof d.cited_by_count === 'number') {
+          badge.querySelector('.cite-count').textContent = d.cited_by_count;
+          badge.style.display = 'inline-flex';
+        }
+      })
+      .catch(function () { /* leave badge hidden if API fails */ });
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

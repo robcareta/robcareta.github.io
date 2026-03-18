@@ -34,18 +34,14 @@
                 </span>
                 <% } %>
                 <% if (item.doi) { %>
-                <span class="__dimensions_badge_embed__ badge-dimensions-wrapper"
-                      data-doi="<%- item.doi %>"
-                      data-style="small_rectangle"
-                      data-hide-zero-citations="true"
-                      data-legend="hover-right">
-                </span>
-                <div data-badge-type="donut"
-                     data-doi="<%- item.doi %>"
-                     data-hide-no-mentions="true"
-                     data-badge-popover="right"
-                     class="altmetric-embed badge-altmetric-wrapper">
-                </div>
+                <a href="https://scholar.google.com/scholar?q=doi:<%- item.doi %>"
+                   class="metric-badge citations-badge"
+                   data-doi="<%- item.doi %>"
+                   target="_blank"
+                   title="Citations via OpenAlex — click to see on Google Scholar"
+                   style="display:none">
+                    <i class="fa-solid fa-graduation-cap"></i>&nbsp;Cited by&nbsp;<span class="cite-count">0</span>
+                </a>
                 <% } %>
             </div>
             <% } %>
