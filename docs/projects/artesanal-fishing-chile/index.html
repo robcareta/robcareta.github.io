@@ -6,11 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Roberto Cárdenas-Retamal">
-<meta name="author" content="Frank Asche">
-<meta name="author" content="Di Fang">
+<meta name="dcterms.date" content="2026-02-05">
+<meta name="description" content="A data pipeline to download, process, and visualize SERNAPESCA satellite positioning data for artisanal fishing fleets in the Los Lagos region.">
 
-<title>Price premiums for the MSC-ecolabel in the U.S.: A hedonic analysis haddock in U.S. market – Roberto Cárdenas-Retamal</title>
+<title>Artisanal Fishing Behavior in Chile – Roberto Cárdenas-Retamal</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -26,22 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-8931d3b3f71fe5cc2e0b8f699b2ad376.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-8931d3b3f71fe5cc2e0b8f699b2ad376.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,25 +76,19 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-H4P0QZL89D', { 'anonymize_ip': true});
 </script>
-<style>
-
-      .quarto-title-block .quarto-title-banner {
-        background: #005f73;
-      }
-</style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 
 
 </head>
 
-<body class="floating nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Roberto Cárdenas-Retamal</span>
     </a>
   </div>
@@ -106,15 +99,15 @@ gtag('config', 'G-H4P0QZL89D', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../research/index.html"> 
+    <a class="nav-link" href="../../research/index.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../projects/index.html"> 
+    <a class="nav-link" href="../../projects/index.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../cv/index.html"> 
+    <a class="nav-link" href="../../cv/index.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
 </ul>
@@ -132,105 +125,162 @@ gtag('config', 'G-H4P0QZL89D', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block research default toc-left page-columns page-full">
-    <div class="quarto-title-banner page-columns page-full">
-                <div class="back-nav"><a href="../../../research/">← Back to research</a></div>
-                <div class="quarto-title column-body">
-            <h1 class="title">Price premiums for the MSC-ecolabel in the U.S.: A hedonic analysis haddock in U.S. market</h1>
-
-            
-            
-                        <div class="haiku">
-                Under review at Journal of the Agricultural &amp; Applied Economics Association
-            </div>
-            
-                                    <div class="quarto-categories">
-                                <div class="quarto-category">Ecolabeling</div>
-                                <div class="quarto-category">Seafood market</div>
-                                <div class="quarto-category">Price premium</div>
-                                <div class="quarto-category">Hedonic price</div>
-                                <div class="quarto-category">Homescan data</div>
-                                <div class="quarto-category">Marine stewardship council</div>
-                            </div>
-                                </div>
-    </div>
-    
-        <div class="project-details">
-        <div class="publication-content">
-            <p>“Price premiums for the MSC-ecolabel in the U.S.: A hedonic analysis haddock in U.S. market”</p>
-        </div>
-            </div>
-
-    
-    <div class="quarto-title-meta-author">
-      <div class="quarto-title-meta-heading">Authors</div>
-      <div class="quarto-title-meta-heading">Affiliations</div>
-      
-        <div class="quarto-title-meta-contents">
-        <p class="author">Roberto Cárdenas-Retamal <a href="https://orcid.org/0000-0002-9578-827X" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
-      </div>
-      <div class="quarto-title-meta-contents">
-            <p class="affiliation">
-                School of Forest, Fisheries, &amp; Geomatics Sciences, University of Florida
-              </p>
-          </div>
-        <div class="quarto-title-meta-contents">
-        <p class="author">Frank Asche </p>
-      </div>
-      <div class="quarto-title-meta-contents">
-            <p class="affiliation">
-                School of Forest, Fisheries, &amp; Geomatics Sciences, University of Florida
-              </p>
-          </div>
-        <div class="quarto-title-meta-contents">
-        <p class="author">Di Fang </p>
-      </div>
-      <div class="quarto-title-meta-contents">
-            <p class="affiliation">
-                Food and Resources Economics Department, University of Florida
-              </p>
-          </div>
-      </div>
-
-    <div class="quarto-title-meta">
-
-          
-        <div>
-        <div class="quarto-title-meta-heading">Published</div>
-        <div class="quarto-title-meta-contents">
-          <p class="date">October 2025</p>
-        </div>
-      </div>
-      
-        
-      </div>
-      
-
-    
-</header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Contents</h2>
-   
-  <ul>
-  <li><a href="#abstract" id="toc-abstract" class="nav-link active" data-scroll-target="#abstract">Abstract</a></li>
-  </ul>
-</nav>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-    </div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Artisanal Fishing Behavior in Chile</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">R</div>
+    <div class="quarto-category">Fisheries</div>
+    <div class="quarto-category">Chile</div>
+    <div class="quarto-category">Data pipeline</div>
+    <div class="quarto-category">DuckDB</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    A data pipeline to download, process, and visualize SERNAPESCA satellite positioning data for artisanal fishing fleets in the Los Lagos region.
+  </div>
+</div>
 
 
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 5, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
 
 
-<section id="abstract" class="level1">
-<h1>Abstract</h1>
-<p>Ecolabels signaling a sustainable or responsible production process have become an important product attribute for many food products, including seafood. If an ecolabel is to incentivize improved production practices, there must be a price premium associated with the label. Although price premiums for ecolabels in seafood markets have been studied in several European markets, evidence from the U.S. market is scarce, despite the importance of the U.S. in the global seafood market. In this study, we estimated the price premium for haddock labeled with the ecolabel of the Marine Stewardship Council (MSC) in the U.S. We used the NielsenIQ Consumer Panel data from 2013-2020, together with UPC-codes obtained from the MSC on which products carried the ecolabel. Our results indicate that U.S. households, on average, pay a 17.23% premium for MSC-labeled haddock. This premium suggests that U.S. consumers place meaningful value on sustainability information and that market-based tools such as ecolabels may offer an effective mechanism to incentivize improvements in fisheries management and production practices.</p>
+</header>
+
+
+<p class="back-nav">
+<a href="../../projects/index.html">← Back to Projects</a>
+</p>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>This project builds a fully automated pipeline to analyze the spatial behavior of artisanal fishing vessels in southern Chile. Raw data come from <a href="https://www.sernapesca.cl/">SERNAPESCA</a>’s satellite positioning system — an open daily feed of GPS positions for all registered artisanal fleets. The pipeline downloads new reports incrementally, stores them in a <a href="https://duckdb.org/">DuckDB</a> database, filters the Los Lagos region, and produces a set of fishing behavior indicators and visualizations.</p>
+<p>The project is under active development; outputs and indicators may evolve.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Code and documentation available on <a href="https://github.com/robcareta/artesanal-fishing-behavior-Chile">GitHub</a>.</p>
+</div>
+</div>
+</section>
+<section id="data-source" class="level2">
+<h2 class="anchored" data-anchor-id="data-source">Data source</h2>
+<p>SERNAPESCA publishes daily CSV reports with vessel ID, timestamp, latitude, longitude, and speed for every registered artisanal boat in Chile. The download script queries the public web portal incrementally, so only new reports are fetched on each run.</p>
+</section>
+<section id="pipeline-structure" class="level2">
+<h2 class="anchored" data-anchor-id="pipeline-structure">Pipeline structure</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Folder</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>R/</code></td>
+<td>Pipeline scripts</td>
+</tr>
+<tr class="even">
+<td><code>data_raw/</code></td>
+<td>Downloaded CSVs (not versioned)</td>
+</tr>
+<tr class="odd">
+<td><code>data_processed/</code></td>
+<td>Filtered and cleaned outputs (not versioned)</td>
+</tr>
+<tr class="even">
+<td><code>outputs/</code></td>
+<td>Figures and animations</td>
+</tr>
+<tr class="odd">
+<td><code>assets/</code></td>
+<td>Supporting images</td>
+</tr>
+</tbody>
+</table>
+<p>To reproduce: open R and run <code>source("R/Fisheries_Webbscrapping.R")</code>.</p>
+</section>
+<section id="selected-outputs" class="level2">
+<h2 class="anchored" data-anchor-id="selected-outputs">Selected outputs</h2>
+<section id="spatial-heatmap-top-30-vessels-los-lagos-2023" class="level3">
+<h3 class="anchored" data-anchor-id="spatial-heatmap-top-30-vessels-los-lagos-2023">Spatial heatmap — top 30 vessels, Los Lagos (2023)</h3>
+<p>The heatmap aggregates time spent at each grid cell across the top 30 most active vessels in the region. Darker areas indicate higher cumulative fishing presence.</p>
+<p><img src="https://raw.githubusercontent.com/robcareta/artesanal-fishing-behavior-Chile/main/outputs/los_lagos_heatmap_top30_2023.png" class="img-fluid" style="width:100.0%" alt="Heatmap of fishing time for top 30 artisanal vessels in Los Lagos"></p>
+</section>
+<section id="quarterly-time-spent-top-30-vessels" class="level3">
+<h3 class="anchored" data-anchor-id="quarterly-time-spent-top-30-vessels">Quarterly time spent — top 30 vessels</h3>
+<p>Temporal breakdown showing how fishing effort distributes across quarters for the most active vessels.</p>
+<p><img src="https://raw.githubusercontent.com/robcareta/artesanal-fishing-behavior-Chile/main/outputs/quarterly_time_spent_top30.png" class="img-fluid" style="width:100.0%" alt="Quarterly time spent by top 30 vessels"></p>
+</section>
+<section id="vessel-track-movement-and-speed" class="level3">
+<h3 class="anchored" data-anchor-id="vessel-track-movement-and-speed">Vessel track — movement and speed</h3>
+<p>Individual vessel track for vessel ID 1, colored by recorded speed, illustrating typical movement patterns between fishing grounds and port.</p>
+<p><img src="https://raw.githubusercontent.com/robcareta/artesanal-fishing-behavior-Chile/main/outputs/speed_points_id_1.png" class="img-fluid" style="width:100.0%" alt="Speed-colored vessel track"></p>
+</section>
+<section id="direction-of-movement" class="level3">
+<h3 class="anchored" data-anchor-id="direction-of-movement">Direction of movement</h3>
+<p><img src="https://raw.githubusercontent.com/robcareta/artesanal-fishing-behavior-Chile/main/outputs/direction_arrows_id_1.png" class="img-fluid" style="width:100.0%" alt="Direction arrows for vessel movement"></p>
+</section>
+<section id="vessel-animation" class="level3">
+<h3 class="anchored" data-anchor-id="vessel-animation">Vessel animation</h3>
+<p>Animated trajectory of vessel ID 1 across the Chilean coastline.</p>
+<p><img src="https://raw.githubusercontent.com/robcareta/artesanal-fishing-behavior-Chile/main/outputs/movement_id_1_chile.gif" class="img-fluid" style="width:80.0%" alt="Animated vessel movement along the Chilean coast"></p>
+</section>
+</section>
+<section id="technical-details" class="level2">
+<h2 class="anchored" data-anchor-id="technical-details">Technical details</h2>
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td><strong>Language</strong></td>
+<td>R (100%)</td>
+</tr>
+<tr class="even">
+<td><strong>Key packages</strong></td>
+<td><code>duckdb</code>, <code>rvest</code>, <code>ggplot2</code>, <code>sf</code>, <code>gganimate</code></td>
+</tr>
+<tr class="odd">
+<td><strong>License</strong></td>
+<td>MIT</td>
+</tr>
+<tr class="even">
+<td><strong>Repository</strong></td>
+<td><a href="https://github.com/robcareta/artesanal-fishing-behavior-Chile">github.com/robcareta/artesanal-fishing-behavior-Chile</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Status</strong></td>
+<td>Active development</td>
+</tr>
+</tbody>
+</table>
 
 
 </section>

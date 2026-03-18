@@ -1,0 +1,80 @@
+---
+title: "Artisanal Fishing Behavior in Chile"
+date: 2026-02-05
+description: "A data pipeline to download, process, and visualize SERNAPESCA satellite positioning data for artisanal fishing fleets in the Los Lagos region."
+image: "https://raw.githubusercontent.com/robcareta/artesanal-fishing-behavior-Chile/main/outputs/los_lagos_heatmap_top30_2023.png"
+categories:
+  - R
+  - Fisheries
+  - Chile
+  - Data pipeline
+  - DuckDB
+---
+
+<p class="back-nav"><a href="../index.qmd">← Back to Projects</a></p>
+
+## Overview
+
+This project builds a fully automated pipeline to analyze the spatial behavior of artisanal fishing vessels in southern Chile. Raw data come from [SERNAPESCA](https://www.sernapesca.cl/)'s satellite positioning system — an open daily feed of GPS positions for all registered artisanal fleets. The pipeline downloads new reports incrementally, stores them in a [DuckDB](https://duckdb.org/) database, filters the Los Lagos region, and produces a set of fishing behavior indicators and visualizations.
+
+The project is under active development; outputs and indicators may evolve.
+
+::: {.callout-note}
+Code and documentation available on [GitHub](https://github.com/robcareta/artesanal-fishing-behavior-Chile).
+:::
+
+## Data source
+
+SERNAPESCA publishes daily CSV reports with vessel ID, timestamp, latitude, longitude, and speed for every registered artisanal boat in Chile. The download script queries the public web portal incrementally, so only new reports are fetched on each run.
+
+## Pipeline structure
+
+| Folder | Content |
+|---|---|
+| `R/` | Pipeline scripts |
+| `data_raw/` | Downloaded CSVs (not versioned) |
+| `data_processed/` | Filtered and cleaned outputs (not versioned) |
+| `outputs/` | Figures and animations |
+| `assets/` | Supporting images |
+
+To reproduce: open R and run `source("R/Fisheries_Webbscrapping.R")`.
+
+## Selected outputs
+
+### Spatial heatmap — top 30 vessels, Los Lagos (2023)
+
+The heatmap aggregates time spent at each grid cell across the top 30 most active vessels in the region. Darker areas indicate higher cumulative fishing presence.
+
+![](https://raw.githubusercontent.com/robcareta/artesanal-fishing-behavior-Chile/main/outputs/los_lagos_heatmap_top30_2023.png){fig-alt="Heatmap of fishing time for top 30 artisanal vessels in Los Lagos" width="100%"}
+
+### Quarterly time spent — top 30 vessels
+
+Temporal breakdown showing how fishing effort distributes across quarters for the most active vessels.
+
+![](https://raw.githubusercontent.com/robcareta/artesanal-fishing-behavior-Chile/main/outputs/quarterly_time_spent_top30.png){fig-alt="Quarterly time spent by top 30 vessels" width="100%"}
+
+### Vessel track — movement and speed
+
+Individual vessel track for vessel ID 1, colored by recorded speed, illustrating typical movement patterns between fishing grounds and port.
+
+![](https://raw.githubusercontent.com/robcareta/artesanal-fishing-behavior-Chile/main/outputs/speed_points_id_1.png){fig-alt="Speed-colored vessel track" width="100%"}
+
+### Direction of movement
+
+![](https://raw.githubusercontent.com/robcareta/artesanal-fishing-behavior-Chile/main/outputs/direction_arrows_id_1.png){fig-alt="Direction arrows for vessel movement" width="100%"}
+
+### Vessel animation
+
+Animated trajectory of vessel ID 1 across the Chilean coastline.
+
+![](https://raw.githubusercontent.com/robcareta/artesanal-fishing-behavior-Chile/main/outputs/movement_id_1_chile.gif){fig-alt="Animated vessel movement along the Chilean coast" width="80%"}
+
+## Technical details
+
+| | |
+|---|---|
+| **Language** | R (100%) |
+| **Key packages** | `duckdb`, `rvest`, `ggplot2`, `sf`, `gganimate` |
+| **License** | MIT |
+| **Repository** | [github.com/robcareta/artesanal-fishing-behavior-Chile](https://github.com/robcareta/artesanal-fishing-behavior-Chile) |
+| **Status** | Active development |
