@@ -51,14 +51,22 @@ I am currently on the academic job market for positions starting in Fall 2026
     <i class="fa-solid fa-earth-americas"></i>&nbsp; Visitors
   </h3>
   <div class="visitor-map-container">
-    <!-- ClustrMaps widget — replace XXXXXXXX with your site ID from clustrmaps.com -->
-    <!-- To get your ID: go to https://clustrmaps.com → Add site → enter robcareta.github.io → copy the widget code -->
-    <script type='text/javascript' id='clustrmaps'
-      src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=XXXXXXXX&co=005f73&ct=ffffff&cmo=3acc3a&cmn=ff5353'>
-    </script>
-    <p class="visitor-map-placeholder" style="display:none">
-      <em>Visitor map loading…</em>
-    </p>
+    <!--
+      SETUP (one time, ~5 min):
+      1. Go to lookerstudio.google.com → Create → Report
+      2. Add data source: Google Analytics 4 → property G-H4P0QZL89D
+      3. Insert → Geo chart  (metric: Sessions, dimension: Country)
+      4. File → Share → Manage access → set to "Anyone with the link can view"
+      5. File → Embed report → copy the src URL from the <iframe> code
+      6. Replace YOUR_REPORT_ID/YOUR_PAGE_ID below with that URL
+    -->
+    <iframe
+      src="https://lookerstudio.google.com/embed/reporting/YOUR_REPORT_ID/page/YOUR_PAGE_ID"
+      class="looker-embed"
+      frameborder="0"
+      allowfullscreen
+      sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
+    </iframe>
   </div>
 </div>
 ```

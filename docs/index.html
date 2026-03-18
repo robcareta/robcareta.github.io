@@ -37,7 +37,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-2faf41b28f1d592aa03801db251aa504.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-0bca7c36e24e035fe09ac834b5714026.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -172,13 +172,17 @@ Note
     <i class="fa-solid fa-earth-americas"></i>&nbsp; Visitors
   </h3>
   <div class="visitor-map-container">
-    <!-- ClustrMaps widget — replace XXXXXXXX with your site ID from clustrmaps.com -->
-    <!-- To get your ID: go to https://clustrmaps.com → Add site → enter robcareta.github.io → copy the widget code -->
-    <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&amp;w=a&amp;t=tt&amp;d=XXXXXXXX&amp;co=005f73&amp;ct=ffffff&amp;cmo=3acc3a&amp;cmn=ff5353">
-    </script>
-    <p class="visitor-map-placeholder" style="display:none">
-      <em>Visitor map loading…</em>
-    </p>
+    <!--
+      SETUP (one time, ~5 min):
+      1. Go to lookerstudio.google.com → Create → Report
+      2. Add data source: Google Analytics 4 → property G-H4P0QZL89D
+      3. Insert → Geo chart  (metric: Sessions, dimension: Country)
+      4. File → Share → Manage access → set to "Anyone with the link can view"
+      5. File → Embed report → copy the src URL from the <iframe> code
+      6. Replace YOUR_REPORT_ID/YOUR_PAGE_ID below with that URL
+    -->
+    <iframe src="https://lookerstudio.google.com/embed/reporting/YOUR_REPORT_ID/page/YOUR_PAGE_ID" class="looker-embed" frameborder="0" allowfullscreen="" sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
+    </iframe>
   </div>
 </div>
 

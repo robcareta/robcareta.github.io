@@ -20,7 +20,7 @@ categories:
 pub-info:
   links:
     - name: Final version
-      url: https://doi.org/10.47872/laer.v32.149
+      url: https://doi.org/10.60758/laer.v32.149
       icon: fa-solid fa-scroll
     # - name: Code
     #   url: https://github.com/andrewheiss/ngo-crackdowns-philanthropy
@@ -33,10 +33,10 @@ pub-info:
     #   icon: ai ai-zotero
   journal-if: 1.2
   reference: >-
-    <a><strong>Cárdenas-Retamal, R.</strong></a>, <a>Barrientos Cifuentes, M.</a>, <a>Vásquez Lavin, F.</a> and <a>Ponce Oliva, R.</a> (2023). “Intrahousehold Bargaining Power and Time Allocation for Multiple Activities” <em>Latin American Economic Review</em> 32:5, doi: <a href="https://doi.org/10.47872/laer.v32.149"><code>10.47872/laer.v32.149</code></a>
+    <a><strong>Cárdenas-Retamal, R.</strong></a>, <a>Barrientos Cifuentes, M.</a>, <a>Vásquez Lavin, F.</a> and <a>Ponce Oliva, R.</a> (2023). “Intrahousehold Bargaining Power and Time Allocation for Multiple Activities” <em>Latin American Economic Review</em> 32:5, doi: <a href="https://doi.org/10.60758/laer.v32.149"><code>10.60758/laer.v32.149</code></a>
 #  extra: >-
 #    Presented at the V International Conference COES: ”Concentrations” in 2018, and in the X Annual Meeting of the Chilean Society of Regional Studies SOCHER in 2018.
-doi: 10.47872/laer.v32.149
+doi: 10.60758/laer.v32.149
 haiku: 
  #   - Income inequality in areas with salmon farms fell significantly compared to areas without farms.
 #    - The installment of salmon farms in remote coastal areas dampened the general trend of increased income inequality.
