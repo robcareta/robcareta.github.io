@@ -26,6 +26,7 @@ pub-info:
     - name: Free access
       url: https://www.tandfonline.com/eprint/QUPWNSKXJYNES8CGBNN6/full?target=10.1080/00036846.2026.2652062
       icon: fa-solid fa-unlock
+  journal-if: 1.8
   reference: >-
     <a>Liu, J.</a>, <a>Li, T.</a>, <a>Patton, M.</a>, <a><strong>Cárdenas-Retamal, R.</strong></a> and <a>Roy, D.</a> (2026). "More than just a break: Performance after walking in green and urban spaces". <em>Applied Economics</em> 1-16, doi: <a href="https://doi.org/10.1080/00036846.2026.2652062"><code>10.1080/00036846.2026.2652062</code></a>
 doi: 10.1080/00036846.2026.2652062
