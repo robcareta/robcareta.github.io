@@ -1,6 +1,6 @@
 ---
 title: "More than just a break: Performance after walking in green and urban spaces"
-date: 2022-03-05
+date: 2026-03-29
 author:
   - name: Jianhui Liu
     affiliation: University of Florida
@@ -11,31 +11,25 @@ author:
   - name: Roberto Cárdenas-Retamal
     orcid: 0000-0002-9578-827X
     affiliation: School of Forest, Fisheries, & Geomatics Sciences, University of Florida
-  - name: Danielle Roy 
-    affiliation: Univresity of Guelph
-  - name: Di Fang 
-    affiliation: University of Florida
+  - name: Danielle Roy
+    affiliation: University of Guelph
 categories:
   - Green space
   - Urban space
   - Productivity
   - Framed field experiment
 pub-info:
+  links:
+    - name: Final version
+      url: https://doi.org/10.1080/00036846.2026.2652062
+      icon: fa-solid fa-scroll
+    - name: Free access
+      url: https://www.tandfonline.com/eprint/QUPWNSKXJYNES8CGBNN6/full?target=10.1080/00036846.2026.2652062
+      icon: fa-solid fa-unlock
   reference: >-
-    “More than just a break: Performance after walking in green and urban spaces”
-#  links:
- # - name: Code
-  #  url: https://github.com/vincentarelbundock/mfxplainer
-  #  icon: fa-brands fa-github
-pub-status: 
-  status: Writing
-  class: warning
-  icon: "fa-solid fa-pencil"
-  
-haiku: 
- - Reviewed and resubmitted at Applied Economics
+    <a>Liu, J.</a>, <a>Li, T.</a>, <a>Patton, M.</a>, <a><strong>Cárdenas-Retamal, R.</strong></a> and <a>Roy, D.</a> (2026). "More than just a break: Performance after walking in green and urban spaces". <em>Applied Economics</em> 1-16, doi: <a href="https://doi.org/10.1080/00036846.2026.2652062"><code>10.1080/00036846.2026.2652062</code></a>
+doi: 10.1080/00036846.2026.2652062
 ---
-
 
 ## Abstract
 

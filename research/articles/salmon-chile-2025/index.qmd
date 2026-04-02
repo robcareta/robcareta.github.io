@@ -36,7 +36,8 @@ pub-info:
 #  extra: >-
 #    Presented at the V International Conference COES: ”Concentrations” in 2018, and in the X Annual Meeting of the Chilean Society of Regional Studies SOCHER in 2018.
 doi: 10.1111/raq.12993
-haiku: 
+haiku:
+  - "🏆 Top 10 most-cited articles published by the journal in 2024"
  #   - Income inequality in areas with salmon farms fell significantly compared to areas without farms.
 #    - The installment of salmon farms in remote coastal areas dampened the general trend of increased income inequality.
  #   - The impact is equivalent to a reduction in the Gini coefficient from 0.479 to 0.464.

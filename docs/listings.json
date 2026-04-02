@@ -1,13 +1,8 @@
 [
   {
-    "listing": "/projects/index.html",
-    "items": [
-      "/projects/artesanal-fishing-chile/index.html"
-    ]
-  },
-  {
     "listing": "/research/index.html",
     "items": [
+      "/research/articles/green-space-productivity-2026/index.html",
       "/research/articles/salmon-norway-2025/index.html",
       "/research/articles/salmon-chile-2025/index.html",
       "/research/articles/seaweed-risk-2024/index.html",
@@ -20,8 +15,13 @@
       "/research/working-papers/depression-labor/index.html",
       "/research/working-papers/seafood-diagnosis/index.html",
       "/research/working-papers/seafood-labelling/index.html",
-      "/research/working-papers/seafood-demand/index.html",
-      "/research/working-papers/green space-productivity/index.html"
+      "/research/working-papers/seafood-demand/index.html"
+    ]
+  },
+  {
+    "listing": "/projects/index.html",
+    "items": [
+      "/projects/artesanal-fishing-chile/index.html"
     ]
   }
 ]
