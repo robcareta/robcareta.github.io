@@ -102,28 +102,28 @@
     "href": "projects/artesanal-fishing-chile/index.html#overview",
     "title": "Artisanal Fishing Behavior in Chile",
     "section": "Overview",
-    "text": "Overview\nThis project builds a fully automated pipeline to analyze the spatial behavior of artisanal fishing vessels in southern Chile. Raw data come from SERNAPESCA’s satellite positioning system — an open daily feed of GPS positions for all registered artisanal fleets. The pipeline downloads new reports incrementally, stores them in a DuckDB database, filters the Los Lagos region, and produces a set of fishing behavior indicators and visualizations.\nThe project is under active development; outputs and indicators may evolve.\n\n\n\n\n\n\nNote\n\n\n\nCode and documentation available on GitHub."
+    "text": "Overview\nThis project builds a fully automated pipeline to analyze the spatial behavior of artisanal fishing vessels in southern Chile. Raw data come from SERNAPESCA’s satellite positioning system — an open daily feed of GPS positions for all registered artisanal fleets. The pipeline downloads new reports incrementally, stores them in a DuckDB database, filters the Los Lagos region, and produces fishing behavior indicators including spatial effort maps and species catch maps.\n\n\n\n\n\n\nWarning\n\n\n\nThis pipeline is under active development and does not yet represent a final or fully stabilized version. The structure, outputs, and indicators may change as the project evolves.\n\n\n\n\n\n\n\n\nNote\n\n\n\nCode and documentation available on GitHub."
   },
   {
     "objectID": "projects/artesanal-fishing-chile/index.html#data-source",
     "href": "projects/artesanal-fishing-chile/index.html#data-source",
     "title": "Artisanal Fishing Behavior in Chile",
     "section": "Data source",
-    "text": "Data source\nSERNAPESCA publishes daily CSV reports with vessel ID, timestamp, latitude, longitude, and speed for every registered artisanal boat in Chile. The download script queries the public web portal incrementally, so only new reports are fetched on each run."
+    "text": "Data source\nSERNAPESCA publishes daily CSV reports with vessel ID, timestamp, latitude, longitude, and speed for every registered artisanal boat in Chile. The download script queries the public web portal incrementally, so only new reports are fetched on each run. The dataset currently covers two report formats:\n\n\n\n\n\n\n\n\n\nPeriod\nSource\nFrequency\nVessels included\n\n\n\n\n2019–mid 2022\nAdmin snapshot reports\n~4 snapshots/day\nAll registered vessels (filtered to artisanal only)\n\n\nmid 2022–2026\nDaily artisanal fleet reports\n1 report/day\nArtisanal vessels only"
   },
   {
     "objectID": "projects/artesanal-fishing-chile/index.html#pipeline-structure",
     "href": "projects/artesanal-fishing-chile/index.html#pipeline-structure",
     "title": "Artisanal Fishing Behavior in Chile",
     "section": "Pipeline structure",
-    "text": "Pipeline structure\n\n\n\nFolder\nContent\n\n\n\n\nR/\nPipeline scripts\n\n\ndata_raw/\nDownloaded CSVs (not versioned)\n\n\ndata_processed/\nFiltered and cleaned outputs (not versioned)\n\n\noutputs/\nFigures and animations\n\n\nassets/\nSupporting images\n\n\n\nTo reproduce: open R and run source(\"R/Fisheries_Webbscrapping.R\")."
+    "text": "Pipeline structure\n\n\n\nFolder\nContent\n\n\n\n\nR/\nDownload and processing scripts\n\n\nnew/\nUpdated analysis scripts\n\n\ndata_raw/\nDownloaded CSVs (not versioned)\n\n\ndata_processed/\nFiltered and cleaned outputs (not versioned)\n\n\nnew/outputs/\nFigures and maps\n\n\nassets/\nSupporting images\n\n\n\nTo reproduce: open R and run source(\"R/Fisheries_Webbscrapping.R\")."
   },
   {
     "objectID": "projects/artesanal-fishing-chile/index.html#selected-outputs",
     "href": "projects/artesanal-fishing-chile/index.html#selected-outputs",
     "title": "Artisanal Fishing Behavior in Chile",
     "section": "Selected outputs",
-    "text": "Selected outputs\n\nSpatial heatmap — top 30 vessels, Los Lagos (2023)\nThe heatmap aggregates time spent at each grid cell across the top 30 most active vessels in the region. Darker areas indicate higher cumulative fishing presence.\n\n\n\nQuarterly time spent — top 30 vessels\nTemporal breakdown showing how fishing effort distributes across quarters for the most active vessels.\n\n\n\nVessel track — movement and speed\nIndividual vessel track for vessel ID 1, colored by recorded speed, illustrating typical movement patterns between fishing grounds and port.\n\n\n\nDirection of movement\n\n\n\nVessel animation\nAnimated trajectory of vessel ID 1 across the Chilean coastline."
+    "text": "Selected outputs\n\nActivity heatmap\nPing density across the Los Lagos region (2019–2026), restricted to artisanal vessels ((ART) and (LB) suffixes only):\n\n\n\nMonthly activity time series\nMonthly total pings and unique vessel counts over time:\n\n\n\nFishing effort map\nSpatial distribution of fishing effort (fishing hours per 0.05° grid cell) across Los Lagos 2019–2026. Fishing effort is estimated using a speed-threshold method — a standard approach in VMS-based fisheries research: a ping is classified as fishing if vessel speed is between 0.1 and 3.0 knots, and fishing hours are computed as the number of fishing-classified pings × 15 minutes (SERNAPESCA’s nominal reporting interval).\n\n\n\nSpecies catch maps\nSpatial distribution of landings by species, derived from SERNAPESCA’s production reports (Anuario Estadístico de Pesca y Acuicultura). Landing records were linked to VMS tracking data by matching vessel names — 193 out of 2,781 vessels in the production reports were matched to VMS-tracked artisanal vessels.\nCatch by species — grid map (0.1° cells, all years combined):\n\nCatch by species — kernel density map (all years combined):"
   },
   {
     "objectID": "projects/artesanal-fishing-chile/index.html#technical-details",
@@ -151,7 +151,7 @@
     "href": "projects/index.html",
     "title": "Projects",
     "section": "",
-    "text": "Artisanal Fishing Behavior in Chile\n\n\n\nR\n\nFisheries\n\nChile\n\nData pipeline\n\nDuckDB\n\n\n\nA data pipeline to download, process, and visualize SERNAPESCA satellite positioning data for artisanal fishing fleets in the Los Lagos region.\n\n\n\nFeb 5, 2026\n\n\n\n\n\n\nNo matching items"
+    "text": "Artisanal Fishing Behavior in Chile\n\n\n\nR\n\nFisheries\n\nChile\n\nData pipeline\n\nDuckDB\n\nVMS\n\nFishing effort\n\n\n\nA data pipeline to download, process, and visualize SERNAPESCA satellite positioning data for artisanal fishing fleets in the Los Lagos region.\n\n\n\nFeb 5, 2026\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "research/articles/intrahousehold-barg-timeuse-2023/index.html",
@@ -229,5 +229,12 @@
     "title": "Seafood Purchasing in Responses to Type 2 Diabetes Diagnosis",
     "section": "",
     "text": "Abstract\nDisease diagnosis can be a critical turning point in individuals’ lives and incentivize them to make lifestyle changes. However, the extent to which these events lead to significant changes in short- and long-term food choices and the extent to which this depends on demographics remain less studied. Seafood is a food group that is particularly interesting in this context. Despite well-documented health benefits, seafood consumption remains below recommended levels and vary significantly between demographic groups. Using a specific food group also allows the use of quantities in addition to expenditure or an index which may be important due to the closer relationship with nutrients, as well as exploring adjustments of the composition of products. Using the NielsenIQ datasets, this study examines how a type 2 diabetes diagnosis affected seafood purchasing behaviors in the United States, using a two-stage difference in difference approach. Our findings show a significant increase in seafood purchases post-diagnosis by 2%; the persistence of the impact vary about 8 years, before the effect eventually declines. There is heterogeneity in the results, showing that demographic differences in households play an important role in seafood purchases responses to a diagnosis, as well seafood species. Of particular interest is the fact that canned seafood was included in the Special Supplemental Nutrition Program for Women, Infants, and Children in the U.S. in 2024, increasing access to low income households that traditionally are among the groups that consumes least seafood. Our results indicate strong positive responses for canned seafood for low income households."
+  },
+  {
+    "objectID": "projects/artesanal-fishing-chile/index.html#references",
+    "href": "projects/artesanal-fishing-chile/index.html#references",
+    "title": "Artisanal Fishing Behavior in Chile",
+    "section": "References",
+    "text": "References\nBehivoke, F., Etienne, M.-P., Guitton, J., Randriatsara, R.M., Mahafina, J., & Léopold, M. (2021). Estimating fishing effort in small-scale fisheries using GPS tracking data and random forests. Ecological Indicators, 123, 107321. https://doi.org/10.1016/j.ecolind.2020.107321\nGerritsen, H., & Lordan, C. (2011). Integrating vessel monitoring systems (VMS) data with daily catch data from logbooks to explore the spatial distribution of catch and effort at high resolution. ICES Journal of Marine Science, 68(1), 245–252. https://doi.org/10.1093/icesjms/fsq137"
   }
 ]

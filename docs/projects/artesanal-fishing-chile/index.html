@@ -141,6 +141,8 @@ gtag('config', 'G-H4P0QZL89D', { 'anonymize_ip': true});
     <div class="quarto-category">Chile</div>
     <div class="quarto-category">Data pipeline</div>
     <div class="quarto-category">DuckDB</div>
+    <div class="quarto-category">VMS</div>
+    <div class="quarto-category">Fishing effort</div>
   </div>
   </div>
 
@@ -174,8 +176,20 @@ gtag('config', 'G-H4P0QZL89D', { 'anonymize_ip': true});
 </p>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This project builds a fully automated pipeline to analyze the spatial behavior of artisanal fishing vessels in southern Chile. Raw data come from <a href="https://www.sernapesca.cl/">SERNAPESCA</a>’s satellite positioning system — an open daily feed of GPS positions for all registered artisanal fleets. The pipeline downloads new reports incrementally, stores them in a <a href="https://duckdb.org/">DuckDB</a> database, filters the Los Lagos region, and produces a set of fishing behavior indicators and visualizations.</p>
-<p>The project is under active development; outputs and indicators may evolve.</p>
+<p>This project builds a fully automated pipeline to analyze the spatial behavior of artisanal fishing vessels in southern Chile. Raw data come from <a href="https://www.sernapesca.cl/">SERNAPESCA</a>’s satellite positioning system — an open daily feed of GPS positions for all registered artisanal fleets. The pipeline downloads new reports incrementally, stores them in a <a href="https://duckdb.org/">DuckDB</a> database, filters the Los Lagos region, and produces fishing behavior indicators including spatial effort maps and species catch maps.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This pipeline is under active development and does not yet represent a final or fully stabilized version. The structure, outputs, and indicators may change as the project evolves.</p>
+</div>
+</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -192,7 +206,37 @@ Note
 </section>
 <section id="data-source" class="level2">
 <h2 class="anchored" data-anchor-id="data-source">Data source</h2>
-<p>SERNAPESCA publishes daily CSV reports with vessel ID, timestamp, latitude, longitude, and speed for every registered artisanal boat in Chile. The download script queries the public web portal incrementally, so only new reports are fetched on each run.</p>
+<p>SERNAPESCA publishes daily CSV reports with vessel ID, timestamp, latitude, longitude, and speed for every registered artisanal boat in Chile. The download script queries the public web portal incrementally, so only new reports are fetched on each run. The dataset currently covers two report formats:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 25%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Period</th>
+<th>Source</th>
+<th>Frequency</th>
+<th>Vessels included</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2019–mid 2022</td>
+<td>Admin snapshot reports</td>
+<td>~4 snapshots/day</td>
+<td>All registered vessels (filtered to artisanal only)</td>
+</tr>
+<tr class="even">
+<td>mid 2022–2026</td>
+<td>Daily artisanal fleet reports</td>
+<td>1 report/day</td>
+<td>Artisanal vessels only</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="pipeline-structure" class="level2">
 <h2 class="anchored" data-anchor-id="pipeline-structure">Pipeline structure</h2>
@@ -206,21 +250,25 @@ Note
 <tbody>
 <tr class="odd">
 <td><code>R/</code></td>
-<td>Pipeline scripts</td>
+<td>Download and processing scripts</td>
 </tr>
 <tr class="even">
+<td><code>new/</code></td>
+<td>Updated analysis scripts</td>
+</tr>
+<tr class="odd">
 <td><code>data_raw/</code></td>
 <td>Downloaded CSVs (not versioned)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>data_processed/</code></td>
 <td>Filtered and cleaned outputs (not versioned)</td>
 </tr>
-<tr class="even">
-<td><code>outputs/</code></td>
-<td>Figures and animations</td>
-</tr>
 <tr class="odd">
+<td><code>new/outputs/</code></td>
+<td>Figures and maps</td>
+</tr>
+<tr class="even">
 <td><code>assets/</code></td>
 <td>Supporting images</td>
 </tr>
@@ -230,29 +278,28 @@ Note
 </section>
 <section id="selected-outputs" class="level2">
 <h2 class="anchored" data-anchor-id="selected-outputs">Selected outputs</h2>
-<section id="spatial-heatmap-top-30-vessels-los-lagos-2023" class="level3">
-<h3 class="anchored" data-anchor-id="spatial-heatmap-top-30-vessels-los-lagos-2023">Spatial heatmap — top 30 vessels, Los Lagos (2023)</h3>
-<p>The heatmap aggregates time spent at each grid cell across the top 30 most active vessels in the region. Darker areas indicate higher cumulative fishing presence.</p>
-<p><img src="https://raw.githubusercontent.com/robcareta/artesanal-fishing-behavior-Chile/main/outputs/los_lagos_heatmap_top30_2023.png" class="img-fluid" style="width:100.0%" alt="Heatmap of fishing time for top 30 artisanal vessels in Los Lagos"></p>
+<section id="activity-heatmap" class="level3">
+<h3 class="anchored" data-anchor-id="activity-heatmap">Activity heatmap</h3>
+<p>Ping density across the Los Lagos region (2019–2026), restricted to artisanal vessels (<code>(ART)</code> and <code>(LB)</code> suffixes only):</p>
+<p><img src="https://raw.githubusercontent.com/robcareta/artesanal-fishing-behavior-Chile/main/new/outputs/heatmap_artesanal_only.png" class="img-fluid" style="width:100.0%" alt="Heatmap of ping density for artisanal vessels in Los Lagos"></p>
 </section>
-<section id="quarterly-time-spent-top-30-vessels" class="level3">
-<h3 class="anchored" data-anchor-id="quarterly-time-spent-top-30-vessels">Quarterly time spent — top 30 vessels</h3>
-<p>Temporal breakdown showing how fishing effort distributes across quarters for the most active vessels.</p>
-<p><img src="https://raw.githubusercontent.com/robcareta/artesanal-fishing-behavior-Chile/main/outputs/quarterly_time_spent_top30.png" class="img-fluid" style="width:100.0%" alt="Quarterly time spent by top 30 vessels"></p>
+<section id="monthly-activity-time-series" class="level3">
+<h3 class="anchored" data-anchor-id="monthly-activity-time-series">Monthly activity time series</h3>
+<p>Monthly total pings and unique vessel counts over time:</p>
+<p><img src="https://raw.githubusercontent.com/robcareta/artesanal-fishing-behavior-Chile/main/new/outputs/timeseries_artesanal_only.png" class="img-fluid" style="width:100.0%" alt="Time series of monthly pings and vessel counts"></p>
 </section>
-<section id="vessel-track-movement-and-speed" class="level3">
-<h3 class="anchored" data-anchor-id="vessel-track-movement-and-speed">Vessel track — movement and speed</h3>
-<p>Individual vessel track for vessel ID 1, colored by recorded speed, illustrating typical movement patterns between fishing grounds and port.</p>
-<p><img src="https://raw.githubusercontent.com/robcareta/artesanal-fishing-behavior-Chile/main/outputs/speed_points_id_1.png" class="img-fluid" style="width:100.0%" alt="Speed-colored vessel track"></p>
+<section id="fishing-effort-map" class="level3">
+<h3 class="anchored" data-anchor-id="fishing-effort-map">Fishing effort map</h3>
+<p>Spatial distribution of fishing effort (fishing hours per 0.05° grid cell) across Los Lagos 2019–2026. Fishing effort is estimated using a <strong>speed-threshold method</strong> — a standard approach in VMS-based fisheries research: a ping is classified as fishing if vessel speed is between 0.1 and 3.0 knots, and fishing hours are computed as the number of fishing-classified pings × 15 minutes (SERNAPESCA’s nominal reporting interval).</p>
+<p><img src="https://raw.githubusercontent.com/robcareta/artesanal-fishing-behavior-Chile/main/new/outputs/effort_map_artesanal_only.png" class="img-fluid" style="width:100.0%" alt="Fishing effort map for artisanal vessels in Los Lagos"></p>
 </section>
-<section id="direction-of-movement" class="level3">
-<h3 class="anchored" data-anchor-id="direction-of-movement">Direction of movement</h3>
-<p><img src="https://raw.githubusercontent.com/robcareta/artesanal-fishing-behavior-Chile/main/outputs/direction_arrows_id_1.png" class="img-fluid" style="width:100.0%" alt="Direction arrows for vessel movement"></p>
-</section>
-<section id="vessel-animation" class="level3">
-<h3 class="anchored" data-anchor-id="vessel-animation">Vessel animation</h3>
-<p>Animated trajectory of vessel ID 1 across the Chilean coastline.</p>
-<p><img src="https://raw.githubusercontent.com/robcareta/artesanal-fishing-behavior-Chile/main/outputs/movement_id_1_chile.gif" class="img-fluid" style="width:80.0%" alt="Animated vessel movement along the Chilean coast"></p>
+<section id="species-catch-maps" class="level3">
+<h3 class="anchored" data-anchor-id="species-catch-maps">Species catch maps</h3>
+<p>Spatial distribution of landings by species, derived from SERNAPESCA’s production reports (<em>Anuario Estadístico de Pesca y Acuicultura</em>). Landing records were linked to VMS tracking data by matching vessel names — 193 out of 2,781 vessels in the production reports were matched to VMS-tracked artisanal vessels.</p>
+<p><strong>Catch by species — grid map (0.1° cells, all years combined):</strong></p>
+<p><img src="https://raw.githubusercontent.com/robcareta/artesanal-fishing-behavior-Chile/main/new/outputs/species_map_loslagos.png" class="img-fluid" style="width:100.0%" alt="Species catch grid map for Los Lagos"></p>
+<p><strong>Catch by species — kernel density map (all years combined):</strong></p>
+<p><img src="https://raw.githubusercontent.com/robcareta/artesanal-fishing-behavior-Chile/main/new/outputs/species_map_kde_loslagos.png" class="img-fluid" style="width:100.0%" alt="Species catch kernel density map for Los Lagos"></p>
 </section>
 </section>
 <section id="technical-details" class="level2">
@@ -281,6 +328,11 @@ Note
 </tr>
 </tbody>
 </table>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p>Behivoke, F., Etienne, M.-P., Guitton, J., Randriatsara, R.M., Mahafina, J., &amp; Léopold, M. (2021). Estimating fishing effort in small-scale fisheries using GPS tracking data and random forests. <em>Ecological Indicators</em>, 123, 107321. <a href="https://doi.org/10.1016/j.ecolind.2020.107321">https://doi.org/10.1016/j.ecolind.2020.107321</a></p>
+<p>Gerritsen, H., &amp; Lordan, C. (2011). Integrating vessel monitoring systems (VMS) data with daily catch data from logbooks to explore the spatial distribution of catch and effort at high resolution. <em>ICES Journal of Marine Science</em>, 68(1), 245–252. <a href="https://doi.org/10.1093/icesjms/fsq137">https://doi.org/10.1093/icesjms/fsq137</a></p>
 
 
 </section>
