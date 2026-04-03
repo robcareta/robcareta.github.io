@@ -57,15 +57,17 @@ Ping density across the Los Lagos region (2019–2026), restricted to artisanal 
 
 ![](https://raw.githubusercontent.com/robcareta/artesanal-fishing-behavior-Chile/main/new/outputs/heatmap_artesanal_only.png){fig-alt="Heatmap of ping density for artisanal vessels in Los Lagos" width="100%"}
 
-### Monthly activity time series
-
-Monthly total pings and unique vessel counts over time:
-
-![](https://raw.githubusercontent.com/robcareta/artesanal-fishing-behavior-Chile/main/new/outputs/timeseries_artesanal_only.png){fig-alt="Time series of monthly pings and vessel counts" width="100%"}
-
 ### Fishing effort map
 
-Spatial distribution of fishing effort (fishing hours per 0.05° grid cell) across Los Lagos 2019–2026. Fishing effort is estimated using a **speed-threshold method** — a standard approach in VMS-based fisheries research: a ping is classified as fishing if vessel speed is between 0.1 and 3.0 knots, and fishing hours are computed as the number of fishing-classified pings × 15 minutes (SERNAPESCA's nominal reporting interval).
+Spatial distribution of fishing effort (fishing hours per 0.05° grid cell) across Los Lagos 2019–2026.
+
+**Effort computation.** Fishing effort is estimated using the **speed-threshold method**, a standard approach in VMS-based fisheries research (Gerritsen & Lordan, 2011; Behivoke et al., 2021). Each VMS ping is classified into one of three states based on recorded speed:
+
+- **Fishing**: speed between 0.1 and 3.0 knots
+- **At anchor / moored**: speed below 0.1 knots
+- **Steaming / transiting**: speed above 3.0 knots
+
+These thresholds are calibrated for small-scale artisanal vessels, which operate at substantially lower speeds than industrial trawlers (Behivoke et al., 2021). Fishing hours are then computed as the count of fishing-classified pings multiplied by 15 minutes — SERNAPESCA's nominal reporting interval. The resulting effort is aggregated to a 0.05° spatial grid.
 
 ![](https://raw.githubusercontent.com/robcareta/artesanal-fishing-behavior-Chile/main/new/outputs/effort_map_artesanal_only.png){fig-alt="Fishing effort map for artisanal vessels in Los Lagos" width="100%"}
 
@@ -73,11 +75,11 @@ Spatial distribution of fishing effort (fishing hours per 0.05° grid cell) acro
 
 Spatial distribution of landings by species, derived from SERNAPESCA's production reports (*Anuario Estadístico de Pesca y Acuicultura*). Landing records were linked to VMS tracking data by matching vessel names — 193 out of 2,781 vessels in the production reports were matched to VMS-tracked artisanal vessels.
 
-**Catch by species — grid map (0.1° cells, all years combined):**
+**Grid map** (0.1° cells, all years combined) — each cell shows total catch tonnage across all matched vessels:
 
 ![](https://raw.githubusercontent.com/robcareta/artesanal-fishing-behavior-Chile/main/new/outputs/species_map_loslagos.png){fig-alt="Species catch grid map for Los Lagos" width="100%"}
 
-**Catch by species — kernel density map (all years combined):**
+**Kernel density map** (all years combined) — fishing locations are smoothed using a two-dimensional Gaussian kernel to highlight core fishing areas for each species, independent of the arbitrary grid resolution. Sardina Austral and Anchoveta concentrate in the interior sea around Puerto Montt, while Reineta and Centolla show a broader distribution across the southern channels and open coast:
 
 ![](https://raw.githubusercontent.com/robcareta/artesanal-fishing-behavior-Chile/main/new/outputs/species_map_kde_loslagos.png){fig-alt="Species catch kernel density map for Los Lagos" width="100%"}
 
