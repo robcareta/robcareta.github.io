@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VMS Fishing Explorer</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,sans-serif;font-size:0.93rem;background:#f8f9fa;color:#222}
+#header{background:#005f73;color:#fff;padding:12px 18px 10px;border-radius:0 0 6px 6px}
+#header h3{font-size:1.15rem;font-weight:700;margin:0}
+#header p{font-size:0.8rem;opacity:.85;margin:3px 0 0}
+#tabs{display:flex;gap:4px;padding:10px 10px 0;background:#fff;border-bottom:1px solid #dee2e6}
+.tab-btn{padding:7px 16px;border:none;background:#e9ecef;border-radius:4px 4px 0 0;cursor:pointer;font-size:.85rem;color:#444;font-weight:500}
+.tab-btn.active{background:#005f73;color:#fff}
+.tab-content{display:none;padding:12px 10px}
+.tab-content.active{display:flex;gap:12px}
+.panel{background:#fff;border:1px solid #dee2e6;border-radius:6px;padding:12px;width:210px;flex-shrink:0}
+.panel h4{color:#005f73;font-weight:700;font-size:.95rem;margin-bottom:10px}
+.panel label{font-size:.82rem;display:block;margin-bottom:3px;color:#444}
+.panel select,.panel input[type=range]{width:100%;margin-bottom:10px}
+.panel input[type=range]{accent-color:#005f73}
+.radio-group{margin-bottom:10px}
+.radio-group label{display:flex;align-items:center;gap:5px;margin-bottom:4px;font-size:.82rem;cursor:pointer}
+.check-group{margin-bottom:10px;max-height:160px;overflow-y:auto}
+.check-group label{display:flex;align-items:center;gap:5px;margin-bottom:4px;font-size:.82rem;cursor:pointer}
+.main-area{flex:1;min-width:0}
+#map{height:520px;border-radius:4px;border:1px solid #dee2e6}
+.stat-row{display:flex;gap:8px;margin-top:8px}
+.stat-box{flex:1;background:#fff;border-left:3px solid #005f73;padding:8px 10px;border-radius:3px;border:1px solid #e4e8ec}
+.stat-val{font-size:1.2rem;font-weight:700;color:#005f73}
+.stat-lbl{font-size:.75rem;color:#666}
+.chart-wrap{position:relative;background:#fff;border:1px solid #dee2e6;border-radius:4px;padding:10px}
+.note{font-size:.75rem;color:#666;margin-top:6px;font-style:italic}
+#loading{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(255,255,255,.9);display:flex;align-items:center;justify-content:center;z-index:9999;flex-direction:column;gap:10px}
+#loading p{color:#005f73;font-size:1rem;font-weight:600}
+#min-pings-val{font-size:.78rem;color:#666}
+</style>
+</head>
+<body>
+
+<div id="loading">
+  <div style="width:40px;height:40px;border:4px solid #e2e8f0;border-top-color:#005f73;border-radius:50%;animation:spin 0.8s linear infinite"></div>
+  <p>Loading data…</p>
+</div>
+<style>@keyframes spin{to{transform:rotate(360deg)}}</style>
+
+<div id="header">
+  <h3>Los Lagos Artisanal Fisheries — VMS Explorer</h3>
+  <p>SERNAPESCA vessel monitoring · 2019–2026 · ~58.5 million pings</p>
+</div>
+
+<div id="tabs">
+  <button class="tab-btn active" data-tab="map">Fishing Map</button>
+  <button class="tab-btn" data-tab="grad">Distance Gradient</button>
+  <button class="tab-btn" data-tab="trend">Fleet Activity</button>
+</div>
+
+<!-- TAB 1: MAP -->
+<div id="tab-map" class="tab-content active">
+  <div class="panel">
+    <h4>Map controls</h4>
+    <label>Year</label>
+    <select id="map-year"></select>
+    <div class="radio-group">
+      <div style="font-size:.82rem;margin-bottom:4px;color:#444">Colour by</div>
+      <label><input type="radio" name="map-metric" value="frac" checked> Fishing fraction</label>
+      <label><input type="radio" name="map-metric" value="log_pings"> Total pings (log)</label>
+    </div>
+    <label>Min pings per cell: <span id="min-pings-val">10</span></label>
+    <input type="range" id="min-pings" min="0" max="500" value="10" step="10">
+    <p class="note">Each square ≈ 5 km. Fishing = speed 0.1–3.0 knots.</p>
+  </div>
+  <div class="main-area">
+    <div id="map"></div>
+    <div class="stat-row" id="map-stats"></div>
+  </div>
+</div>
+
+<!-- TAB 2: GRADIENT -->
+<div id="tab-grad" class="tab-content">
+  <div class="panel">
+    <h4>Controls</h4>
+    <div class="check-group" id="grad-years"></div>
+    <div class="radio-group">
+      <label><input type="radio" name="grad-metric" value="frac" checked> Fishing fraction</label>
+      <label><input type="radio" name="grad-metric" value="pings"> Total pings</label>
+    </div>
+    <p class="note">Distance to nearest marine aquaculture farm.</p>
+  </div>
+  <div class="main-area">
+    <div class="chart-wrap"><canvas id="grad-chart" height="420"></canvas></div>
+  </div>
+</div>
+
+<!-- TAB 3: TRENDS -->
+<div id="tab-trend" class="tab-content">
+  <div class="panel">
+    <h4>Controls</h4>
+    <label>Year range</label>
+    <div style="display:flex;gap:6px;margin-bottom:10px">
+      <select id="trend-yr-min" style="width:50%"></select>
+      <select id="trend-yr-max" style="width:50%"></select>
+    </div>
+    <div class="radio-group">
+      <div style="font-size:.82rem;margin-bottom:4px;color:#444">Show</div>
+      <label><input type="radio" name="trend-metric" value="n_pings" checked> Total pings</label>
+      <label><input type="radio" name="trend-metric" value="n_fishing"> Fishing pings</label>
+      <label><input type="radio" name="trend-metric" value="frac"> Fishing fraction</label>
+      <label><input type="radio" name="trend-metric" value="n_cells"> Active cells</label>
+    </div>
+  </div>
+  <div class="main-area" style="display:flex;flex-direction:column;gap:10px">
+    <div class="chart-wrap"><canvas id="trend-monthly" height="280"></canvas></div>
+    <div class="chart-wrap"><canvas id="trend-annual" height="150"></canvas></div>
+  </div>
+</div>
+
+<script>
+// ── Global state ──────────────────────────────────────────────────────────────
+let cellData = [], ringData = [], trendData = [];
+let map, mapLayers = [];
+let gradChart = null, trendMonthly = null, trendAnnual = null;
+
+const RING_ORDER = ["0\u20132 km","2\u20135 km","5\u201310 km","10\u201320 km","20\u201350 km"];
+const RING_COLS  = {"0\u20132 km":"#b5000a","2\u20135 km":"#e05c00","5\u201310 km":"#e8a020","10\u201320 km":"#4a7c59","20\u201350 km":"#2a5caa",">50 km":"#7a7a7a"};
+const CELL = 0.025; // half-cell
+
+// ── Colour helpers ────────────────────────────────────────────────────────────
+const FRAC_STOPS = [[0,"#ffffb2"],[0.25,"#fecc5c"],[0.5,"#fd8d3c"],[0.75,"#e31a1c"],[1,"#800026"]];
+const BLUE_STOPS = [[0,"#eff3ff"],[1,"#08519c"]];
+
+function lerp(a,b,t){return a+(b-a)*t}
+function hexToRgb(h){const r=parseInt(h.slice(1,3),16),g=parseInt(h.slice(3,5),16),b=parseInt(h.slice(5,7),16);return[r,g,b]}
+function rgbToHex(r,g,b){return'#'+[r,g,b].map(v=>Math.round(v).toString(16).padStart(2,'0')).join('')}
+function interpolateColor(stops, t){
+  t=Math.max(0,Math.min(1,t));
+  for(let i=1;i<stops.length;i++){
+    if(t<=stops[i][0]){
+      const lo=stops[i-1],hi=stops[i];
+      const u=(t-lo[0])/(hi[0]-lo[0]);
+      const c1=hexToRgb(lo[1]),c2=hexToRgb(hi[1]);
+      return rgbToHex(lerp(c1[0],c2[0],u),lerp(c1[1],c2[1],u),lerp(c1[2],c2[2],u));
+    }
+  }
+  return stops[stops.length-1][1];
+}
+
+// ── Format helpers ────────────────────────────────────────────────────────────
+function fmtNum(n){return n>=1e6?(n/1e6).toFixed(1)+'M':n>=1e3?(n/1e3).toFixed(0)+'k':String(n)}
+function fmtPct(v){return(v*100).toFixed(1)+'%'}
+
+// ── Data loading ──────────────────────────────────────────────────────────────
+async function loadCSV(path){
+  return new Promise((res,rej)=>Papa.parse(path,{download:true,header:true,dynamicTyping:true,skipEmptyLines:true,complete:r=>res(r.data),error:rej}));
+}
+
+async function init(){
+  [cellData, ringData, trendData] = await Promise.all([
+    loadCSV('data/cell_annual.csv'),
+    loadCSV('data/ring_annual.csv'),
+    loadCSV('data/monthly_trend.csv')
+  ]);
+
+  trendData.forEach(d=>{ d.yearmonth = new Date(d.yearmonth); });
+
+  const years = [...new Set(cellData.map(d=>d.year))].sort();
+
+  // Populate year selectors
+  const mapYrSel = document.getElementById('map-year');
+  years.forEach(y=>{ const o=document.createElement('option'); o.value=y; o.text=y; mapYrSel.appendChild(o); });
+  mapYrSel.value = years[years.length-1];
+
+  const gradDiv = document.getElementById('grad-years');
+  years.forEach(y=>{
+    const lbl=document.createElement('label');
+    lbl.innerHTML=`<input type="checkbox" value="${y}" checked> ${y}`;
+    gradDiv.appendChild(lbl);
+  });
+
+  const tMin=document.getElementById('trend-yr-min');
+  const tMax=document.getElementById('trend-yr-max');
+  years.forEach(y=>{ [tMin,tMax].forEach(s=>{const o=document.createElement('option');o.value=y;o.text=y;s.appendChild(o);}); });
+  tMin.value = years[0]; tMax.value = years[years.length-1];
+
+  // Init map
+  initMap();
+  renderMap();
+
+  // Init charts
+  initGradChart();
+  renderGradChart();
+  initTrendCharts();
+  renderTrendCharts();
+
+  // Wire up tabs
+  document.querySelectorAll('.tab-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-'+btn.dataset.tab).classList.add('active');
+      if(btn.dataset.tab==='map') setTimeout(()=>map.invalidateSize(),50);
+    });
+  });
+
+  // Wire up map controls
+  mapYrSel.addEventListener('change', renderMap);
+  document.querySelectorAll('input[name="map-metric"]').forEach(r=>r.addEventListener('change', renderMap));
+  const minPingsSlider = document.getElementById('min-pings');
+  const minPingsVal = document.getElementById('min-pings-val');
+  minPingsSlider.addEventListener('input',()=>{minPingsVal.textContent=minPingsSlider.value; renderMap();});
+
+  // Wire up gradient controls
+  gradDiv.querySelectorAll('input[type=checkbox]').forEach(c=>c.addEventListener('change', renderGradChart));
+  document.querySelectorAll('input[name="grad-metric"]').forEach(r=>r.addEventListener('change', renderGradChart));
+
+  // Wire up trend controls
+  tMin.addEventListener('change', renderTrendCharts);
+  tMax.addEventListener('change', renderTrendCharts);
+  document.querySelectorAll('input[name="trend-metric"]').forEach(r=>r.addEventListener('change', renderTrendCharts));
+
+  document.getElementById('loading').style.display='none';
+}
+
+// ── MAP ───────────────────────────────────────────────────────────────────────
+function initMap(){
+  map = L.map('map', {renderer: L.canvas()}).setView([-42.5, -73.5], 7);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{
+    attribution:'&copy; <a href="https://carto.com/">CARTO</a>',maxZoom:19
+  }).addTo(map);
+}
+
+function renderMap(){
+  const year = +document.getElementById('map-year').value;
+  const metric = document.querySelector('input[name="map-metric"]:checked').value;
+  const minP = +document.getElementById('min-pings').value;
+
+  mapLayers.forEach(l=>map.removeLayer(l));
+  mapLayers = [];
+
+  const rows = cellData.filter(d=>d.year===year && d.n_pings>=minP);
+  if(rows.length===0) return;
+
+  const vals = rows.map(d=>d[metric]);
+  const vMin=Math.min(...vals), vMax=Math.max(...vals);
+  const stops = metric==='frac' ? FRAC_STOPS : BLUE_STOPS;
+  const useLog = metric==='log_pings';
+
+  rows.forEach(d=>{
+    const v = d[metric];
+    const t = vMax>vMin ? (v-vMin)/(vMax-vMin) : 0.5;
+    const color = interpolateColor(stops, t);
+    const r = L.rectangle(
+      [[d.lat_bin-CELL, d.lon_bin-CELL],[d.lat_bin+CELL, d.lon_bin+CELL]],
+      {fillColor:color, fillOpacity:0.75, color:'transparent', weight:0}
+    ).bindPopup(
+      `<b>${d.lat_bin.toFixed(3)}, ${d.lon_bin.toFixed(3)}</b><br>`+
+      `Year: ${d.year}<br>`+
+      `Pings: ${d.n_pings.toLocaleString()}<br>`+
+      `Fishing: ${fmtPct(d.frac)}<br>`+
+      `Ring: ${d.ring}`
+    );
+    r.addTo(map);
+    mapLayers.push(r);
+  });
+
+  // Stats
+  const totPings = rows.reduce((s,d)=>s+d.n_pings,0);
+  const totFish  = rows.reduce((s,d)=>s+d.n_fishing,0);
+  document.getElementById('map-stats').innerHTML =
+    statBox(totPings.toLocaleString(), `Total pings (${year})`)+
+    statBox(fmtPct(totFish/totPings), 'Fishing fraction')+
+    statBox(rows.length.toLocaleString(), 'Active grid cells');
+}
+
+function statBox(val,lbl){
+  return `<div class="stat-box"><div class="stat-val">${val}</div><div class="stat-lbl">${lbl}</div></div>`;
+}
+
+// ── GRADIENT CHART ────────────────────────────────────────────────────────────
+function initGradChart(){
+  gradChart = new Chart(document.getElementById('grad-chart'),{
+    type:'bar',
+    data:{labels:[],datasets:[]},
+    options:{
+      responsive:true,
+      plugins:{legend:{display:false},title:{display:true,text:'',font:{size:13,weight:'bold'}}},
+      scales:{
+        x:{grid:{display:false},title:{display:true,text:'Distance ring'}},
+        y:{beginAtZero:true,grid:{color:'#f0f0f0'}}
+      }
+    }
+  });
+}
+
+function renderGradChart(){
+  const checkedYrs = [...document.querySelectorAll('#grad-years input:checked')].map(c=>+c.value);
+  const metric = document.querySelector('input[name="grad-metric"]:checked').value;
+  const rings = RING_ORDER;
+
+  if(checkedYrs.length===0){gradChart.data.labels=[];gradChart.data.datasets=[];gradChart.update();return;}
+
+  if(checkedYrs.length===1){
+    const yr = checkedYrs[0];
+    const rows = ringData.filter(d=>d.year===yr && rings.includes(d.ring));
+    const vals = rings.map(r=>{ const row=rows.find(d=>d.ring===r); return row?(metric==='frac'?row.weighted_frac*100:row.total_pings/1e6):0; });
+    gradChart.data.labels = rings;
+    gradChart.data.datasets = [{
+      data: vals,
+      backgroundColor: rings.map(r=>RING_COLS[r]+'cc'),
+      borderColor: rings.map(r=>RING_COLS[r]),
+      borderWidth:1, borderRadius:3
+    }];
+    gradChart.options.plugins.title.text = metric==='frac'
+      ? `Fishing Fraction by Distance (${yr})` : `Total Pings by Distance (${yr})`;
+    gradChart.options.scales.y.title = {display:true,text: metric==='frac'?'% pings while fishing':'Pings (millions)'};
+    if(metric==='frac'){
+      gradChart.options.scales.y.max=80;
+      gradChart.options.scales.y.ticks={callback:v=>v+'%'};
+    } else {
+      gradChart.options.scales.y.max=undefined;
+      gradChart.options.scales.y.ticks={callback:v=>v.toFixed(1)+'M'};
+    }
+  } else {
+    // Multi-year: datasets per year
+    gradChart.data.labels = rings;
+    gradChart.data.datasets = checkedYrs.map((yr,i)=>{
+      const rows = ringData.filter(d=>d.year===yr && rings.includes(d.ring));
+      const vals = rings.map(r=>{ const row=rows.find(d=>d.ring===r); return row?(metric==='frac'?row.weighted_frac*100:row.total_pings/1e6):0; });
+      const hue = i/(checkedYrs.length-1||1);
+      return {label:String(yr),data:vals,backgroundColor:`hsl(${Math.round(200+hue*140)},60%,50%)`,borderRadius:2,borderWidth:0};
+    });
+    gradChart.options.plugins.legend.display = true;
+    gradChart.options.plugins.title.text = metric==='frac' ? 'Fishing Fraction by Distance Ring' : 'Total Pings by Distance Ring';
+  }
+  gradChart.update();
+}
+
+// ── TREND CHARTS ──────────────────────────────────────────────────────────────
+function initTrendCharts(){
+  const commonOpts = {
+    responsive:true,
+    plugins:{legend:{display:false}},
+    scales:{
+      x:{grid:{display:false},ticks:{maxRotation:35}},
+      y:{beginAtZero:false,grid:{color:'#f0f0f0'}}
+    }
+  };
+  trendMonthly = new Chart(document.getElementById('trend-monthly'),{
+    type:'line',data:{labels:[],datasets:[]},
+    options:{...JSON.parse(JSON.stringify(commonOpts)),plugins:{...commonOpts.plugins,title:{display:true,text:'',font:{size:13,weight:'bold'}}}}
+  });
+  trendAnnual = new Chart(document.getElementById('trend-annual'),{
+    type:'bar',data:{labels:[],datasets:[]},
+    options:{...JSON.parse(JSON.stringify(commonOpts)),plugins:{...commonOpts.plugins,title:{display:true,text:'Annual total',font:{size:11,weight:'bold'}}},scales:{x:{grid:{display:false}},y:{beginAtZero:true,grid:{color:'#f0f0f0'}}}}
+  });
+}
+
+function renderTrendCharts(){
+  const yMin = +document.getElementById('trend-yr-min').value;
+  const yMax = +document.getElementById('trend-yr-max').value;
+  const metric = document.querySelector('input[name="trend-metric"]:checked').value;
+  const labels = {'n_pings':'Total VMS pings/month','n_fishing':'Fishing pings/month','frac':'Fishing fraction (%)','n_cells':'Active grid cells'};
+  const lbl = labels[metric];
+
+  const filtered = trendData.filter(d=>d.year>=yMin && d.year<=yMax);
+  const dates = filtered.map(d=>d.yearmonth.toLocaleDateString('en',{month:'short',year:'numeric'}));
+  const vals = filtered.map(d=>metric==='frac'?d[metric]*100:metric==='n_pings'||metric==='n_fishing'?d[metric]/1e6:d[metric]);
+
+  trendMonthly.data.labels = dates;
+  trendMonthly.data.datasets = [{
+    data: vals,
+    borderColor:'#005f73', backgroundColor:'rgba(0,95,115,0.1)',
+    borderWidth:1.5, pointRadius:2, fill:true, tension:0.3
+  }];
+  trendMonthly.options.plugins.title.text = `Monthly ${lbl}`;
+  trendMonthly.options.scales.y.title = {display:true,text: metric==='frac'?'%':metric==='n_cells'?'cells':'millions'};
+  trendMonthly.update();
+
+  // Annual aggregates
+  const byYear = {};
+  filtered.forEach(d=>{
+    if(!byYear[d.year]) byYear[d.year]={n_pings:0,n_fishing:0,n_cells:0,cnt:0};
+    byYear[d.year].n_pings += d.n_pings;
+    byYear[d.year].n_fishing += d.n_fishing;
+    byYear[d.year].n_cells += d.n_cells;
+    byYear[d.year].cnt++;
+  });
+  const annYears = Object.keys(byYear).sort();
+  const annVals = annYears.map(y=>{
+    const v = byYear[y];
+    if(metric==='frac') return v.n_fishing/Math.max(v.n_pings,1)*100;
+    if(metric==='n_cells') return v.n_cells/v.cnt;
+    return v[metric]/1e6;
+  });
+
+  trendAnnual.data.labels = annYears;
+  trendAnnual.data.datasets = [{
+    data:annVals,
+    backgroundColor:'#005f73cc', borderRadius:3
+  }];
+  trendAnnual.update();
+}
+
+// ── Boot ──────────────────────────────────────────────────────────────────────
+init().catch(e=>{ document.getElementById('loading').innerHTML=`<p style="color:red">Error loading data: ${e.message}</p>`; });
+</script>
+</body>
+</html>
