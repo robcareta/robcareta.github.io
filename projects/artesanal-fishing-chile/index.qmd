@@ -27,6 +27,11 @@ This pipeline is under active development and does not yet represent a final or 
 Code and documentation available on [GitHub](https://github.com/robcareta/artesanal-fishing-behavior-Chile).
 :::
 
+::: {.callout-tip}
+## Interactive explorer
+Explore the fishing activity data interactively — spatial map, distance gradient from farms, and fleet trends — in the **[VMS Fishing Explorer](vms-explorer.qmd)**.
+:::
+
 ## Data source
 
 SERNAPESCA publishes daily CSV reports with vessel ID, timestamp, latitude, longitude, and speed for every registered artisanal boat in Chile. The download script queries the public web portal incrementally, so only new reports are fetched on each run. The dataset currently covers two report formats:
