@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Roberto Cárdenas-Retamal">
+<meta name="description" content="Occasional notes on food economics, the environment, and the evidence behind the headlines.">
 
-<title>Labor outcomes effect of mental health – Roberto Cárdenas-Retamal</title>
+<title>Blog – Roberto Cárdenas-Retamal</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -27,22 +27,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-4082d3e689bd3d0e9f58069c02f8a7f1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-4082d3e689bd3d0e9f58069c02f8a7f1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,6 +71,35 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-posts .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-posts'] = new List('listing-posts', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-H4P0QZL89D"></script>
 
 <script type="text/javascript">
@@ -78,25 +109,48 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-H4P0QZL89D', { 'anonymize_ip': true});
 </script>
-<style>
-
-      .quarto-title-block .quarto-title-banner {
-        background: #005f73;
-      }
-</style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
-<body class="floating nav-fixed quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Roberto Cárdenas-Retamal</span>
     </a>
   </div>
@@ -107,19 +161,19 @@ gtag('config', 'G-H4P0QZL89D', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../research/index.html"> 
+    <a class="nav-link" href="../research/index.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../projects/index.html"> 
+    <a class="nav-link" href="../projects/index.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../blog/index.html"> 
+    <a class="nav-link active" href="../blog/index.html" aria-current="page"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../cv/index.html"> 
+    <a class="nav-link" href="../cv/index.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
 </ul>
@@ -137,87 +191,74 @@ gtag('config', 'G-H4P0QZL89D', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block research default toc-left page-columns page-full">
-    <div class="quarto-title-banner page-columns page-full">
-                <div class="back-nav"><a href="../../../research/">← Back to research</a></div>
-                <div class="quarto-title column-body">
-            <h1 class="title">Labor outcomes effect of mental health</h1>
-
-            
-            
-            
-                                    <div class="quarto-categories">
-                                <div class="quarto-category">Mental health</div>
-                                <div class="quarto-category">Depression</div>
-                                <div class="quarto-category">Anxiety</div>
-                                <div class="quarto-category">Labor outcomes</div>
-                            </div>
-                                </div>
-    </div>
-    
-        <div class="project-details">
-        <div class="publication-content">
-            <p>“Labor outcomes effect of mental health”</p>
-        </div>
-            </div>
-
-    
-    <div class="quarto-title-meta-author">
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-heading">Affiliation</div>
-      
-        <div class="quarto-title-meta-contents">
-        <p class="author">Roberto Cárdenas-Retamal <a href="https://orcid.org/0000-0002-9578-827X" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
-      </div>
-      <div class="quarto-title-meta-contents">
-            <p class="affiliation">
-                School of Forest, Fisheries, &amp; Geomatics Sciences, University of Florida
-              </p>
-          </div>
-      </div>
-
-    <div class="quarto-title-meta">
-
-          
-        <div>
-        <div class="quarto-title-meta-heading">Published</div>
-        <div class="quarto-title-meta-contents">
-          <p class="date">December 2025</p>
-        </div>
-      </div>
-      
-        
-      </div>
-      
-
-    
-</header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Contents</h2>
-   
-  <ul>
-  <li><a href="#abstract" id="toc-abstract" class="nav-link active" data-scroll-target="#abstract">Abstract</a></li>
-  </ul>
-</nav>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-    </div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZWNvbm9taWNz">economics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZW52aXJvbm1lbnQ=">environment <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Zm9vZA==">food <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aGVhbHRo">health <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Blog</h1>
+</div>
+
+<div>
+  <div class="description">
+    Occasional notes on food economics, the environment, and the evidence behind the headlines.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta column-page-left">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div id="listing-posts" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="Zm9vZCUyQ2Vudmlyb25tZW50JTJDaGVhbHRoJTJDZWNvbm9taWNz" data-listing-date-sort="1776484800000" data-listing-file-modified-sort="1776534089516" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1929">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../blog/posts/menu-not-the-shopper/index.html" class="no-external">The menu, not the shopper</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('Zm9vZA=='); return false;">food</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZW52aXJvbm1lbnQ='); return false;">environment</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('aGVhbHRo'); return false;">health</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZWNvbm9taWNz'); return false;">economics</div>
+
+</div>
+<div class="delink listing-description"><a href="../blog/posts/menu-not-the-shopper/index.html" class="no-external">
+<p>Healthy and sustainable diets are almost the same diet. The apparent conflict between nutrition and the planet is smaller than the conversation around it. Individual virtue is the wrong unit of analysis: cafeteria menus, supermarket shelves, and tax codes move more carbon than any number of eco-conscious shoppers.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../blog/posts/menu-not-the-shopper/index.html" class="no-external">
+<div class="listing-date">
+Apr 18, 2026
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
 
 
 
-
-<section id="abstract" class="level1">
-<h1>Abstract</h1>
-<p>A chronic disease diagnosis is an event that can be a turning point in an individual’s lifestyle, affecting several behavioral dimensions, such as diet patterns (Edenbrandt et al., 2025; Hut &amp; Oster, 2022), crime behavior (Andersen et al., 2025), prevalence of healthy behaviors, a change in alcohol use (Pinto &amp; Trunzo, 2005), and labor market outcomes (Ramirez Lizardi et al., 2024). Mental health is a diagnosis that is particularly interesting from a behavioral perspective because it has multiple possible implications for the diagnosed individuals in terms of their economic, professional, and social life, as well as for health policy (Chisholm et al., 2016; Horwitz, 2011; Stecher et al., 2024). Globally, the most common mental disorders are anxiety and depression, and most people do not have access to effective care, even though effective prevention and treatment options exist. In 2016, it was estimated that 12 billion productive days were lost every year to depression and anxiety across 36 countries in the world, at a cost of nearly US$1 trillion, which included days lost to absenteeism, presenteeism, and staff turnover. Some of the social costs of depression are reduced educational attainment, lower wages, and costs to employers, as well as in labor force participation and productivity (Lerner &amp; Henke, 2008). Individuals with a depression diagnosis can become an increasing cause of disability, suicides, and disease burden, and tend to coexist with other noncommunicable diseases (Hsieh &amp; Qin, 2018). The relationship between mental health illness and labor outcomes is well documented in the literature; however, the causal effect of depression and anxiety on labor outcomes is less studied, despite the social consequences associated with those diseases. This relationship also faces some challenges because of the endogeneity problem of mental health diseases. The objective of this paper is to estimate how labor outcomes, specifically wages and employment, respond to a depression or anxiety diagnosis in households. We use a representative longitudinal panel data set from NielsenIQ Consumer Panel Data, complemented with the Annual Ailments, Health, and Wellness Survey. The Ailment data provides health information for a subset of panelists’ households from the consumer panel data. This allows us to track when households were diagnosed with depression or anxiety, while using the consumer panel allows us to extract demographic information from households. We employed a difference-in-differences design to estimate the effect of the diagnosis on labor outcomes. We find a statistically significant decrease in wages on average of 20% following a mental health diagnosis. This effect is small in the first years after the diagnosis, intensifying over time and being persistent for seven years. In addition to this, we show that the results are consistent across demographic heterogeneity, such as marital status (being stronger in divorced and single households), race, head of household age, household composition (stronger when living alone), and family type. We also find that the probability of being unemployed after the mental health diagnosis increases by 10%, but the effect is significant only after the fifth year of the diagnosis. This article makes several contributions. First, we expand the scarce evidence on the causal effects of health shocks on labor outcomes, providing evidence on how households present large and persistent declines in wages and increases in unemployment after a mental health diagnosis. The magnitude and long-run effects suggest that mental health conditions create substantial economic costs for households. Secondly, the heterogeneous impacts across demographic household attributes highlight that some population groups, particularly divorced, single, and single-person households, are more vulnerable to labor market disruptions following a mental health shock. Those results underscore the potential economic returns to early mental health detection, timely treatment, and workplace accommodations. Addressing mental health conditions nay not only improve individual well-being, but also mitigate long-term productivity in the labor market.</p>
-
-
-</section>
 
 </main> <!-- /main -->
 <script>

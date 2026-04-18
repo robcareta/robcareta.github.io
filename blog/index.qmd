@@ -1,0 +1,20 @@
+---
+title: "Blog"
+description: "Occasional notes on food economics, the environment, and the evidence behind the headlines."
+
+listing:
+  - id: posts
+    contents: "posts/*/index.qmd"
+    sort: "date desc"
+    type: default
+    fields: [date, title, description, categories]
+    categories: true
+    feed: true
+
+page-layout: full
+include-back-link: false
+toc: false
+---
+
+:::{#posts}
+:::

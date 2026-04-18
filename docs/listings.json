@@ -19,6 +19,12 @@
     ]
   },
   {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/posts/menu-not-the-shopper/index.html"
+    ]
+  },
+  {
     "listing": "/projects/index.html",
     "items": [
       "/projects/artesanal-fishing-chile/index.html"

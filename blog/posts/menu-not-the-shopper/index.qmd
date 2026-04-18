@@ -1,0 +1,91 @@
+---
+title: "The menu, not the shopper"
+subtitle: "Why the healthy-vs-sustainable diet fight is mostly settled, and the real trade-off is somewhere else"
+date: 2026-04-18
+author:
+  - name: Roberto Cárdenas-Retamal
+    affiliation: University of Florida
+    orcid: 0000-0002-9578-827X
+categories: [food, environment, health, economics]
+description: |
+  Healthy and sustainable diets are almost the same diet. The apparent
+  conflict between nutrition and the planet is smaller than the
+  conversation around it. Individual virtue is the wrong unit of analysis:
+  cafeteria menus, supermarket shelves, and tax codes move more carbon
+  than any number of eco-conscious shoppers.
+image: ../../../img/ANA_1857.jpg
+bibliography:
+  - Bibliography_base.bib
+  - references.bib
+csl: nature.csl
+link-citations: true
+toc: true
+toc-location: right
+---
+
+## Two dinners
+
+Picture two dinners. The first is a grilled ribeye with roasted potatoes and a glass of red. The second is a lentil stew with carrots, onions, a hunk of bread, and a drizzle of olive oil. Both are filling. Both can be part of a healthy diet. One of them emits roughly twenty to fifty times more greenhouse gas per gram of protein than the other [@Poore2018_food_environmental_impacts].
+
+That number is real. It is also the hook most diet-and-climate stories open with, and it invites you to think the problem is on your plate. It usually isn't. Healthy and sustainable diets, at the food-group level, are nearly the same diet. The interesting question is not which one you pick at the grocery store. It is who designs the grocery store.
+
+## What the evidence actually says
+
+Start with the headline finding of 2025. A team at Tufts priced and carbon-counted five versions of a globally defined healthy diet across 171 countries [@Bai2025_healthy_diets_cost_emissions]. The cheapest healthy diet costs about \$3.68 a day (adjusted for purchasing power) and emits 1.65 kg of CO₂ equivalent per person per day. The lowest-emission healthy diet emits 0.67 kg, less than half, but costs \$6.95, an 89% jump. 91% of the emissions gap between the two comes from just two food groups: animal-source foods, and starchy staples. Fruits and vegetables, which people worry about a lot, barely move the emissions needle [@LopezBarrera2025_cost_climate_healthy_diets].
+
+The alignment between health and environment is not limited to an optimization exercise. A PNAS paper looking at fifteen food groups directly found that the foods associated with better health outcomes (whole grains, vegetables, legumes, nuts, fruits, fish) also have the lowest environmental footprints. The foods associated with worse outcomes (red and processed meat, sugary drinks) sit at the top of the emissions ranking [@Clark2019_health_environ_alignment]. In the United States, the top quintile of diets by carbon footprint emits roughly five times what the bottom quintile does, and households in that bottom quintile are eating more nutritiously and spending less [@WillitsSmith2020_us_diet_footprint].
+
+So where does the trade-off come from? It lives in the marginal tonne. Even the cheapest healthy diet is already about half as carbon-intensive as the global average diet. Getting from "cheapest healthy" to "cleanest healthy" means shifting within the animal-protein aisle, swapping beef for small fish or poultry, or milk for plant alternatives. Those swaps carry a price tag. That is the 30% of sustainability gains that isn't free. It is not a biological conflict between feeding yourself and feeding the planet. It is a dollar figure attached to the last mile.
+
+Which means, if you zoom out, the standard reader's anxiety ("am I being healthy or sustainable right now?") is mostly a false choice. In high-income countries, plant-forward diets come in 22–34% cheaper than current eating patterns on average [@Springmann2021_global_diet_costs]. The question is why, if that is true, people aren't already eating them.
+
+## The shopper isn't the problem
+
+The short answer is that individual preferences are not where the action is. Three experiments make the point clearly.
+
+At three Cambridge cafeterias, researchers increased the share of vegetarian options on the menu from roughly 25% to 50%. Meat sales fell by 40–80% depending on the site, with no rebound at nearby outlets [@Garnett2019_vegetarian_cafeteria]. Nobody was lectured. Nobody signed a pledge. The menu changed, and the meal choices changed with it. A separate Swedish study that made the vegetarian dish the default option (you had to ask for meat) pushed the vegetarian share from 28% to roughly 40%, with the effect persisting for months after the experiment ended [@Kurz2018_default_vegetarian].
+
+Labels are more modest, but the format matters. A field experiment across five Cambridge cafeterias with more than 80,000 meal purchases found that carbon-footprint labels cut average meal emissions by 4.3% and reduced the probability of ordering a high-carbon meal by about 2.7 percentage points [@Lohmann2022_carbon_label_field]. A corporate-dining experiment testing different label formats found that labels expressed in money (how many euros the climate damage of this meal was worth) cut the average carbon footprint of purchased meals by about 11%, five times the effect of labels in kilograms of CO₂ [@Beyer2024_carbon_info_format]. People respond to prices, not to abstractions.
+
+Information can also have long legs. A randomized fifty-minute lecture on climate and food, given once to undergraduates, cut their meat purchases at dining halls by 5.6 percentage points. The effect persisted for three years with no reversal, at a cost of roughly \$14 per tonne of CO₂ averted [@Jalil2023_climate_info_meat]. That is cheaper than most industrial carbon abatement.
+
+The common thread is that none of these effects run through heroic individual resolve. They run through what was on the menu, how it was labeled, and whether the default option was the plant. The meta-analytic summary of sixty-odd eco-label studies finds a real but modest effect size, an odds ratio of about 1.22 for sustainable choice, with larger effects in experiments than in the real world [@Potter2021_eco_label_review]. Preferences move a little. Choice architecture moves a lot.
+
+## Where the real leverage sits
+
+If the cafeteria designer is more important than the cafeteria diner, the tax code and the retail buyer are more important still. A review in Science in 2026 makes the structural point bluntly: midstream actors (the manufacturers, retailers, and restaurants who decide what actually shows up on shelves and menus) sit between farmers and consumers and control the food environment [@Yang2026_dietary_transitions]. Sixty percent of U.S. food spending in 2024 went to food away from home. Changing what individuals want has, at best, a slow feedback loop into what those midstream actors stock. Changing what those actors stock is a much faster lever, and it is a lever governments have used before.
+
+Take a carbon price on food. A 2025 simulation for the European Union estimated that a €150 per tonne food carbon price would cut consumption-side food emissions by roughly 20%, and that a revenue-equivalent reform of value-added taxes (removing VAT from fruit and vegetables, raising it on animal products) would deliver similar emissions cuts while improving average diet quality more [@Kortleve2025_eu_food_carbon_price]. A synthesis of the externalities from climate, health, and biodiversity suggests the socially optimal price of beef in high-income countries would roughly double its retail cost [@Funke2022_optimal_meat_pricing]. A German simulation of a simple VAT equalization on meat cut beef consumption by about 12% and agricultural emissions by 8–9% [@Roosen2022_german_meat_tax].
+
+The natural objection is that these are regressive. A careful distributional analysis across 25 EU countries finds that uncompensated meat taxes are mildly regressive (about half a percentage point of income for the bottom decile at moderate rates), but uniform lump-sum rebates of the tax revenue flip the sign: the bottom decile becomes a net winner [@Klenert2023_meat_tax_europe]. The same logic has shown up in SSB taxes. The canonical welfare analysis of optimal soda taxation finds that even when the monetary incidence falls on poorer households, the internality correction (poor consumers were losing more health from the drink) makes the net effect progressive [@Allcott2019_regressive_sin_taxes; @Dubois2020_soda_tax_targeting]. Mexico's one-peso-per-liter SSB tax cut purchases 7.6% on average and 14.3% among the poorest tertile. The biggest health gains went to the households most at risk [@Colchero2017_mexico_ssb_tax].
+
+None of this is to claim that a European meat tax is about to pass. The narrower point is that the high-impact interventions for the healthy-sustainable diet are not on the demand side. They are in R&D for cheaper plant proteins, in public procurement (the school lunch, the hospital tray, the army base), in pricing externalities that are presently unpriced, and in the choice architecture the midstream industry controls [@Yang2026_dietary_transitions]. The shopper can reinforce these. The shopper cannot substitute for them.
+
+## The bill comes due somewhere
+
+The argument so far has an asterisk, and the asterisk is global. Everything above describes a high-income world in which the average household is eating too much of the wrong things, and where the constraints on fixing that are mostly institutional rather than financial. Run the same diagnostic in a country where the average household is eating too little, and the picture inverts.
+
+The EAT-Lancet "planetary health" diet, the reference point for most of this literature, costs roughly \$2.84 per person per day at median global prices [@Hirvonen2020_eat_lancet_affordability]. About 1.58 billion people cannot afford it. The more recent analysis pushes the count up: about 2.6 billion people can't afford even the cheapest version of a globally defined healthy diet, and in sub-Saharan Africa and South Asia more than 75% of the population is priced out [@Bai2025_healthy_diets_cost_emissions]. The largest single cost component of the planetary health diet is fruits and vegetables, which account for roughly 31% of diet cost at least-cost prices (not meat) [@Hirvonen2020_eat_lancet_affordability]. Nutrient-adequate diets cost 1.3 to 3 times the calorie-adequacy floor, and adolescent girls and lactating women carry the biggest shortfall inside the household [@Bai2022_nutrient_adequate_cost].
+
+In a large share of low-income countries, the least-environmental-impact feasible diet is above current consumption, not below it [@Kim2020_country_dietary_shifts]. The "eat less" frame that organizes the sustainability conversation in rich countries is the wrong frame. These populations need to eat more protein, more micronutrients, more animal-source foods, and doing so within a tight planetary budget is genuinely hard. The emissions gap Bai and colleagues identify between "cheapest healthy" and "cleanest healthy" diets is largest exactly where incomes are lowest [@LopezBarrera2025_cost_climate_healthy_diets].
+
+So the real trade-off is not the one most diet-and-climate pieces talk about. It is not healthy versus sustainable. It is healthy-and-sustainable versus affordable-right-now, and it bites hardest where food systems are weakest. Recognizing that shifts the policy weight away from consumer exhortation in rich countries and toward affordability, supply-chain investment, and food-system redesign in poorer ones.
+
+## What to do on Monday morning
+
+A general reader reasonably wants a list. Here is a short one.
+
+- Swap one red-meat meal per week for a legume- or pulse-based one. The per-meal gap is large enough that this is a real change even at low frequency [@Poore2018_food_environmental_impacts].
+- Don't overthink fruit and vegetable sourcing. Local vs. imported, organic vs. conventional, fresh vs. frozen: these are second-order choices. The big emissions moves are in the animal-protein aisle [@Bai2025_healthy_diets_cost_emissions].
+- When a cafeteria or a restaurant offers a plant-forward default, take it. Cafeterias and corporate dining are where institutional change gets its data. Your order counts twice: once for you and once as a signal to the procurement manager [@Garnett2019_vegetarian_cafeteria; @Kurz2018_default_vegetarian].
+- Be suspicious of products that brand themselves as virtuous. Plant-based analogs cut emissions by roughly 90% compared with beef, but some are ultra-processed and carry nutrition caveats of their own [@Santo2020_plant_cell_meat]. "Plant" is not a synonym for "healthy."
+- Notice that most dietary guidelines were written with national agriculture in mind, not the climate. Almost no national food-based dietary guideline is fully consistent with both the EAT-Lancet planetary limits and standard health targets [@Springmann2020_dietary_guidelines]. The government pyramid you grew up with is not the last word.
+
+None of these add up to personal salvation. The structural story (taxes, procurement, midstream redesign) is doing most of the work in any scenario where global food emissions come down fast enough to matter. Business-as-usual food-system emissions alone could, by themselves, consume the entire 1.5 °C carbon budget even if every other sector went to zero [@Clark2020_food_15C]. That is not a fact you fix with a shopping list.
+
+But the shopping list still matters, for two reasons. First, the marginal buying decision pools into the market signal that determines what the cafeteria and the grocery chain stock next quarter. Second, the politics of a meat tax, a VAT reform, or a public procurement mandate are easier when a non-trivial share of the population has already made the individual substitutions. The private choice and the public policy are not substitutes. They are complements, and the public one does most of the work.
+
+## References
+
+::: {#refs}
+:::
