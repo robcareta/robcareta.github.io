@@ -14,7 +14,8 @@ description: |
   conversation around it. Individual virtue is the wrong unit of analysis:
   cafeteria menus, supermarket shelves, and tax codes move more carbon
   than any number of eco-conscious shoppers.
-image: ../../../img/ANA_1857.jpg
+image: preview.svg
+image-alt: "Two dinners illustrated: a steak with potatoes on one plate, a bowl of lentil stew with carrots and parsley on the other."
 bibliography:
   - Bibliography_base.bib
   - references.bib

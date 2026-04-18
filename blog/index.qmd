@@ -7,9 +7,10 @@ listing:
     contents: "posts/*/index.qmd"
     sort: "date desc"
     type: default
-    fields: [date, title, description, categories]
+    fields: [image, date, title, description, categories]
     categories: true
     feed: true
+    image-height: "180px"
 
 page-layout: full
 include-back-link: false
