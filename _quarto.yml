@@ -7,6 +7,7 @@ website:
   image: img/ANA_1857.jpg
   site-url: https://robcareta.github.io
   google-analytics: "G-H4P0QZL89D"
+  draft-mode: gone
 
   
   #favicon:
