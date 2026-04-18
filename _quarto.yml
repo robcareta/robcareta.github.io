@@ -78,6 +78,7 @@ format:
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     include-after-body:
       - html/citations.html
+      - html/translate.html
     
     
     # Metadata stuff
