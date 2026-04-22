@@ -466,45 +466,7 @@ pre.text, pre.sourceCode, .cell-output pre {
             p {
                 margin: 0;
             }
-
-            &.has-thumb {
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                column-gap: 1.1em;
-                padding-left: 0.5em;
-
-                .project-thumb {
-                    flex: 0 0 130px;
-                    padding-top: 0.3em;
-
-                    img {
-                        width: 100%;
-                        height: auto;
-                        display: block;
-                        border-radius: 0.25rem;
-                        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
-                    }
-
-                    @media (max-width: map-get($grid-breakpoints, md)) {
-                        flex: 0 0 90px;
-                    }
-                }
-
-                .project-body {
-                    flex: 1 1 auto;
-                    min-width: 0;
-                }
-            }
         }
-    }
-
-    .project-description {
-        margin: 0.5em 0.5em 0.25em;
-        padding-left: 0.5em;
-        font-size: 0.95em;
-        line-height: 1.55;
-        color: $gray-700;
     }
 
     .project-content {

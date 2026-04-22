@@ -1,8 +1,6 @@
 ---
 title: "The growing importance of aquaculture: The case of Norwegian salmon"
 date: 2025-09-12
-description: >-
-  Reviews the socioeconomic impact of Norwegian salmon aquaculture using economic impact analysis across the full supply chain — from input suppliers to sales — and accounts for ripple effects over several rounds. In 2022 the industry supported 57,800 total jobs (11,175 direct in production), dispersed across coastal communities but concentrating in larger cities as activity moves downstream.
 author:
   - name: A. Iversen
     affiliation: NOFIMA, Norway

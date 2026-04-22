@@ -1,8 +1,6 @@
 ---
 title: "Labor outcomes effect of mental health"
 date: 2025-12-01
-description: >-
-  Estimates how wages and employment respond to a depression or anxiety diagnosis using NielsenIQ Consumer Panel Data combined with the Annual Ailments, Health, and Wellness Survey in a difference-in-differences design. Finds a persistent 20% wage decline after a mental health diagnosis — intensifying over seven years — and a 10% rise in unemployment probability after year five, with effects strongest for divorced, single, and single-person households.
 author:
   - name: Roberto Cárdenas-Retamal
     orcid: 0000-0002-9578-827X

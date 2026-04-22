@@ -1,8 +1,6 @@
 ---
 title: "More than just a break: Performance after walking in green and urban spaces"
 date: 2026-03-29
-description: >-
-  A lab-in-the-field experiment (n=222) testing how acute exposure to green vs. urban spaces affects productivity (math test) and self-esteem (Rosenberg scale) after a 20-minute walk. Finds heterogeneous effects — infrequent green-space visitors gain productivity after an urban walk while frequent visitors lose productivity after a green walk, and women's self-esteem rises after green-space exposure while men's declines in both settings.
 author:
   - name: Jianhui Liu
     affiliation: University of Florida
