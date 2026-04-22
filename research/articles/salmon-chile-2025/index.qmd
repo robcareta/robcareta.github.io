@@ -1,7 +1,6 @@
 ---
 title: "Salmon Aquaculture in Chile: Production Growth and Socioeconomic Impacts"
 date: 2025-01-01
-image: /img/my_image.jpg
 description: >-
   Reviews the socioeconomic impact of the Chilean salmon industry on employment, wages, and migration. The industry pays relatively well and has reversed outward migration, reduced poverty, narrowed income distribution, and raised female labor participation and education — though benefits remain conditioned on environmental sustainability.
 author:

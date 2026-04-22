@@ -1,6 +1,8 @@
 ---
 title: "Women engagement, psychological traits, and gender gapsin the small-scale seaweed aquaculture in Chile"
 date: 2023-01-15
+description: >-
+  Investigates the drivers of gender gaps in small-scale seaweed aquaculture using matched data from 152 producers in central-southern Chile. Female producers exhibit more positive psychological traits (patience, interpersonal trust), but their choices appear incongruent with these characteristics — pointing to opportunity costs and outside options rather than innate attributes as the main drivers of observed gaps.
 author:
   - name: César Salazar
     affiliation: Universidad del Bio-Bio. Research Nucleus on Environmental and Natural Resource Economics (NENRE)-EfD Chile

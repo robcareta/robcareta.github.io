@@ -1,6 +1,8 @@
 ---
 title: "Intrahousehold Bargaining Power and Time Allocation for Multiple Activities"
 date: 2023-10-04
+description: >-
+  Estimates how couples allocate time across six weekday and weekend activities in Chile, using an MDCEV demand model with explicit intrahousehold bargaining indicators (relative wages and education). Finds bargaining power shapes the tradeoff between housework and paid work; simulating higher women's wages and childcare availability increases female labor participation, yet women still spend more time on domestic activities than men.
 author:
   - name: Roberto Cárdenas-Retamal
     affiliation: Departamento de Econoḿıa. Facultad de Ciencias Economicas y Administrativas. Universidad Católica de la Santísima Concepción. University of Florida, USA.

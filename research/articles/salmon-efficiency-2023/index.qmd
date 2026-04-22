@@ -1,6 +1,8 @@
 ---
 title: "Environmental efficiency in the salmon industry—an exploratory analysis around the 2007 ISA virus outbreak and subsequent regulations in Chile"
 date: 2023-05-14
+description: >-
+  Measures environmental performance in Chile's salmon industry using DEA models that treat nutrient pollutants as undesired outputs, spanning the 2007 ISA virus outbreak and subsequent regulatory tightening. Technical and environmental efficiency declined during the outbreak and recovered afterward, offering preliminary evidence that stricter sanitary norms improved environmental performance.
 author:
   - name: César Salazar
     affiliation: Universidad del Bio-Bio

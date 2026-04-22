@@ -1,6 +1,8 @@
 ---
 title: "Impact assessment of salmon farming on income distribution in remote coastal areas: The Chilean case"
 date: 2021-03-29
+description: >-
+  Evaluates whether salmon aquaculture changed household income distribution in remote coastal areas of Los Lagos, Chile, between 1992 and 2002, using impact evaluation with Gini, Theil, and MLD indices. Income inequality fell significantly in areas with salmon farms — attenuating a general trend toward increasing rural inequality — driven by improvements in the position of medium-income households and conditioned by distance from the farms.
 author:
   - name: Roberto Cárdenas-Retamal
     affiliation: University of Florida

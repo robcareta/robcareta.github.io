@@ -1,6 +1,8 @@
 ---
 title: "Risk perception and production risk in seaweed aquaculture"
 date: 2024-04-27
+description: >-
+  Studies how risk perception and input risk properties explain low adoption of seaweed farming in Chile, using a risk production estimation framework with selectivity. Farmers are more likely to farm seaweed when they perceive better access to financing but also greater theft exposure; labor and energy are risk-increasing inputs, while capital and hectares available are risk-decreasing.
 author:
   - name: César Salazar
     affiliation: Universidad del Bio-Bio. Research Nucleus on Environmental and Natural Resource Economics (NENRE)-EfD Chile
