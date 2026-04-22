@@ -2,71 +2,86 @@
 <div class="research project-list">
 <ul class="list">
     <% for (const item of items) { %>
-        <li class="project" <%=metadataAttrs(item) %>>
-            <div class="project-content listing-pub-info">
-                <p><%= item['pub-info'].reference %></p>
-            </div>
-
-            <% if(item.categories) { %>
-            <div class="project-categories">
-                <% for (const cat of item.categories) { %>
-                    <div class="project-category"><a href="#category=<%= cat %>">
-                            <%= cat %>
-                        </a></div>
-                    <% } %>
-            </div>
-            <% } %>
-
-            <% // Loop through the haiku lines and prepend a / to all but the first %>
-            <% if (item.haiku) { %>
-            <div class="haiku">
-            <% for (var i=0; i <= item.haiku.length - 1; i++) { %>
-                <% if (i > 0) { %> / <% } %><%= item.haiku[i] %>
-            <% } %>
-            </div>
-            <% } %>
-            
-            <% if (item['pub-info'] && (item['pub-info']['journal-if'] || item.doi)) { %>
-            <div class="project-metrics">
-                <% if (item['pub-info']['journal-if']) { %>
-                <span class="metric-badge if-badge" title="Journal Impact Factor (2023)">
-                    <i class="fa-solid fa-chart-line"></i>&nbsp;IF&nbsp;<%= item['pub-info']['journal-if'] %>
-                </span>
-                <% } %>
-                <% if (item.doi) { %>
-                <a href="https://scholar.google.com/scholar?q=doi:<%- item.doi %>"
-                   class="metric-badge citations-badge"
-                   data-doi="<%- item.doi %>"
-                   target="_blank"
-                   title="Citations via OpenAlex — click to see on Google Scholar"
-                   style="display:none">
-                    <i class="fa-solid fa-graduation-cap"></i>&nbsp;Cited by&nbsp;<span class="cite-count">0</span>
+        <li class="project <%= item.image ? 'has-thumb' : '' %>" <%=metadataAttrs(item) %>>
+            <% if (item.image) { %>
+            <div class="project-thumb">
+                <a href="<%- item.path %>">
+                    <img src="<%= item.image %>" alt="Thumbnail for <%= item.title %>" loading="lazy" />
                 </a>
-                <% } %>
             </div>
             <% } %>
+            <div class="project-body">
+                <div class="project-content listing-pub-info">
+                    <p><%= item['pub-info'].reference %></p>
+                </div>
 
-            <div class="project-details-listing">
-                <ul class="project-links">
-                    <li class="project-link details">
-                        <a href="<%- item.path %>" class="listing-name">
-                            <i class="fa-solid fa-circle-info"></i> Full details »
-                        </a>
-                    </li>
-                    <% if (item['pub-info'].links) { %>
-                        <% for (const link of item['pub-info'].links) { %>
-                    <li class="project-link">
-                        <% if (link.local) { %>
-                        <a href="<%- item.path.substring(0, item.path.lastIndexOf('/')) %>/<%- link.url %>">
-                        <% } else { %>
-                        <a href="<%- link.url %>">
+                <% if (item.description) { %>
+                <div class="project-description">
+                    <%= item.description %>
+                </div>
+                <% } %>
+
+                <% if(item.categories) { %>
+                <div class="project-categories">
+                    <% for (const cat of item.categories) { %>
+                        <div class="project-category"><a href="#category=<%= cat %>">
+                                <%= cat %>
+                            </a></div>
                         <% } %>
-                            <i class="<%- link.icon %>"></i> <%= link.name %>
-                        </a>
-                    </li>
-                        <% } %>
+                </div>
+                <% } %>
+
+                <% // Loop through the haiku lines and prepend a / to all but the first %>
+                <% if (item.haiku) { %>
+                <div class="haiku">
+                <% for (var i=0; i <= item.haiku.length - 1; i++) { %>
+                    <% if (i > 0) { %> / <% } %><%= item.haiku[i] %>
+                <% } %>
+                </div>
+                <% } %>
+
+                <% if (item['pub-info'] && (item['pub-info']['journal-if'] || item.doi)) { %>
+                <div class="project-metrics">
+                    <% if (item['pub-info']['journal-if']) { %>
+                    <span class="metric-badge if-badge" title="Journal Impact Factor (2023)">
+                        <i class="fa-solid fa-chart-line"></i>&nbsp;IF&nbsp;<%= item['pub-info']['journal-if'] %>
+                    </span>
                     <% } %>
-                </ul>
+                    <% if (item.doi) { %>
+                    <a href="https://scholar.google.com/scholar?q=doi:<%- item.doi %>"
+                       class="metric-badge citations-badge"
+                       data-doi="<%- item.doi %>"
+                       target="_blank"
+                       title="Citations via OpenAlex — click to see on Google Scholar"
+                       style="display:none">
+                        <i class="fa-solid fa-graduation-cap"></i>&nbsp;Cited by&nbsp;<span class="cite-count">0</span>
+                    </a>
+                    <% } %>
+                </div>
+                <% } %>
+
+                <div class="project-details-listing">
+                    <ul class="project-links">
+                        <li class="project-link details">
+                            <a href="<%- item.path %>" class="listing-name">
+                                <i class="fa-solid fa-circle-info"></i> Full details »
+                            </a>
+                        </li>
+                        <% if (item['pub-info'].links) { %>
+                            <% for (const link of item['pub-info'].links) { %>
+                        <li class="project-link">
+                            <% if (link.local) { %>
+                            <a href="<%- item.path.substring(0, item.path.lastIndexOf('/')) %>/<%- link.url %>">
+                            <% } else { %>
+                            <a href="<%- link.url %>">
+                            <% } %>
+                                <i class="<%- link.icon %>"></i> <%= link.name %>
+                            </a>
+                        </li>
+                            <% } %>
+                        <% } %>
+                    </ul>
+                </div>
             </div>
         </li>
         <% } %>
