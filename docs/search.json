@@ -224,6 +224,13 @@
     "text": "Technical details\n\n\n\nLanguage\nR (100%)\n\n\nKey dependencies\nstats, sandwich, ggplot2, openxlsx (for Excel export)\n\n\nStandard errors\n500-replication nonparametric bootstrap that resamples the full pipeline (probit, IMR, mean function, residuals, risk function) on every replication.\n\n\nLicense\nMIT\n\n\nRepository\ngithub.com/robcareta/JPselect\n\n\nInstallation\nremotes::install_github(\"robcareta/JPselect\")\n\n\nStatus\nFirst public release (v0.1.0)"
   },
   {
+    "objectID": "projects/jpselect-package/index.html#how-to-cite",
+    "href": "projects/jpselect-package/index.html#how-to-cite",
+    "title": "JPselect: Just-Pope Production Functions with Heckman Selectivity",
+    "section": "How to cite",
+    "text": "How to cite\nIf you use JPselect in published work, please cite the package together with the underlying paper.\nPackage:\n\nCardenas Retamal, R. (2026). JPselect: Just-Pope Production Functions with Heckman Selectivity Correction. R package version 0.1.0. https://github.com/robcareta/JPselect\n\nUnderlying paper:\n\nKoundouri, P., & Nauges, C. (2005). On Production Function Estimation with Selectivity and Risk Considerations. Journal of Agricultural and Resource Economics, 30(3), 597-608.\n\nIn R, the canonical citations are also available via:\ncitation(\"JPselect\")"
+  },
+  {
     "objectID": "projects/jpselect-package/index.html#references",
     "href": "projects/jpselect-package/index.html#references",
     "title": "JPselect: Just-Pope Production Functions with Heckman Selectivity",
