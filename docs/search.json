@@ -91,32 +91,11 @@
     "text": "Increasing productivity at the individual level is influenced by a complex mix of factors. While the literature generally suggests that green space exposure may enhance attention and well-being, urban environments are often perceived as less beneficial due to factors like noise and artificial design. This study investigates the effects of acute green and urban space exposure on productivity, aiming to fill a critical research gap in understanding how short-term environmental exposure impacts real-world performance. Using a lab-in-the-field experiment, we measured productivity through a math test and mental well-being via the Rosenberg Self-Esteem Scale. A total of 222 participants completed both tests before and after a 20-minute treatment, involving a randomized walk in either a green or urban space, while a control group remained indoors. Significant treatment effects were observed within specific subgroups: infrequent green space visitors showed enhanced productivity after an urban walk, while frequent green space visitors experienced decreased productivity following a green space walk. Gender differences also emerged, with female participants reporting a boost in self-esteem after a walk in a green space, whereas both green and urban spaces led to declines in self-esteem for male participants. By addressing this research gap, our study challenges assumptions about the universal benefits of green space exposure and emphasizes the importance of tailoring environmental interventions. These insights offer valuable guidance for employers and urban planners in designing environments that enhance productivity and well-being across diverse populations."
   },
   {
-    "objectID": "projects/artesanal-fishing-chile/vms-explorer.html",
-    "href": "projects/artesanal-fishing-chile/vms-explorer.html",
-    "title": "VMS Fishing Explorer — Los Lagos",
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
     "section": "",
-    "text": "← Back to Project\n\nThis tool explores SERNAPESCA vessel monitoring system (VMS) data for the artisanal fishing fleet in Los Lagos, Chile (2019–2026). The dataset covers ~58.5 million GPS pings. Use the three tabs to explore spatial patterns, distance gradients from aquaculture farms, and temporal trends.\n\n\n\n\n\n\nNote\n\n\n\nThe app runs entirely in your browser — no server required. Data is fetched from this site (~2 MB) so the first load may take a few seconds.\n\n\n\n\n\n\n\n\n\n\n\nData and methods\n\n\n\n\n\n\nSource: SERNAPESCA Vessel Monitoring System (VMS), artisanal fleet\nPeriod: 2019–2026 · Region: Los Lagos (lat –44.5° to –40.5°)\nFishing: speed 0.1–3.0 knots (Behivoke et al. 2021)\nGrid: 0.05° × 0.05° cells. Farm distances: to nearest marine concession centroid.\nNote: 2019–2022 from admin snapshots (~4×/day, ~1,000 vessels); 2023+ from daily artisanal reports (~175–190 vessels)."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome to my website!",
-    "section": "",
-    "text": "Welcome to my website!\n\n\nI’m a PhD candidate in the Fisheries and Aquatic Sciences program at the University of Florida. My research focuses on seafood markets, sustainable consumption, and the nutritional impacts of seafood on consumers. My dissertation explores how incentives and product attributes influence consumer behavior in seafood markets.\n\nYou can find my research papers and ongoing projects on this page\n\n\n\n\n\n\nNote\n\n\n\n\n\nI am currently on the academic job market for positions starting in Fall 2026"
-  },
-  {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "Blog",
-    "section": "",
-    "text": "No matching items"
-  },
-  {
-    "objectID": "cv/index.html",
-    "href": "cv/index.html",
-    "title": "Curriculum vitae",
-    "section": "",
-    "text": "Download Roberto’s CV."
+    "text": "JPselect: Just-Pope Production Functions with Heckman Selectivity\n\n\n\nR\n\nPackage\n\nProduction functions\n\nHeckman correction\n\nJust-Pope\n\nAgricultural economics\n\n\n\nAn R package that estimates stochastic production functions while correcting for crop-choice selection bias, following Koundouri & Nauges (2005). Returns a clean…\n\n\n\nJun 4, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nArtisanal Fishing Behavior in Chile\n\n\n\nR\n\nFisheries\n\nChile\n\nData pipeline\n\nDuckDB\n\nVMS\n\nFishing effort\n\n\n\nA data pipeline to download, process, and visualize SERNAPESCA satellite positioning data for artisanal fishing fleets in the Los Lagos region.\n\n\n\nFeb 5, 2026\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/artesanal-fishing-chile/index.html",
@@ -130,7 +109,7 @@
     "href": "projects/artesanal-fishing-chile/index.html#overview",
     "title": "Artisanal Fishing Behavior in Chile",
     "section": "Overview",
-    "text": "Overview\nThis project builds a fully automated pipeline to analyze the spatial behavior of artisanal fishing vessels in southern Chile. Raw data come from SERNAPESCA’s satellite positioning system — an open daily feed of GPS positions for all registered artisanal fleets. The pipeline downloads new reports incrementally, stores them in a DuckDB database, filters the Los Lagos region, and produces fishing behavior indicators including spatial effort maps and species catch maps.\n\n\n\n\n\n\nWarning\n\n\n\nThis pipeline is under active development and does not yet represent a final or fully stabilized version. The structure, outputs, and indicators may change as the project evolves.\n\n\n\n\n\n\n\n\nNote\n\n\n\nCode and documentation available on GitHub.\n\n\n\n\n\n\n\n\nInteractive explorer\n\n\n\nExplore the fishing activity data interactively — spatial map, distance gradient from farms, and fleet trends — in the VMS Fishing Explorer."
+    "text": "Overview\nThis project builds a fully automated pipeline to analyze the spatial behavior of artisanal fishing vessels in southern Chile. Raw data come from SERNAPESCA’s satellite positioning system — an open daily feed of GPS positions for all registered artisanal fleets. The pipeline downloads new reports incrementally, stores them in a DuckDB database, filters the Los Lagos region, and produces fishing behavior indicators including spatial effort maps and species catch maps.\n\n\n\n\n\n\nWarning\n\n\n\nThis pipeline is under active development and does not yet represent a final or fully stabilized version. The structure, outputs, and indicators may change as the project evolves.\n\n\n\n\n\n\n\n\nNote\n\n\n\nCode and documentation available on GitHub.\n\n\n\n\n\n\n\n\nTipInteractive explorer\n\n\n\nExplore the fishing activity data interactively — spatial map, distance gradient from farms, and fleet trends — in the VMS Fishing Explorer."
   },
   {
     "objectID": "projects/artesanal-fishing-chile/index.html#data-source",
@@ -168,11 +147,88 @@
     "text": "References\nBehivoke, F., Etienne, M.-P., Guitton, J., Randriatsara, R.M., Mahafina, J., & Léopold, M. (2021). Estimating fishing effort in small-scale fisheries using GPS tracking data and random forests. Ecological Indicators, 123, 107321. https://doi.org/10.1016/j.ecolind.2020.107321\nGerritsen, H., & Lordan, C. (2011). Integrating vessel monitoring systems (VMS) data with daily catch data from logbooks to explore the spatial distribution of catch and effort at high resolution. ICES Journal of Marine Science, 68(1), 245–252. https://doi.org/10.1093/icesjms/fsq137"
   },
   {
-    "objectID": "projects/index.html",
-    "href": "projects/index.html",
-    "title": "Projects",
+    "objectID": "cv/index.html",
+    "href": "cv/index.html",
+    "title": "Curriculum vitae",
     "section": "",
-    "text": "Artisanal Fishing Behavior in Chile\n\n\n\nR\n\nFisheries\n\nChile\n\nData pipeline\n\nDuckDB\n\nVMS\n\nFishing effort\n\n\n\nA data pipeline to download, process, and visualize SERNAPESCA satellite positioning data for artisanal fishing fleets in the Los Lagos region.\n\n\n\nFeb 5, 2026\n\n\n\n\n\n\nNo matching items"
+    "text": "Download Roberto’s CV."
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "No matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to my website!",
+    "section": "",
+    "text": "Welcome to my website!\n\n\nI’m a PhD candidate in the Fisheries and Aquatic Sciences program at the University of Florida. My research focuses on seafood markets, sustainable consumption, and the nutritional impacts of seafood on consumers. My dissertation explores how incentives and product attributes influence consumer behavior in seafood markets.\n\nYou can find my research papers and ongoing projects on this page\n\n\n\n\n\n\nNote\n\n\n\n\n\nI am currently on the academic job market for positions starting in Fall 2026"
+  },
+  {
+    "objectID": "projects/artesanal-fishing-chile/vms-explorer.html",
+    "href": "projects/artesanal-fishing-chile/vms-explorer.html",
+    "title": "VMS Fishing Explorer — Los Lagos",
+    "section": "",
+    "text": "← Back to Project\n\nThis tool explores SERNAPESCA vessel monitoring system (VMS) data for the artisanal fishing fleet in Los Lagos, Chile (2019–2026). The dataset covers ~58.5 million GPS pings. Use the three tabs to explore spatial patterns, distance gradients from aquaculture farms, and temporal trends.\n\n\n\n\n\n\nNote\n\n\n\nThe app runs entirely in your browser — no server required. Data is fetched from this site (~2 MB) so the first load may take a few seconds.\n\n\n\n\n\n\n\n\n\n\n\nNoteData and methods\n\n\n\n\n\n\nSource: SERNAPESCA Vessel Monitoring System (VMS), artisanal fleet\nPeriod: 2019–2026 · Region: Los Lagos (lat –44.5° to –40.5°)\nFishing: speed 0.1–3.0 knots (Behivoke et al. 2021)\nGrid: 0.05° × 0.05° cells. Farm distances: to nearest marine concession centroid.\nNote: 2019–2022 from admin snapshots (~4×/day, ~1,000 vessels); 2023+ from daily artisanal reports (~175–190 vessels)."
+  },
+  {
+    "objectID": "projects/jpselect-package/index.html",
+    "href": "projects/jpselect-package/index.html",
+    "title": "JPselect: Just-Pope Production Functions with Heckman Selectivity",
+    "section": "",
+    "text": "← Back to Projects"
+  },
+  {
+    "objectID": "projects/jpselect-package/index.html#overview",
+    "href": "projects/jpselect-package/index.html#overview",
+    "title": "JPselect: Just-Pope Production Functions with Heckman Selectivity",
+    "section": "Overview",
+    "text": "Overview\nJPselect is an R package that implements the three-step estimation procedure of Koundouri & Nauges (2005) for Just-Pope (1978, 1979) stochastic production functions with sample-selection bias from crop choice. The package bundles the probit selection equation, the linear-quadratic mean function with an Inverse Mills Ratio, the Cobb-Douglas risk (variance) function, and a full-pipeline bootstrap, behind a single high-level interface.\n\n\n\n\n\n\nNote\n\n\n\nCode, documentation, and a runnable example are available on GitHub. Install with remotes::install_github(\"robcareta/JPselect\")."
+  },
+  {
+    "objectID": "projects/jpselect-package/index.html#the-problem-it-solves",
+    "href": "projects/jpselect-package/index.html#the-problem-it-solves",
+    "title": "JPselect: Just-Pope Production Functions with Heckman Selectivity",
+    "section": "The problem it solves",
+    "text": "The problem it solves\nWhen farmers choose what to grow, that choice depends on characteristics (soil quality, water access, farming experience) that also affect productivity. Estimating a production function on the chosen sub-sample, for example just the vegetable growers, mixes the technological relationship between inputs and output with the self-selection of farms into crops. The result is biased estimates of how inputs affect both mean output and its variability.\nKoundouri and Nauges’ main finding is that skipping the Heckman correction can flip the sign or kill the significance of risk-function coefficients. An applied researcher who reports the naive estimates can therefore reach the wrong conclusion about which inputs are risk-increasing or risk-decreasing.\nJPselect runs both the corrected and uncorrected specifications and shows them side by side, so the bias is visible directly."
+  },
+  {
+    "objectID": "projects/jpselect-package/index.html#whats-inside",
+    "href": "projects/jpselect-package/index.html#whats-inside",
+    "title": "JPselect: Just-Pope Production Functions with Heckman Selectivity",
+    "section": "What’s inside",
+    "text": "What’s inside\nThe package exposes a small surface area:\n\n\n\n\n\n\n\nFunction\nPurpose\n\n\n\n\njp_fit()\nOne-call wrapper for the full three-step pipeline plus the with-vs-without comparison. Returns a jpfit S3 object.\n\n\nprint(fit)\nRisk-function table plus a plain-language interpretation: which inputs are risk-increasing or decreasing, where selectivity correction changes the conclusion, whether the Mill’s ratio is significant.\n\n\nsummary(fit)\nAll three stages of the procedure end-to-end: probit, mean function with Mill’s ratio, with vs. without risk function.\n\n\nplot(fit)\nHeadline coefficient plot of the risk function.\n\n\njp_export()\nWrites the four resulting tables to Excel (one workbook, five sheets), LaTeX (booktabs tables for a paper), or CSV (one file per table).\n\n\nsimulate_kiti_data()\nSynthetic 239-farm dataset that mimics the paper’s Cyprus sample, for demonstration and testing.\n\n\n\nIndividual stage functions (estimate_selection, estimate_mean_function, estimate_risk_function) are also exported for users who want finer control."
+  },
+  {
+    "objectID": "projects/jpselect-package/index.html#sample-output",
+    "href": "projects/jpselect-package/index.html#sample-output",
+    "title": "JPselect: Just-Pope Production Functions with Heckman Selectivity",
+    "section": "Sample output",
+    "text": "Sample output\nprint(fit) ends with a structured interpretation block:\nAt p &lt; 0.10, with selectivity correction:\n  Risk-DECREASING inputs : (none)\n  Risk-INCREASING inputs : (none)\n\nDoes selectivity correction change the conclusion?\n  labor : significant without correction (p=0.022) but NOT significant once corrected (p=0.116)\n  water : significant without correction (p=0.030) but NOT significant once corrected (p=0.519)\n\nSelection-bias test (Mill's ratio in the mean function):\n  coef = +0.527, p = 0.036 -- selection bias DETECTED.\n  Prefer the 'with correction' column above.\nThe headline plot shows each input twice (red = with selectivity correction, teal = without). When the two estimates disagree, the selectivity bias is visible at a glance:"
+  },
+  {
+    "objectID": "projects/jpselect-package/index.html#quick-example",
+    "href": "projects/jpselect-package/index.html#quick-example",
+    "title": "JPselect: Just-Pope Production Functions with Heckman Selectivity",
+    "section": "Quick example",
+    "text": "Quick example\nlibrary(JPselect)\n\nfarms &lt;- simulate_kiti_data(seed = 42)\n\nfit &lt;- jp_fit(\n  data                 = farms,\n  selection_var        = \"vegetables\",\n  selection_covariates = c(\"rainfall\", \"irrigated\", \"dist_town\",\n                           \"dist_coast\", \"experience\"),\n  output_var           = \"revenue\",\n  input_vars           = c(\"fertilizers\", \"pesticides\", \"labor\", \"water\"),\n  shifter_vars         = c(\"machinery\", \"rainfall\", \"irrigated\",\n                           \"dist_town\", \"dist_coast\", \"experience\"),\n  bootstrap_reps       = 500\n)\n\nprint(fit)\nplot(fit)\njp_export(fit, \"results.xlsx\")"
+  },
+  {
+    "objectID": "projects/jpselect-package/index.html#technical-details",
+    "href": "projects/jpselect-package/index.html#technical-details",
+    "title": "JPselect: Just-Pope Production Functions with Heckman Selectivity",
+    "section": "Technical details",
+    "text": "Technical details\n\n\n\nLanguage\nR (100%)\n\n\nKey dependencies\nstats, sandwich, ggplot2, openxlsx (for Excel export)\n\n\nStandard errors\n500-replication nonparametric bootstrap that resamples the full pipeline (probit, IMR, mean function, residuals, risk function) on every replication.\n\n\nLicense\nMIT\n\n\nRepository\ngithub.com/robcareta/JPselect\n\n\nInstallation\nremotes::install_github(\"robcareta/JPselect\")\n\n\nStatus\nFirst public release (v0.1.0)"
+  },
+  {
+    "objectID": "projects/jpselect-package/index.html#references",
+    "href": "projects/jpselect-package/index.html#references",
+    "title": "JPselect: Just-Pope Production Functions with Heckman Selectivity",
+    "section": "References",
+    "text": "References\nHeckman, J. (1979). Sample selection bias as a specification error. Econometrica, 47, 153-161. https://doi.org/10.2307/1912352\nJust, R. E., & Pope, R. D. (1978). Stochastic representation of production functions and econometric implications. Journal of Econometrics, 7(1), 67-86. https://doi.org/10.1016/0304-4076(78)90006-4\nKoundouri, P., & Nauges, C. (2005). On Production Function Estimation with Selectivity and Risk Considerations. Journal of Agricultural and Resource Economics, 30(3), 597-608. https://www.jstor.org/stable/40987295"
   },
   {
     "objectID": "research/articles/intrahousehold-barg-timeuse-2023/index.html",

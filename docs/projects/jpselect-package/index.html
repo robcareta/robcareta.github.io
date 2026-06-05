@@ -6,11 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Roberto Cárdenas-Retamal">
-<meta name="author" content="Jorge Dresdner-Cid">
-<meta name="author" content="Adams Ceballos-Concha">
+<meta name="dcterms.date" content="2026-06-04">
+<meta name="description" content="An R package that estimates stochastic production functions while correcting for crop-choice selection bias, following Koundouri &amp; Nauges (2005). Returns a clean interpretation of which inputs drive output variance and which are biased by selection.">
 
-<title>Impact assessment of salmon farming on income distribution in remote coastal areas: The Chilean case – Roberto Cárdenas-Retamal</title>
+<title>JPselect: Just-Pope Production Functions with Heckman Selectivity – Roberto Cárdenas-Retamal</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,25 +25,60 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-4082d3e689bd3d0e9f58069c02f8a7f1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-4082d3e689bd3d0e9f58069c02f8a7f1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -80,25 +114,19 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-H4P0QZL89D', { 'anonymize_ip': true});
 </script>
-<style>
-
-      .quarto-title-block .quarto-title-banner {
-        background: #005f73;
-      }
-</style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 
 
 </head>
 
-<body class="floating nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Roberto Cárdenas-Retamal</span>
     </a>
   </div>
@@ -109,19 +137,19 @@ gtag('config', 'G-H4P0QZL89D', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../research/index.html"> 
+    <a class="nav-link" href="../../research/index.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../projects/index.html"> 
+    <a class="nav-link" href="../../projects/index.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../blog/index.html"> 
+    <a class="nav-link" href="../../blog/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../cv/index.html"> 
+    <a class="nav-link" href="../../cv/index.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
 </ul>
@@ -139,139 +167,199 @@ gtag('config', 'G-H4P0QZL89D', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block research default toc-left page-columns page-full">
-    <div class="quarto-title-banner page-columns page-full">
-                <div class="back-nav"><a href="../../../research/">← Back to research</a></div>
-                <div class="quarto-title column-body">
-            <h1 class="title">Impact assessment of salmon farming on income distribution in remote coastal areas: The Chilean case</h1>
-
-            
-            
-            
-                                    <div class="quarto-categories">
-                                <div class="quarto-category">Income distribution</div>
-                                <div class="quarto-category">Salmon aquaculture</div>
-                                <div class="quarto-category">Remote coastal areas</div>
-                                <div class="quarto-category">Impact evaluation</div>
-                                <div class="quarto-category">Chile</div>
-                            </div>
-                                </div>
-    </div>
-    
-        <div class="project-details">
-        <div class="publication-content">
-            <p><a><strong>Cárdenas-Retamal, R.</strong></a>, <a>Dresdner-Cid, J.</a>, and <a>Ceballos-Concha, A.</a>, (2021) “Impact assessment of salmon farming on income distribution in remote coastal areas: The Chilean case,” <em>Food Policy</em> 101: 102078, doi: <a href="”https://doi.org/10.1016/j.foodpol.2021.102078”"><code>10.1016/j.foodpol.2021.102078</code></a></p>
-        </div>
-                <ul class="project-links">
-                        <li class="project-link">
-                <a href="https://doi.org/10.1016/j.foodpol.2021.102078"><i class="fa-solid fa-scroll"></i> Final version</a>
-            </li>
-                    </ul>
-            </div>
-
-    
-    <div class="quarto-title-meta-author">
-      <div class="quarto-title-meta-heading">Authors</div>
-      <div class="quarto-title-meta-heading">Affiliations</div>
-      
-        <div class="quarto-title-meta-contents">
-        <p class="author">Roberto Cárdenas-Retamal <a href="https://orcid.org/0000-0002-9578-827X" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
-      </div>
-      <div class="quarto-title-meta-contents">
-            <p class="affiliation">
-                University of Florida
-              </p>
-          </div>
-        <div class="quarto-title-meta-contents">
-        <p class="author">Jorge Dresdner-Cid </p>
-      </div>
-      <div class="quarto-title-meta-contents">
-            <p class="affiliation">
-                Universidad de Concepcion
-              </p>
-          </div>
-        <div class="quarto-title-meta-contents">
-        <p class="author">Adams Ceballos-Concha </p>
-      </div>
-      <div class="quarto-title-meta-contents">
-            <p class="affiliation">
-                Univeristy of Florida
-              </p>
-          </div>
-      </div>
-
-    <div class="quarto-title-meta">
-
-          
-        <div>
-        <div class="quarto-title-meta-heading">Published</div>
-        <div class="quarto-title-meta-contents">
-          <p class="date">March 2021</p>
-        </div>
-      </div>
-      
-        
-        <div>
-        <div class="quarto-title-meta-heading">Doi</div>
-        <div class="quarto-title-meta-contents">
-          <p class="doi">
-            <a href="https://doi.org/10.1016/j.foodpol.2021.102078">10.1016/j.foodpol.2021.102078</a>
-          </p>
-        </div>
-      </div>
-      </div>
-      
-
-    
-    <div class="quarto-title-meta-heading manual">Other details</div>
-    <div class="quarto-title-meta-contents">
-        <p class="publication-extra">
-            Presented at the V International Conference COES: ”Concentrations” in 2018, and in the X Annual Meeting of the Chilean Society of Regional Studies SOCHER in 2018.
-        </p>
-    </div>
-    
-</header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Contents</h2>
-   
-  <ul>
-  <li><a href="#abstract" id="toc-abstract" class="nav-link active" data-scroll-target="#abstract">Abstract</a></li>
-  </ul>
-</nav>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-    </div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">JPselect: Just-Pope Production Functions with Heckman Selectivity</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">R</div>
+    <div class="quarto-category">Package</div>
+    <div class="quarto-category">Production functions</div>
+    <div class="quarto-category">Heckman correction</div>
+    <div class="quarto-category">Just-Pope</div>
+    <div class="quarto-category">Agricultural economics</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    An R package that estimates stochastic production functions while correcting for crop-choice selection bias, following Koundouri &amp; Nauges (2005). Returns a clean interpretation of which inputs drive output variance and which are biased by selection.
+  </div>
+</div>
 
 
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 4, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
 
 
-<section id="abstract" class="level2">
-<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
-<p>We analyzed the impact that the advent of the salmon aquaculture industry had on income distribution in coastal communities. Specifically, we evaluated whether salmon farms generated significant changes on household income distribution in the remote coastal areas of the Los Lagos region in Chile between 1992 and 2002. Salmon farms were expected to generate new labor and income opportunities for the local population. The impact on income distribution in the area should depend on which type of households were favored with this increased labor demand: low-income or high-income households. We tested this by applying impact evaluation techniques. Changes in income distribution were measured using Gini, Theil, and Mean Log Deviation (MLD) indices. We used information generated by small area estimation methods to measure individual household incomes. This latter was utilized to calculate the distribution indices at the locality level. We controlled for pre-existing differences and observable characteristics in the treatment group. Our results show that income inequality in areas with salmon farms fell significantly compared to areas without farms and this attenuated a general trend towards increasing inequality in the rural sector. These results are conditioned by the zone of influence of salmon farming, since the distance between the farm and the locality plays an important role in the impact on inequality. Finally, our results suggest that improvements in the position of households with medium incomes explain the reduction in income inequality.</p>
-<!-- ## Citation -->
-<!-- <p class="buttons" style="text-align:center;"> -->
-<!-- <a class="btn btn-danger" target="_blank" href="https://www.zotero.org/save?type=doi&q=10.1177/0899764020971045">{{< ai zotero >}}&emsp;Add to Zotero {{< fa square-arrow-up-right >}}</a> -->
-<!-- </p> -->
-<!-- ```bibtex -->
-<!-- @article{CARDENASRETAMAL2021102078, -->
-<!-- title = {Impact assessment of salmon farming on income distribution in remote coastal areas: The Chilean case}, -->
-<!-- journal = {Food Policy}, -->
-<!-- volume = {101}, -->
-<!-- pages = {102078}, -->
-<!-- year = {2021}, -->
-<!-- issn = {0306-9192}, -->
-<!-- doi = {https://doi.org/10.1016/j.foodpol.2021.102078}, -->
-<!-- url = {https://www.sciencedirect.com/science/article/pii/S0306919221000555}, -->
-<!-- author = {Roberto Cárdenas-Retamal and Jorge Dresdner-Cid and Adams Ceballos-Concha}, -->
-<!-- keywords = {Income distribution, Salmon aquaculture, Remote coastal areas, Impact evaluation, Chile} -->
-<!-- } -->
-<!-- ``` -->
+</header>
+
+
+<p class="back-nav">
+<a href="../../projects/index.html">← Back to Projects</a>
+</p>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p><code>JPselect</code> is an R package that implements the three-step estimation procedure of <a href="https://www.jstor.org/stable/40987295">Koundouri &amp; Nauges (2005)</a> for <a href="https://www.sciencedirect.com/science/article/abs/pii/0304407678900068">Just-Pope</a> (1978, 1979) stochastic production functions with sample-selection bias from crop choice. The package bundles the probit selection equation, the linear-quadratic mean function with an Inverse Mills Ratio, the Cobb-Douglas risk (variance) function, and a full-pipeline bootstrap, behind a single high-level interface.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Code, documentation, and a runnable example are available on <a href="https://github.com/robcareta/JPselect">GitHub</a>. Install with <code>remotes::install_github("robcareta/JPselect")</code>.</p>
+</div>
+</div>
+</section>
+<section id="the-problem-it-solves" class="level2">
+<h2 class="anchored" data-anchor-id="the-problem-it-solves">The problem it solves</h2>
+<p>When farmers choose what to grow, that choice depends on characteristics (soil quality, water access, farming experience) that also affect productivity. Estimating a production function on the chosen sub-sample, for example just the vegetable growers, mixes the technological relationship between inputs and output with the self-selection of farms into crops. The result is <strong>biased</strong> estimates of how inputs affect both mean output <strong>and</strong> its variability.</p>
+<p>Koundouri and Nauges’ main finding is that <strong>skipping the Heckman correction can flip the sign or kill the significance</strong> of risk-function coefficients. An applied researcher who reports the naive estimates can therefore reach the wrong conclusion about which inputs are risk-increasing or risk-decreasing.</p>
+<p><code>JPselect</code> runs both the corrected and uncorrected specifications and shows them side by side, so the bias is visible directly.</p>
+</section>
+<section id="whats-inside" class="level2">
+<h2 class="anchored" data-anchor-id="whats-inside">What’s inside</h2>
+<p>The package exposes a small surface area:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>jp_fit()</code></td>
+<td>One-call wrapper for the full three-step pipeline plus the with-vs-without comparison. Returns a <code>jpfit</code> S3 object.</td>
+</tr>
+<tr class="even">
+<td><code>print(fit)</code></td>
+<td>Risk-function table plus a plain-language interpretation: which inputs are risk-increasing or decreasing, where selectivity correction changes the conclusion, whether the Mill’s ratio is significant.</td>
+</tr>
+<tr class="odd">
+<td><code>summary(fit)</code></td>
+<td>All three stages of the procedure end-to-end: probit, mean function with Mill’s ratio, with vs.&nbsp;without risk function.</td>
+</tr>
+<tr class="even">
+<td><code>plot(fit)</code></td>
+<td>Headline coefficient plot of the risk function.</td>
+</tr>
+<tr class="odd">
+<td><code>jp_export()</code></td>
+<td>Writes the four resulting tables to Excel (one workbook, five sheets), LaTeX (booktabs tables for a paper), or CSV (one file per table).</td>
+</tr>
+<tr class="even">
+<td><code>simulate_kiti_data()</code></td>
+<td>Synthetic 239-farm dataset that mimics the paper’s Cyprus sample, for demonstration and testing.</td>
+</tr>
+</tbody>
+</table>
+<p>Individual stage functions (<code>estimate_selection</code>, <code>estimate_mean_function</code>, <code>estimate_risk_function</code>) are also exported for users who want finer control.</p>
+</section>
+<section id="sample-output" class="level2">
+<h2 class="anchored" data-anchor-id="sample-output">Sample output</h2>
+<p><code>print(fit)</code> ends with a structured interpretation block:</p>
+<pre><code>At p &lt; 0.10, with selectivity correction:
+  Risk-DECREASING inputs : (none)
+  Risk-INCREASING inputs : (none)
+
+Does selectivity correction change the conclusion?
+  labor : significant without correction (p=0.022) but NOT significant once corrected (p=0.116)
+  water : significant without correction (p=0.030) but NOT significant once corrected (p=0.519)
+
+Selection-bias test (Mill's ratio in the mean function):
+  coef = +0.527, p = 0.036 -- selection bias DETECTED.
+  Prefer the 'with correction' column above.</code></pre>
+<p>The headline plot shows each input twice (red = with selectivity correction, teal = without). When the two estimates disagree, the selectivity bias is visible at a glance:</p>
+<p><img src="https://raw.githubusercontent.com/robcareta/JPselect/main/man/figures/README-risk-plot.png" class="img-fluid" style="width:100.0%" alt="Risk-function coefficients with vs. without Heckman correction"></p>
+</section>
+<section id="quick-example" class="level2">
+<h2 class="anchored" data-anchor-id="quick-example">Quick example</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(JPselect)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>farms <span class="ot">&lt;-</span> <span class="fu">simulate_kiti_data</span>(<span class="at">seed =</span> <span class="dv">42</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>fit <span class="ot">&lt;-</span> <span class="fu">jp_fit</span>(</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">data                 =</span> farms,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">selection_var        =</span> <span class="st">"vegetables"</span>,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">selection_covariates =</span> <span class="fu">c</span>(<span class="st">"rainfall"</span>, <span class="st">"irrigated"</span>, <span class="st">"dist_town"</span>,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>                           <span class="st">"dist_coast"</span>, <span class="st">"experience"</span>),</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">output_var           =</span> <span class="st">"revenue"</span>,</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">input_vars           =</span> <span class="fu">c</span>(<span class="st">"fertilizers"</span>, <span class="st">"pesticides"</span>, <span class="st">"labor"</span>, <span class="st">"water"</span>),</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">shifter_vars         =</span> <span class="fu">c</span>(<span class="st">"machinery"</span>, <span class="st">"rainfall"</span>, <span class="st">"irrigated"</span>,</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>                           <span class="st">"dist_town"</span>, <span class="st">"dist_coast"</span>, <span class="st">"experience"</span>),</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">bootstrap_reps       =</span> <span class="dv">500</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(fit)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(fit)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="fu">jp_export</span>(fit, <span class="st">"results.xlsx"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="technical-details" class="level2">
+<h2 class="anchored" data-anchor-id="technical-details">Technical details</h2>
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td><strong>Language</strong></td>
+<td>R (100%)</td>
+</tr>
+<tr class="even">
+<td><strong>Key dependencies</strong></td>
+<td><code>stats</code>, <code>sandwich</code>, <code>ggplot2</code>, <code>openxlsx</code> (for Excel export)</td>
+</tr>
+<tr class="odd">
+<td><strong>Standard errors</strong></td>
+<td>500-replication nonparametric bootstrap that resamples the full pipeline (probit, IMR, mean function, residuals, risk function) on every replication.</td>
+</tr>
+<tr class="even">
+<td><strong>License</strong></td>
+<td>MIT</td>
+</tr>
+<tr class="odd">
+<td><strong>Repository</strong></td>
+<td><a href="https://github.com/robcareta/JPselect">github.com/robcareta/JPselect</a></td>
+</tr>
+<tr class="even">
+<td><strong>Installation</strong></td>
+<td><code>remotes::install_github("robcareta/JPselect")</code></td>
+</tr>
+<tr class="odd">
+<td><strong>Status</strong></td>
+<td>First public release (v0.1.0)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p>Heckman, J. (1979). Sample selection bias as a specification error. <em>Econometrica</em>, 47, 153-161. <a href="https://doi.org/10.2307/1912352">https://doi.org/10.2307/1912352</a></p>
+<p>Just, R. E., &amp; Pope, R. D. (1978). Stochastic representation of production functions and econometric implications. <em>Journal of Econometrics</em>, 7(1), 67-86. <a href="https://doi.org/10.1016/0304-4076(78)90006-4">https://doi.org/10.1016/0304-4076(78)90006-4</a></p>
+<p>Koundouri, P., &amp; Nauges, C. (2005). On Production Function Estimation with Selectivity and Risk Considerations. <em>Journal of Agricultural and Resource Economics</em>, 30(3), 597-608. <a href="https://www.jstor.org/stable/40987295">https://www.jstor.org/stable/40987295</a></p>
 
 
 </section>
