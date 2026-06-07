@@ -21,7 +21,7 @@
 
             $if(haiku)$
             <div class="haiku">
-                $for(haiku)$$haiku$$sep$<br>$endfor$
+                $for(haiku)$$if(haiku.url)$$haiku.text$ <a href="$haiku.url$" target="_blank" rel="noopener">$haiku.journal$</a>$else$$haiku$$endif$$sep$<br>$endfor$
             </div>
             $endif$
 

@@ -20,8 +20,15 @@
             <% // Loop through the haiku lines and prepend a / to all but the first %>
             <% if (item.haiku) { %>
             <div class="haiku">
-            <% for (var i=0; i <= item.haiku.length - 1; i++) { %>
-                <% if (i > 0) { %> / <% } %><%- item.haiku[i] %>
+            <% for (var i=0; i <= item.haiku.length - 1; i++) {
+                 var h = item.haiku[i];
+            %>
+                <% if (i > 0) { %> / <% } %>
+                <% if (typeof h === 'object' && h !== null && h.url) { %>
+                    <%= h.text %> <a href="<%= h.url %>" target="_blank" rel="noopener"><%= h.journal %></a>
+                <% } else { %>
+                    <%= h %>
+                <% } %>
             <% } %>
             </div>
             <% } %>
