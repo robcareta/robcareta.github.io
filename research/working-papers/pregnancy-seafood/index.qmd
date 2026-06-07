@@ -1,5 +1,5 @@
 ---
-title: "Eating for Two? Pregnancy and Seafood Consumption in Household Purchase Data"
+title: "Pregnancy and the seafood demand response: Evidence from household scanner data"
 date: 2026-03-017
 author:
   - name: Roberto Cárdenas-Retamal
@@ -12,7 +12,7 @@ categories:
   - Diet change
 pub-info:
   reference: >-
-    “Eating for Two? Pregnancy and Seafood Consumption in Household Purchase Data”
+    “Pregnancy and the seafood demand response: Evidence from household scanner data”
 #  links:
  # - name: Code
   #  url: https://github.com/vincentarelbundock/mfxplainer

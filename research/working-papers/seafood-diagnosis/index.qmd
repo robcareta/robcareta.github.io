@@ -29,8 +29,8 @@ pub-status:
   class: warning
   icon: fa-solid fa-pencil
   
-haiku: 
-  - Presented at the Agricultural & Applied Ecoonmics Association (AAEA) 2024 conference in New Orleans
+haiku:
+  - Under review at Food Policy
   
   
 ---
