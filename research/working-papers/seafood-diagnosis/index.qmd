@@ -30,7 +30,7 @@ pub-status:
   icon: fa-solid fa-pencil
   
 haiku:
-  - Under review at Food Policy
+  - 'Under review at <a href="https://www.sciencedirect.com/journal/food-policy" target="_blank" rel="noopener">Food Policy</a>'
   
   
 ---

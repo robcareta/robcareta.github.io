@@ -29,8 +29,8 @@ pub-status:
   class: warning
   icon: "fa-solid fa-pencil"
   
-haiku: 
-  - Under review at Journal of the Agricultural & Applied Economics Association
+haiku:
+  - 'Under review at <a href="https://onlinelibrary.wiley.com/journal/26928876" target="_blank" rel="noopener">Journal of the Agricultural & Applied Economics Association</a>'
 ---
 
 # Abstract 
