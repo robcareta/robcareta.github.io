@@ -16,7 +16,9 @@ categories:
 
 ## Overview
 
-`JPselect` is an R package that implements the three-step estimation procedure of [Koundouri & Nauges (2005)](https://www.jstor.org/stable/40987295) for [Just-Pope](https://www.sciencedirect.com/science/article/abs/pii/0304407678900068) (1978, 1979) stochastic production functions with sample-selection bias from crop choice. The package bundles the probit selection equation, the linear-quadratic mean function with an Inverse Mills Ratio, the Cobb-Douglas risk (variance) function, and a full-pipeline bootstrap, behind a single high-level interface.
+`JPselect` is an R package that implements the three-step estimation procedure of [Koundouri & Nauges (2005)](https://www.jstor.org/stable/40987295) for [Just-Pope](https://www.sciencedirect.com/science/article/abs/pii/0304407678900068) (1978, 1979) stochastic production functions with sample-selection bias from crop choice. The package bundles the probit selection equation, the mean production function with an Inverse Mills Ratio, the variance (risk) function, and a full-pipeline bootstrap, behind a single high-level interface.
+
+Version 0.2.0 adds functional-form flexibility: three mean-function forms (linear-quadratic, quadratic, Cobb-Douglas), two risk-function forms (Cobb-Douglas, exponential), a translog guard, and a side-by-side comparison helper `jp_compare()` for sensitivity analysis across specifications.
 
 ::: {.callout-note}
 Code, documentation, and a runnable example are available on [GitHub](https://github.com/robcareta/JPselect). Install with `remotes::install_github("robcareta/JPselect")`.
@@ -36,10 +38,11 @@ The package exposes a small surface area:
 
 | Function | Purpose |
 |---|---|
-| `jp_fit()` | One-call wrapper for the full three-step pipeline plus the with-vs-without comparison. Returns a `jpfit` S3 object. |
+| `jp_fit()` | One-call wrapper for the full three-step pipeline plus the with-vs-without comparison. Accepts `mean_form` and `risk_form` arguments. Returns a `jpfit` S3 object. |
 | `print(fit)` | Risk-function table plus a plain-language interpretation: which inputs are risk-increasing or decreasing, where selectivity correction changes the conclusion, whether the Mill's ratio is significant. |
 | `summary(fit)` | All three stages of the procedure end-to-end: probit, mean function with Mill's ratio, with vs. without risk function. |
 | `plot(fit)` | Headline coefficient plot of the risk function. |
+| `jp_compare()` | Fits `jp_fit()` under every combination of supplied mean and risk forms, returns a `jpcompare` object with summary diagnostics and a wide side-by-side coefficient table. |
 | `jp_export()` | Writes the four resulting tables to Excel (one workbook, five sheets), LaTeX (booktabs tables for a paper), or CSV (one file per table). |
 | `simulate_kiti_data()` | Synthetic 239-farm dataset that mimics the paper's Cyprus sample, for demonstration and testing. |
 
@@ -67,6 +70,50 @@ The headline plot shows each input twice (red = with selectivity correction, tea
 
 ![](https://raw.githubusercontent.com/robcareta/JPselect/main/man/figures/README-risk-plot.png){fig-alt="Risk-function coefficients with vs. without Heckman correction" width="100%"}
 
+## Functional form flexibility
+
+Functional form is a research-design choice, not a property of the data. Version 0.2.0 lets the user pick from three mean functions and two risk functions and compare them side by side.
+
+**Mean function** (`mean_form` argument of `jp_fit()`):
+
+- `"linear_quadratic"` (default): the Koundouri-Nauges specification, with linear, quadratic, and pairwise interaction terms in inputs.
+- `"quadratic"`: linear and quadratic terms only, no pairwise interactions. Useful when the sample is small relative to the input count.
+- `"cobb_douglas"`: log-log specification. Shankar & Nelson (1999) show that the Cobb-Douglas mean paired with the Cobb-Douglas variance is robust to input endogeneity within the Just-Pope framework.
+
+**Risk function** (`risk_form` argument of `jp_fit()`):
+
+- `"cobb_douglas"` (default): the canonical Koundouri-Nauges form. Coefficients are variance elasticities. Requires strictly positive inputs.
+- `"exponential"`: $h(x) = \exp(\xi_0 + \sum_j \xi_j x_j)$. Coefficients are variance semi-elasticities. Handles zero-valued inputs (Saha, Havenner & Talpaz 1997; Tveterås 1999, 2000).
+
+**Translog is deliberately blocked** at the API level. It implies a multiplicative interaction between the mean and variance functions, which breaks the additive identification structure that Just-Pope requires (Koundouri & Nauges 2005, footnote 5). Passing `mean_form = "translog"` raises an informative error pointing to the footnote.
+
+**Sensitivity comparison.** `jp_compare()` fits the package across every combination of mean and risk forms supplied and returns a `jpcompare` object whose `print()` method produces a publication-ready table:
+
+```
+======================================================================
+JPselect: comparison of functional-form specifications
+======================================================================
+6 combinations fitted on n = 95 selected farms.
+
+SUMMARY (Step 1 + Step 2 diagnostics)
+ Combo  Mean_form        Risk_form    Mean_R2 IMR_coef IMR_p Bias_at_10
+ LQ/CD  linear_quadratic cobb_douglas 0.964   +0.527   0.036 YES
+ Q/CD   quadratic        cobb_douglas 0.961   +0.371   0.105 no
+ CD/CD  cobb_douglas     cobb_douglas 0.426   +0.706   0.360 no
+ LQ/Exp linear_quadratic exponential  0.964   +0.527   0.036 YES
+ Q/Exp  quadratic        exponential  0.961   +0.371   0.105 no
+ CD/Exp cobb_douglas     exponential  0.426   +0.706   0.360 no
+
+RISK FUNCTION COEFFICIENTS (with selectivity correction)
+ Input       LQ/CD    Q/CD     CD/CD    LQ/Exp  Q/Exp    CD/Exp
+ fertilizers +0.057   +0.131** +0.036   +0.013  +0.150** +0.064
+ pesticides  +0.007   +0.111** +0.053   -0.081  +0.061   +0.067
+ labor       -0.107** -0.069   -0.111   -0.129  -0.187** -0.004
+ water       -0.046   -0.045   +0.434** -0.115* -0.070   +0.122***
+```
+
+The wide coefficient table makes it easy to spot inputs whose sign or significance depends on the specification, exactly the kind of robustness check a referee will want.
+
 ## Quick example
 
 ```r
@@ -74,6 +121,7 @@ library(JPselect)
 
 farms <- simulate_kiti_data(seed = 42)
 
+# Single specification (default linear-quadratic + Cobb-Douglas risk)
 fit <- jp_fit(
   data                 = farms,
   selection_var        = "vegetables",
@@ -89,6 +137,23 @@ fit <- jp_fit(
 print(fit)
 plot(fit)
 jp_export(fit, "results.xlsx")
+
+# Sensitivity comparison across all 6 form combinations
+cmp <- jp_compare(
+  data                 = farms,
+  selection_var        = "vegetables",
+  selection_covariates = c("rainfall", "irrigated", "dist_town",
+                           "dist_coast", "experience"),
+  output_var           = "revenue",
+  input_vars           = c("fertilizers", "pesticides", "labor", "water"),
+  shifter_vars         = c("machinery", "rainfall", "irrigated",
+                           "dist_town", "dist_coast", "experience"),
+  bootstrap_reps       = 0,
+  mean_forms           = c("linear_quadratic", "quadratic", "cobb_douglas"),
+  risk_forms           = c("cobb_douglas", "exponential")
+)
+
+print(cmp)
 ```
 
 ## Technical details
@@ -101,7 +166,7 @@ jp_export(fit, "results.xlsx")
 | **License** | MIT |
 | **Repository** | [github.com/robcareta/JPselect](https://github.com/robcareta/JPselect) |
 | **Installation** | `remotes::install_github("robcareta/JPselect")` |
-| **Status** | First public release (v0.1.0) |
+| **Status** | v0.2.0 (functional-form flexibility and sensitivity comparison) |
 
 ## How to cite
 
@@ -109,7 +174,7 @@ If you use `JPselect` in published work, please cite the package together with t
 
 **Package:**
 
-> Cardenas Retamal, R. (2026). *JPselect: Just-Pope Production Functions with Heckman Selectivity Correction.* R package version 0.1.0. [https://github.com/robcareta/JPselect](https://github.com/robcareta/JPselect)
+> Cardenas Retamal, R. (2026). *JPselect: Just-Pope Production Functions with Heckman Selectivity Correction.* R package version 0.2.0. [https://github.com/robcareta/JPselect](https://github.com/robcareta/JPselect)
 
 **Underlying paper:**
 
@@ -128,3 +193,11 @@ Heckman, J. (1979). Sample selection bias as a specification error. *Econometric
 Just, R. E., & Pope, R. D. (1978). Stochastic representation of production functions and econometric implications. *Journal of Econometrics*, 7(1), 67-86. [https://doi.org/10.1016/0304-4076(78)90006-4](https://doi.org/10.1016/0304-4076(78)90006-4)
 
 Koundouri, P., & Nauges, C. (2005). On Production Function Estimation with Selectivity and Risk Considerations. *Journal of Agricultural and Resource Economics*, 30(3), 597-608. [https://www.jstor.org/stable/40987295](https://www.jstor.org/stable/40987295)
+
+Saha, A., Havenner, A., & Talpaz, H. (1997). Stochastic production function estimation: small sample properties of ML versus FGLS. *Applied Economics*, 29(4), 459-469.
+
+Shankar, B., & Nelson, C. H. (1999). Joint risk preference-technology estimation with a primal system: comment. *American Journal of Agricultural Economics*, 81(1), 241-244.
+
+Tveterås, R. (1999). Production risk and productivity growth: some findings for Norwegian salmon aquaculture. *Journal of Productivity Analysis*, 12(2), 161-179.
+
+Tveterås, R. (2000). Flexible panel data models for risky production technologies with an application to salmon aquaculture. *Econometric Reviews*, 19(3), 367-389.

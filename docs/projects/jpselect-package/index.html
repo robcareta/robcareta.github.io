@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,6 +11,9 @@
 
 <title>JPselect: Just-Pope Production Functions with Heckman Selectivity – Roberto Cárdenas-Retamal</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -72,10 +75,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-8931d3b3f71fe5cc2e0b8f699b2ad376.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-4082d3e689bd3d0e9f58069c02f8a7f1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -113,6 +116,35 @@ gtag('config', 'G-H4P0QZL89D', { 'anonymize_ip': true});
 </script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -214,7 +246,8 @@ gtag('config', 'G-H4P0QZL89D', { 'anonymize_ip': true});
 </p>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p><code>JPselect</code> is an R package that implements the three-step estimation procedure of <a href="https://www.jstor.org/stable/40987295">Koundouri &amp; Nauges (2005)</a> for <a href="https://www.sciencedirect.com/science/article/abs/pii/0304407678900068">Just-Pope</a> (1978, 1979) stochastic production functions with sample-selection bias from crop choice. The package bundles the probit selection equation, the linear-quadratic mean function with an Inverse Mills Ratio, the Cobb-Douglas risk (variance) function, and a full-pipeline bootstrap, behind a single high-level interface.</p>
+<p><code>JPselect</code> is an R package that implements the three-step estimation procedure of <a href="https://www.jstor.org/stable/40987295">Koundouri &amp; Nauges (2005)</a> for <a href="https://www.sciencedirect.com/science/article/abs/pii/0304407678900068">Just-Pope</a> (1978, 1979) stochastic production functions with sample-selection bias from crop choice. The package bundles the probit selection equation, the mean production function with an Inverse Mills Ratio, the variance (risk) function, and a full-pipeline bootstrap, behind a single high-level interface.</p>
+<p>Version 0.2.0 adds functional-form flexibility: three mean-function forms (linear-quadratic, quadratic, Cobb-Douglas), two risk-function forms (Cobb-Douglas, exponential), a translog guard, and a side-by-side comparison helper <code>jp_compare()</code> for sensitivity analysis across specifications.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -252,7 +285,7 @@ Note
 <tbody>
 <tr class="odd">
 <td><code>jp_fit()</code></td>
-<td>One-call wrapper for the full three-step pipeline plus the with-vs-without comparison. Returns a <code>jpfit</code> S3 object.</td>
+<td>One-call wrapper for the full three-step pipeline plus the with-vs-without comparison. Accepts <code>mean_form</code> and <code>risk_form</code> arguments. Returns a <code>jpfit</code> S3 object.</td>
 </tr>
 <tr class="even">
 <td><code>print(fit)</code></td>
@@ -267,10 +300,14 @@ Note
 <td>Headline coefficient plot of the risk function.</td>
 </tr>
 <tr class="odd">
+<td><code>jp_compare()</code></td>
+<td>Fits <code>jp_fit()</code> under every combination of supplied mean and risk forms, returns a <code>jpcompare</code> object with summary diagnostics and a wide side-by-side coefficient table.</td>
+</tr>
+<tr class="even">
 <td><code>jp_export()</code></td>
 <td>Writes the four resulting tables to Excel (one workbook, five sheets), LaTeX (booktabs tables for a paper), or CSV (one file per table).</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>simulate_kiti_data()</code></td>
 <td>Synthetic 239-farm dataset that mimics the paper’s Cyprus sample, for demonstration and testing.</td>
 </tr>
@@ -295,27 +332,83 @@ Selection-bias test (Mill's ratio in the mean function):
 <p>The headline plot shows each input twice (red = with selectivity correction, teal = without). When the two estimates disagree, the selectivity bias is visible at a glance:</p>
 <p><img src="https://raw.githubusercontent.com/robcareta/JPselect/main/man/figures/README-risk-plot.png" class="img-fluid" style="width:100.0%" alt="Risk-function coefficients with vs. without Heckman correction"></p>
 </section>
+<section id="functional-form-flexibility" class="level2">
+<h2 class="anchored" data-anchor-id="functional-form-flexibility">Functional form flexibility</h2>
+<p>Functional form is a research-design choice, not a property of the data. Version 0.2.0 lets the user pick from three mean functions and two risk functions and compare them side by side.</p>
+<p><strong>Mean function</strong> (<code>mean_form</code> argument of <code>jp_fit()</code>):</p>
+<ul>
+<li><code>"linear_quadratic"</code> (default): the Koundouri-Nauges specification, with linear, quadratic, and pairwise interaction terms in inputs.</li>
+<li><code>"quadratic"</code>: linear and quadratic terms only, no pairwise interactions. Useful when the sample is small relative to the input count.</li>
+<li><code>"cobb_douglas"</code>: log-log specification. Shankar &amp; Nelson (1999) show that the Cobb-Douglas mean paired with the Cobb-Douglas variance is robust to input endogeneity within the Just-Pope framework.</li>
+</ul>
+<p><strong>Risk function</strong> (<code>risk_form</code> argument of <code>jp_fit()</code>):</p>
+<ul>
+<li><code>"cobb_douglas"</code> (default): the canonical Koundouri-Nauges form. Coefficients are variance elasticities. Requires strictly positive inputs.</li>
+<li><code>"exponential"</code>: <span class="math inline">\(h(x) = \exp(\xi_0 + \sum_j \xi_j x_j)\)</span>. Coefficients are variance semi-elasticities. Handles zero-valued inputs (Saha, Havenner &amp; Talpaz 1997; Tveterås 1999, 2000).</li>
+</ul>
+<p><strong>Translog is deliberately blocked</strong> at the API level. It implies a multiplicative interaction between the mean and variance functions, which breaks the additive identification structure that Just-Pope requires (Koundouri &amp; Nauges 2005, footnote 5). Passing <code>mean_form = "translog"</code> raises an informative error pointing to the footnote.</p>
+<p><strong>Sensitivity comparison.</strong> <code>jp_compare()</code> fits the package across every combination of mean and risk forms supplied and returns a <code>jpcompare</code> object whose <code>print()</code> method produces a publication-ready table:</p>
+<pre><code>======================================================================
+JPselect: comparison of functional-form specifications
+======================================================================
+6 combinations fitted on n = 95 selected farms.
+
+SUMMARY (Step 1 + Step 2 diagnostics)
+ Combo  Mean_form        Risk_form    Mean_R2 IMR_coef IMR_p Bias_at_10
+ LQ/CD  linear_quadratic cobb_douglas 0.964   +0.527   0.036 YES
+ Q/CD   quadratic        cobb_douglas 0.961   +0.371   0.105 no
+ CD/CD  cobb_douglas     cobb_douglas 0.426   +0.706   0.360 no
+ LQ/Exp linear_quadratic exponential  0.964   +0.527   0.036 YES
+ Q/Exp  quadratic        exponential  0.961   +0.371   0.105 no
+ CD/Exp cobb_douglas     exponential  0.426   +0.706   0.360 no
+
+RISK FUNCTION COEFFICIENTS (with selectivity correction)
+ Input       LQ/CD    Q/CD     CD/CD    LQ/Exp  Q/Exp    CD/Exp
+ fertilizers +0.057   +0.131** +0.036   +0.013  +0.150** +0.064
+ pesticides  +0.007   +0.111** +0.053   -0.081  +0.061   +0.067
+ labor       -0.107** -0.069   -0.111   -0.129  -0.187** -0.004
+ water       -0.046   -0.045   +0.434** -0.115* -0.070   +0.122***</code></pre>
+<p>The wide coefficient table makes it easy to spot inputs whose sign or significance depends on the specification, exactly the kind of robustness check a referee will want.</p>
+</section>
 <section id="quick-example" class="level2">
 <h2 class="anchored" data-anchor-id="quick-example">Quick example</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(JPselect)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>farms <span class="ot">&lt;-</span> <span class="fu">simulate_kiti_data</span>(<span class="at">seed =</span> <span class="dv">42</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>fit <span class="ot">&lt;-</span> <span class="fu">jp_fit</span>(</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">data                 =</span> farms,</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">selection_var        =</span> <span class="st">"vegetables"</span>,</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">selection_covariates =</span> <span class="fu">c</span>(<span class="st">"rainfall"</span>, <span class="st">"irrigated"</span>, <span class="st">"dist_town"</span>,</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>                           <span class="st">"dist_coast"</span>, <span class="st">"experience"</span>),</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">output_var           =</span> <span class="st">"revenue"</span>,</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">input_vars           =</span> <span class="fu">c</span>(<span class="st">"fertilizers"</span>, <span class="st">"pesticides"</span>, <span class="st">"labor"</span>, <span class="st">"water"</span>),</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">shifter_vars         =</span> <span class="fu">c</span>(<span class="st">"machinery"</span>, <span class="st">"rainfall"</span>, <span class="st">"irrigated"</span>,</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>                           <span class="st">"dist_town"</span>, <span class="st">"dist_coast"</span>, <span class="st">"experience"</span>),</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">bootstrap_reps       =</span> <span class="dv">500</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(fit)</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(fit)</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="fu">jp_export</span>(fit, <span class="st">"results.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(JPselect)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>farms <span class="ot">&lt;-</span> <span class="fu">simulate_kiti_data</span>(<span class="at">seed =</span> <span class="dv">42</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Single specification (default linear-quadratic + Cobb-Douglas risk)</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>fit <span class="ot">&lt;-</span> <span class="fu">jp_fit</span>(</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">data                 =</span> farms,</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">selection_var        =</span> <span class="st">"vegetables"</span>,</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">selection_covariates =</span> <span class="fu">c</span>(<span class="st">"rainfall"</span>, <span class="st">"irrigated"</span>, <span class="st">"dist_town"</span>,</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>                           <span class="st">"dist_coast"</span>, <span class="st">"experience"</span>),</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">output_var           =</span> <span class="st">"revenue"</span>,</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">input_vars           =</span> <span class="fu">c</span>(<span class="st">"fertilizers"</span>, <span class="st">"pesticides"</span>, <span class="st">"labor"</span>, <span class="st">"water"</span>),</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">shifter_vars         =</span> <span class="fu">c</span>(<span class="st">"machinery"</span>, <span class="st">"rainfall"</span>, <span class="st">"irrigated"</span>,</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>                           <span class="st">"dist_town"</span>, <span class="st">"dist_coast"</span>, <span class="st">"experience"</span>),</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">bootstrap_reps       =</span> <span class="dv">500</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(fit)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(fit)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="fu">jp_export</span>(fit, <span class="st">"results.xlsx"</span>)</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Sensitivity comparison across all 6 form combinations</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>cmp <span class="ot">&lt;-</span> <span class="fu">jp_compare</span>(</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>  <span class="at">data                 =</span> farms,</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>  <span class="at">selection_var        =</span> <span class="st">"vegetables"</span>,</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>  <span class="at">selection_covariates =</span> <span class="fu">c</span>(<span class="st">"rainfall"</span>, <span class="st">"irrigated"</span>, <span class="st">"dist_town"</span>,</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>                           <span class="st">"dist_coast"</span>, <span class="st">"experience"</span>),</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>  <span class="at">output_var           =</span> <span class="st">"revenue"</span>,</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>  <span class="at">input_vars           =</span> <span class="fu">c</span>(<span class="st">"fertilizers"</span>, <span class="st">"pesticides"</span>, <span class="st">"labor"</span>, <span class="st">"water"</span>),</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>  <span class="at">shifter_vars         =</span> <span class="fu">c</span>(<span class="st">"machinery"</span>, <span class="st">"rainfall"</span>, <span class="st">"irrigated"</span>,</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>                           <span class="st">"dist_town"</span>, <span class="st">"dist_coast"</span>, <span class="st">"experience"</span>),</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>  <span class="at">bootstrap_reps       =</span> <span class="dv">0</span>,</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>  <span class="at">mean_forms           =</span> <span class="fu">c</span>(<span class="st">"linear_quadratic"</span>, <span class="st">"quadratic"</span>, <span class="st">"cobb_douglas"</span>),</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>  <span class="at">risk_forms           =</span> <span class="fu">c</span>(<span class="st">"cobb_douglas"</span>, <span class="st">"exponential"</span>)</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(cmp)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="technical-details" class="level2">
 <h2 class="anchored" data-anchor-id="technical-details">Technical details</h2>
@@ -347,7 +440,7 @@ Selection-bias test (Mill's ratio in the mean function):
 </tr>
 <tr class="odd">
 <td><strong>Status</strong></td>
-<td>First public release (v0.1.0)</td>
+<td>v0.2.0 (functional-form flexibility and sensitivity comparison)</td>
 </tr>
 </tbody>
 </table>
@@ -357,20 +450,24 @@ Selection-bias test (Mill's ratio in the mean function):
 <p>If you use <code>JPselect</code> in published work, please cite the package together with the underlying paper.</p>
 <p><strong>Package:</strong></p>
 <blockquote class="blockquote">
-<p>Cardenas Retamal, R. (2026). <em>JPselect: Just-Pope Production Functions with Heckman Selectivity Correction.</em> R package version 0.1.0. <a href="https://github.com/robcareta/JPselect">https://github.com/robcareta/JPselect</a></p>
+<p>Cardenas Retamal, R. (2026). <em>JPselect: Just-Pope Production Functions with Heckman Selectivity Correction.</em> R package version 0.2.0. <a href="https://github.com/robcareta/JPselect">https://github.com/robcareta/JPselect</a></p>
 </blockquote>
 <p><strong>Underlying paper:</strong></p>
 <blockquote class="blockquote">
 <p>Koundouri, P., &amp; Nauges, C. (2005). On Production Function Estimation with Selectivity and Risk Considerations. <em>Journal of Agricultural and Resource Economics</em>, 30(3), 597-608.</p>
 </blockquote>
 <p>In R, the canonical citations are also available via:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">citation</span>(<span class="st">"JPselect"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">citation</span>(<span class="st">"JPselect"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
 <p>Heckman, J. (1979). Sample selection bias as a specification error. <em>Econometrica</em>, 47, 153-161. <a href="https://doi.org/10.2307/1912352">https://doi.org/10.2307/1912352</a></p>
 <p>Just, R. E., &amp; Pope, R. D. (1978). Stochastic representation of production functions and econometric implications. <em>Journal of Econometrics</em>, 7(1), 67-86. <a href="https://doi.org/10.1016/0304-4076(78)90006-4">https://doi.org/10.1016/0304-4076(78)90006-4</a></p>
 <p>Koundouri, P., &amp; Nauges, C. (2005). On Production Function Estimation with Selectivity and Risk Considerations. <em>Journal of Agricultural and Resource Economics</em>, 30(3), 597-608. <a href="https://www.jstor.org/stable/40987295">https://www.jstor.org/stable/40987295</a></p>
+<p>Saha, A., Havenner, A., &amp; Talpaz, H. (1997). Stochastic production function estimation: small sample properties of ML versus FGLS. <em>Applied Economics</em>, 29(4), 459-469.</p>
+<p>Shankar, B., &amp; Nelson, C. H. (1999). Joint risk preference-technology estimation with a primal system: comment. <em>American Journal of Agricultural Economics</em>, 81(1), 241-244.</p>
+<p>Tveterås, R. (1999). Production risk and productivity growth: some findings for Norwegian salmon aquaculture. <em>Journal of Productivity Analysis</em>, 12(2), 161-179.</p>
+<p>Tveterås, R. (2000). Flexible panel data models for risky production technologies with an application to salmon aquaculture. <em>Econometric Reviews</em>, 19(3), 367-389.</p>
 
 
 </section>
@@ -446,13 +543,14 @@ document.addEventListener('DOMContentLoaded', function () {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
