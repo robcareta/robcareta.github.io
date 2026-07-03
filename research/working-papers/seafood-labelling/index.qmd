@@ -1,6 +1,6 @@
 ---
 title: "Price premiums for the MSC-ecolabel in the U.S.: A hedonic analysis haddock in U.S. market"
-date: 2025-10-01
+date: 2026-05-01
 author:
   - name: Roberto Cárdenas-Retamal
     orcid: 0000-0002-9578-827X

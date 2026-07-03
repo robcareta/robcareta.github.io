@@ -1,0 +1,34 @@
+---
+title: "Market penetration and potential of crawfish, oysters, and red drum in Southeastern U.S. markets"
+date: 2026-04-15
+author:
+  - name: Quinn LaFontaine
+    affiliation: School of Forest, Fisheries, & Geomatics Sciences, University of Florida
+  - name: Taryn Garlock
+    affiliation: School of Forest, Fisheries, & Geomatics Sciences, University of Florida
+  - name: Frank Asche
+    affiliation: School of Forest, Fisheries, & Geomatics Sciences, University of Florida
+  - name: Roberto Cárdenas-Retamal
+    orcid: 0000-0002-9578-827X
+    affiliation: School of Forest, Fisheries, & Geomatics Sciences, University of Florida
+
+categories:
+  - Aquaculture
+  - Seafood market
+  - Market penetration
+  - Crawfish
+  - Oysters
+  - Red drum
+  - Southeastern U.S.
+pub-info:
+  reference: >-
+    "Market penetration and potential of crawfish, oysters, and red drum in Southeastern U.S. markets"
+pub-status:
+  status: Writing
+  class: warning
+  icon: "fa-solid fa-pencil"
+---
+
+# Abstract
+
+An understanding of the market dynamics and market potential of emerging aquaculture species is important for industry success and expansion for domestically as well as export-oriented producers. This study provides two complementary analyses of the southeastern U.S. seafood market using primary data collected from restaurant menus and a web-based survey of restaurants and grocery stores in Texas, Louisiana, Mississippi, and Alabama. The results show that 68% of restaurants serving seafood are located in Texas, highlighting the importance of the size of the Texas market. Market penetration for US producers was highest near production centers. Crawfish were largely sourced from domestic production in both restaurant and grocery channels, whereas red drum and oysters were sourced from both domestic and imported production. Restaurants, on average, showed a higher preference for wild-caught seafood, whereas grocery stores showed a higher preference for farm-raised, and also for U.S.-produced seafood.

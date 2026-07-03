@@ -1,6 +1,6 @@
 ---
 title: "Seafood Purchasing in Responses to Type 2 Diabetes Diagnosis"
-date: 2025-10-07
+date: 2026-05-15
 author:
   - name: Roberto Cárdenas-Retamal
     orcid: 0000-0002-9578-827X

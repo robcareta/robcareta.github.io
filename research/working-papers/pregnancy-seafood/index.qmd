@@ -1,6 +1,6 @@
 ---
 title: "Pregnancy and the seafood demand response: Evidence from household scanner data"
-date: 2026-03-017
+date: 2026-06-01
 author:
   - name: Roberto Cárdenas-Retamal
     orcid: 0000-0002-9578-827X
