@@ -3,14 +3,14 @@ title: "Market penetration and potential of crawfish, oysters, and red drum in S
 date: 2026-04-15
 author:
   - name: Quinn LaFontaine
-    affiliation: School of Forest, Fisheries, & Geomatics Sciences, University of Florida
+    affiliation: School of Fisheries, Aquaculture and Aquatic Sciences, Auburn University, Auburn, AL, USA
   - name: Taryn Garlock
-    affiliation: School of Forest, Fisheries, & Geomatics Sciences, University of Florida
+    affiliation: School of Fisheries, Aquaculture and Aquatic Sciences, Auburn University, Auburn, AL, USA
   - name: Frank Asche
-    affiliation: School of Forest, Fisheries, & Geomatics Sciences, University of Florida
+    affiliation: School of Forest, Fisheries and Geomatics Sciences, University of Florida, Gainesville, FL, USA
   - name: Roberto Cárdenas-Retamal
     orcid: 0000-0002-9578-827X
-    affiliation: School of Forest, Fisheries, & Geomatics Sciences, University of Florida
+    affiliation: School of Forest, Fisheries and Geomatics Sciences, University of Florida, Gainesville, FL, USA
 
 categories:
   - Aquaculture
