@@ -88,7 +88,7 @@
     "href": "projects/jpselect-package/index.html",
     "title": "JPselect: Just-Pope Production Functions with Heckman Selectivity",
     "section": "",
-    "text": "← Back to Projects"
+    "text": "Redirecting to the JPselect package website…\nIf you are not redirected automatically, open https://robcareta.github.io/JPselect/."
   },
   {
     "objectID": "projects/jpselect-package/index.html#overview",
@@ -235,7 +235,7 @@
     "href": "projects/index.html",
     "title": "Projects",
     "section": "",
-    "text": "JPselect: Just-Pope Production Functions with Heckman Selectivity\n\n\n\nR\n\nPackage\n\nProduction functions\n\nHeckman correction\n\nJust-Pope\n\nAgricultural economics\n\n\n\nAn R package that estimates stochastic production functions while correcting for crop-choice selection bias, following Koundouri & Nauges (2005). Returns a clean…\n\n\n\nJun 4, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nArtisanal Fishing Behavior in Chile\n\n\n\nR\n\nFisheries\n\nChile\n\nData pipeline\n\nDuckDB\n\nVMS\n\nFishing effort\n\n\n\nA data pipeline to download, process, and visualize SERNAPESCA satellite positioning data for artisanal fishing fleets in the Los Lagos region.\n\n\n\nFeb 5, 2026\n\n\n\n\n\n\nNo matching items"
+    "text": "JPselect: Just-Pope Production Functions with Heckman Selectivity\n\n\n\nR\n\nPackage\n\nProduction functions\n\nHeckman correction\n\nJust-Pope\n\nAgricultural economics\n\n\n\nAn R package that estimates stochastic production functions while correcting for crop-choice selection bias, following Koundouri & Nauges (2005). Full documentation site…\n\n\n\nJun 4, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nArtisanal Fishing Behavior in Chile\n\n\n\nR\n\nFisheries\n\nChile\n\nData pipeline\n\nDuckDB\n\nVMS\n\nFishing effort\n\n\n\nA data pipeline to download, process, and visualize SERNAPESCA satellite positioning data for artisanal fishing fleets in the Los Lagos region.\n\n\n\nFeb 5, 2026\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "research/articles/green-space-productivity-2026/index.html",
