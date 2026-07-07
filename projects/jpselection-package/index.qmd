@@ -1,0 +1,23 @@
+---
+title: "JPselection: Just-Pope Production Functions with Heckman Selectivity"
+date: 2026-06-04
+description: "An R package that estimates stochastic production functions while correcting for crop-choice selection bias, following Koundouri & Nauges (2005). Full documentation site available."
+image: "https://raw.githubusercontent.com/robcareta/JPselection/main/man/figures/README-risk-plot.png"
+categories:
+  - R
+  - Package
+  - Production functions
+  - Heckman correction
+  - Just-Pope
+  - Agricultural economics
+format:
+  html:
+    include-in-header:
+      text: |
+        <meta http-equiv="refresh" content="0; url=https://robcareta.github.io/JPselection/">
+        <link rel="canonical" href="https://robcareta.github.io/JPselection/">
+---
+
+# Redirecting to the JPselection package website…
+
+If you are not redirected automatically, open **[https://robcareta.github.io/JPselection/](https://robcareta.github.io/JPselection/)**.
