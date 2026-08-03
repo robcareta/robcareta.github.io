@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2026-08-03">
-<meta name="description" content="Descriptive trade and nutrition trends from a species-level bilateral trade panel for African seafood, 1996-2020, including a breakdown by World Bank income group.">
+<meta name="description" content="A first look at how nutrients embedded in Africa’s seafood trade move between income groups, and which countries are net importers vs exporters.">
 
 <title>Africa’s Seafood Trade &amp; Nutrient Flows – Roberto Cárdenas-Retamal</title>
 <style>
@@ -149,13 +149,12 @@ gtag('config', 'G-H4P0QZL89D', { 'anonymize_ip': true});
     <div class="quarto-category">Nutrition</div>
     <div class="quarto-category">Africa</div>
     <div class="quarto-category">ARTIS</div>
-    <div class="quarto-category">Gravity model</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Descriptive trade and nutrition trends from a species-level bilateral trade panel for African seafood, 1996-2020, including a breakdown by World Bank income group.
+    A first look at how nutrients embedded in Africa’s seafood trade move between income groups, and which countries are net importers vs exporters.
   </div>
 </div>
 
@@ -183,7 +182,7 @@ gtag('config', 'G-H4P0QZL89D', { 'anonymize_ip': true});
 </p>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This project studies Africa’s seafood trade through the lens of <strong>nutrition, not just tonnage</strong>. Using species-level bilateral trade flows for 1996-2020, each traded shipment is converted into flows of protein, iron, zinc, calcium, and omega-3 fatty acids (DHA, EPA), so that trade can be read as flows of nutrients across borders, not just commodity volume. The guiding question: as Africa’s seafood trade has grown, has it also strengthened the continent’s access to nutrient-dense food, or is it exporting the nutrients its own population needs?</p>
+<p>Species-level bilateral seafood trade data lets each shipment be converted into flows of protein, iron, zinc, calcium, and omega-3 fatty acids (DHA, EPA), not just tonnage. This is a preliminary look at where those nutrients actually go, split by World Bank income group and by whether trade stays within Africa or crosses into the rest of the world.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -194,99 +193,24 @@ Warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This is an active working paper, not a finished publication. The figures below are descriptive results from an ongoing analysis; specifications, country coverage, and headline numbers may still change.</p>
+<p>This is an active working paper. Figures below are preliminary and the full analysis is not yet public.</p>
 </div>
 </div>
 </section>
-<section id="data-whats-actually-behind-these-charts" class="level2">
-<h2 class="anchored" data-anchor-id="data-whats-actually-behind-these-charts">Data — what’s actually behind these charts</h2>
-<p>Three data sources are combined, and each has real limitations worth being upfront about:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Source</th>
-<th>What it provides</th>
-<th>Coverage</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>ARTIS</strong> (Aquatic Resource Trade in Species)</td>
-<td>Species-level bilateral seafood trade flows, reconciled from customs/Comtrade data</td>
-<td>1996-2020, ~2,000 species, ~190 countries</td>
-</tr>
-<tr class="even">
-<td><strong>AFCD</strong> (Aquatic Food Composition Database)</td>
-<td>Nutrient content per 100g edible portion, by species</td>
-<td>Matched to ARTIS via a species/genus crosswalk</td>
-</tr>
-<tr class="odd">
-<td><strong>World Bank WDI</strong></td>
-<td>GDP, population, and income-group classification</td>
-<td>Merged by country-year</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Turning trade volume into nutrient flows.</strong> Each species’ live-weight trade is multiplied by an edible-fraction assumption (0.5) and its AFCD nutrient content to get a flow of protein, iron, zinc, calcium, DHA, and EPA (and 7 other nutrients tracked but not shown here). Species without a direct AFCD match are matched at the genus level; together, exact and genus-level matches cover about <strong>73% of traded live weight</strong> — the remainder (mostly unclassified or artisanal-market species) contributes zero nutrient flow, which likely understates trade in lower-income countries that rely more on species outside the standard commercial catalog.</p>
-<p><strong>What “trade” does and doesn’t capture.</strong> ARTIS reconciles official customs records. It does <strong>not</strong> capture informal or artisanal cross-border trade, which can be substantial in parts of West and Central Africa, nor does it capture fish caught and consumed domestically without ever entering recorded trade. Every number below is a trade-channel indicator, not a measure of total national fish consumption.</p>
+<section id="nutrient-flows-by-income-group" class="level2">
+<h2 class="anchored" data-anchor-id="nutrient-flows-by-income-group">Nutrient flows by income group</h2>
+<p>Trade with the rest of the world (left) looks very different from trade within Africa (right). Ribbon width is proportional to nutrient volume; color denotes the exporting income group.</p>
+<p><img src="img/sankey_extra_africa.png" class="img-fluid" style="width:100.0%" alt="Sankey diagram of nutrient flows between African and non-African countries by income group"></p>
+<p><img src="img/sankey_intra_africa.png" class="img-fluid" style="width:100.0%" alt="Sankey diagram of nutrient flows between African countries only by income group"></p>
 </section>
-<section id="trade-trends" class="level2">
-<h2 class="anchored" data-anchor-id="trade-trends">Trade trends</h2>
-<p>Africa’s recorded seafood trade nearly quadrupled between 1996 and 2020 — exports grew from 1.4 to 5.3 million tonnes (live weight), imports from 0.9 to 5.6 million tonnes. Intra-Africa trade (green) has grown fastest in relative terms, though it remains smaller than trade with the rest of the world.</p>
-<p><img src="img/trade_by_flow.png" class="img-fluid" style="width:100.0%" alt="Africa's total seafood trade by flow type, 1996-2020"></p>
+<section id="which-countries-are-net-importers-vs-exporters" class="level2">
+<h2 class="anchored" data-anchor-id="which-countries-are-net-importers-vs-exporters">Which countries are net importers vs exporters</h2>
+<p>Normalized net trade balance by country and nutrient (green = net exporter, red = net importer):</p>
+<p><img src="img/country_nutrient_balance_heatmap.png" class="img-fluid" style="width:100.0%" alt="Heatmap of normalized net nutrient trade balance by African country"></p>
 </section>
-<section id="nutrient-trends" class="level2">
-<h2 class="anchored" data-anchor-id="nutrient-trends">Nutrient trends</h2>
-<p>Converting trade volume into nutrient content changes the picture. Averaged over 2016-2020, <strong>Africa is a net importer of every one of the 13 nutrients tracked</strong> — it imports more protein, iron, zinc, calcium, and omega-3s embedded in seafood than it exports. The gap is smallest for protein (imports ~11% above exports) and largest for the omega-3 fatty acids DHA and EPA (imports 2.4-4.0x exports):</p>
-<p><img src="img/nutrient_exports_vs_imports.png" class="img-fluid" style="width:100.0%" alt="Africa's seafood exports vs imports by nutrient, 2016-2020 average"></p>
-<p>This net-import position has been fairly stable in relative terms but has grown enormously in absolute terms since the mid-2000s, as both exports and imports of nutrient-dense species have scaled up with overall trade volume:</p>
-<p><img src="img/nutrient_balance_timeseries.png" class="img-fluid" style="width:100.0%" alt="Net nutrient trade balance over time for 8 key nutrients"></p>
-</section>
-<section id="by-income-group" class="level2">
-<h2 class="anchored" data-anchor-id="by-income-group">By income group</h2>
-<p>Splitting the continent’s 53 countries by World Bank income classification (20 low income, 23 lower-middle income, 8 upper-middle income, 1 high income — Seychelles) shows the net-importer story is <strong>not</strong> shared equally.</p>
-<p>Lower-middle income countries dominate both export and import volume — they are simply the biggest players in African seafood trade by tonnage:</p>
-<p><img src="img/volume_by_income_group.png" class="img-fluid" style="width:100.0%" alt="Seafood trade volume by income group, 1996-2020"></p>
-<p>But looking at <em>net</em> nutrient balance tells a sharper story. Low-income and lower-middle-income countries are consistently net importers of protein and omega-3s — trade is, on net, bringing nutrients into these economies. The sole high-income country, Seychelles, is a striking outlier in the opposite direction:</p>
-<p><img src="img/nutrient_balance_by_income_group.png" class="img-fluid" style="width:100.0%" alt="Net Protein and DHA trade balance by income group over time"></p>
-<p>Across all 6 headline nutrients, the pattern holds: low- and lower-middle-income countries are net importers, while Seychelles is a large net <em>exporter</em> of every nutrient — a reflection of its role as a major Indian Ocean tuna transshipment and canning hub (a huge processing industry relative to its ~97,000 population), not a sign that its own population has more seafood-nutrient access:</p>
-<p><img src="img/nutrient_snapshot_by_income_group.png" class="img-fluid" style="width:100.0%" alt="Net trade balance by income group across 6 headline nutrients, 2016-2020 average"></p>
-</section>
-<section id="technical-details" class="level2">
-<h2 class="anchored" data-anchor-id="technical-details">Technical details</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><strong>Language</strong></td>
-<td>R</td>
-</tr>
-<tr class="even">
-<td><strong>Key packages</strong></td>
-<td><code>tidyverse</code>, <code>fixest</code>, <code>WDI</code>, <code>xgboost</code>, <code>penppml</code></td>
-</tr>
-<tr class="odd">
-<td><strong>Data</strong></td>
-<td>ARTIS bulk trade data, AFCD nutrient database, World Bank WDI</td>
-</tr>
-<tr class="even">
-<td><strong>Methods used elsewhere in this project</strong></td>
-<td>PPML gravity models, lasso-based variable selection (Breinlich et al.&nbsp;2021 adaptation), K-means clustering of country nutrient-trade profiles, gradient-boosting forecast benchmarking</td>
-</tr>
-<tr class="odd">
-<td><strong>Status</strong></td>
-<td>Working paper in progress</td>
-</tr>
-</tbody>
-</table>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
+<p>Built from species-level bilateral trade data merged with a nutrient-content crosswalk and World Bank income classifications. Full data and methods documentation to follow with the working paper.</p>
 
 
 </section>

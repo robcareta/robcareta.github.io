@@ -172,7 +172,7 @@
     "href": "projects/index.html",
     "title": "Projects",
     "section": "",
-    "text": "Africa’s Seafood Trade & Nutrient Flows\n\n\n\nR\n\nTrade economics\n\nFisheries\n\nNutrition\n\nAfrica\n\nARTIS\n\nGravity model\n\n\n\nDescriptive trade and nutrition trends from a species-level bilateral trade panel for African seafood, 1996-2020, including a breakdown by World Bank income group.\n\n\n\nAug 3, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nJPselection: Just-Pope Production Functions with Heckman Selectivity\n\n\n\nR\n\nPackage\n\nProduction functions\n\nHeckman correction\n\nJust-Pope\n\nAgricultural economics\n\n\n\nAn R package that estimates stochastic production functions while correcting for crop-choice selection bias, following Koundouri & Nauges (2005). Full documentation site…\n\n\n\nJun 4, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nArtisanal Fishing Behavior in Chile\n\n\n\nR\n\nFisheries\n\nChile\n\nData pipeline\n\nDuckDB\n\nVMS\n\nFishing effort\n\n\n\nA data pipeline to download, process, and visualize SERNAPESCA satellite positioning data for artisanal fishing fleets in the Los Lagos region.\n\n\n\nFeb 5, 2026\n\n\n\n\n\n\nNo matching items"
+    "text": "Africa’s Seafood Trade & Nutrient Flows\n\n\n\nR\n\nTrade economics\n\nFisheries\n\nNutrition\n\nAfrica\n\nARTIS\n\n\n\nA first look at how nutrients embedded in Africa’s seafood trade move between income groups, and which countries are net importers vs exporters.\n\n\n\nAug 3, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nJPselection: Just-Pope Production Functions with Heckman Selectivity\n\n\n\nR\n\nPackage\n\nProduction functions\n\nHeckman correction\n\nJust-Pope\n\nAgricultural economics\n\n\n\nAn R package that estimates stochastic production functions while correcting for crop-choice selection bias, following Koundouri & Nauges (2005). Full documentation site…\n\n\n\nJun 4, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nArtisanal Fishing Behavior in Chile\n\n\n\nR\n\nFisheries\n\nChile\n\nData pipeline\n\nDuckDB\n\nVMS\n\nFishing effort\n\n\n\nA data pipeline to download, process, and visualize SERNAPESCA satellite positioning data for artisanal fishing fleets in the Los Lagos region.\n\n\n\nFeb 5, 2026\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "research/articles/green-space-productivity-2026/index.html",
@@ -277,7 +277,7 @@
     "href": "projects/africa-seafood-nutrient-trade/index.html#overview",
     "title": "Africa’s Seafood Trade & Nutrient Flows",
     "section": "Overview",
-    "text": "Overview\nThis project studies Africa’s seafood trade through the lens of nutrition, not just tonnage. Using species-level bilateral trade flows for 1996-2020, each traded shipment is converted into flows of protein, iron, zinc, calcium, and omega-3 fatty acids (DHA, EPA), so that trade can be read as flows of nutrients across borders, not just commodity volume. The guiding question: as Africa’s seafood trade has grown, has it also strengthened the continent’s access to nutrient-dense food, or is it exporting the nutrients its own population needs?\n\n\n\n\n\n\nWarning\n\n\n\nThis is an active working paper, not a finished publication. The figures below are descriptive results from an ongoing analysis; specifications, country coverage, and headline numbers may still change."
+    "text": "Overview\nSpecies-level bilateral seafood trade data lets each shipment be converted into flows of protein, iron, zinc, calcium, and omega-3 fatty acids (DHA, EPA), not just tonnage. This is a preliminary look at where those nutrients actually go, split by World Bank income group and by whether trade stays within Africa or crosses into the rest of the world.\n\n\n\n\n\n\nWarning\n\n\n\nThis is an active working paper. Figures below are preliminary and the full analysis is not yet public."
   },
   {
     "objectID": "projects/africa-seafood-nutrient-trade/index.html#data-whats-actually-behind-these-charts",
@@ -313,5 +313,26 @@
     "title": "Africa’s Seafood Trade & Nutrient Flows",
     "section": "Technical details",
     "text": "Technical details\n\n\n\n\n\n\n\nLanguage\nR\n\n\nKey packages\ntidyverse, fixest, WDI, xgboost, penppml\n\n\nData\nARTIS bulk trade data, AFCD nutrient database, World Bank WDI\n\n\nMethods used elsewhere in this project\nPPML gravity models, lasso-based variable selection (Breinlich et al. 2021 adaptation), K-means clustering of country nutrient-trade profiles, gradient-boosting forecast benchmarking\n\n\nStatus\nWorking paper in progress"
+  },
+  {
+    "objectID": "projects/africa-seafood-nutrient-trade/index.html#nutrient-flows-by-income-group",
+    "href": "projects/africa-seafood-nutrient-trade/index.html#nutrient-flows-by-income-group",
+    "title": "Africa’s Seafood Trade & Nutrient Flows",
+    "section": "Nutrient flows by income group",
+    "text": "Nutrient flows by income group\nTrade with the rest of the world (left) looks very different from trade within Africa (right). Ribbon width is proportional to nutrient volume; color denotes the exporting income group."
+  },
+  {
+    "objectID": "projects/africa-seafood-nutrient-trade/index.html#which-countries-are-net-importers-vs-exporters",
+    "href": "projects/africa-seafood-nutrient-trade/index.html#which-countries-are-net-importers-vs-exporters",
+    "title": "Africa’s Seafood Trade & Nutrient Flows",
+    "section": "Which countries are net importers vs exporters",
+    "text": "Which countries are net importers vs exporters\nNormalized net trade balance by country and nutrient (green = net exporter, red = net importer):"
+  },
+  {
+    "objectID": "projects/africa-seafood-nutrient-trade/index.html#data",
+    "href": "projects/africa-seafood-nutrient-trade/index.html#data",
+    "title": "Africa’s Seafood Trade & Nutrient Flows",
+    "section": "Data",
+    "text": "Data\nBuilt from species-level bilateral trade data merged with a nutrient-content crosswalk and World Bank income classifications. Full data and methods documentation to follow with the working paper."
   }
 ]
