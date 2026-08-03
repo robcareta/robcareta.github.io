@@ -25,6 +25,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -79,6 +114,8 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-H4P0QZL89D', { 'anonymize_ip': true});
 </script>
+<script type="module" src="../../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="../../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 
 
@@ -205,8 +242,124 @@ Warning
 </section>
 <section id="which-countries-are-net-importers-vs-exporters" class="level2">
 <h2 class="anchored" data-anchor-id="which-countries-are-net-importers-vs-exporters">Which countries are net importers vs exporters</h2>
-<p>Normalized net trade balance by country and nutrient (green = net exporter, red = net importer):</p>
-<p><img src="img/country_nutrient_balance_heatmap.png" class="img-fluid" style="width:100.0%" alt="Heatmap of normalized net nutrient trade balance by African country"></p>
+<p>Pick a nutrient to see each country’s trade position, ranked <em>relative to other African countries</em> rather than by absolute quantity (green = net exporter, red = net importer):</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="39" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 38;"><span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>mapdata <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"nutrient_map_data.json"</span>)<span class="op">.</span><span class="fu">json</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="43" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 42;"><span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>topojson <span class="op">=</span> <span class="pp">require</span>(<span class="st">"topojson-client@3"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="47" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 46;"><span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>world <span class="op">=</span> d3<span class="op">.</span><span class="fu">json</span>(<span class="st">"https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb4" data-startfrom="51" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 50;"><span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>africaIdSet <span class="op">=</span> <span class="kw">new</span> <span class="bu">Set</span>(mapdata<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">iso_n3</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb5" data-startfrom="55" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 54;"><span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a>countryFeatures <span class="op">=</span> topojson<span class="op">.</span><span class="fu">feature</span>(world<span class="op">,</span> world<span class="op">.</span><span class="at">objects</span><span class="op">.</span><span class="at">countries</span>)<span class="op">.</span><span class="at">features</span></span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">filter</span>(f <span class="kw">=&gt;</span> africaIdSet<span class="op">.</span><span class="fu">has</span>(<span class="op">+</span>f<span class="op">.</span><span class="at">id</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb6" data-startfrom="60" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 59;"><span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a>viewof selectedNutrient <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(</span>
+<span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"Protein"</span><span class="op">,</span> <span class="st">"Iron"</span><span class="op">,</span> <span class="st">"Zinc"</span><span class="op">,</span> <span class="st">"Calcium"</span><span class="op">,</span> <span class="st">"DHA"</span><span class="op">,</span> <span class="st">"EPA"</span>]<span class="op">,</span></span>
+<span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">label</span><span class="op">:</span> <span class="st">"Nutrient"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="st">"Protein"</span> }</span>
+<span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-6" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb7" data-startfrom="67" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 66;"><span id="cb7-67"><a href="#cb7-67" aria-hidden="true" tabindex="-1"></a>categoryById <span class="op">=</span> <span class="kw">new</span> <span class="bu">Map</span>(</span>
+<span id="cb7-68"><a href="#cb7-68" aria-hidden="true" tabindex="-1"></a>  mapdata<span class="op">.</span><span class="fu">filter</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">nutrient</span> <span class="op">===</span> selectedNutrient)<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> [d<span class="op">.</span><span class="at">iso_n3</span><span class="op">,</span> d<span class="op">.</span><span class="at">category</span>])</span>
+<span id="cb7-69"><a href="#cb7-69" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-7" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb8" data-startfrom="73" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 72;"><span id="cb8-73"><a href="#cb8-73" aria-hidden="true" tabindex="-1"></a>nameById <span class="op">=</span> <span class="kw">new</span> <span class="bu">Map</span>(mapdata<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> [d<span class="op">.</span><span class="at">iso_n3</span><span class="op">,</span> d<span class="op">.</span><span class="at">country</span>]))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-8" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb9" data-startfrom="77" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 76;"><span id="cb9-77"><a href="#cb9-77" aria-hidden="true" tabindex="-1"></a>categoryDomain <span class="op">=</span> [<span class="st">"Strong net exporter"</span><span class="op">,</span> <span class="st">"Net exporter"</span><span class="op">,</span> <span class="st">"Neutral"</span><span class="op">,</span> <span class="st">"Net importer"</span><span class="op">,</span> <span class="st">"Strong net importer"</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-9" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb10" data-startfrom="81" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 80;"><span id="cb10-81"><a href="#cb10-81" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb10-82"><a href="#cb10-82" aria-hidden="true" tabindex="-1"></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">700</span><span class="op">,</span></span>
+<span id="cb10-83"><a href="#cb10-83" aria-hidden="true" tabindex="-1"></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">620</span><span class="op">,</span></span>
+<span id="cb10-84"><a href="#cb10-84" aria-hidden="true" tabindex="-1"></a>  <span class="dt">projection</span><span class="op">:</span> { <span class="dt">type</span><span class="op">:</span> <span class="st">"mercator"</span><span class="op">,</span> <span class="dt">domain</span><span class="op">:</span> { <span class="dt">type</span><span class="op">:</span> <span class="st">"FeatureCollection"</span><span class="op">,</span> <span class="dt">features</span><span class="op">:</span> countryFeatures } }<span class="op">,</span></span>
+<span id="cb10-85"><a href="#cb10-85" aria-hidden="true" tabindex="-1"></a>  <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb10-86"><a href="#cb10-86" aria-hidden="true" tabindex="-1"></a>    <span class="dt">domain</span><span class="op">:</span> categoryDomain<span class="op">,</span></span>
+<span id="cb10-87"><a href="#cb10-87" aria-hidden="true" tabindex="-1"></a>    <span class="dt">range</span><span class="op">:</span> [<span class="st">"#1a9850"</span><span class="op">,</span> <span class="st">"#91cf60"</span><span class="op">,</span> <span class="st">"#f7f7f7"</span><span class="op">,</span> <span class="st">"#fc8d59"</span><span class="op">,</span> <span class="st">"#d73027"</span>]<span class="op">,</span></span>
+<span id="cb10-88"><a href="#cb10-88" aria-hidden="true" tabindex="-1"></a>    <span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb10-89"><a href="#cb10-89" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span> <span class="vs">`</span><span class="sc">${</span>selectedNutrient<span class="sc">}</span><span class="vs"> trade position`</span></span>
+<span id="cb10-90"><a href="#cb10-90" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb10-91"><a href="#cb10-91" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb10-92"><a href="#cb10-92" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">geo</span>(countryFeatures<span class="op">,</span> {</span>
+<span id="cb10-93"><a href="#cb10-93" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fill</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> categoryById<span class="op">.</span><span class="fu">get</span>(<span class="op">+</span>d<span class="op">.</span><span class="at">id</span>) <span class="op">??</span> <span class="st">"#e0e0e0"</span><span class="op">,</span></span>
+<span id="cb10-94"><a href="#cb10-94" aria-hidden="true" tabindex="-1"></a>      <span class="dt">stroke</span><span class="op">:</span> <span class="st">"white"</span><span class="op">,</span></span>
+<span id="cb10-95"><a href="#cb10-95" aria-hidden="true" tabindex="-1"></a>      <span class="dt">strokeWidth</span><span class="op">:</span> <span class="fl">0.6</span><span class="op">,</span></span>
+<span id="cb10-96"><a href="#cb10-96" aria-hidden="true" tabindex="-1"></a>      <span class="dt">title</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> <span class="vs">`</span><span class="sc">${</span>nameById<span class="op">.</span><span class="fu">get</span>(<span class="op">+</span>d<span class="op">.</span><span class="at">id</span>) <span class="op">??</span> <span class="st">"Unknown"</span><span class="sc">}</span><span class="vs">: </span><span class="sc">${</span>categoryById<span class="op">.</span><span class="fu">get</span>(<span class="op">+</span>d<span class="op">.</span><span class="at">id</span>) <span class="op">??</span> <span class="st">"No data"</span><span class="sc">}</span><span class="vs">`</span></span>
+<span id="cb10-97"><a href="#cb10-97" aria-hidden="true" tabindex="-1"></a>    })</span>
+<span id="cb10-98"><a href="#cb10-98" aria-hidden="true" tabindex="-1"></a>  ]</span>
+<span id="cb10-99"><a href="#cb10-99" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-10" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Categories are relative quintiles (each country’s rank against other African countries), not raw trade values — deliberately coarser than the full analysis, which stays with the working paper for now.</p>
+</div>
+</div>
 </section>
 <section id="data" class="level2">
 <h2 class="anchored" data-anchor-id="data">Data</h2>
@@ -234,6 +387,17 @@ document.addEventListener('DOMContentLoaded', function () {
       .catch(function () { /* leave badge hidden if API fails */ });
   });
 });
+</script>
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Im1hcGRhdGEgPSBGaWxlQXR0YWNobWVudChcIm51dHJpZW50X21hcF9kYXRhLmpzb25cIikuanNvbigpXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ0b3BvanNvbiA9IHJlcXVpcmUoXCJ0b3BvanNvbi1jbGllbnRAM1wiKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0zIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoid29ybGQgPSBkMy5qc29uKFwiaHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L25wbS93b3JsZC1hdGxhc0AyLjAuMi9jb3VudHJpZXMtMTEwbS5qc29uXCIpXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTQiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJhZnJpY2FJZFNldCA9IG5ldyBTZXQobWFwZGF0YS5tYXAoZCA9PiBkLmlzb19uMykpXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTUiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJjb3VudHJ5RmVhdHVyZXMgPSB0b3BvanNvbi5mZWF0dXJlKHdvcmxkLCB3b3JsZC5vYmplY3RzLmNvdW50cmllcykuZmVhdHVyZXNcbiAgLmZpbHRlcihmID0+IGFmcmljYUlkU2V0LmhhcygrZi5pZCkpXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTYiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2aWV3b2Ygc2VsZWN0ZWROdXRyaWVudCA9IElucHV0cy5zZWxlY3QoXG4gIFtcIlByb3RlaW5cIiwgXCJJcm9uXCIsIFwiWmluY1wiLCBcIkNhbGNpdW1cIiwgXCJESEFcIiwgXCJFUEFcIl0sXG4gIHsgbGFiZWw6IFwiTnV0cmllbnRcIiwgdmFsdWU6IFwiUHJvdGVpblwiIH1cbilcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImNhdGVnb3J5QnlJZCA9IG5ldyBNYXAoXG4gIG1hcGRhdGEuZmlsdGVyKGQgPT4gZC5udXRyaWVudCA9PT0gc2VsZWN0ZWROdXRyaWVudCkubWFwKGQgPT4gW2QuaXNvX24zLCBkLmNhdGVnb3J5XSlcbilcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtOCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Im5hbWVCeUlkID0gbmV3IE1hcChtYXBkYXRhLm1hcChkID0+IFtkLmlzb19uMywgZC5jb3VudHJ5XSkpXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTkiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJjYXRlZ29yeURvbWFpbiA9IFtcIlN0cm9uZyBuZXQgZXhwb3J0ZXJcIiwgXCJOZXQgZXhwb3J0ZXJcIiwgXCJOZXV0cmFsXCIsIFwiTmV0IGltcG9ydGVyXCIsIFwiU3Ryb25nIG5ldCBpbXBvcnRlclwiXVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xMCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7XG4gIHdpZHRoOiA3MDAsXG4gIGhlaWdodDogNjIwLFxuICBwcm9qZWN0aW9uOiB7IHR5cGU6IFwibWVyY2F0b3JcIiwgZG9tYWluOiB7IHR5cGU6IFwiRmVhdHVyZUNvbGxlY3Rpb25cIiwgZmVhdHVyZXM6IGNvdW50cnlGZWF0dXJlcyB9IH0sXG4gIGNvbG9yOiB7XG4gICAgZG9tYWluOiBjYXRlZ29yeURvbWFpbixcbiAgICByYW5nZTogW1wiIzFhOTg1MFwiLCBcIiM5MWNmNjBcIiwgXCIjZjdmN2Y3XCIsIFwiI2ZjOGQ1OVwiLCBcIiNkNzMwMjdcIl0sXG4gICAgbGVnZW5kOiB0cnVlLFxuICAgIGxhYmVsOiBgJHtzZWxlY3RlZE51dHJpZW50fSB0cmFkZSBwb3NpdGlvbmBcbiAgfSxcbiAgbWFya3M6IFtcbiAgICBQbG90Lmdlbyhjb3VudHJ5RmVhdHVyZXMsIHtcbiAgICAgIGZpbGw6IChkKSA9PiBjYXRlZ29yeUJ5SWQuZ2V0KCtkLmlkKSA/PyBcIiNlMGUwZTBcIixcbiAgICAgIHN0cm9rZTogXCJ3aGl0ZVwiLFxuICAgICAgc3Ryb2tlV2lkdGg6IDAuNixcbiAgICAgIHRpdGxlOiAoZCkgPT4gYCR7bmFtZUJ5SWQuZ2V0KCtkLmlkKSA/PyBcIlVua25vd25cIn06ICR7Y2F0ZWdvcnlCeUlkLmdldCgrZC5pZCkgPz8gXCJObyBkYXRhXCJ9YFxuICAgIH0pXG4gIF1cbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ3NlbGVjdGVkTnV0cmllbnQnKSJ9XX0=
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../../projects/africa-seafood-nutrient-trade";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "../..";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {

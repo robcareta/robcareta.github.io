@@ -10,6 +10,8 @@ categories:
   - Nutrition
   - Africa
   - ARTIS
+execute:
+  echo: false
 ---
 
 <p class="back-nav"><a href="../index.qmd">← Back to Projects</a></p>
@@ -32,9 +34,75 @@ Trade with the rest of the world (left) looks very different from trade within A
 
 ## Which countries are net importers vs exporters
 
-Normalized net trade balance by country and nutrient (green = net exporter, red = net importer):
+Pick a nutrient to see each country's trade position, ranked *relative to other African countries* rather than by absolute quantity (green = net exporter, red = net importer):
 
-![](img/country_nutrient_balance_heatmap.png){fig-alt="Heatmap of normalized net nutrient trade balance by African country" width="100%"}
+```{ojs}
+mapdata = FileAttachment("nutrient_map_data.json").json()
+```
+
+```{ojs}
+topojson = require("topojson-client@3")
+```
+
+```{ojs}
+world = d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json")
+```
+
+```{ojs}
+africaIdSet = new Set(mapdata.map(d => d.iso_n3))
+```
+
+```{ojs}
+countryFeatures = topojson.feature(world, world.objects.countries).features
+  .filter(f => africaIdSet.has(+f.id))
+```
+
+```{ojs}
+viewof selectedNutrient = Inputs.select(
+  ["Protein", "Iron", "Zinc", "Calcium", "DHA", "EPA"],
+  { label: "Nutrient", value: "Protein" }
+)
+```
+
+```{ojs}
+categoryById = new Map(
+  mapdata.filter(d => d.nutrient === selectedNutrient).map(d => [d.iso_n3, d.category])
+)
+```
+
+```{ojs}
+nameById = new Map(mapdata.map(d => [d.iso_n3, d.country]))
+```
+
+```{ojs}
+categoryDomain = ["Strong net exporter", "Net exporter", "Neutral", "Net importer", "Strong net importer"]
+```
+
+```{ojs}
+Plot.plot({
+  width: 700,
+  height: 620,
+  projection: { type: "mercator", domain: { type: "FeatureCollection", features: countryFeatures } },
+  color: {
+    domain: categoryDomain,
+    range: ["#1a9850", "#91cf60", "#f7f7f7", "#fc8d59", "#d73027"],
+    legend: true,
+    label: `${selectedNutrient} trade position`
+  },
+  marks: [
+    Plot.geo(countryFeatures, {
+      fill: (d) => categoryById.get(+d.id) ?? "#e0e0e0",
+      stroke: "white",
+      strokeWidth: 0.6,
+      title: (d) => `${nameById.get(+d.id) ?? "Unknown"}: ${categoryById.get(+d.id) ?? "No data"}`
+    })
+  ]
+})
+```
+
+::: {.callout-note}
+Categories are relative quintiles (each country's rank against other African countries), not raw trade values — deliberately coarser than the full analysis, which stays with the working paper for now.
+:::
 
 ## Data
 

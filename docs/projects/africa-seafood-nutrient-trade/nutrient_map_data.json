@@ -1,0 +1,2228 @@
+[
+  {
+    "iso3c": "AGO",
+    "iso_n3": 24,
+    "country": "Angola",
+    "nutrient": "Protein",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "AGO",
+    "iso_n3": 24,
+    "country": "Angola",
+    "nutrient": "Iron",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "AGO",
+    "iso_n3": 24,
+    "country": "Angola",
+    "nutrient": "Zinc",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "AGO",
+    "iso_n3": 24,
+    "country": "Angola",
+    "nutrient": "Calcium",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "AGO",
+    "iso_n3": 24,
+    "country": "Angola",
+    "nutrient": "DHA",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "AGO",
+    "iso_n3": 24,
+    "country": "Angola",
+    "nutrient": "EPA",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "BDI",
+    "iso_n3": 108,
+    "country": "Burundi",
+    "nutrient": "Protein",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "BDI",
+    "iso_n3": 108,
+    "country": "Burundi",
+    "nutrient": "Iron",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "BDI",
+    "iso_n3": 108,
+    "country": "Burundi",
+    "nutrient": "Zinc",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "BDI",
+    "iso_n3": 108,
+    "country": "Burundi",
+    "nutrient": "Calcium",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "BDI",
+    "iso_n3": 108,
+    "country": "Burundi",
+    "nutrient": "DHA",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "BDI",
+    "iso_n3": 108,
+    "country": "Burundi",
+    "nutrient": "EPA",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "BEN",
+    "iso_n3": 204,
+    "country": "Benin",
+    "nutrient": "Protein",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "BEN",
+    "iso_n3": 204,
+    "country": "Benin",
+    "nutrient": "Iron",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "BEN",
+    "iso_n3": 204,
+    "country": "Benin",
+    "nutrient": "Zinc",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "BEN",
+    "iso_n3": 204,
+    "country": "Benin",
+    "nutrient": "Calcium",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "BEN",
+    "iso_n3": 204,
+    "country": "Benin",
+    "nutrient": "DHA",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "BEN",
+    "iso_n3": 204,
+    "country": "Benin",
+    "nutrient": "EPA",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "BFA",
+    "iso_n3": 854,
+    "country": "Burkina Faso",
+    "nutrient": "Protein",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "BFA",
+    "iso_n3": 854,
+    "country": "Burkina Faso",
+    "nutrient": "Iron",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "BFA",
+    "iso_n3": 854,
+    "country": "Burkina Faso",
+    "nutrient": "Zinc",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "BFA",
+    "iso_n3": 854,
+    "country": "Burkina Faso",
+    "nutrient": "Calcium",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "BFA",
+    "iso_n3": 854,
+    "country": "Burkina Faso",
+    "nutrient": "DHA",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "BFA",
+    "iso_n3": 854,
+    "country": "Burkina Faso",
+    "nutrient": "EPA",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "BWA",
+    "iso_n3": 72,
+    "country": "Botswana",
+    "nutrient": "Protein",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "BWA",
+    "iso_n3": 72,
+    "country": "Botswana",
+    "nutrient": "Iron",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "BWA",
+    "iso_n3": 72,
+    "country": "Botswana",
+    "nutrient": "Zinc",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "BWA",
+    "iso_n3": 72,
+    "country": "Botswana",
+    "nutrient": "Calcium",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "BWA",
+    "iso_n3": 72,
+    "country": "Botswana",
+    "nutrient": "DHA",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "BWA",
+    "iso_n3": 72,
+    "country": "Botswana",
+    "nutrient": "EPA",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "CAF",
+    "iso_n3": 140,
+    "country": "Central African Republic",
+    "nutrient": "Protein",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "CAF",
+    "iso_n3": 140,
+    "country": "Central African Republic",
+    "nutrient": "Iron",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "CAF",
+    "iso_n3": 140,
+    "country": "Central African Republic",
+    "nutrient": "Zinc",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "CAF",
+    "iso_n3": 140,
+    "country": "Central African Republic",
+    "nutrient": "Calcium",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "CAF",
+    "iso_n3": 140,
+    "country": "Central African Republic",
+    "nutrient": "DHA",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "CAF",
+    "iso_n3": 140,
+    "country": "Central African Republic",
+    "nutrient": "EPA",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "CIV",
+    "iso_n3": 384,
+    "country": "Côte d’Ivoire",
+    "nutrient": "Protein",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "CIV",
+    "iso_n3": 384,
+    "country": "Côte d’Ivoire",
+    "nutrient": "Iron",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "CIV",
+    "iso_n3": 384,
+    "country": "Côte d’Ivoire",
+    "nutrient": "Zinc",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "CIV",
+    "iso_n3": 384,
+    "country": "Côte d’Ivoire",
+    "nutrient": "Calcium",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "CIV",
+    "iso_n3": 384,
+    "country": "Côte d’Ivoire",
+    "nutrient": "DHA",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "CIV",
+    "iso_n3": 384,
+    "country": "Côte d’Ivoire",
+    "nutrient": "EPA",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "CMR",
+    "iso_n3": 120,
+    "country": "Cameroon",
+    "nutrient": "Protein",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "CMR",
+    "iso_n3": 120,
+    "country": "Cameroon",
+    "nutrient": "Iron",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "CMR",
+    "iso_n3": 120,
+    "country": "Cameroon",
+    "nutrient": "Zinc",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "CMR",
+    "iso_n3": 120,
+    "country": "Cameroon",
+    "nutrient": "Calcium",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "CMR",
+    "iso_n3": 120,
+    "country": "Cameroon",
+    "nutrient": "DHA",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "CMR",
+    "iso_n3": 120,
+    "country": "Cameroon",
+    "nutrient": "EPA",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "COD",
+    "iso_n3": 180,
+    "country": "Congo - Kinshasa",
+    "nutrient": "Protein",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "COD",
+    "iso_n3": 180,
+    "country": "Congo - Kinshasa",
+    "nutrient": "Iron",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "COD",
+    "iso_n3": 180,
+    "country": "Congo - Kinshasa",
+    "nutrient": "Zinc",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "COD",
+    "iso_n3": 180,
+    "country": "Congo - Kinshasa",
+    "nutrient": "Calcium",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "COD",
+    "iso_n3": 180,
+    "country": "Congo - Kinshasa",
+    "nutrient": "DHA",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "COD",
+    "iso_n3": 180,
+    "country": "Congo - Kinshasa",
+    "nutrient": "EPA",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "COG",
+    "iso_n3": 178,
+    "country": "Congo - Brazzaville",
+    "nutrient": "Protein",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "COG",
+    "iso_n3": 178,
+    "country": "Congo - Brazzaville",
+    "nutrient": "Iron",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "COG",
+    "iso_n3": 178,
+    "country": "Congo - Brazzaville",
+    "nutrient": "Zinc",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "COG",
+    "iso_n3": 178,
+    "country": "Congo - Brazzaville",
+    "nutrient": "Calcium",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "COG",
+    "iso_n3": 178,
+    "country": "Congo - Brazzaville",
+    "nutrient": "DHA",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "COG",
+    "iso_n3": 178,
+    "country": "Congo - Brazzaville",
+    "nutrient": "EPA",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "COM",
+    "iso_n3": 174,
+    "country": "Comoros",
+    "nutrient": "Protein",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "COM",
+    "iso_n3": 174,
+    "country": "Comoros",
+    "nutrient": "Iron",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "COM",
+    "iso_n3": 174,
+    "country": "Comoros",
+    "nutrient": "Zinc",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "COM",
+    "iso_n3": 174,
+    "country": "Comoros",
+    "nutrient": "Calcium",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "COM",
+    "iso_n3": 174,
+    "country": "Comoros",
+    "nutrient": "DHA",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "COM",
+    "iso_n3": 174,
+    "country": "Comoros",
+    "nutrient": "EPA",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "CPV",
+    "iso_n3": 132,
+    "country": "Cape Verde",
+    "nutrient": "Protein",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "CPV",
+    "iso_n3": 132,
+    "country": "Cape Verde",
+    "nutrient": "Iron",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "CPV",
+    "iso_n3": 132,
+    "country": "Cape Verde",
+    "nutrient": "Zinc",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "CPV",
+    "iso_n3": 132,
+    "country": "Cape Verde",
+    "nutrient": "Calcium",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "CPV",
+    "iso_n3": 132,
+    "country": "Cape Verde",
+    "nutrient": "DHA",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "CPV",
+    "iso_n3": 132,
+    "country": "Cape Verde",
+    "nutrient": "EPA",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "DJI",
+    "iso_n3": 262,
+    "country": "Djibouti",
+    "nutrient": "Protein",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "DJI",
+    "iso_n3": 262,
+    "country": "Djibouti",
+    "nutrient": "Iron",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "DJI",
+    "iso_n3": 262,
+    "country": "Djibouti",
+    "nutrient": "Zinc",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "DJI",
+    "iso_n3": 262,
+    "country": "Djibouti",
+    "nutrient": "Calcium",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "DJI",
+    "iso_n3": 262,
+    "country": "Djibouti",
+    "nutrient": "DHA",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "DJI",
+    "iso_n3": 262,
+    "country": "Djibouti",
+    "nutrient": "EPA",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "DZA",
+    "iso_n3": 12,
+    "country": "Algeria",
+    "nutrient": "Protein",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "DZA",
+    "iso_n3": 12,
+    "country": "Algeria",
+    "nutrient": "Iron",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "DZA",
+    "iso_n3": 12,
+    "country": "Algeria",
+    "nutrient": "Zinc",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "DZA",
+    "iso_n3": 12,
+    "country": "Algeria",
+    "nutrient": "Calcium",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "DZA",
+    "iso_n3": 12,
+    "country": "Algeria",
+    "nutrient": "DHA",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "DZA",
+    "iso_n3": 12,
+    "country": "Algeria",
+    "nutrient": "EPA",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "EGY",
+    "iso_n3": 818,
+    "country": "Egypt",
+    "nutrient": "Protein",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "EGY",
+    "iso_n3": 818,
+    "country": "Egypt",
+    "nutrient": "Iron",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "EGY",
+    "iso_n3": 818,
+    "country": "Egypt",
+    "nutrient": "Zinc",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "EGY",
+    "iso_n3": 818,
+    "country": "Egypt",
+    "nutrient": "Calcium",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "EGY",
+    "iso_n3": 818,
+    "country": "Egypt",
+    "nutrient": "DHA",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "EGY",
+    "iso_n3": 818,
+    "country": "Egypt",
+    "nutrient": "EPA",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "ERI",
+    "iso_n3": 232,
+    "country": "Eritrea",
+    "nutrient": "Protein",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "ERI",
+    "iso_n3": 232,
+    "country": "Eritrea",
+    "nutrient": "Iron",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "ERI",
+    "iso_n3": 232,
+    "country": "Eritrea",
+    "nutrient": "Zinc",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "ERI",
+    "iso_n3": 232,
+    "country": "Eritrea",
+    "nutrient": "Calcium",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "ERI",
+    "iso_n3": 232,
+    "country": "Eritrea",
+    "nutrient": "DHA",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "ERI",
+    "iso_n3": 232,
+    "country": "Eritrea",
+    "nutrient": "EPA",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "ETH",
+    "iso_n3": 231,
+    "country": "Ethiopia",
+    "nutrient": "Protein",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "ETH",
+    "iso_n3": 231,
+    "country": "Ethiopia",
+    "nutrient": "Iron",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "ETH",
+    "iso_n3": 231,
+    "country": "Ethiopia",
+    "nutrient": "Zinc",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "ETH",
+    "iso_n3": 231,
+    "country": "Ethiopia",
+    "nutrient": "Calcium",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "ETH",
+    "iso_n3": 231,
+    "country": "Ethiopia",
+    "nutrient": "DHA",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "ETH",
+    "iso_n3": 231,
+    "country": "Ethiopia",
+    "nutrient": "EPA",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "GAB",
+    "iso_n3": 266,
+    "country": "Gabon",
+    "nutrient": "Protein",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "GAB",
+    "iso_n3": 266,
+    "country": "Gabon",
+    "nutrient": "Iron",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "GAB",
+    "iso_n3": 266,
+    "country": "Gabon",
+    "nutrient": "Zinc",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "GAB",
+    "iso_n3": 266,
+    "country": "Gabon",
+    "nutrient": "Calcium",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "GAB",
+    "iso_n3": 266,
+    "country": "Gabon",
+    "nutrient": "DHA",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "GAB",
+    "iso_n3": 266,
+    "country": "Gabon",
+    "nutrient": "EPA",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "GHA",
+    "iso_n3": 288,
+    "country": "Ghana",
+    "nutrient": "Protein",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "GHA",
+    "iso_n3": 288,
+    "country": "Ghana",
+    "nutrient": "Iron",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "GHA",
+    "iso_n3": 288,
+    "country": "Ghana",
+    "nutrient": "Zinc",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "GHA",
+    "iso_n3": 288,
+    "country": "Ghana",
+    "nutrient": "Calcium",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "GHA",
+    "iso_n3": 288,
+    "country": "Ghana",
+    "nutrient": "DHA",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "GHA",
+    "iso_n3": 288,
+    "country": "Ghana",
+    "nutrient": "EPA",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "GIN",
+    "iso_n3": 324,
+    "country": "Guinea",
+    "nutrient": "Protein",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "GIN",
+    "iso_n3": 324,
+    "country": "Guinea",
+    "nutrient": "Iron",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "GIN",
+    "iso_n3": 324,
+    "country": "Guinea",
+    "nutrient": "Zinc",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "GIN",
+    "iso_n3": 324,
+    "country": "Guinea",
+    "nutrient": "Calcium",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "GIN",
+    "iso_n3": 324,
+    "country": "Guinea",
+    "nutrient": "DHA",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "GIN",
+    "iso_n3": 324,
+    "country": "Guinea",
+    "nutrient": "EPA",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "GMB",
+    "iso_n3": 270,
+    "country": "Gambia",
+    "nutrient": "Protein",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "GMB",
+    "iso_n3": 270,
+    "country": "Gambia",
+    "nutrient": "Iron",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "GMB",
+    "iso_n3": 270,
+    "country": "Gambia",
+    "nutrient": "Zinc",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "GMB",
+    "iso_n3": 270,
+    "country": "Gambia",
+    "nutrient": "Calcium",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "GMB",
+    "iso_n3": 270,
+    "country": "Gambia",
+    "nutrient": "DHA",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "GMB",
+    "iso_n3": 270,
+    "country": "Gambia",
+    "nutrient": "EPA",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "GNB",
+    "iso_n3": 624,
+    "country": "Guinea-Bissau",
+    "nutrient": "Protein",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "GNB",
+    "iso_n3": 624,
+    "country": "Guinea-Bissau",
+    "nutrient": "Iron",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "GNB",
+    "iso_n3": 624,
+    "country": "Guinea-Bissau",
+    "nutrient": "Zinc",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "GNB",
+    "iso_n3": 624,
+    "country": "Guinea-Bissau",
+    "nutrient": "Calcium",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "GNB",
+    "iso_n3": 624,
+    "country": "Guinea-Bissau",
+    "nutrient": "DHA",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "GNB",
+    "iso_n3": 624,
+    "country": "Guinea-Bissau",
+    "nutrient": "EPA",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "GNQ",
+    "iso_n3": 226,
+    "country": "Equatorial Guinea",
+    "nutrient": "Protein",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "GNQ",
+    "iso_n3": 226,
+    "country": "Equatorial Guinea",
+    "nutrient": "Iron",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "GNQ",
+    "iso_n3": 226,
+    "country": "Equatorial Guinea",
+    "nutrient": "Zinc",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "GNQ",
+    "iso_n3": 226,
+    "country": "Equatorial Guinea",
+    "nutrient": "Calcium",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "GNQ",
+    "iso_n3": 226,
+    "country": "Equatorial Guinea",
+    "nutrient": "DHA",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "GNQ",
+    "iso_n3": 226,
+    "country": "Equatorial Guinea",
+    "nutrient": "EPA",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "KEN",
+    "iso_n3": 404,
+    "country": "Kenya",
+    "nutrient": "Protein",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "KEN",
+    "iso_n3": 404,
+    "country": "Kenya",
+    "nutrient": "Iron",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "KEN",
+    "iso_n3": 404,
+    "country": "Kenya",
+    "nutrient": "Zinc",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "KEN",
+    "iso_n3": 404,
+    "country": "Kenya",
+    "nutrient": "Calcium",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "KEN",
+    "iso_n3": 404,
+    "country": "Kenya",
+    "nutrient": "DHA",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "KEN",
+    "iso_n3": 404,
+    "country": "Kenya",
+    "nutrient": "EPA",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "LBR",
+    "iso_n3": 430,
+    "country": "Liberia",
+    "nutrient": "Protein",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "LBR",
+    "iso_n3": 430,
+    "country": "Liberia",
+    "nutrient": "Iron",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "LBR",
+    "iso_n3": 430,
+    "country": "Liberia",
+    "nutrient": "Zinc",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "LBR",
+    "iso_n3": 430,
+    "country": "Liberia",
+    "nutrient": "Calcium",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "LBR",
+    "iso_n3": 430,
+    "country": "Liberia",
+    "nutrient": "DHA",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "LBR",
+    "iso_n3": 430,
+    "country": "Liberia",
+    "nutrient": "EPA",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "LBY",
+    "iso_n3": 434,
+    "country": "Libya",
+    "nutrient": "Protein",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "LBY",
+    "iso_n3": 434,
+    "country": "Libya",
+    "nutrient": "Iron",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "LBY",
+    "iso_n3": 434,
+    "country": "Libya",
+    "nutrient": "Zinc",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "LBY",
+    "iso_n3": 434,
+    "country": "Libya",
+    "nutrient": "Calcium",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "LBY",
+    "iso_n3": 434,
+    "country": "Libya",
+    "nutrient": "DHA",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "LBY",
+    "iso_n3": 434,
+    "country": "Libya",
+    "nutrient": "EPA",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "LSO",
+    "iso_n3": 426,
+    "country": "Lesotho",
+    "nutrient": "Protein",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "LSO",
+    "iso_n3": 426,
+    "country": "Lesotho",
+    "nutrient": "Iron",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "LSO",
+    "iso_n3": 426,
+    "country": "Lesotho",
+    "nutrient": "Zinc",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "LSO",
+    "iso_n3": 426,
+    "country": "Lesotho",
+    "nutrient": "Calcium",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "LSO",
+    "iso_n3": 426,
+    "country": "Lesotho",
+    "nutrient": "DHA",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "LSO",
+    "iso_n3": 426,
+    "country": "Lesotho",
+    "nutrient": "EPA",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "MAR",
+    "iso_n3": 504,
+    "country": "Morocco",
+    "nutrient": "Protein",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "MAR",
+    "iso_n3": 504,
+    "country": "Morocco",
+    "nutrient": "Iron",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "MAR",
+    "iso_n3": 504,
+    "country": "Morocco",
+    "nutrient": "Zinc",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "MAR",
+    "iso_n3": 504,
+    "country": "Morocco",
+    "nutrient": "Calcium",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "MAR",
+    "iso_n3": 504,
+    "country": "Morocco",
+    "nutrient": "DHA",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "MAR",
+    "iso_n3": 504,
+    "country": "Morocco",
+    "nutrient": "EPA",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "MDG",
+    "iso_n3": 450,
+    "country": "Madagascar",
+    "nutrient": "Protein",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "MDG",
+    "iso_n3": 450,
+    "country": "Madagascar",
+    "nutrient": "Iron",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "MDG",
+    "iso_n3": 450,
+    "country": "Madagascar",
+    "nutrient": "Zinc",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "MDG",
+    "iso_n3": 450,
+    "country": "Madagascar",
+    "nutrient": "Calcium",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "MDG",
+    "iso_n3": 450,
+    "country": "Madagascar",
+    "nutrient": "DHA",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "MDG",
+    "iso_n3": 450,
+    "country": "Madagascar",
+    "nutrient": "EPA",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "MLI",
+    "iso_n3": 466,
+    "country": "Mali",
+    "nutrient": "Protein",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "MLI",
+    "iso_n3": 466,
+    "country": "Mali",
+    "nutrient": "Iron",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "MLI",
+    "iso_n3": 466,
+    "country": "Mali",
+    "nutrient": "Zinc",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "MLI",
+    "iso_n3": 466,
+    "country": "Mali",
+    "nutrient": "Calcium",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "MLI",
+    "iso_n3": 466,
+    "country": "Mali",
+    "nutrient": "DHA",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "MLI",
+    "iso_n3": 466,
+    "country": "Mali",
+    "nutrient": "EPA",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "MOZ",
+    "iso_n3": 508,
+    "country": "Mozambique",
+    "nutrient": "Protein",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "MOZ",
+    "iso_n3": 508,
+    "country": "Mozambique",
+    "nutrient": "Iron",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "MOZ",
+    "iso_n3": 508,
+    "country": "Mozambique",
+    "nutrient": "Zinc",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "MOZ",
+    "iso_n3": 508,
+    "country": "Mozambique",
+    "nutrient": "Calcium",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "MOZ",
+    "iso_n3": 508,
+    "country": "Mozambique",
+    "nutrient": "DHA",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "MOZ",
+    "iso_n3": 508,
+    "country": "Mozambique",
+    "nutrient": "EPA",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "MRT",
+    "iso_n3": 478,
+    "country": "Mauritania",
+    "nutrient": "Protein",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "MRT",
+    "iso_n3": 478,
+    "country": "Mauritania",
+    "nutrient": "Iron",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "MRT",
+    "iso_n3": 478,
+    "country": "Mauritania",
+    "nutrient": "Zinc",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "MRT",
+    "iso_n3": 478,
+    "country": "Mauritania",
+    "nutrient": "Calcium",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "MRT",
+    "iso_n3": 478,
+    "country": "Mauritania",
+    "nutrient": "DHA",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "MRT",
+    "iso_n3": 478,
+    "country": "Mauritania",
+    "nutrient": "EPA",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "MUS",
+    "iso_n3": 480,
+    "country": "Mauritius",
+    "nutrient": "Protein",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "MUS",
+    "iso_n3": 480,
+    "country": "Mauritius",
+    "nutrient": "Iron",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "MUS",
+    "iso_n3": 480,
+    "country": "Mauritius",
+    "nutrient": "Zinc",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "MUS",
+    "iso_n3": 480,
+    "country": "Mauritius",
+    "nutrient": "Calcium",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "MUS",
+    "iso_n3": 480,
+    "country": "Mauritius",
+    "nutrient": "DHA",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "MUS",
+    "iso_n3": 480,
+    "country": "Mauritius",
+    "nutrient": "EPA",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "MWI",
+    "iso_n3": 454,
+    "country": "Malawi",
+    "nutrient": "Protein",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "MWI",
+    "iso_n3": 454,
+    "country": "Malawi",
+    "nutrient": "Iron",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "MWI",
+    "iso_n3": 454,
+    "country": "Malawi",
+    "nutrient": "Zinc",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "MWI",
+    "iso_n3": 454,
+    "country": "Malawi",
+    "nutrient": "Calcium",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "MWI",
+    "iso_n3": 454,
+    "country": "Malawi",
+    "nutrient": "DHA",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "MWI",
+    "iso_n3": 454,
+    "country": "Malawi",
+    "nutrient": "EPA",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "NAM",
+    "iso_n3": 516,
+    "country": "Namibia",
+    "nutrient": "Protein",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "NAM",
+    "iso_n3": 516,
+    "country": "Namibia",
+    "nutrient": "Iron",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "NAM",
+    "iso_n3": 516,
+    "country": "Namibia",
+    "nutrient": "Zinc",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "NAM",
+    "iso_n3": 516,
+    "country": "Namibia",
+    "nutrient": "Calcium",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "NAM",
+    "iso_n3": 516,
+    "country": "Namibia",
+    "nutrient": "DHA",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "NAM",
+    "iso_n3": 516,
+    "country": "Namibia",
+    "nutrient": "EPA",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "NER",
+    "iso_n3": 562,
+    "country": "Niger",
+    "nutrient": "Protein",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "NER",
+    "iso_n3": 562,
+    "country": "Niger",
+    "nutrient": "Iron",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "NER",
+    "iso_n3": 562,
+    "country": "Niger",
+    "nutrient": "Zinc",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "NER",
+    "iso_n3": 562,
+    "country": "Niger",
+    "nutrient": "Calcium",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "NER",
+    "iso_n3": 562,
+    "country": "Niger",
+    "nutrient": "DHA",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "NER",
+    "iso_n3": 562,
+    "country": "Niger",
+    "nutrient": "EPA",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "NGA",
+    "iso_n3": 566,
+    "country": "Nigeria",
+    "nutrient": "Protein",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "NGA",
+    "iso_n3": 566,
+    "country": "Nigeria",
+    "nutrient": "Iron",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "NGA",
+    "iso_n3": 566,
+    "country": "Nigeria",
+    "nutrient": "Zinc",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "NGA",
+    "iso_n3": 566,
+    "country": "Nigeria",
+    "nutrient": "Calcium",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "NGA",
+    "iso_n3": 566,
+    "country": "Nigeria",
+    "nutrient": "DHA",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "NGA",
+    "iso_n3": 566,
+    "country": "Nigeria",
+    "nutrient": "EPA",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "RWA",
+    "iso_n3": 646,
+    "country": "Rwanda",
+    "nutrient": "Protein",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "RWA",
+    "iso_n3": 646,
+    "country": "Rwanda",
+    "nutrient": "Iron",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "RWA",
+    "iso_n3": 646,
+    "country": "Rwanda",
+    "nutrient": "Zinc",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "RWA",
+    "iso_n3": 646,
+    "country": "Rwanda",
+    "nutrient": "Calcium",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "RWA",
+    "iso_n3": 646,
+    "country": "Rwanda",
+    "nutrient": "DHA",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "RWA",
+    "iso_n3": 646,
+    "country": "Rwanda",
+    "nutrient": "EPA",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "SEN",
+    "iso_n3": 686,
+    "country": "Senegal",
+    "nutrient": "Protein",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "SEN",
+    "iso_n3": 686,
+    "country": "Senegal",
+    "nutrient": "Iron",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "SEN",
+    "iso_n3": 686,
+    "country": "Senegal",
+    "nutrient": "Zinc",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "SEN",
+    "iso_n3": 686,
+    "country": "Senegal",
+    "nutrient": "Calcium",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "SEN",
+    "iso_n3": 686,
+    "country": "Senegal",
+    "nutrient": "DHA",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "SEN",
+    "iso_n3": 686,
+    "country": "Senegal",
+    "nutrient": "EPA",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "SLE",
+    "iso_n3": 694,
+    "country": "Sierra Leone",
+    "nutrient": "Protein",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "SLE",
+    "iso_n3": 694,
+    "country": "Sierra Leone",
+    "nutrient": "Iron",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "SLE",
+    "iso_n3": 694,
+    "country": "Sierra Leone",
+    "nutrient": "Zinc",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "SLE",
+    "iso_n3": 694,
+    "country": "Sierra Leone",
+    "nutrient": "Calcium",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "SLE",
+    "iso_n3": 694,
+    "country": "Sierra Leone",
+    "nutrient": "DHA",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "SLE",
+    "iso_n3": 694,
+    "country": "Sierra Leone",
+    "nutrient": "EPA",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "SOM",
+    "iso_n3": 706,
+    "country": "Somalia",
+    "nutrient": "Protein",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "SOM",
+    "iso_n3": 706,
+    "country": "Somalia",
+    "nutrient": "Iron",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "SOM",
+    "iso_n3": 706,
+    "country": "Somalia",
+    "nutrient": "Zinc",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "SOM",
+    "iso_n3": 706,
+    "country": "Somalia",
+    "nutrient": "Calcium",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "SOM",
+    "iso_n3": 706,
+    "country": "Somalia",
+    "nutrient": "DHA",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "SOM",
+    "iso_n3": 706,
+    "country": "Somalia",
+    "nutrient": "EPA",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "SSD",
+    "iso_n3": 728,
+    "country": "South Sudan",
+    "nutrient": "Protein",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "SSD",
+    "iso_n3": 728,
+    "country": "South Sudan",
+    "nutrient": "Iron",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "SSD",
+    "iso_n3": 728,
+    "country": "South Sudan",
+    "nutrient": "Zinc",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "SSD",
+    "iso_n3": 728,
+    "country": "South Sudan",
+    "nutrient": "Calcium",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "SSD",
+    "iso_n3": 728,
+    "country": "South Sudan",
+    "nutrient": "DHA",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "SSD",
+    "iso_n3": 728,
+    "country": "South Sudan",
+    "nutrient": "EPA",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "STP",
+    "iso_n3": 678,
+    "country": "São Tomé & Príncipe",
+    "nutrient": "Protein",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "STP",
+    "iso_n3": 678,
+    "country": "São Tomé & Príncipe",
+    "nutrient": "Iron",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "STP",
+    "iso_n3": 678,
+    "country": "São Tomé & Príncipe",
+    "nutrient": "Zinc",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "STP",
+    "iso_n3": 678,
+    "country": "São Tomé & Príncipe",
+    "nutrient": "Calcium",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "STP",
+    "iso_n3": 678,
+    "country": "São Tomé & Príncipe",
+    "nutrient": "DHA",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "STP",
+    "iso_n3": 678,
+    "country": "São Tomé & Príncipe",
+    "nutrient": "EPA",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "SWZ",
+    "iso_n3": 748,
+    "country": "Eswatini",
+    "nutrient": "Protein",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "SWZ",
+    "iso_n3": 748,
+    "country": "Eswatini",
+    "nutrient": "Iron",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "SWZ",
+    "iso_n3": 748,
+    "country": "Eswatini",
+    "nutrient": "Zinc",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "SWZ",
+    "iso_n3": 748,
+    "country": "Eswatini",
+    "nutrient": "Calcium",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "SWZ",
+    "iso_n3": 748,
+    "country": "Eswatini",
+    "nutrient": "DHA",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "SWZ",
+    "iso_n3": 748,
+    "country": "Eswatini",
+    "nutrient": "EPA",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "SYC",
+    "iso_n3": 690,
+    "country": "Seychelles",
+    "nutrient": "Protein",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "SYC",
+    "iso_n3": 690,
+    "country": "Seychelles",
+    "nutrient": "Iron",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "SYC",
+    "iso_n3": 690,
+    "country": "Seychelles",
+    "nutrient": "Zinc",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "SYC",
+    "iso_n3": 690,
+    "country": "Seychelles",
+    "nutrient": "Calcium",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "SYC",
+    "iso_n3": 690,
+    "country": "Seychelles",
+    "nutrient": "DHA",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "SYC",
+    "iso_n3": 690,
+    "country": "Seychelles",
+    "nutrient": "EPA",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "TCD",
+    "iso_n3": 148,
+    "country": "Chad",
+    "nutrient": "Protein",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "TCD",
+    "iso_n3": 148,
+    "country": "Chad",
+    "nutrient": "Iron",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "TCD",
+    "iso_n3": 148,
+    "country": "Chad",
+    "nutrient": "Zinc",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "TCD",
+    "iso_n3": 148,
+    "country": "Chad",
+    "nutrient": "Calcium",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "TCD",
+    "iso_n3": 148,
+    "country": "Chad",
+    "nutrient": "DHA",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "TCD",
+    "iso_n3": 148,
+    "country": "Chad",
+    "nutrient": "EPA",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "TGO",
+    "iso_n3": 768,
+    "country": "Togo",
+    "nutrient": "Protein",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "TGO",
+    "iso_n3": 768,
+    "country": "Togo",
+    "nutrient": "Iron",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "TGO",
+    "iso_n3": 768,
+    "country": "Togo",
+    "nutrient": "Zinc",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "TGO",
+    "iso_n3": 768,
+    "country": "Togo",
+    "nutrient": "Calcium",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "TGO",
+    "iso_n3": 768,
+    "country": "Togo",
+    "nutrient": "DHA",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "TGO",
+    "iso_n3": 768,
+    "country": "Togo",
+    "nutrient": "EPA",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "TUN",
+    "iso_n3": 788,
+    "country": "Tunisia",
+    "nutrient": "Protein",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "TUN",
+    "iso_n3": 788,
+    "country": "Tunisia",
+    "nutrient": "Iron",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "TUN",
+    "iso_n3": 788,
+    "country": "Tunisia",
+    "nutrient": "Zinc",
+    "category": "Strong net exporter"
+  },
+  {
+    "iso3c": "TUN",
+    "iso_n3": 788,
+    "country": "Tunisia",
+    "nutrient": "Calcium",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "TUN",
+    "iso_n3": 788,
+    "country": "Tunisia",
+    "nutrient": "DHA",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "TUN",
+    "iso_n3": 788,
+    "country": "Tunisia",
+    "nutrient": "EPA",
+    "category": "Net importer"
+  },
+  {
+    "iso3c": "TZA",
+    "iso_n3": 834,
+    "country": "Tanzania",
+    "nutrient": "Protein",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "TZA",
+    "iso_n3": 834,
+    "country": "Tanzania",
+    "nutrient": "Iron",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "TZA",
+    "iso_n3": 834,
+    "country": "Tanzania",
+    "nutrient": "Zinc",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "TZA",
+    "iso_n3": 834,
+    "country": "Tanzania",
+    "nutrient": "Calcium",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "TZA",
+    "iso_n3": 834,
+    "country": "Tanzania",
+    "nutrient": "DHA",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "TZA",
+    "iso_n3": 834,
+    "country": "Tanzania",
+    "nutrient": "EPA",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "UGA",
+    "iso_n3": 800,
+    "country": "Uganda",
+    "nutrient": "Protein",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "UGA",
+    "iso_n3": 800,
+    "country": "Uganda",
+    "nutrient": "Iron",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "UGA",
+    "iso_n3": 800,
+    "country": "Uganda",
+    "nutrient": "Zinc",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "UGA",
+    "iso_n3": 800,
+    "country": "Uganda",
+    "nutrient": "Calcium",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "UGA",
+    "iso_n3": 800,
+    "country": "Uganda",
+    "nutrient": "DHA",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "UGA",
+    "iso_n3": 800,
+    "country": "Uganda",
+    "nutrient": "EPA",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "ZAF",
+    "iso_n3": 710,
+    "country": "South Africa",
+    "nutrient": "Protein",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "ZAF",
+    "iso_n3": 710,
+    "country": "South Africa",
+    "nutrient": "Iron",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "ZAF",
+    "iso_n3": 710,
+    "country": "South Africa",
+    "nutrient": "Zinc",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "ZAF",
+    "iso_n3": 710,
+    "country": "South Africa",
+    "nutrient": "Calcium",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "ZAF",
+    "iso_n3": 710,
+    "country": "South Africa",
+    "nutrient": "DHA",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "ZAF",
+    "iso_n3": 710,
+    "country": "South Africa",
+    "nutrient": "EPA",
+    "category": "Net exporter"
+  },
+  {
+    "iso3c": "ZMB",
+    "iso_n3": 894,
+    "country": "Zambia",
+    "nutrient": "Protein",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "ZMB",
+    "iso_n3": 894,
+    "country": "Zambia",
+    "nutrient": "Iron",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "ZMB",
+    "iso_n3": 894,
+    "country": "Zambia",
+    "nutrient": "Zinc",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "ZMB",
+    "iso_n3": 894,
+    "country": "Zambia",
+    "nutrient": "Calcium",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "ZMB",
+    "iso_n3": 894,
+    "country": "Zambia",
+    "nutrient": "DHA",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "ZMB",
+    "iso_n3": 894,
+    "country": "Zambia",
+    "nutrient": "EPA",
+    "category": "Strong net importer"
+  },
+  {
+    "iso3c": "ZWE",
+    "iso_n3": 716,
+    "country": "Zimbabwe",
+    "nutrient": "Protein",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "ZWE",
+    "iso_n3": 716,
+    "country": "Zimbabwe",
+    "nutrient": "Iron",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "ZWE",
+    "iso_n3": 716,
+    "country": "Zimbabwe",
+    "nutrient": "Zinc",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "ZWE",
+    "iso_n3": 716,
+    "country": "Zimbabwe",
+    "nutrient": "Calcium",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "ZWE",
+    "iso_n3": 716,
+    "country": "Zimbabwe",
+    "nutrient": "DHA",
+    "category": "Neutral"
+  },
+  {
+    "iso3c": "ZWE",
+    "iso_n3": 716,
+    "country": "Zimbabwe",
+    "nutrient": "EPA",
+    "category": "Neutral"
+  }
+]
