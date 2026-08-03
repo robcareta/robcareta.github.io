@@ -16,21 +16,9 @@ execute:
 
 <p class="back-nav"><a href="../index.qmd">← Back to Projects</a></p>
 
-## Overview
-
-Species-level bilateral seafood trade data lets each shipment be converted into flows of protein, iron, zinc, calcium, and omega-3 fatty acids (DHA, EPA), not just tonnage. This is a preliminary look at where those nutrients actually go, split by World Bank income group and by whether trade stays within Africa or crosses into the rest of the world.
-
 ::: {.callout-warning}
 This is an active working paper. Figures below are preliminary and the full analysis is not yet public.
 :::
-
-## Nutrient flows by income group
-
-Trade with the rest of the world (left) looks very different from trade within Africa (right). Ribbon width is proportional to nutrient volume; color denotes the exporting income group.
-
-![](img/sankey_extra_africa.png){fig-alt="Sankey diagram of nutrient flows between African and non-African countries by income group" width="100%"}
-
-![](img/sankey_intra_africa.png){fig-alt="Sankey diagram of nutrient flows between African countries only by income group" width="100%"}
 
 ## Which countries are net importers vs exporters
 
@@ -103,6 +91,18 @@ Plot.plot({
 ::: {.callout-note}
 Categories are relative quintiles (each country's rank against other African countries), not raw trade values — deliberately coarser than the full analysis, which stays with the working paper for now.
 :::
+
+## Overview
+
+Species-level bilateral seafood trade data lets each shipment be converted into flows of protein, iron, zinc, calcium, and omega-3 fatty acids (DHA, EPA), not just tonnage. This is a preliminary look at where those nutrients actually go, split by World Bank income group and by whether trade stays within Africa or crosses into the rest of the world.
+
+## Nutrient flows by income group
+
+Trade with the rest of the world (left) looks very different from trade within Africa (right). Ribbon width is proportional to nutrient volume; color denotes the exporting income group.
+
+![](img/sankey_extra_africa.png){fig-alt="Sankey diagram of nutrient flows between African and non-African countries by income group" width="100%"}
+
+![](img/sankey_intra_africa.png){fig-alt="Sankey diagram of nutrient flows between African countries only by income group" width="100%"}
 
 ## Data
 
