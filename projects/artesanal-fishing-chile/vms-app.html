@@ -58,6 +58,7 @@ body{font-family:'Segoe UI',system-ui,sans-serif;font-size:0.93rem;background:#f
   <button class="tab-btn active" data-tab="map">Fishing Map</button>
   <button class="tab-btn" data-tab="grad">Distance Gradient</button>
   <button class="tab-btn" data-tab="trend">Fleet Activity</button>
+  <button class="tab-btn" data-tab="hab">HAB Spatial Effect</button>
 </div>
 
 <!-- TAB 1: MAP -->
@@ -120,11 +121,34 @@ body{font-family:'Segoe UI',system-ui,sans-serif;font-size:0.93rem;background:#f
   </div>
 </div>
 
+<!-- TAB 4: HAB SPATIAL EFFECT -->
+<div id="tab-hab" class="tab-content">
+  <div class="panel">
+    <h4>HAB events</h4>
+    <div class="check-group" id="hab-events">
+      <label><input type="checkbox" value="2019-10" checked> Oct 2019</label>
+      <label><input type="checkbox" value="2019-11" checked> Nov 2019</label>
+      <label><input type="checkbox" value="2020-03" checked> Mar 2020</label>
+    </div>
+    <label>Max distance: <span id="hab-dist-val">80</span> km</label>
+    <input type="range" id="hab-dist" min="10" max="80" value="80" step="5">
+    <div style="margin-top:6px">
+      <label style="display:flex;align-items:center;gap:5px;font-size:.82rem;cursor:pointer">
+        <input type="checkbox" id="hab-show-ci" checked> Show 95% CI
+      </label>
+    </div>
+    <p class="note">ATT(d) = change in fishing fraction at distance d from bloom site vs. 3-month pre-bloom baseline. Pooled across 3 bloom events (Oct–Nov 2019, Mar 2020).</p>
+  </div>
+  <div class="main-area">
+    <div class="chart-wrap"><canvas id="hab-chart" height="420"></canvas></div>
+  </div>
+</div>
+
 <script>
 // ── Global state ──────────────────────────────────────────────────────────────
-let cellData = [], ringData = [], trendData = [];
+let cellData = [], ringData = [], trendData = [], habData = [], habEventData = [];
 let map, mapLayers = [];
-let gradChart = null, trendMonthly = null, trendAnnual = null;
+let gradChart = null, trendMonthly = null, trendAnnual = null, habChart = null;
 
 const RING_ORDER = ["0\u20132 km","2\u20135 km","5\u201310 km","10\u201320 km","20\u201350 km"];
 const RING_COLS  = {"0\u20132 km":"#b5000a","2\u20135 km":"#e05c00","5\u201310 km":"#e8a020","10\u201320 km":"#4a7c59","20\u201350 km":"#2a5caa",">50 km":"#7a7a7a"};
@@ -160,10 +184,12 @@ async function loadCSV(path){
 }
 
 async function init(){
-  [cellData, ringData, trendData] = await Promise.all([
+  [cellData, ringData, trendData, habData, habEventData] = await Promise.all([
     loadCSV('data/cell_annual.csv'),
     loadCSV('data/ring_annual.csv'),
-    loadCSV('data/monthly_trend.csv')
+    loadCSV('data/monthly_trend.csv'),
+    loadCSV('data/hab_att_d.csv'),
+    loadCSV('data/hab_att_event.csv')
   ]);
 
   trendData.forEach(d=>{ d.yearmonth = new Date(d.yearmonth); });
@@ -196,6 +222,8 @@ async function init(){
   renderGradChart();
   initTrendCharts();
   renderTrendCharts();
+  initHabChart();
+  renderHabChart();
 
   // Wire up tabs
   document.querySelectorAll('.tab-btn').forEach(btn=>{
@@ -223,6 +251,13 @@ async function init(){
   tMin.addEventListener('change', renderTrendCharts);
   tMax.addEventListener('change', renderTrendCharts);
   document.querySelectorAll('input[name="trend-metric"]').forEach(r=>r.addEventListener('change', renderTrendCharts));
+
+  // Wire up HAB controls
+  const habDistSlider = document.getElementById('hab-dist');
+  const habDistVal    = document.getElementById('hab-dist-val');
+  habDistSlider.addEventListener('input', ()=>{ habDistVal.textContent=habDistSlider.value; renderHabChart(); });
+  document.getElementById('hab-show-ci').addEventListener('change', renderHabChart);
+  document.querySelectorAll('#hab-events input').forEach(c=>c.addEventListener('change', renderHabChart));
 
   document.getElementById('loading').style.display='none';
 }
@@ -405,6 +440,68 @@ function renderTrendCharts(){
     backgroundColor:'#005f73cc', borderRadius:3
   }];
   trendAnnual.update();
+}
+
+// ── HAB SPATIAL EFFECT CHART ─────────────────────────────────────────────────
+const HAB_EVENT_COLS = {'2019-10':'#e41a1c','2019-11':'#ff7f00','2020-03':'#377eb8'};
+const HAB_EVENT_LABS = {'2019-10':'Oct 2019','2019-11':'Nov 2019','2020-03':'Mar 2020'};
+
+function initHabChart(){
+  habChart = new Chart(document.getElementById('hab-chart'),{
+    type:'line',
+    data:{labels:[],datasets:[]},
+    options:{
+      responsive:true,
+      interaction:{mode:'index',intersect:false},
+      plugins:{
+        legend:{
+          display:true,position:'top',
+          labels:{filter:(item)=>!item.text.startsWith('_')}
+        },
+        title:{display:true,text:'HAB Effect on Fishing Fraction by Distance — ATT(d)',font:{size:13,weight:'bold'}}
+      },
+      scales:{
+        x:{grid:{display:false},title:{display:true,text:'Distance from HAB detection (km)'}},
+        y:{grid:{color:'#f0f0f0'},title:{display:true,text:'Δ Fishing fraction (pp)'},
+           ticks:{callback:v=>(v>=0?'+':'')+v.toFixed(2)+' pp'}}
+      }
+    }
+  });
+}
+
+function renderHabChart(){
+  const maxDist = +document.getElementById('hab-dist').value;
+  const showCI  = document.getElementById('hab-show-ci').checked;
+  const checkedEvents = [...document.querySelectorAll('#hab-events input:checked')].map(c=>c.value);
+
+  const pooled = habData.filter(d=>d.dist_mid<=maxDist);
+  if(pooled.length===0){habChart.data.labels=[];habChart.data.datasets=[];habChart.update();return;}
+
+  const labels   = pooled.map(d=>d.dist_mid+' km');
+  const attVals  = pooled.map(d=>+( d.att  *100).toFixed(3));
+  const ciHiVals = pooled.map(d=>+( d.ci_hi*100).toFixed(3));
+  const ciLoVals = pooled.map(d=>+( d.ci_lo*100).toFixed(3));
+
+  const datasets=[];
+
+  if(showCI){
+    datasets.push({label:'95% CI',data:ciHiVals,fill:'+1',borderColor:'transparent',backgroundColor:'rgba(0,95,115,0.15)',pointRadius:0,tension:0.3});
+    datasets.push({label:'_ci_lo',data:ciLoVals,fill:false,borderColor:'transparent',backgroundColor:'transparent',pointRadius:0,tension:0.3});
+  }
+
+  datasets.push({label:'Zero (no effect)',data:labels.map(()=>0),borderColor:'#aaa',borderWidth:1,borderDash:[5,3],pointRadius:0,fill:false});
+
+  datasets.push({label:'Pooled ATT(d)',data:attVals,borderColor:'#005f73',backgroundColor:'#005f73',borderWidth:2.5,pointRadius:4,pointHoverRadius:6,fill:false,tension:0.3});
+
+  checkedEvents.forEach(ev=>{
+    const evRows=habEventData.filter(d=>d.bloom_month===ev&&d.dist_mid<=maxDist);
+    if(evRows.length===0) return;
+    datasets.push({label:HAB_EVENT_LABS[ev],data:evRows.map(d=>+(d.att*100).toFixed(3)),borderColor:HAB_EVENT_COLS[ev],backgroundColor:HAB_EVENT_COLS[ev],borderWidth:1.5,pointRadius:2,borderDash:[3,2],fill:false,tension:0.3});
+  });
+
+  habChart.data.labels=labels;
+  habChart.data.datasets=datasets;
+  habChart.update();
 }
 
 // ── Boot ──────────────────────────────────────────────────────────────────────

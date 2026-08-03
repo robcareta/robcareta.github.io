@@ -18,6 +18,8 @@ resources:
   - data/cell_annual.csv
   - data/ring_annual.csv
   - data/monthly_trend.csv
+  - data/hab_att_d.csv
+  - data/hab_att_event.csv
   - vms-app.html
 ---
 
