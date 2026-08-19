@@ -7,7 +7,7 @@ format:
       banner-header-class: "home"
 about:
   template: solana
-  image: "img/ANA_1857.jpg"
+  image: "img/ANA_5756.jpg"
   links:
     # - icon: twitter
     #   text: Twitter

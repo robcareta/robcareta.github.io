@@ -98,11 +98,46 @@
     "text": "← Back to Project\n\nThis tool explores SERNAPESCA vessel monitoring system (VMS) data for the artisanal fishing fleet in Los Lagos, Chile (2019–2026). The dataset covers ~58.5 million GPS pings. Use the three tabs to explore spatial patterns, distance gradients from aquaculture farms, and temporal trends.\n\n\n\n\n\n\nNote\n\n\n\nThe app runs entirely in your browser — no server required. Data is fetched from this site (~2 MB) so the first load may take a few seconds.\n\n\n\n\n\n\n\n\n\n\n\nNoteData and methods\n\n\n\n\n\n\nSource: SERNAPESCA Vessel Monitoring System (VMS), artisanal fleet\nPeriod: 2019–2026 · Region: Los Lagos (lat –44.5° to –40.5°)\nFishing: speed 0.1–3.0 knots (Behivoke et al. 2021)\nGrid: 0.05° × 0.05° cells. Farm distances: to nearest marine concession centroid.\nNote: 2019–2022 from admin snapshots (~4×/day, ~1,000 vessels); 2023+ from daily artisanal reports (~175–190 vessels)."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome to my website!",
+    "objectID": "projects/africa-seafood-nutrient-trade/index.html",
+    "href": "projects/africa-seafood-nutrient-trade/index.html",
+    "title": "Africa’s Seafood Trade & Nutrient Flows",
     "section": "",
-    "text": "Welcome to my website!\n\n\nI recently earned my PhD from the Fisheries and Aquatic Sciences program at the University of Florida. My research focuses on seafood markets, sustainable consumption, and the nutritional impacts of seafood on consumers. My dissertation explored how incentives and product attributes influence consumer behavior in seafood markets.\n\nYou can find my research papers and ongoing projects on this page\n\n\n\n\n\n\nNote\n\n\n\n\n\nI am currently on the academic job market and open to research, postdoctoral, and faculty positions."
+    "text": "← Back to Projects"
+  },
+  {
+    "objectID": "projects/africa-seafood-nutrient-trade/index.html#which-countries-are-net-importers-vs-exporters",
+    "href": "projects/africa-seafood-nutrient-trade/index.html#which-countries-are-net-importers-vs-exporters",
+    "title": "Africa’s Seafood Trade & Nutrient Flows",
+    "section": "Which countries are net importers vs exporters",
+    "text": "Which countries are net importers vs exporters\nPick a nutrient to see each country’s trade position, ranked relative to other African countries rather than by absolute quantity (green = net exporter, red = net importer):\n\nmapdata = FileAttachment(\"nutrient_map_data.json\").json()\n\n\n\n\n\n\n\ntopojson = require(\"topojson-client@3\")\n\n\n\n\n\n\n\nworld = d3.json(\"https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json\")\n\n\n\n\n\n\n\nafricaIdSet = new Set(mapdata.map(d =&gt; d.iso_n3))\n\n\n\n\n\n\n\ncountryFeatures = topojson.feature(world, world.objects.countries).features\n  .filter(f =&gt; africaIdSet.has(+f.id))\n\n\n\n\n\n\n\nviewof selectedNutrient = Inputs.select(\n  [\"Protein\", \"Iron\", \"Zinc\", \"Calcium\", \"DHA\", \"EPA\"],\n  { label: \"Nutrient\", value: \"Protein\" }\n)\n\n\n\n\n\n\n\ncategoryById = new Map(\n  mapdata.filter(d =&gt; d.nutrient === selectedNutrient).map(d =&gt; [d.iso_n3, d.category])\n)\n\n\n\n\n\n\n\nnameById = new Map(mapdata.map(d =&gt; [d.iso_n3, d.country]))\n\n\n\n\n\n\n\ncategoryDomain = [\"Strong net exporter\", \"Net exporter\", \"Neutral\", \"Net importer\", \"Strong net importer\"]\n\n\n\n\n\n\n\nPlot.plot({\n  width: 700,\n  height: 620,\n  projection: { type: \"mercator\", domain: { type: \"FeatureCollection\", features: countryFeatures } },\n  color: {\n    domain: categoryDomain,\n    range: [\"#1a9850\", \"#91cf60\", \"#f7f7f7\", \"#fc8d59\", \"#d73027\"],\n    legend: true,\n    label: `${selectedNutrient} trade position`\n  },\n  marks: [\n    Plot.geo(countryFeatures, {\n      fill: (d) =&gt; categoryById.get(+d.id) ?? \"#e0e0e0\",\n      stroke: \"white\",\n      strokeWidth: 0.6,\n      title: (d) =&gt; `${nameById.get(+d.id) ?? \"Unknown\"}: ${categoryById.get(+d.id) ?? \"No data\"}`\n    })\n  ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nCategories are relative quintiles (each country’s rank against other African countries), not raw trade values — deliberately coarser than the full analysis, which stays with the working paper for now."
+  },
+  {
+    "objectID": "projects/africa-seafood-nutrient-trade/index.html#overview",
+    "href": "projects/africa-seafood-nutrient-trade/index.html#overview",
+    "title": "Africa’s Seafood Trade & Nutrient Flows",
+    "section": "Overview",
+    "text": "Overview\nSpecies-level bilateral seafood trade data lets each shipment be converted into flows of protein, iron, zinc, calcium, and omega-3 fatty acids (DHA, EPA), not just tonnage. This is a preliminary look at where those nutrients actually go, split by World Bank income group and by whether trade stays within Africa or crosses into the rest of the world."
+  },
+  {
+    "objectID": "projects/africa-seafood-nutrient-trade/index.html#nutrient-flows-by-income-group",
+    "href": "projects/africa-seafood-nutrient-trade/index.html#nutrient-flows-by-income-group",
+    "title": "Africa’s Seafood Trade & Nutrient Flows",
+    "section": "Nutrient flows by income group",
+    "text": "Nutrient flows by income group\nTrade with the rest of the world (left) looks very different from trade within Africa (right). Ribbon width is proportional to nutrient volume; color denotes the exporting income group."
+  },
+  {
+    "objectID": "projects/africa-seafood-nutrient-trade/index.html#data",
+    "href": "projects/africa-seafood-nutrient-trade/index.html#data",
+    "title": "Africa’s Seafood Trade & Nutrient Flows",
+    "section": "Data",
+    "text": "Data\nBuilt from species-level bilateral trade data merged with a nutrient-content crosswalk and World Bank income classifications. Full data and methods documentation to follow with the working paper."
+  },
+  {
+    "objectID": "cv/index.html",
+    "href": "cv/index.html",
+    "title": "Curriculum vitae",
+    "section": "",
+    "text": "Download Roberto’s CV."
   },
   {
     "objectID": "blog/index.html",
@@ -112,11 +147,11 @@
     "text": "No matching items"
   },
   {
-    "objectID": "cv/index.html",
-    "href": "cv/index.html",
-    "title": "Curriculum vitae",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to my website!",
     "section": "",
-    "text": "Download Roberto’s CV."
+    "text": "Welcome to my website!\n\n\nI recently earned my PhD from the Fisheries and Aquatic Sciences program at the University of Florida. My research focuses on seafood markets, sustainable consumption, and the nutritional impacts of seafood on consumers. My dissertation explored how incentives and product attributes influence consumer behavior in seafood markets.\n\nYou can find my research papers and ongoing projects on this page\n\n\n\n\n\n\nNote\n\n\n\n\n\nI am currently on the academic job market and open to research, postdoctoral, and faculty positions."
   },
   {
     "objectID": "projects/artesanal-fishing-chile/index.html",
@@ -264,75 +299,5 @@
     "title": "Price premiums for the MSC-ecolabel in the U.S.: A hedonic analysis haddock in U.S. market",
     "section": "",
     "text": "Abstract\nEcolabels signaling a sustainable or responsible production process have become an important product attribute for many food products, including seafood. If an ecolabel is to incentivize improved production practices, there must be a price premium associated with the label. Although price premiums for ecolabels in seafood markets have been studied in several European markets, evidence from the U.S. market is scarce, despite the importance of the U.S. in the global seafood market. In this study, we estimated the price premium for haddock labeled with the ecolabel of the Marine Stewardship Council (MSC) in the U.S. We used the NielsenIQ Consumer Panel data from 2013-2020, together with UPC-codes obtained from the MSC on which products carried the ecolabel. Our results indicate that U.S. households, on average, pay a 17.23% premium for MSC-labeled haddock. This premium suggests that U.S. consumers place meaningful value on sustainability information and that market-based tools such as ecolabels may offer an effective mechanism to incentivize improvements in fisheries management and production practices."
-  },
-  {
-    "objectID": "projects/africa-seafood-nutrient-trade/index.html",
-    "href": "projects/africa-seafood-nutrient-trade/index.html",
-    "title": "Africa’s Seafood Trade & Nutrient Flows",
-    "section": "",
-    "text": "← Back to Projects"
-  },
-  {
-    "objectID": "projects/africa-seafood-nutrient-trade/index.html#overview",
-    "href": "projects/africa-seafood-nutrient-trade/index.html#overview",
-    "title": "Africa’s Seafood Trade & Nutrient Flows",
-    "section": "Overview",
-    "text": "Overview\nSpecies-level bilateral seafood trade data lets each shipment be converted into flows of protein, iron, zinc, calcium, and omega-3 fatty acids (DHA, EPA), not just tonnage. This is a preliminary look at where those nutrients actually go, split by World Bank income group and by whether trade stays within Africa or crosses into the rest of the world."
-  },
-  {
-    "objectID": "projects/africa-seafood-nutrient-trade/index.html#data-whats-actually-behind-these-charts",
-    "href": "projects/africa-seafood-nutrient-trade/index.html#data-whats-actually-behind-these-charts",
-    "title": "Africa’s Seafood Trade & Nutrient Flows",
-    "section": "Data — what’s actually behind these charts",
-    "text": "Data — what’s actually behind these charts\nThree data sources are combined, and each has real limitations worth being upfront about:\n\n\n\n\n\n\n\n\nSource\nWhat it provides\nCoverage\n\n\n\n\nARTIS (Aquatic Resource Trade in Species)\nSpecies-level bilateral seafood trade flows, reconciled from customs/Comtrade data\n1996-2020, ~2,000 species, ~190 countries\n\n\nAFCD (Aquatic Food Composition Database)\nNutrient content per 100g edible portion, by species\nMatched to ARTIS via a species/genus crosswalk\n\n\nWorld Bank WDI\nGDP, population, and income-group classification\nMerged by country-year\n\n\n\nTurning trade volume into nutrient flows. Each species’ live-weight trade is multiplied by an edible-fraction assumption (0.5) and its AFCD nutrient content to get a flow of protein, iron, zinc, calcium, DHA, and EPA (and 7 other nutrients tracked but not shown here). Species without a direct AFCD match are matched at the genus level; together, exact and genus-level matches cover about 73% of traded live weight — the remainder (mostly unclassified or artisanal-market species) contributes zero nutrient flow, which likely understates trade in lower-income countries that rely more on species outside the standard commercial catalog.\nWhat “trade” does and doesn’t capture. ARTIS reconciles official customs records. It does not capture informal or artisanal cross-border trade, which can be substantial in parts of West and Central Africa, nor does it capture fish caught and consumed domestically without ever entering recorded trade. Every number below is a trade-channel indicator, not a measure of total national fish consumption."
-  },
-  {
-    "objectID": "projects/africa-seafood-nutrient-trade/index.html#trade-trends",
-    "href": "projects/africa-seafood-nutrient-trade/index.html#trade-trends",
-    "title": "Africa’s Seafood Trade & Nutrient Flows",
-    "section": "Trade trends",
-    "text": "Trade trends\nAfrica’s recorded seafood trade nearly quadrupled between 1996 and 2020 — exports grew from 1.4 to 5.3 million tonnes (live weight), imports from 0.9 to 5.6 million tonnes. Intra-Africa trade (green) has grown fastest in relative terms, though it remains smaller than trade with the rest of the world."
-  },
-  {
-    "objectID": "projects/africa-seafood-nutrient-trade/index.html#nutrient-trends",
-    "href": "projects/africa-seafood-nutrient-trade/index.html#nutrient-trends",
-    "title": "Africa’s Seafood Trade & Nutrient Flows",
-    "section": "Nutrient trends",
-    "text": "Nutrient trends\nConverting trade volume into nutrient content changes the picture. Averaged over 2016-2020, Africa is a net importer of every one of the 13 nutrients tracked — it imports more protein, iron, zinc, calcium, and omega-3s embedded in seafood than it exports. The gap is smallest for protein (imports ~11% above exports) and largest for the omega-3 fatty acids DHA and EPA (imports 2.4-4.0x exports):\n\nThis net-import position has been fairly stable in relative terms but has grown enormously in absolute terms since the mid-2000s, as both exports and imports of nutrient-dense species have scaled up with overall trade volume:"
-  },
-  {
-    "objectID": "projects/africa-seafood-nutrient-trade/index.html#by-income-group",
-    "href": "projects/africa-seafood-nutrient-trade/index.html#by-income-group",
-    "title": "Africa’s Seafood Trade & Nutrient Flows",
-    "section": "By income group",
-    "text": "By income group\nSplitting the continent’s 53 countries by World Bank income classification (20 low income, 23 lower-middle income, 8 upper-middle income, 1 high income — Seychelles) shows the net-importer story is not shared equally.\nLower-middle income countries dominate both export and import volume — they are simply the biggest players in African seafood trade by tonnage:\n\nBut looking at net nutrient balance tells a sharper story. Low-income and lower-middle-income countries are consistently net importers of protein and omega-3s — trade is, on net, bringing nutrients into these economies. The sole high-income country, Seychelles, is a striking outlier in the opposite direction:\n\nAcross all 6 headline nutrients, the pattern holds: low- and lower-middle-income countries are net importers, while Seychelles is a large net exporter of every nutrient — a reflection of its role as a major Indian Ocean tuna transshipment and canning hub (a huge processing industry relative to its ~97,000 population), not a sign that its own population has more seafood-nutrient access:"
-  },
-  {
-    "objectID": "projects/africa-seafood-nutrient-trade/index.html#technical-details",
-    "href": "projects/africa-seafood-nutrient-trade/index.html#technical-details",
-    "title": "Africa’s Seafood Trade & Nutrient Flows",
-    "section": "Technical details",
-    "text": "Technical details\n\n\n\n\n\n\n\nLanguage\nR\n\n\nKey packages\ntidyverse, fixest, WDI, xgboost, penppml\n\n\nData\nARTIS bulk trade data, AFCD nutrient database, World Bank WDI\n\n\nMethods used elsewhere in this project\nPPML gravity models, lasso-based variable selection (Breinlich et al. 2021 adaptation), K-means clustering of country nutrient-trade profiles, gradient-boosting forecast benchmarking\n\n\nStatus\nWorking paper in progress"
-  },
-  {
-    "objectID": "projects/africa-seafood-nutrient-trade/index.html#nutrient-flows-by-income-group",
-    "href": "projects/africa-seafood-nutrient-trade/index.html#nutrient-flows-by-income-group",
-    "title": "Africa’s Seafood Trade & Nutrient Flows",
-    "section": "Nutrient flows by income group",
-    "text": "Nutrient flows by income group\nTrade with the rest of the world (left) looks very different from trade within Africa (right). Ribbon width is proportional to nutrient volume; color denotes the exporting income group."
-  },
-  {
-    "objectID": "projects/africa-seafood-nutrient-trade/index.html#which-countries-are-net-importers-vs-exporters",
-    "href": "projects/africa-seafood-nutrient-trade/index.html#which-countries-are-net-importers-vs-exporters",
-    "title": "Africa’s Seafood Trade & Nutrient Flows",
-    "section": "Which countries are net importers vs exporters",
-    "text": "Which countries are net importers vs exporters\nPick a nutrient to see each country’s trade position, ranked relative to other African countries rather than by absolute quantity (green = net exporter, red = net importer):\n\nmapdata = FileAttachment(\"nutrient_map_data.json\").json()\n\n\n\n\n\n\n\ntopojson = require(\"topojson-client@3\")\n\n\n\n\n\n\n\nworld = d3.json(\"https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json\")\n\n\n\n\n\n\n\nafricaIdSet = new Set(mapdata.map(d =&gt; d.iso_n3))\n\n\n\n\n\n\n\ncountryFeatures = topojson.feature(world, world.objects.countries).features\n  .filter(f =&gt; africaIdSet.has(+f.id))\n\n\n\n\n\n\n\nviewof selectedNutrient = Inputs.select(\n  [\"Protein\", \"Iron\", \"Zinc\", \"Calcium\", \"DHA\", \"EPA\"],\n  { label: \"Nutrient\", value: \"Protein\" }\n)\n\n\n\n\n\n\n\ncategoryById = new Map(\n  mapdata.filter(d =&gt; d.nutrient === selectedNutrient).map(d =&gt; [d.iso_n3, d.category])\n)\n\n\n\n\n\n\n\nnameById = new Map(mapdata.map(d =&gt; [d.iso_n3, d.country]))\n\n\n\n\n\n\n\ncategoryDomain = [\"Strong net exporter\", \"Net exporter\", \"Neutral\", \"Net importer\", \"Strong net importer\"]\n\n\n\n\n\n\n\nPlot.plot({\n  width: 700,\n  height: 620,\n  projection: { type: \"mercator\", domain: { type: \"FeatureCollection\", features: countryFeatures } },\n  color: {\n    domain: categoryDomain,\n    range: [\"#1a9850\", \"#91cf60\", \"#f7f7f7\", \"#fc8d59\", \"#d73027\"],\n    legend: true,\n    label: `${selectedNutrient} trade position`\n  },\n  marks: [\n    Plot.geo(countryFeatures, {\n      fill: (d) =&gt; categoryById.get(+d.id) ?? \"#e0e0e0\",\n      stroke: \"white\",\n      strokeWidth: 0.6,\n      title: (d) =&gt; `${nameById.get(+d.id) ?? \"Unknown\"}: ${categoryById.get(+d.id) ?? \"No data\"}`\n    })\n  ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nCategories are relative quintiles (each country’s rank against other African countries), not raw trade values — deliberately coarser than the full analysis, which stays with the working paper for now."
-  },
-  {
-    "objectID": "projects/africa-seafood-nutrient-trade/index.html#data",
-    "href": "projects/africa-seafood-nutrient-trade/index.html#data",
-    "title": "Africa’s Seafood Trade & Nutrient Flows",
-    "section": "Data",
-    "text": "Data\nBuilt from species-level bilateral trade data merged with a nutrient-content crosswalk and World Bank income classifications. Full data and methods documentation to follow with the working paper."
   }
 ]
