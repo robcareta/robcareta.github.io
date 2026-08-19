@@ -1,10 +1,10 @@
 ---
 title: Curriculum vitae
 resources:
-  - "cv.pdf"
+  - "CV_August.pdf"
 title-block-banner: false
 ---
 
 
-Download [Roberto's CV](../cv/cv.pdf). 
+Download [Roberto's CV](../cv/CV_August.pdf).
 
