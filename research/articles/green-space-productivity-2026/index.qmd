@@ -14,10 +14,8 @@ author:
   - name: Danielle Roy
     affiliation: University of Guelph
 categories:
-  - Green space
-  - Urban space
-  - Productivity
-  - Framed field experiment
+  - Labor Economics
+  - Environmental Sustainability
 pub-info:
   links:
     - name: Final version

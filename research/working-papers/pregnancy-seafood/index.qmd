@@ -7,9 +7,8 @@ author:
     affiliation: School of Forest, Fisheries, & Geomatics Sciences, University of Florida
  
 categories:
-  - Pregnancy
-  - Seafood
-  - Diet change
+  - Seafood Markets & Demand
+  - Health & Nutrition
 pub-info:
   reference: >-
     “Pregnancy and the seafood demand response: Evidence from household scanner data”

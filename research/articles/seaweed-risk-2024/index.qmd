@@ -12,10 +12,9 @@ author:
     orcid: 0000-0002-9578-827X
   - name: Francisco Hernandez
     affiliation: Universidad del Bio-Bio
-categories: 
-  - Production risk
-  - Sample selection
-  - Seaweed aquaculture
+categories:
+  - Aquaculture Economics
+  - Environmental Sustainability
 pub-info:
   links:
     - name: Final version

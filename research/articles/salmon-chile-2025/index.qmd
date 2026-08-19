@@ -11,11 +11,9 @@ author:
   - name: Roberto Cárdenas-Retamal
     affiliation: University of Florida
     orcid: 0000-0002-9578-827X
-categories: 
-  - Aquaculture
+categories:
+  - Aquaculture Economics
   - Chile
-  - Salmon
-  - Socioeconomic impacts
 pub-info:
   links:
     - name: Final version

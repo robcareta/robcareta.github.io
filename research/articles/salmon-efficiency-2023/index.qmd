@@ -10,11 +10,9 @@ author:
     orcid: 0000-0002-9578-827X
   - name: Marcela Jaime
     affiliation: Universidad de Concepcion
-categories: 
-  - DEA analysis
-  - Undesired outputs
-  - Environmental efficiency 
-  - Salmon aquaculture
+categories:
+  - Aquaculture Economics
+  - Environmental Sustainability
 pub-info:
   links:
     - name: Final version

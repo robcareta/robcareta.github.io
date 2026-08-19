@@ -12,12 +12,10 @@ author:
     orcid: 0000-0002-9578-827X
   - name: Marjorie Baquedano
     affiliation: Departamento de Educación Médica, Universidad de Concepción and Interdisciplinary Center for Aquaculture Research (INCAR)
-categories: 
-  - Gender gaps
-  - Production process
-  - Psychological traits
-  - Small-scale aquaculture
-  - Women engagement
+categories:
+  - Aquaculture Economics
+  - Gender Economics
+  - Chile
 pub-info:
   links:
     - name: Final version

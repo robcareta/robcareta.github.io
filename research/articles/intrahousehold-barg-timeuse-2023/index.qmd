@@ -11,11 +11,8 @@ author:
     affiliation: Univeridad del Desarrollo
   - name: Roberto Ponce Oliva
     affiliation: Universidad del Desarrollo
-categories: 
-  - Time allocation
-  - Intrahousehold bargaining power
-  - Multiple discrete-continuous choice modeling
-  - Gender equity
+categories:
+  - Gender Economics
   - Chile
 pub-info:
   links:

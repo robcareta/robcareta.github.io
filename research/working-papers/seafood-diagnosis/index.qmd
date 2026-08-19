@@ -10,12 +10,8 @@ author:
   - name: Frank Asche
     affiliation: School of Forest, Fisheries, & Geomatics Sciences, University of Florida
 categories:
-  - Seafood 
-  - WIC program
-  - Healthy diets
-  - Disease diagnosis
-  - Food policy 
-  - Scanner data
+  - Seafood Markets & Demand
+  - Health & Nutrition
 pub-info:
   reference: >-
     “Seafood Purchasing in Responses to Type 2 Diabetes Diagnosis”

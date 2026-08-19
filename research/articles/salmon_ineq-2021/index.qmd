@@ -9,11 +9,8 @@ author:
     affiliation: Universidad de Concepcion
   - name: Adams Ceballos-Concha
     affiliation: Univeristy of Florida
-categories: 
-  - Income distribution
-  - Salmon aquaculture
-  - Remote coastal areas
-  - Impact evaluation
+categories:
+  - Aquaculture Economics
   - Chile
 pub-info:
   links:

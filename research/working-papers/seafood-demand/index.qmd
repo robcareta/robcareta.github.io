@@ -9,10 +9,8 @@ author:
     affiliation: School of Forest, Fisheries, & Geomatics Sciences, University of Florida
  
 categories:
-  - Ecolabeling
-  - Seafood market
-  - Seafood demand
-  - Homescan data
+  - Seafood Markets & Demand
+  - Environmental Sustainability
 pub-info:
   reference: >-
     “Demand of environmental attributes in the U.S. seafood market”

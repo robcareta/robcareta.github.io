@@ -13,13 +13,8 @@ author:
     affiliation: School of Forest, Fisheries and Geomatics Sciences, University of Florida, Gainesville, FL, USA
 
 categories:
-  - Aquaculture
-  - Seafood market
-  - Market penetration
-  - Crawfish
-  - Oysters
-  - Red drum
-  - Southeastern U.S.
+  - Aquaculture Economics
+  - Seafood Markets & Demand
 pub-info:
   reference: >-
     "Market penetration and potential of crawfish, oysters, and red drum in Southeastern U.S. markets"
@@ -27,6 +22,11 @@ pub-status:
   status: Writing
   class: warning
   icon: "fa-solid fa-pencil"
+
+haiku:
+  - text: "Submitted at"
+    journal: "Aquaculture"
+    url: "https://www.sciencedirect.com/journal/aquaculture"
 ---
 
 # Abstract

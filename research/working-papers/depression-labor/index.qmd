@@ -7,10 +7,8 @@ author:
     affiliation: School of Forest, Fisheries, & Geomatics Sciences, University of Florida
  
 categories:
-  - Mental health
-  - Depression
-  - Anxiety
-  - Labor outcomes
+  - Labor Economics
+  - Health & Nutrition
 pub-info:
   reference: >-
     “Labor outcomes effect of mental health”

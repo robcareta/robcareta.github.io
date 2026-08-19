@@ -9,12 +9,8 @@ author:
     affiliation: School of Forest, Fisheries, & Geomatics Sciences, University of Florida
  
 categories:
-  - labeling
-  - Seafood market
-  - Seafood demand
-  - Homescan data
-  - Hedonic price 
-  - Seafood
+  - Seafood Markets & Demand
+  - Health & Nutrition
 pub-info:
   reference: >-
     “The value of nutritional attributes in seafood”

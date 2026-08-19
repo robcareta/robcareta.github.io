@@ -18,11 +18,8 @@ author:
     orcid: 0000-0002-9578-827X
     affiliation: School of Forest, Fisheries, & Geomatics Sciences, University of Florida
   
-categories: 
-  - Aquaculture  
-  - Input–output analysis
-  - Ripple effects 
-  - Salmon
+categories:
+  - Aquaculture Economics
 pub-info:
   links:
     - name: Final version

@@ -11,12 +11,8 @@ author:
     affiliation: Food and Resources Economics Department, University of Florida
 
 categories:
-  - Ecolabeling
-  - Seafood market
-  - Price premium
-  - Hedonic price
-  - Homescan data
-  - Marine stewardship council
+  - Seafood Markets & Demand
+  - Environmental Sustainability
 pub-info:
   reference: >-
     “Price premiums for the MSC-ecolabel in the U.S.: A hedonic analysis haddock in U.S. market”
