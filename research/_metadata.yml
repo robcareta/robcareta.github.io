@@ -2,7 +2,7 @@
 date-format: "MMMM YYYY"
 
 # Enable banner style title blocks
-title-block-banner: "#005f73"
+title-block-banner: "#1a3c6e"
 
 # Default for table of contents
 toc: true
