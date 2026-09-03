@@ -13,8 +13,8 @@ description: |
   barriers to consumption — but the evidence on VAT cuts, school meals,
   and financing design suggests implementation details matter more than
   the diagnosis.
-image: preview.svg
-image-alt: "A stylized fish outline with a declining line chart of per-capita seafood consumption drawn across it."
+image: preview.jpg
+image-alt: "A shopper looks over trays of fresh whole fish on ice at a supermarket seafood counter."
 toc: true
 toc-location: right
 ---
