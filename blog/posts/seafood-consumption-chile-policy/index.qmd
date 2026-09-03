@@ -1,0 +1,118 @@
+---
+title: "Promoting Seafood Consumption: Questions for a Policy That Is Still Being Designed"
+subtitle: "Chile eats 15.4 kilos of seafood a year, a third below the global average. A new national policy has the right diagnosis — the real test is how each instrument gets designed, financed, and made to survive the next government."
+date: 2026-09-03
+author:
+  - name: Roberto Cárdenas-Retamal
+    affiliation: University of Florida
+    orcid: 0000-0002-9578-827X
+categories: [seafood, chile, food policy, economics]
+description: |
+  Chile produces seafood at a world-class scale but eats less of it every
+  year. A new national policy targets market, cultural, and governance
+  barriers to consumption — but the evidence on VAT cuts, school meals,
+  and financing design suggests implementation details matter more than
+  the diagnosis.
+image: preview.svg
+image-alt: "A stylized fish outline with a declining line chart of per-capita seafood consumption drawn across it."
+toc: true
+toc-location: right
+---
+
+## A widening gap
+
+A concern that crosses borders is that seafood consumption remains, in most countries, below the amounts recommended by health organizations under nutritional guidelines. This is despite well-documented nutritional benefits: seafood reduces cardiovascular risk [[1]](https://doi.org/10.1001/jama.296.15.1885), and it supports cognitive development from pregnancy through early childhood [[2]](https://doi.org/10.1016/j.advnut.2025.100415),[[3]](https://doi.org/10.1016/S0140-6736(07)60277-3). Much of this effect comes from a combination few foods offer: high-quality protein paired with long-chain omega-3 fatty acids (EPA and DHA).
+
+Chile, despite being a country with fishing and aquaculture production at a world-class scale, exports two-thirds of that output [[4]](https://www.subpesca.cl/portal/617/articles-130801_recurso_1.pdf?ts=1787324462). Annual consumption sits at 15.4 kilos per person, compared with a global average of 21 kilos, and well below Norway (50.2 kg), China (39.9 kg), or Peru (26.5 kg) [[5]](https://uchile.cl/dam/jcr:ccfd77dc-db62-4c91-a6be-7709dbf5561a/policy-brief-DIC-Mar-2025.pdf). That figure has also fallen 20% between 2017 and 2024, according to Subpesca [[4]](https://www.subpesca.cl/portal/617/articles-130801_recurso_1.pdf?ts=1787324462). Chile's Ministry of Health recommends eating seafood at least twice a week — the same recommendation as the U.S. Department of Agriculture — yet only 9.2% of the population reaches that level of consumption [[5]](https://uchile.cl/dam/jcr:ccfd77dc-db62-4c91-a6be-7709dbf5561a/policy-brief-DIC-Mar-2025.pdf). Nor is the problem evenly distributed: 86.5% of high-income households consume seafood, compared with 65.6% of low-income households [[6]](https://www.minsal.cl/sites/default/files/ENCA.pdf).
+
+Chile's Undersecretariat of Fisheries and Aquaculture (Subpesca) has just launched the design of a National Policy for Promoting Responsible Seafood Consumption, and the diagnosis it presents is sound. It identifies three barriers: 1) market barriers, including pricing, intermediation, and an export bias; 2) cultural barriers, such as limited food education and disconnection from the sea; and 3) governance barriers, since initiatives tend not to survive changes in government. This diagnosis matches what international evidence has found over the past few decades regarding barriers to seafood consumption. So the problem is not the diagnosis — it is that the diagnosis does not yet spell out clearly how each instrument will be financed, enforced, and sustained.
+
+## Does It All Come Down to Price?
+
+Compared with other animal proteins, the seafood production chain is more complex in both production and distribution, and that complexity shows up in the final price. FAO evidence on fisheries value chains shows that, across different countries, fishers receive no more than 50% of the final price, while intermediaries capture the rest [[7]](https://www.fao.org/4/Y2876E/y2876e0i.htm). In Chile, Subpesca's own brief identifies this as a structural barrier to consumption, noting that "long, fragmented supply chains" push up prices and reduce freshness, i.e., quality [[4]](https://www.subpesca.cl/portal/617/articles-130801_recurso_1.pdf?ts=1787324462).
+
+As Subpesca's own brief notes, the evidence points to price as one of the main barriers to seafood consumption. Cutting the value-added tax on these products might sound like a popular, easy-to-implement measure to boost demand; but the actual effect of such a cut, or of eliminating the tax altogether, is far from trivial. Portugal tried exactly this, temporarily eliminating VAT on essential foods — seafood included — in 2023, as an emergency measure against inflation. Prices for these products fell; seafood demand, however, kept declining [[8]](https://www.eleconomista.es/retail-consumo/noticias/12233829/04/23/portugal-pone-en-marcha-su-medida-de-iva-cero-en-la-que-si-se-incluyen-la-carne-y-el-pescado.html),[[9]](https://eurofish.dk/fish-consumption-at-lowest-level-of-the-past-decade/). France, which has held a reduced 5.5% rate for decades, hasn't escaped the downward trend either. Spain, meanwhile, has kept a 10% VAT on fish, since it isn't classified as a "basic" good, and has seen consumption fall 25% over the past 14 years [[10]](https://eurofish.dk/news/spain-cepesca-thinks-vat-on-seafood-should-fall-like-the-tax-on-diesel-fuel/). Three cases, three different tax treatments, and the same downward trend in all three.
+
+How much a given tax rate actually matters depends on the price elasticity of demand — how much consumption drops when the price rises. Most studies put fish's price elasticity between 0.6 and 0.8, more inelastic than any other animal protein. In plain terms, if the price of fish rose 10% per kilo, consumption would fall by only 6% to 8%. The implication is that, however much the price changes, fish consumption isn't going to move much in response. The exception within seafood is salmon, which shows greater price sensitivity and also happens to be one of the most consumed species in Chile [[4]](https://www.subpesca.cl/portal/617/articles-130801_recurso_1.pdf?ts=1787324462). That distinction turns out to be key for policy design.
+
+It also matters that households choose seafood relative to other available animal proteins, so it's worth asking how consumption responds when the price of those alternatives changes. Evidence from 38 countries, grouped by income level, shows that a 10% increase in the price of meat shifts fish demand by only 0.1% to 0.5% [[11]](https://onlinelibrary.wiley.com/doi/abs/10.1002/hec.3107). In short, for most consumers fish and meat are not close substitutes. But disaggregation matters a lot. A study using data from 30,000 households in the U.K. found that while "fish" as an aggregate category showed no significant relationship with meat prices, breaking it down into chilled and smoked preparations revealed much stronger sensitivity to meat price changes [[12]](https://www.niesr.ac.uk/wp-content/uploads/2021/11/Estimating-Food-and-Drink-Demand-Elasticities.pdf). This poses a challenge for policy design: neither lowering the relative price of seafood nor making meat look more expensive is going to shift consumption from one plate to the other at scale. But differentiating by format — fresh versus frozen versus canned, for example — can produce the desired effects in a way a blanket policy cannot.
+
+## Even If the Tax Comes Down, Does the Consumer Actually See It?
+
+Regardless of how sensitive seafood consumption is to price, it isn't obvious that cutting or removing VAT would actually lower prices. The reason: not all of the tax savings necessarily reach the consumer. A well-documented example is France, which cut the VAT on restaurants from 19.6% to 5.5% in 2009. Prices fell only 1.3% in the first month; owners kept more than half the savings; and when the tax rose again later, prices went up four or five times more than they had come down after the original cut [[13]](https://www.aeaweb.org/articles?id=10.1257%2Fpol.20170504). In German supermarkets, by contrast, roughly 70% of a VAT cut was actually passed through to prices [[14]](https://doi.org/10.1007/s10797-023-09824-7). The key variable seems to be how prices are set: a study of European restaurants found that independent businesses set prices "by feel," in rounded ranges, and ignore small tax changes, while chains use centralized pricing systems that adjust quickly and completely [[15]](https://doi.org/10.1016/j.jpubeco.2018.06.006). In Chile, roughly half of all seafood is sold through open-air markets, or *ferias libres* [[5]](https://uchile.cl/dam/jcr:ccfd77dc-db62-4c91-a6be-7709dbf5561a/policy-brief-DIC-Mar-2025.pdf) — exactly the kind of seller where comparative evidence shows tax cuts tend to get lost along the way. That, combined with the elasticities already discussed, is one more reason not to bet on a strategy centered on cutting VAT.
+
+## Food Programs: The Demand the State Already Guarantees
+
+Peru faces a similar production-consumption paradox to Chile's, and its response is worth a look. In 2012 it launched a program combining three elements: direct-sale fairs at promotional prices, short supply circuits connecting fishers directly with consumers, and school food education [[16]](https://www.gob.pe/acomerpescado). With a budget of just 10 million soles over five years (roughly 2.71 billion Chilean pesos at the current exchange rate), Peru's per capita consumption rose from 14.6 to 16.5 kilos between 2013 and 2016 [[17]](https://repositorio.profonanpe.org.pe/bitstream/handle/20.500.14150/2407/Evaluaci%C3%B3n%20del%20PNACP.pdf). Brazil, since 2009, has required by law that a minimum share of school-meal funds be purchased directly from family farming and small-scale fisheries [[18]](https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l11947.htm).
+
+Chile isn't starting from zero here. JUNAEB, the national school meal program, already requires a minimum of one fish-based meal per week in its procurement rules [[19]](https://www.junaeb.cl/programa-de-alimentacion-escolar). In March of this year, the Valparaíso Regional Government, the Ministry of Education, and Subpesca launched a $354.6 million pilot to bring locally caught fish and shellfish into school meals in that region. The question, as in Brazil, is whether this stays a regional pilot funded at official discretion, or becomes a nationally enforceable quota under the Public Procurement Law. This comes with real challenges: JUNAEB's own satisfaction surveys show that fish-based meals were the worst-rated item on the entire school menu, mostly because of the smell. Different formats, such as fish sausages and burgers, haven't succeeded either [[5]](https://uchile.cl/dam/jcr:ccfd77dc-db62-4c91-a6be-7709dbf5561a/policy-brief-DIC-Mar-2025.pdf). A public procurement quota by itself isn't enough — product and format innovation can make the real difference in whether the target population actually eats it.
+
+In the United States, one of the oldest nutrition assistance programs, WIC (for pregnant women, breastfeeding mothers, and children up to age 5), didn't leave seafood out. Following its 2022 revision, implemented in 2024, the food package now includes between 6 and 20 ounces of low-mercury, high-omega-3 canned fish [[20]](https://www.fna.usda.gov/wic/food-packages/qas/canned-fish). The program targets a food package during pregnancy and early childhood, justified — much like Subpesca's own rationale — by child cognitive development. Chile doesn't need to invent a program for this; it already has one. The Ministry of Health's National Supplementary Feeding Program (PNAC) already delivers monthly food packages, universally, to pregnant women, breastfeeding mothers, and children under six. The current package is mostly dairy-based and doesn't include seafood. Adding it would essentially replicate what the U.S. did in 2022, with one difference: WIC is income-targeted while PNAC is universal — leaving only the question of what goes in the basket, not who receives it.
+
+## Surviving a Change in Government
+
+One of the structural barriers Subpesca identifies is that initiatives need to survive changes in government. Chile already tried this once: a program launched in 2017 to boost seafood consumption, called "Del Mar a Mi Mesa" ("From the Sea to My Table"). Consumption, far from rising, fell 20% in the years that followed [[4]](https://www.subpesca.cl/portal/617/articles-130801_recurso_1.pdf?ts=1787324462) — not necessarily because the policy was poorly designed, but because it depended on institutional continuity to stay funded.
+
+Norway, by contrast, doesn't promote its flagship product, salmon, through campaigns tied to the annual budget law; instead it funds the Norwegian Seafood Council through a permanent statutory levy on exports [[21]](https://en.seafood.no/about-norwegian-seafood-council/about-us/). Alaska funds its own promotion through a tax the fishing industry imposes on itself on landings and, unlike Norway, directs much of that money toward the U.S. domestic market [[22]](https://alaskabeacon.com/2025/03/05/boosted-funding-for-alaska-seafood-marketing-pitched-as-needed-to-expand-domestic-sales/). What these cases have in common is that funding for demand-boosting instruments sits outside the annual budget debate.
+
+Subpesca's policy brief is clear that this still needs to be defined, with a first draft expected by December 2026, but at least two questions can't be avoided. First, how will demand promotion be funded on a sustained basis? Second, who is going to meet that increased demand — what combination of industrial fishing, small-scale fishing, and aquaculture will absorb it? A third question follows naturally: rising demand requires a supply that isn't disrupted by shocks such as red tides. Here it's worth asking what role imports could play as a buffer against these events.
+
+## Where Is the Missing Fish Consumption Happening?
+
+Before deciding which of the instruments discussed above to use, there's a question Chile still hasn't answered well: is the consumption gap happening at home or away from it? In the United States, food spending has been split into "food-at-home" and "food-away-from-home" since 1997. For seafood, that split reveals something the aggregate figure hides: 63% of the fish consumed, by weight, is eaten at home, while 65% of fish spending happens away from home, in restaurants [[23]](https://doi.org/10.3390/nu12061810). That's because what's eaten out is naturally pricier and higher-value, while what's eaten at home is cheap and consumed in volume. NOAA's reporting also breaks consumption down by product form (fresh, frozen, canned, sticks), which helps pinpoint exactly where demand stalls.
+
+In Chile, the most recent survey on the topic, run by the Millennium Institute in Coastal Socio-Ecology (SECOS) in 2024, found seafood consumption even more concentrated at home than in the U.S.: 90% happens at home, averaging 3.6 times a month for fish and 2.3 for shellfish [[24]](https://socioecologiacostera.cl/encuesta-consumo-pescado-marisco/). This matters for policy design. If 9 out of 10 seafood-eating occasions happen at home, the instrument can't just be improving restaurant supply or culinary tourism — it has to target what happens in the kitchen: price, availability, prep time, and aversion to attributes like smell or bones. Neither Subpesca's brief nor the supply-demand balance IFOP (Chile's Fisheries Development Institute) uses today distinguishes between at-home and away-from-home consumption, or by product form, and the SECOS survey covered only 1,000 people across 9 regions. Data availability and tracking are essential to designing an effective policy for increasing seafood consumption.
+
+---
+
+There is currently a proposed National Policy for Responsible Seafood Consumption on the table. It has a clear diagnosis, aligned with what international evidence identifies as the barriers to consumption. The questions that remain are no longer about what's holding back seafood consumption, but about how to design the instruments that will actually move demand: scaling regional pilots to the national level, product formats children will actually eat, expanding the food package for pregnant women and young children, and above all, a permanent financing mechanism that doesn't depend on the annual budget. Without that last piece, this remains only a good diagnosis, with good intentions, attached to a consumption curve that keeps trending down.
+
+## References
+
+[1] Mozaffarian, D. & Rimm, E. B. (2006). Fish Intake, Contaminants, and Human Health: Evaluating the Risks and the Benefits. *JAMA*, 296(15), 1885-1899. DOI: [10.1001/jama.296.15.1885](https://doi.org/10.1001/jama.296.15.1885)
+
+[2] Brenna, J. T. (2025). Hook, Line, and Thinker: Seafood Nets Benefits for Neurocognitive Development. *Advances in Nutrition*. DOI: [10.1016/j.advnut.2025.100415](https://doi.org/10.1016/j.advnut.2025.100415)
+
+[3] Hibbeln, J. R., Davis, J. M., Steer, C., Emmett, P. M., Rogers, I., Williams, C., & Golding, J. (2007). Maternal Seafood Consumption in Pregnancy and Neurodevelopmental Outcomes in Childhood (ALSPAC Study): An Observational Cohort Study. *The Lancet*, 369(9561), 578-585. DOI: [10.1016/S0140-6736(07)60277-3](https://doi.org/10.1016/S0140-6736(07)60277-3)
+
+[4] Undersecretariat of Fisheries and Aquaculture (Subpesca) (2026). *Brief No. 01081926: Background for the Launch of the National Policy for Promoting Responsible Seafood Consumption* (in Spanish). Santiago, August 20, 2026. [subpesca.cl (PDF)](https://www.subpesca.cl/portal/617/articles-130801_recurso_1.pdf?ts=1787324462)
+
+[5] Vásquez, R. I., Horna Campos, O., Rodríguez Osiac, L., Molina, P., Ramírez, C., Pizarro, M., & Franch, C. (2025). *Seafood on the Chilean Table: Public Policy Recommendations to Increase Consumption* [Policy brief, in Spanish]. Vice-Rectory for Research and Development, Universidad de Chile. [uchile.cl (PDF)](https://uchile.cl/dam/jcr:ccfd77dc-db62-4c91-a6be-7709dbf5561a/policy-brief-DIC-Mar-2025.pdf)
+
+[6] Amigo, H., Bustos, P., Pizarro, M. et al. (2010). *National Food Consumption Survey (ENCA)* (in Spanish). Chilean Ministry of Health. Cited in Vásquez et al. (2025). [Final report (minsal.cl)](https://www.minsal.cl/sites/default/files/ENCA.pdf)
+
+[7] FAO (2001). Production, Accessibility, Marketing and Consumption Patterns of Freshwater Aquaculture Products in Asia: A Cross-Country Comparison. *FAO Fisheries Circular* No. 973 (FIRI/C973), section "5. Marketing of Fish." [fao.org](https://www.fao.org/4/Y2876E/y2876e0i.htm)
+
+[8] El Economista (04/18/2023). Portugal Launches Its "Zero VAT" Measure, Which Does Include Meat and Fish (in Spanish). [eleconomista.es](https://www.eleconomista.es/retail-consumo/noticias/12233829/04/23/portugal-pone-en-marcha-su-medida-de-iva-cero-en-la-que-si-se-incluyen-la-carne-y-el-pescado.html)
+
+[9] Eurofish (2025). Fish Consumption at Lowest Level of the Past Decade. [eurofish.dk](https://eurofish.dk/fish-consumption-at-lowest-level-of-the-past-decade/)
+
+[10] Eurofish / CEPESCA (2026). Spain: CEPESCA Thinks VAT on Seafood Should Fall Like the Tax on Diesel Fuel. [eurofish.dk](https://eurofish.dk/news/spain-cepesca-thinks-vat-on-seafood-should-fall-like-the-tax-on-diesel-fuel/)
+
+[11] Cornelsen, L., Green, R., Turner, R., Dangour, A. D., Shankar, B., Mazzocchi, M., & Smith, R. D. (2015). What Happens to Patterns of Food Consumption when Food Prices Change? Evidence from a Systematic Review and Meta-Analysis of Food Price Elasticities Globally. *Health Economics*, 24(12), 1548-1559. DOI: [10.1002/hec.3107](https://onlinelibrary.wiley.com/doi/abs/10.1002/hec.3107)
+
+[12] da Silva Marioni, L., Rincon-Aznar, A., Aitken, A., Kapur, S., Smith, R., & Beckert, W. (2022). *Estimating Food and Drink Demand Elasticities*. National Institute of Economic and Social Research (NIESR) / Birkbeck, University of London. April 2022. [niesr.ac.uk (PDF)](https://www.niesr.ac.uk/wp-content/uploads/2021/11/Estimating-Food-and-Drink-Demand-Elasticities.pdf)
+
+[13] Benzarti, Y. & Carloni, D. (2019). Who Really Benefits from Consumption Tax Cuts? Evidence from a Large VAT Reform in France. *American Economic Journal: Economic Policy*, 11(1), 38-63. [aeaweb.org](https://www.aeaweb.org/articles?id=10.1257%2Fpol.20170504)
+
+[14] Fuest, C., Neumeier, F., & Stöhlker, D. (2025). The Pass-Through of Temporary VAT Rate Cuts: Evidence from German Supermarket Retail. *International Tax and Public Finance*, 32(1). DOI: [10.1007/s10797-023-09824-7](https://doi.org/10.1007/s10797-023-09824-7)
+
+[15] Harju, J., Kosonen, T., & Skans, O. N. (2018). Firm Types, Price-Setting Strategies, and Consumption-Tax Incidence. *Journal of Public Economics*, 165, 48-72. DOI: [10.1016/j.jpubeco.2018.06.006](https://doi.org/10.1016/j.jpubeco.2018.06.006)
+
+[16] PRODUCE Peru (2012). National Program "A Comer Pescado" ["Let's Eat Fish"]. Supreme Decree No. 007-2012-PRODUCE. [gob.pe/acomerpescado](https://www.gob.pe/acomerpescado)
+
+[17] Mesías Changa, L. A. (2021). *Consulting Report for the Comprehensive Evaluation of the National "A Comer Pescado" Program* (in Spanish). Ministry of Production, Peru. [repositorio.profonanpe.org.pe (PDF)](https://repositorio.profonanpe.org.pe/bitstream/handle/20.500.14150/2407/Evaluaci%C3%B3n%20del%20PNACP.pdf)
+
+[18] FNDE Brazil (2009). National School Feeding Program (PNAE) — Law 11,947/2009. [planalto.gov.br](https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l11947.htm)
+
+[19] JUNAEB (2024). Exempt Resolution No. DN-00457/2024, Simplified Food Structure for the School Feeding Program (PAE) (in Spanish). [junaeb.cl](https://www.junaeb.cl/programa-de-alimentacion-escolar)
+
+[20] USDA Food and Nutrition Administration (2022). Changes to the WIC Food Packages — Canned Fish. [fna.usda.gov](https://www.fna.usda.gov/wic/food-packages/qas/canned-fish)
+
+[21] Norwegian Seafood Council (n.d.). About Us — Financing via Export Levy. [en.seafood.no](https://en.seafood.no/about-norwegian-seafood-council/about-us/)
+
+[22] Alaska Seafood Marketing Institute (2025). Funding structure: voluntary landings tax, federal Market Access Program, state match. [Alaska Beacon, 2025](https://alaskabeacon.com/2025/03/05/boosted-funding-for-alaska-seafood-marketing-pitched-as-needed-to-expand-domestic-sales/)
+
+[23] Food Sources and Expenditures for Seafood in the United States (2020). *Nutrients*, 12(6), 1810. DOI: [10.3390/nu12061810](https://doi.org/10.3390/nu12061810)
+
+[24] SECOS (2024). *Survey on Fish and Shellfish Consumption in Chile* (in Spanish). [socioecologiacostera.cl](https://socioecologiacostera.cl/encuesta-consumo-pescado-marisco/)

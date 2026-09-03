@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A stylized fish outline with a declining line chart of per-capita seafood consumption drawn across it.">
+  <!-- Background: warm cream -->
+  <rect width="1200" height="630" fill="#f4ede2"/>
+
+  <!-- Soft texture lines in background -->
+  <g stroke="#e2d8c5" stroke-width="1" opacity="0.5">
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="510" x2="1200" y2="510"/>
+  </g>
+
+  <!-- FISH -->
+  <g transform="translate(600 330)">
+    <!-- Tail -->
+    <path d="M -330 0 L -410 -70 L -395 0 L -410 70 Z" fill="#1a3c6e" opacity="0.92"/>
+    <!-- Body -->
+    <ellipse cx="0" cy="0" rx="290" ry="150" fill="#1a3c6e" opacity="0.92"/>
+    <!-- Dorsal fin -->
+    <path d="M -40 -145 C 0 -210, 90 -210, 120 -150 C 60 -165, 0 -160, -40 -145 Z" fill="#1a3c6e" opacity="0.92"/>
+    <!-- Belly fin -->
+    <path d="M 60 130 C 90 175, 150 180, 170 150 C 130 150, 95 140, 60 130 Z" fill="#1a3c6e" opacity="0.8"/>
+    <!-- Gill line -->
+    <path d="M 150 -95 C 130 -30, 130 30, 150 95" stroke="#f4ede2" stroke-width="6" fill="none" opacity="0.55"/>
+    <!-- Eye -->
+    <circle cx="205" cy="-45" r="26" fill="#f4ede2"/>
+    <circle cx="212" cy="-45" r="12" fill="#0b1f3a"/>
+  </g>
+
+  <!-- DECLINING CONSUMPTION LINE, drawn across the fish -->
+  <g>
+    <polyline points="140,205 340,235 540,270 740,320 940,380 1080,430"
+              fill="none" stroke="#ee9b00" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+    <g fill="#ee9b00">
+      <circle cx="140" cy="205" r="11"/>
+      <circle cx="340" cy="235" r="11"/>
+      <circle cx="540" cy="270" r="11"/>
+      <circle cx="740" cy="320" r="11"/>
+      <circle cx="940" cy="380" r="11"/>
+      <circle cx="1080" cy="430" r="13"/>
+    </g>
+    <text x="140" y="180" text-anchor="middle" font-family="Jost, Arial, sans-serif" font-size="24" font-weight="600" fill="#8a5c00">2017</text>
+    <text x="1080" y="465" text-anchor="middle" font-family="Jost, Arial, sans-serif" font-size="24" font-weight="600" fill="#8a5c00">2024</text>
+  </g>
+
+  <!-- Subtle italic caption at bottom -->
+  <text x="600" y="575" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="30"
+        fill="#3a3a3a"
+        font-style="italic"
+        letter-spacing="1">Fewer kilos, every year.</text>
+</svg>

@@ -1,7 +1,9 @@
 [
   {
     "listing": "/blog/index.html",
-    "items": []
+    "items": [
+      "/blog/posts/seafood-consumption-chile-policy/index.html"
+    ]
   },
   {
     "listing": "/projects/index.html",
