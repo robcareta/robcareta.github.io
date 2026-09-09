@@ -29,7 +29,7 @@ Code and documentation available on [GitHub](https://github.com/robcareta/artesa
 
 ::: {.callout-tip}
 ## Interactive explorer
-Explore the fishing activity data interactively — spatial map, distance gradient from farms, and fleet trends — in the **[VMS Fishing Explorer](vms-explorer.qmd)**.
+Explore the fishing activity data interactively — spatial map and fleet trends — in the **[VMS Fishing Explorer](vms-explorer.qmd)**.
 :::
 
 ## Data source

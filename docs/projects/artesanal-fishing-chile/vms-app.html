@@ -56,7 +56,6 @@ body{font-family:'Segoe UI',system-ui,sans-serif;font-size:0.93rem;background:#f
 
 <div id="tabs">
   <button class="tab-btn active" data-tab="map">Fishing Map</button>
-  <button class="tab-btn" data-tab="grad">Distance Gradient</button>
   <button class="tab-btn" data-tab="trend">Fleet Activity</button>
 </div>
 
@@ -81,23 +80,7 @@ body{font-family:'Segoe UI',system-ui,sans-serif;font-size:0.93rem;background:#f
   </div>
 </div>
 
-<!-- TAB 2: GRADIENT -->
-<div id="tab-grad" class="tab-content">
-  <div class="panel">
-    <h4>Controls</h4>
-    <div class="check-group" id="grad-years"></div>
-    <div class="radio-group">
-      <label><input type="radio" name="grad-metric" value="frac" checked> Fishing fraction</label>
-      <label><input type="radio" name="grad-metric" value="pings"> Total pings</label>
-    </div>
-    <p class="note">Distance to nearest marine aquaculture farm.</p>
-  </div>
-  <div class="main-area">
-    <div class="chart-wrap"><canvas id="grad-chart" height="420"></canvas></div>
-  </div>
-</div>
-
-<!-- TAB 3: TRENDS -->
+<!-- TAB 2: TRENDS -->
 <div id="tab-trend" class="tab-content">
   <div class="panel">
     <h4>Controls</h4>
@@ -122,12 +105,10 @@ body{font-family:'Segoe UI',system-ui,sans-serif;font-size:0.93rem;background:#f
 
 <script>
 // ── Global state ──────────────────────────────────────────────────────────────
-let cellData = [], ringData = [], trendData = [];
+let cellData = [], trendData = [];
 let map, mapLayers = [];
-let gradChart = null, trendMonthly = null, trendAnnual = null;
+let trendMonthly = null, trendAnnual = null;
 
-const RING_ORDER = ["0\u20132 km","2\u20135 km","5\u201310 km","10\u201320 km","20\u201350 km"];
-const RING_COLS  = {"0\u20132 km":"#b5000a","2\u20135 km":"#e05c00","5\u201310 km":"#e8a020","10\u201320 km":"#4a7c59","20\u201350 km":"#2a5caa",">50 km":"#7a7a7a"};
 const CELL = 0.025; // half-cell
 
 // ── Colour helpers ────────────────────────────────────────────────────────────
@@ -160,9 +141,8 @@ async function loadCSV(path){
 }
 
 async function init(){
-  [cellData, ringData, trendData] = await Promise.all([
+  [cellData, trendData] = await Promise.all([
     loadCSV('data/cell_annual.csv'),
-    loadCSV('data/ring_annual.csv'),
     loadCSV('data/monthly_trend.csv')
   ]);
 
@@ -175,13 +155,6 @@ async function init(){
   years.forEach(y=>{ const o=document.createElement('option'); o.value=y; o.text=y; mapYrSel.appendChild(o); });
   mapYrSel.value = years[years.length-1];
 
-  const gradDiv = document.getElementById('grad-years');
-  years.forEach(y=>{
-    const lbl=document.createElement('label');
-    lbl.innerHTML=`<input type="checkbox" value="${y}" checked> ${y}`;
-    gradDiv.appendChild(lbl);
-  });
-
   const tMin=document.getElementById('trend-yr-min');
   const tMax=document.getElementById('trend-yr-max');
   years.forEach(y=>{ [tMin,tMax].forEach(s=>{const o=document.createElement('option');o.value=y;o.text=y;s.appendChild(o);}); });
@@ -192,8 +165,6 @@ async function init(){
   renderMap();
 
   // Init charts
-  initGradChart();
-  renderGradChart();
   initTrendCharts();
   renderTrendCharts();
 
@@ -214,10 +185,6 @@ async function init(){
   const minPingsSlider = document.getElementById('min-pings');
   const minPingsVal = document.getElementById('min-pings-val');
   minPingsSlider.addEventListener('input',()=>{minPingsVal.textContent=minPingsSlider.value; renderMap();});
-
-  // Wire up gradient controls
-  gradDiv.querySelectorAll('input[type=checkbox]').forEach(c=>c.addEventListener('change', renderGradChart));
-  document.querySelectorAll('input[name="grad-metric"]').forEach(r=>r.addEventListener('change', renderGradChart));
 
   // Wire up trend controls
   tMin.addEventListener('change', renderTrendCharts);
@@ -280,65 +247,6 @@ function renderMap(){
 
 function statBox(val,lbl){
   return `<div class="stat-box"><div class="stat-val">${val}</div><div class="stat-lbl">${lbl}</div></div>`;
-}
-
-// ── GRADIENT CHART ────────────────────────────────────────────────────────────
-function initGradChart(){
-  gradChart = new Chart(document.getElementById('grad-chart'),{
-    type:'bar',
-    data:{labels:[],datasets:[]},
-    options:{
-      responsive:true,
-      plugins:{legend:{display:false},title:{display:true,text:'',font:{size:13,weight:'bold'}}},
-      scales:{
-        x:{grid:{display:false},title:{display:true,text:'Distance ring'}},
-        y:{beginAtZero:true,grid:{color:'#f0f0f0'}}
-      }
-    }
-  });
-}
-
-function renderGradChart(){
-  const checkedYrs = [...document.querySelectorAll('#grad-years input:checked')].map(c=>+c.value);
-  const metric = document.querySelector('input[name="grad-metric"]:checked').value;
-  const rings = RING_ORDER;
-
-  if(checkedYrs.length===0){gradChart.data.labels=[];gradChart.data.datasets=[];gradChart.update();return;}
-
-  if(checkedYrs.length===1){
-    const yr = checkedYrs[0];
-    const rows = ringData.filter(d=>d.year===yr && rings.includes(d.ring));
-    const vals = rings.map(r=>{ const row=rows.find(d=>d.ring===r); return row?(metric==='frac'?row.weighted_frac*100:row.total_pings/1e6):0; });
-    gradChart.data.labels = rings;
-    gradChart.data.datasets = [{
-      data: vals,
-      backgroundColor: rings.map(r=>RING_COLS[r]+'cc'),
-      borderColor: rings.map(r=>RING_COLS[r]),
-      borderWidth:1, borderRadius:3
-    }];
-    gradChart.options.plugins.title.text = metric==='frac'
-      ? `Fishing Fraction by Distance (${yr})` : `Total Pings by Distance (${yr})`;
-    gradChart.options.scales.y.title = {display:true,text: metric==='frac'?'% pings while fishing':'Pings (millions)'};
-    if(metric==='frac'){
-      gradChart.options.scales.y.max=80;
-      gradChart.options.scales.y.ticks={callback:v=>v+'%'};
-    } else {
-      gradChart.options.scales.y.max=undefined;
-      gradChart.options.scales.y.ticks={callback:v=>v.toFixed(1)+'M'};
-    }
-  } else {
-    // Multi-year: datasets per year
-    gradChart.data.labels = rings;
-    gradChart.data.datasets = checkedYrs.map((yr,i)=>{
-      const rows = ringData.filter(d=>d.year===yr && rings.includes(d.ring));
-      const vals = rings.map(r=>{ const row=rows.find(d=>d.ring===r); return row?(metric==='frac'?row.weighted_frac*100:row.total_pings/1e6):0; });
-      const hue = i/(checkedYrs.length-1||1);
-      return {label:String(yr),data:vals,backgroundColor:`hsl(${Math.round(200+hue*140)},60%,50%)`,borderRadius:2,borderWidth:0};
-    });
-    gradChart.options.plugins.legend.display = true;
-    gradChart.options.plugins.title.text = metric==='frac' ? 'Fishing Fraction by Distance Ring' : 'Total Pings by Distance Ring';
-  }
-  gradChart.update();
 }
 
 // ── TREND CHARTS ──────────────────────────────────────────────────────────────

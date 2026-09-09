@@ -16,10 +16,7 @@ format:
     embed-resources: false
 resources:
   - data/cell_annual.csv
-  - data/ring_annual.csv
   - data/monthly_trend.csv
-  - data/hab_att_d.csv
-  - data/hab_att_event.csv
   - vms-app.html
 ---
 
@@ -27,8 +24,8 @@ resources:
 
 This tool explores SERNAPESCA vessel monitoring system (VMS) data for the
 artisanal fishing fleet in **Los Lagos, Chile** (2019–2026). The dataset
-covers ~58.5 million GPS pings. Use the three tabs to explore spatial
-patterns, distance gradients from aquaculture farms, and temporal trends.
+covers ~58.5 million GPS pings. Use the two tabs to explore spatial
+fishing patterns and fleet activity trends over time.
 
 ::: {.callout-note}
 The app runs entirely in your browser — no server required. Data is fetched
@@ -53,6 +50,6 @@ from this site (~2 MB) so the first load may take a few seconds.
 - **Source:** SERNAPESCA Vessel Monitoring System (VMS), artisanal fleet
 - **Period:** 2019–2026 · **Region:** Los Lagos (lat –44.5° to –40.5°)
 - **Fishing:** speed 0.1–3.0 knots (Behivoke et al. 2021)
-- **Grid:** 0.05° × 0.05° cells. **Farm distances:** to nearest marine concession centroid.
+- **Grid:** 0.05° × 0.05° cells.
 - Note: 2019–2022 from admin snapshots (~4×/day, ~1,000 vessels); 2023+ from daily artisanal reports (~175–190 vessels).
 :::
