@@ -36,7 +36,7 @@ The analysis uses satellite position reports from SERNAPESCA, Chile's National F
 
 ## How we identify the choice
 
-![Identification approach. Panel A shows the geographic choice set on a 0.1° grid; panel B shows the econometric structure of the choice model.](figures/identification_approach.png){fig-alt="Two-panel schematic. Panel A shows a map of grid cells around a home port with the operating radius, a marine protected area, HAB cells, a salmon farm and the chosen cell. Panel B shows the random utility model, the softmax choice probability and the identification argument" width="100%"}
+![Geographic choice set on a 0.1° grid (about 11 × 8 km cells). A vessel chooses one cell within its operating radius around the home port. The MPA, HAB cells and salmon farm are shown schematically.](figures/geographic_choice_set.png){fig-alt="Schematic map of grid cells around a home port, showing the operating radius, a marine protected area, HAB cells, a salmon farm, sampled alternative cells and the chosen cell" width="100%"}
 
 Each vessel chooses one grid cell, about 11 × 8 km, from the set of cells it could reach within its operating radius around the home port. Choices are compared against a sample of alternative cells. This setup lets a conditional logit model, in the tradition of random utility models (McFadden, 1974; Train, 2009), estimate how the characteristics of each cell affect the probability that it is chosen.
 
