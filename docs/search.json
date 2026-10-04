@@ -212,16 +212,16 @@
   {
     "objectID": "projects/artesanal-fishing-chile/index.html",
     "href": "projects/artesanal-fishing-chile/index.html",
-    "title": "Artisanal Fishing Behavior in Chile",
+    "title": "Fishing Location Choice in Southern Chile",
     "section": "",
     "text": "← Back to Projects"
   },
   {
     "objectID": "projects/artesanal-fishing-chile/index.html#overview",
     "href": "projects/artesanal-fishing-chile/index.html#overview",
-    "title": "Artisanal Fishing Behavior in Chile",
+    "title": "Fishing Location Choice in Southern Chile",
     "section": "Overview",
-    "text": "Overview\nThis project builds a fully automated pipeline to analyze the spatial behavior of artisanal fishing vessels in southern Chile. Raw data come from SERNAPESCA’s satellite positioning system — an open daily feed of GPS positions for all registered artisanal fleets. The pipeline downloads new reports incrementally, stores them in a DuckDB database, filters the Los Lagos region, and produces fishing behavior indicators including spatial effort maps and species catch maps.\n\n\n\n\n\n\nWarning\n\n\n\nThis pipeline is under active development and does not yet represent a final or fully stabilized version. The structure, outputs, and indicators may change as the project evolves.\n\n\n\n\n\n\n\n\nNote\n\n\n\nCode and documentation available on GitHub.\n\n\n\n\n\n\n\n\nTipInteractive explorer\n\n\n\nExplore the fishing activity data interactively — spatial map and fleet trends — in the VMS Fishing Explorer."
+    "text": "Overview\nArtisanal fishing vessels in southern Chile decide where to operate on a given day. Those decisions respond to the sea itself, through harmful algal blooms (HABs), to regulation, through marine protected areas (MPAs), and to other users of the same waters, through salmon farms. This project studies that location choice.\n\n\n\n\n\n\nNote\n\n\n\nThis is an ongoing project. The data, approach and results described here may still be refined."
   },
   {
     "objectID": "projects/artesanal-fishing-chile/index.html#data-source",
@@ -263,7 +263,7 @@
     "href": "projects/index.html",
     "title": "Projects",
     "section": "",
-    "text": "Africa’s Seafood Trade & Nutrient Flows\n\n\n\nR\n\nTrade economics\n\nFisheries\n\nNutrition\n\nAfrica\n\nARTIS\n\n\n\nA first look at how nutrients embedded in Africa’s seafood trade move between income groups, and which countries are net importers vs exporters.\n\n\n\nAug 3, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nJPselection: Just-Pope Production Functions with Heckman Selectivity\n\n\n\nR\n\nPackage\n\nProduction functions\n\nHeckman correction\n\nJust-Pope\n\nAgricultural economics\n\n\n\nAn R package that estimates stochastic production functions while correcting for crop-choice selection bias, following Koundouri & Nauges (2005). Full documentation site…\n\n\n\nJun 4, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nArtisanal Fishing Behavior in Chile\n\n\n\nR\n\nFisheries\n\nChile\n\nData pipeline\n\nDuckDB\n\nVMS\n\nFishing effort\n\n\n\nA data pipeline to download, process, and visualize SERNAPESCA satellite positioning data for artisanal fishing fleets in the Los Lagos region.\n\n\n\nFeb 5, 2026\n\n\n\n\n\n\nNo matching items"
+    "text": "Fishing Location Choice in Southern Chile\n\n\n\nFisheries\n\nChile\n\nDiscrete choice\n\nHarmful algal blooms\n\nAquaculture\n\n\n\nHow artisanal fishing vessels choose where to fish in Los Lagos, and how harmful algal blooms, marine protected areas and salmon farms shape those choices.\n\n\n\nOct 4, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nAfrica’s Seafood Trade & Nutrient Flows\n\n\n\nR\n\nTrade economics\n\nFisheries\n\nNutrition\n\nAfrica\n\nARTIS\n\n\n\nA first look at how nutrients embedded in Africa’s seafood trade move between income groups, and which countries are net importers vs exporters.\n\n\n\nAug 3, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nJPselection: Just-Pope Production Functions with Heckman Selectivity\n\n\n\nR\n\nPackage\n\nProduction functions\n\nHeckman correction\n\nJust-Pope\n\nAgricultural economics\n\n\n\nAn R package that estimates stochastic production functions while correcting for crop-choice selection bias, following Koundouri & Nauges (2005). Full documentation site…\n\n\n\nJun 4, 2026\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "research/articles/green-space-productivity-2026/index.html",
@@ -355,5 +355,26 @@
     "title": "Price premiums for the MSC-ecolabel in the U.S.: A hedonic analysis haddock in U.S. market",
     "section": "",
     "text": "Abstract\nEcolabels signaling a sustainable or responsible production process have become an important product attribute for many food products, including seafood. If an ecolabel is to incentivize improved production practices, there must be a price premium associated with the label. Although price premiums for ecolabels in seafood markets have been studied in several European markets, evidence from the U.S. market is scarce, despite the importance of the U.S. in the global seafood market. In this study, we estimated the price premium for haddock labeled with the ecolabel of the Marine Stewardship Council (MSC) in the U.S. We used the NielsenIQ Consumer Panel data from 2013-2020, together with UPC-codes obtained from the MSC on which products carried the ecolabel. Our results indicate that U.S. households, on average, pay a 17.23% premium for MSC-labeled haddock. This premium suggests that U.S. consumers place meaningful value on sustainability information and that market-based tools such as ecolabels may offer an effective mechanism to incentivize improvements in fisheries management and production practices."
+  },
+  {
+    "objectID": "projects/artesanal-fishing-chile/index.html#where-the-fleet-fishes",
+    "href": "projects/artesanal-fishing-chile/index.html#where-the-fleet-fishes",
+    "title": "Fishing Location Choice in Southern Chile",
+    "section": "Where the fleet fishes",
+    "text": "Where the fleet fishes\n\n\n\nFishing activity in the interior sea of Los Lagos, 2019–2026. Each cell (about 2.2 × 1.7 km) counts satellite position reports recorded at fishing speed (0.1–3 knots), summed over all years. The colour scale is logarithmic.\n\n\n\nWhat data we have\nThe analysis uses satellite position reports from SERNAPESCA, Chile’s National Fisheries and Aquaculture Service, for registered artisanal vessels.\n\nCoverage: 2019 to 2026. Reporting in 2021 is much thinner than in other years.\nVolume: about 10.3 million position reports across Los Lagos from roughly 330 vessel identifiers. About 7.4 million fall in the interior sea shown above, and about 0.9 million of those were recorded at fishing speed.\nFrequency: one position about every 15 minutes per vessel.\nContent: vessel identifier, timestamp, latitude, longitude, speed and heading."
+  },
+  {
+    "objectID": "projects/artesanal-fishing-chile/index.html#how-we-identify-the-choice",
+    "href": "projects/artesanal-fishing-chile/index.html#how-we-identify-the-choice",
+    "title": "Fishing Location Choice in Southern Chile",
+    "section": "How we identify the choice",
+    "text": "How we identify the choice\n\n\n\nIdentification approach. Panel A shows the geographic choice set on a 0.1° grid; panel B shows the econometric structure of the choice model.\n\n\nEach vessel chooses one grid cell, about 11 × 8 km, from the set of cells it could reach within its operating radius around the home port. Choices are compared against a sample of alternative cells. This setup lets a conditional logit model, in the tradition of random utility models (McFadden, 1974; Train, 2009), estimate how the characteristics of each cell affect the probability that it is chosen.\nIdentification comes from variation within a vessel and month. Holding the vessel and month fixed, the model compares the cell a vessel chose with cells it could have chosen at a similar distance from port but that differ in environmental or policy conditions.\nThe figure is a schematic. The positions of the port, the MPA, the farm and the HAB cells are illustrative and do not reproduce the estimation sample."
+  },
+  {
+    "objectID": "projects/artesanal-fishing-chile/index.html#environmental-and-policy-factors",
+    "href": "projects/artesanal-fishing-chile/index.html#environmental-and-policy-factors",
+    "title": "Fishing Location Choice in Southern Chile",
+    "section": "Environmental and policy factors",
+    "text": "Environmental and policy factors\n\nHarmful algal blooms (HABs). Cells where a bloom is present, and the closures triggered when toxin thresholds are exceeded. Closures are treated as exogenous shocks to the toxin environment.\nMarine protected areas (MPAs). No-take zones where fishing is not permitted, which change the set of cells available to a vessel.\nSalmon farms. Proximity to aquaculture sites, which can change both the attractiveness of nearby waters and the effort vessels allocate around them.\n\nDistance to port and other oceanographic conditions enter the model as controls."
   }
 ]

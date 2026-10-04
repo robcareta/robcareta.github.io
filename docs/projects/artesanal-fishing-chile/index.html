@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-02-05">
-<meta name="description" content="A data pipeline to download, process, and visualize SERNAPESCA satellite positioning data for artisanal fishing fleets in the Los Lagos region.">
+<meta name="dcterms.date" content="2026-10-04">
+<meta name="description" content="How artisanal fishing vessels choose where to fish in Los Lagos, and how harmful algal blooms, marine protected areas and salmon farms shape those choices.">
 
-<title>Artisanal Fishing Behavior in Chile – Roberto Cárdenas-Retamal</title>
+<title>Fishing Location Choice in Southern Chile – Roberto Cárdenas-Retamal</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -84,7 +84,7 @@ gtag('config', 'G-H4P0QZL89D', { 'anonymize_ip': true});
 
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -135,27 +135,26 @@ gtag('config', 'G-H4P0QZL89D', { 'anonymize_ip': true});
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Artisanal Fishing Behavior in Chile</h1>
+<h1 class="title">Fishing Location Choice in Southern Chile</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">R</div>
     <div class="quarto-category">Fisheries</div>
     <div class="quarto-category">Chile</div>
-    <div class="quarto-category">Data pipeline</div>
-    <div class="quarto-category">DuckDB</div>
-    <div class="quarto-category">VMS</div>
-    <div class="quarto-category">Fishing effort</div>
+    <div class="quarto-category">Discrete choice</div>
+    <div class="quarto-category">Harmful algal blooms</div>
+    <div class="quarto-category">Aquaculture</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    A data pipeline to download, process, and visualize SERNAPESCA satellite positioning data for artisanal fishing fleets in the Los Lagos region.
+    How artisanal fishing vessels choose where to fish in Los Lagos, and how harmful algal blooms, marine protected areas and salmon farms shape those choices.
   </div>
 </div>
 
@@ -166,7 +165,7 @@ gtag('config', 'G-H4P0QZL89D', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 5, 2026</p>
+      <p class="date">October 4, 2026</p>
     </div>
   </div>
   
@@ -183,20 +182,7 @@ gtag('config', 'G-H4P0QZL89D', { 'anonymize_ip': true});
 </p>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This project builds a fully automated pipeline to analyze the spatial behavior of artisanal fishing vessels in southern Chile. Raw data come from <a href="https://www.sernapesca.cl/">SERNAPESCA</a>’s satellite positioning system — an open daily feed of GPS positions for all registered artisanal fleets. The pipeline downloads new reports incrementally, stores them in a <a href="https://duckdb.org/">DuckDB</a> database, filters the Los Lagos region, and produces fishing behavior indicators including spatial effort maps and species catch maps.</p>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This pipeline is under active development and does not yet represent a final or fully stabilized version. The structure, outputs, and indicators may change as the project evolves.</p>
-</div>
-</div>
+<p>Artisanal fishing vessels in southern Chile decide where to operate on a given day. Those decisions respond to the sea itself, through harmful algal blooms (HABs), to regulation, through marine protected areas (MPAs), and to other users of the same waters, through salmon farms. This project studies that location choice.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -207,154 +193,49 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Code and documentation available on <a href="https://github.com/robcareta/artesanal-fishing-behavior-Chile">GitHub</a>.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Interactive explorer
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Explore the fishing activity data interactively — spatial map and fleet trends — in the <strong><a href="../../projects/artesanal-fishing-chile/vms-explorer.html">VMS Fishing Explorer</a></strong>.</p>
+<p>This is an ongoing project. The data, approach and results described here may still be refined.</p>
 </div>
 </div>
 </section>
-<section id="data-source" class="level2">
-<h2 class="anchored" data-anchor-id="data-source">Data source</h2>
-<p>SERNAPESCA publishes daily CSV reports with vessel ID, timestamp, latitude, longitude, and speed for every registered artisanal boat in Chile. The download script queries the public web portal incrementally, so only new reports are fetched on each run. The dataset currently covers two report formats:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 18%">
-<col style="width: 18%">
-<col style="width: 25%">
-<col style="width: 38%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Period</th>
-<th>Source</th>
-<th>Frequency</th>
-<th>Vessels included</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2019–mid 2022</td>
-<td>Admin snapshot reports</td>
-<td>~4 snapshots/day</td>
-<td>All registered vessels (filtered to artisanal only)</td>
-</tr>
-<tr class="even">
-<td>mid 2022–2026</td>
-<td>Daily artisanal fleet reports</td>
-<td>1 report/day</td>
-<td>Artisanal vessels only</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="pipeline-structure" class="level2">
-<h2 class="anchored" data-anchor-id="pipeline-structure">Pipeline structure</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Folder</th>
-<th>Content</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>R/</code></td>
-<td>Download and processing scripts</td>
-</tr>
-<tr class="even">
-<td><code>new/</code></td>
-<td>Updated analysis scripts</td>
-</tr>
-<tr class="odd">
-<td><code>data_raw/</code></td>
-<td>Downloaded CSVs (not versioned)</td>
-</tr>
-<tr class="even">
-<td><code>data_processed/</code></td>
-<td>Filtered and cleaned outputs (not versioned)</td>
-</tr>
-<tr class="odd">
-<td><code>new/outputs/</code></td>
-<td>Figures and maps</td>
-</tr>
-<tr class="even">
-<td><code>assets/</code></td>
-<td>Supporting images</td>
-</tr>
-</tbody>
-</table>
-<p>To reproduce: open R and run <code>source("R/Fisheries_Webbscrapping.R")</code>.</p>
-</section>
-<section id="selected-outputs" class="level2">
-<h2 class="anchored" data-anchor-id="selected-outputs">Selected outputs</h2>
-<section id="activity-heatmap" class="level3">
-<h3 class="anchored" data-anchor-id="activity-heatmap">Activity heatmap</h3>
-<p>Ping density across the Los Lagos region (2019–2026), restricted to artisanal vessels (<code>(ART)</code> and <code>(LB)</code> suffixes only):</p>
-<p><img src="https://raw.githubusercontent.com/robcareta/artesanal-fishing-behavior-Chile/main/new/outputs/heatmap_artesanal_only.png" class="img-fluid" style="width:100.0%" alt="Heatmap of ping density for artisanal vessels in Los Lagos"></p>
-</section>
-<section id="fishing-effort-map" class="level3">
-<h3 class="anchored" data-anchor-id="fishing-effort-map">Fishing effort map</h3>
-<p>Spatial distribution of fishing effort (fishing hours per 0.05° grid cell) across Los Lagos 2019–2026.</p>
-<p><strong>Effort computation.</strong> Fishing effort is estimated using the <strong>speed-threshold method</strong>, a standard approach in VMS-based fisheries research (Gerritsen &amp; Lordan, 2011; Behivoke et al., 2021). Each VMS ping is classified into one of three states based on recorded speed:</p>
+<section id="where-the-fleet-fishes" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="where-the-fleet-fishes">Where the fleet fishes</h2>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="figures/heatmap_interior_loslagos.png" class="img-fluid figure-img" style="width:100.0%" alt="Heatmap of fishing-speed position reports in the interior sea of Los Lagos, Chile, 2019 to 2026"></p>
+<figcaption class="margin-caption">Fishing activity in the interior sea of Los Lagos, 2019–2026. Each cell (about 2.2 × 1.7 km) counts satellite position reports recorded at fishing speed (0.1–3 knots), summed over all years. The colour scale is logarithmic.</figcaption>
+</figure>
+</div>
+<section id="what-data-we-have" class="level3">
+<h3 class="anchored" data-anchor-id="what-data-we-have">What data we have</h3>
+<p>The analysis uses satellite position reports from SERNAPESCA, Chile’s National Fisheries and Aquaculture Service, for registered artisanal vessels.</p>
 <ul>
-<li><strong>Fishing</strong>: speed between 0.1 and 3.0 knots</li>
-<li><strong>At anchor / moored</strong>: speed below 0.1 knots</li>
-<li><strong>Steaming / transiting</strong>: speed above 3.0 knots</li>
+<li><strong>Coverage:</strong> 2019 to 2026. Reporting in 2021 is much thinner than in other years.</li>
+<li><strong>Volume:</strong> about 10.3 million position reports across Los Lagos from roughly 330 vessel identifiers. About 7.4 million fall in the interior sea shown above, and about 0.9 million of those were recorded at fishing speed.</li>
+<li><strong>Frequency:</strong> one position about every 15 minutes per vessel.</li>
+<li><strong>Content:</strong> vessel identifier, timestamp, latitude, longitude, speed and heading.</li>
 </ul>
-<p>These thresholds are calibrated for small-scale artisanal vessels, which operate at substantially lower speeds than industrial trawlers (Behivoke et al., 2021). Fishing hours are then computed as the count of fishing-classified pings multiplied by 15 minutes — SERNAPESCA’s nominal reporting interval. The resulting effort is aggregated to a 0.05° spatial grid.</p>
-<p><img src="https://raw.githubusercontent.com/robcareta/artesanal-fishing-behavior-Chile/main/new/outputs/effort_map_artesanal_only.png" class="img-fluid" style="width:100.0%" alt="Fishing effort map for artisanal vessels in Los Lagos"></p>
-</section>
-<section id="species-catch-maps" class="level3">
-<h3 class="anchored" data-anchor-id="species-catch-maps">Species catch maps</h3>
-<p>Spatial distribution of landings by species, derived from SERNAPESCA’s production reports (<em>Anuario Estadístico de Pesca y Acuicultura</em>). Landing records were linked to VMS tracking data by matching vessel names — 193 out of 2,781 vessels in the production reports were matched to VMS-tracked artisanal vessels.</p>
-<p><strong>Grid map</strong> (0.1° cells, all years combined) — each cell shows total catch tonnage across all matched vessels:</p>
-<p><img src="https://raw.githubusercontent.com/robcareta/artesanal-fishing-behavior-Chile/main/new/outputs/species_map_loslagos.png" class="img-fluid" style="width:100.0%" alt="Species catch grid map for Los Lagos"></p>
-<p><strong>Kernel density map</strong> (all years combined) — fishing locations are smoothed using a two-dimensional Gaussian kernel to highlight core fishing areas for each species, independent of the arbitrary grid resolution. Sardina Austral and Anchoveta concentrate in the interior sea around Puerto Montt, while Reineta and Centolla show a broader distribution across the southern channels and open coast:</p>
-<p><img src="https://raw.githubusercontent.com/robcareta/artesanal-fishing-behavior-Chile/main/new/outputs/species_map_kde_loslagos.png" class="img-fluid" style="width:100.0%" alt="Species catch kernel density map for Los Lagos"></p>
 </section>
 </section>
-<section id="technical-details" class="level2">
-<h2 class="anchored" data-anchor-id="technical-details">Technical details</h2>
-<table class="caption-top table">
-<tbody>
-<tr class="odd">
-<td><strong>Language</strong></td>
-<td>R (100%)</td>
-</tr>
-<tr class="even">
-<td><strong>Key packages</strong></td>
-<td><code>duckdb</code>, <code>rvest</code>, <code>ggplot2</code>, <code>sf</code>, <code>gganimate</code></td>
-</tr>
-<tr class="odd">
-<td><strong>License</strong></td>
-<td>MIT</td>
-</tr>
-<tr class="even">
-<td><strong>Repository</strong></td>
-<td><a href="https://github.com/robcareta/artesanal-fishing-behavior-Chile">github.com/robcareta/artesanal-fishing-behavior-Chile</a></td>
-</tr>
-<tr class="odd">
-<td><strong>Status</strong></td>
-<td>Active development</td>
-</tr>
-</tbody>
-</table>
+<section id="how-we-identify-the-choice" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="how-we-identify-the-choice">How we identify the choice</h2>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="figures/identification_approach.png" class="img-fluid figure-img" style="width:100.0%" alt="Two-panel schematic. Panel A shows a map of grid cells around a home port with the operating radius, a marine protected area, HAB cells, a salmon farm and the chosen cell. Panel B shows the random utility model, the softmax choice probability and the identification argument"></p>
+<figcaption class="margin-caption">Identification approach. Panel A shows the geographic choice set on a 0.1° grid; panel B shows the econometric structure of the choice model.</figcaption>
+</figure>
+</div>
+<p>Each vessel chooses one grid cell, about 11 × 8 km, from the set of cells it could reach within its operating radius around the home port. Choices are compared against a sample of alternative cells. This setup lets a conditional logit model, in the tradition of random utility models (McFadden, 1974; Train, 2009), estimate how the characteristics of each cell affect the probability that it is chosen.</p>
+<p>Identification comes from variation within a vessel and month. Holding the vessel and month fixed, the model compares the cell a vessel chose with cells it could have chosen at a similar distance from port but that differ in environmental or policy conditions.</p>
+<p>The figure is a schematic. The positions of the port, the MPA, the farm and the HAB cells are illustrative and do not reproduce the estimation sample.</p>
 </section>
-<section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
-<p>Behivoke, F., Etienne, M.-P., Guitton, J., Randriatsara, R.M., Mahafina, J., &amp; Léopold, M. (2021). Estimating fishing effort in small-scale fisheries using GPS tracking data and random forests. <em>Ecological Indicators</em>, 123, 107321. <a href="https://doi.org/10.1016/j.ecolind.2020.107321">https://doi.org/10.1016/j.ecolind.2020.107321</a></p>
-<p>Gerritsen, H., &amp; Lordan, C. (2011). Integrating vessel monitoring systems (VMS) data with daily catch data from logbooks to explore the spatial distribution of catch and effort at high resolution. <em>ICES Journal of Marine Science</em>, 68(1), 245–252. <a href="https://doi.org/10.1093/icesjms/fsq137">https://doi.org/10.1093/icesjms/fsq137</a></p>
+<section id="environmental-and-policy-factors" class="level2">
+<h2 class="anchored" data-anchor-id="environmental-and-policy-factors">Environmental and policy factors</h2>
+<ul>
+<li><strong>Harmful algal blooms (HABs).</strong> Cells where a bloom is present, and the closures triggered when toxin thresholds are exceeded. Closures are treated as exogenous shocks to the toxin environment.</li>
+<li><strong>Marine protected areas (MPAs).</strong> No-take zones where fishing is not permitted, which change the set of cells available to a vessel.</li>
+<li><strong>Salmon farms.</strong> Proximity to aquaculture sites, which can change both the attractiveness of nearby waters and the effort vessels allocate around them.</li>
+</ul>
+<p>Distance to port and other oceanographic conditions enter the model as controls.</p>
 
 
 </section>
