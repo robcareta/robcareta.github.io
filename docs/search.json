@@ -214,35 +214,28 @@
     "href": "personal/index.html",
     "title": "Beyond the Research",
     "section": "",
-    "text": "[PLACEHOLDER: one or two sentences about what you do when you are not working.]\n\n\n\n[PLACEHOLDER: short description.]\n\n\n\n\n[PLACEHOLDER: short description.]\n\n\n\n\n[PLACEHOLDER: teams you follow.]"
-  },
-  {
-    "objectID": "personal/index.html#outside-economics",
-    "href": "personal/index.html#outside-economics",
-    "title": "Beyond the Research",
-    "section": "",
     "text": "[PLACEHOLDER: one or two sentences about what you do when you are not working.]"
   },
   {
     "objectID": "personal/index.html#section-one",
     "href": "personal/index.html#section-one",
     "title": "Beyond the Research",
-    "section": "",
-    "text": "[PLACEHOLDER: short description.]"
+    "section": "Section one",
+    "text": "Section one\n[PLACEHOLDER: short description.]"
   },
   {
     "objectID": "personal/index.html#section-two",
     "href": "personal/index.html#section-two",
     "title": "Beyond the Research",
-    "section": "",
-    "text": "[PLACEHOLDER: short description.]"
+    "section": "Section two",
+    "text": "Section two\n[PLACEHOLDER: short description.]"
   },
   {
     "objectID": "personal/index.html#sports",
     "href": "personal/index.html#sports",
     "title": "Beyond the Research",
-    "section": "",
-    "text": "[PLACEHOLDER: teams you follow.]"
+    "section": "Sports",
+    "text": "Sports\n[PLACEHOLDER: teams you follow.]"
   },
   {
     "objectID": "projects/artesanal-fishing-chile/index.html",
