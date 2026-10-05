@@ -6,28 +6,18 @@ toc: false
 fig-cap-location: bottom
 ---
 
-[PLACEHOLDER: one or two sentences about what you do when you are not working.]
+When I am not working, I like to spend time outdoors, hiking, climbing and paddling.
 
-## Section one
+## Hiking and climbing
 
-[PLACEHOLDER: short description.]
+Even though I struggle with heights, I try to climb and hike whenever I can.
 
-<!-- Two photos side by side. Put the photos in this folder and uncomment:
+![Climbing the Beehive Loop Trail in Acadia National Park, Maine.](acadia.jpeg){fig-alt="Roberto climbing a steep granite section of the Beehive Loop Trail, with forest and the Atlantic coast below" width="65%" fig-align="center"}
+
+## Florida springs and wetlands
+
 ::: {layout-ncol=2}
-![Caption one.](photo1.jpg){fig-alt="Describe photo one" group="one"}
+![Kayaking at Ichetucknee Springs State Park, Florida.](kayak.jpeg){fig-alt="Bow of a yellow kayak on a clear spring-fed river lined with trees" group="florida"}
 
-![Caption two.](photo2.jpg){fig-alt="Describe photo two" group="one"}
+![A great blue heron at Sweetwater Wetlands Park, Florida.](sweetwater.jpeg){fig-alt="A great blue heron on the grass beside a marsh at sunset" group="florida"}
 :::
--->
-
-## Section two
-
-[PLACEHOLDER: short description.]
-
-<!-- Single photo:
-![Caption.](photo3.jpg){fig-alt="Describe photo" width="100%"}
--->
-
-## Sports
-
-[PLACEHOLDER: teams you follow.]
