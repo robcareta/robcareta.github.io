@@ -1,0 +1,49 @@
+---
+title: "Beyond the Research"
+description: "Roberto Cárdenas-Retamal's interests outside economics."
+title-block-banner: true
+page-layout: full
+lightbox: auto
+fig-cap-location: bottom
+toc: false
+---
+
+::::: {.personal-content}
+:::: {.personal-hero}
+## Outside economics
+
+[PLACEHOLDER: one or two sentences about what you do when you are not working.]
+::::
+
+:::: {.personal-section}
+## Section one
+
+[PLACEHOLDER: short description.]
+
+<!-- To add photos, put them in this folder and uncomment:
+::: {.personal-gallery .personal-gallery-two}
+![Caption one.](photo1.jpg){fig-alt="Describe photo one" .personal-photo loading="lazy" lightbox="group1"}
+
+![Caption two.](photo2.jpg){fig-alt="Describe photo two" .personal-photo loading="lazy" lightbox="group1"}
+:::
+-->
+::::
+
+:::: {.personal-section}
+## Section two
+
+[PLACEHOLDER: short description.]
+
+<!-- Single photo:
+::: {.personal-gallery}
+![Caption.](photo3.jpg){fig-alt="Describe photo" .personal-photo loading="lazy" lightbox="group2"}
+:::
+-->
+::::
+
+:::: {.personal-section .personal-section-text}
+## Sports
+
+[PLACEHOLDER: teams you follow.]
+::::
+:::::

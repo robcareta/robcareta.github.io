@@ -709,3 +709,110 @@ pre.text, pre.sourceCode, .cell-output pre {
         left: 0;
     }
 }
+// Personal page ------------------------------------------------
+.personal-content {
+    max-width: 69rem;
+    margin-inline: auto;
+}
+
+.personal-hero {
+    margin-bottom: 2.5rem;
+    border: 1px solid rgba($blue, 0.2);
+    border-radius: 1.1rem;
+    background: linear-gradient(135deg, rgba($blue, 0.07) 0%, $white 100%);
+    padding: clamp(1.5rem, 4vw, 3rem);
+
+    h2 {
+        margin: 0 0 0.55rem;
+        color: $blue;
+        font-size: clamp(1.65rem, 3vw, 2.3rem);
+        letter-spacing: -0.02em;
+        border-bottom: none;
+    }
+
+    p {
+        max-width: 58ch;
+        margin: 0;
+        color: $gray-700;
+        font-size: 1.08rem;
+    }
+}
+
+.personal-section {
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba($blue, 0.12);
+    border-radius: 1.1rem;
+    background: $white;
+    padding: clamp(1.25rem, 3.5vw, 2.5rem);
+    box-shadow: 0 0.35rem 1.5rem rgba($blue, 0.045);
+
+    h2 {
+        margin-top: 0;
+        color: $gray-900;
+        font-size: clamp(1.4rem, 3vw, 1.85rem);
+        letter-spacing: -0.02em;
+        border-bottom: none;
+    }
+
+    > p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.personal-gallery {
+    display: grid;
+    max-width: 55rem;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+    margin: 1.5rem auto 0;
+
+    figure,
+    .quarto-figure {
+        margin: 0;
+    }
+}
+
+.personal-gallery-two {
+    max-width: none;
+    grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+    align-items: stretch;
+
+    figure,
+    .quarto-figure,
+    p {
+        height: 100%;
+    }
+
+    .personal-photo {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 576px) {
+    .personal-gallery-two {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.personal-gallery:not(.personal-gallery-two) .personal-photo {
+    max-height: 38rem;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.personal-photo {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0.85rem;
+    box-shadow: 0 0.6rem 1.5rem rgba($blue, 0.14);
+}
+
+.personal-photo + figcaption,
+figure:has(.personal-photo) figcaption {
+    margin-top: 0.55rem;
+    color: $gray-700;
+    font-size: 0.85rem;
+    line-height: 1.45;
+}
