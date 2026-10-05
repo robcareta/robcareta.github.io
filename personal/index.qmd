@@ -1,6 +1,5 @@
 ---
 title: "Beyond the Research"
-description: "Roberto Cárdenas-Retamal's interests outside economics."
 lightbox: auto
 toc: false
 fig-cap-location: bottom
