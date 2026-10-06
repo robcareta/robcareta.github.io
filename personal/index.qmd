@@ -20,3 +20,9 @@ Even though I struggle with heights, I try to climb and hike whenever I can.
 
 ![A great blue heron at Sweetwater Wetlands Park, Florida.](sweetwater.jpeg){fig-alt="A great blue heron on the grass beside a marsh at sunset" group="florida"}
 :::
+
+## Murph and Mochi
+
+I share my home with two cats, Murph and Mochi. Both are tripods, and I adopted them to give them a better life than the one they had before.
+
+![Murph (brown) and Mochi (orange).](cats.jpeg){fig-alt="Two cats lounging together on a blue armchair by a window, a brown and white cat behind an orange and white cat" width="65%" fig-align="center"}
